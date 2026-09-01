@@ -1,0 +1,10 @@
+{
+  "projection_columns": 28,
+  "projection_rms": 0.001857449803779231,
+  "projection_max_abs": 0.11520326506047683,
+  "r2": 0.9999985714131041,
+  "approx_ez": 7.921487739733842,
+  "approx_public_score": 1.6493323303927023,
+  "cauchy_mse_uncertainty_bound": 0.012187662627006058,
+  "cauchy_score_uncertainty_bound_approx": 0.0036947261635574087
+}

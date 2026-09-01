@@ -1,0 +1,15 @@
+{
+  "base_deployment_private": 1.66571501925089,
+  "candidates": {
+    "h4_cohortlift_anchored_val": {
+      "correlation_with_stack": 0.9578132123908712,
+      "full_deployment_gain": -0.000383770535570369,
+      "standard_error": 8.09795726615033e-05,
+      "gain_positive_splits": 39,
+      "weight_positive_splits": 30,
+      "sign_stability": 66,
+      "mean_weight": -0.055700374914080836,
+      "gate": "FAIL"
+    }
+  }
+}

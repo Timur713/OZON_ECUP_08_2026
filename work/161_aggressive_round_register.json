@@ -1,0 +1,75 @@
+{
+  "tag": "161_aggressive_upside_round",
+  "date_msk": "2026-08-28",
+  "context": "Team dropped to 6th; the leaderboard closes tomorrow. 20 submissions available today. 130 and 147 stay untouched as the safety net.",
+  "what_is_ruled_out_before_spending_anything": {
+    "more_aggressive_stacking": "The ideal unregularised fit over ALL measured bases is 1.6461003 against a top-3 of 1.6452202. No reweighting, lambda change, elastic net or subset choice can pass that ceiling, so at most 0.00007 of public is available from the combiner. Not a path.",
+    "harvesting_every_measured_but_unadopted_result": "Adopting 131 (position, +0.0000310) and 146 (sw28, +0.0001125) together reaches about 1.6460354, still 0.0008 short of top-3. Both were rejected by frozen keys; they remain available on the user's explicit call but do not reach the goal.",
+    "raw_feature_columns": "Closed today by 155-159: below about 0.99 correlation with the stack the moment recovery stops cancelling and the block loses 0.0022 on private."
+  },
+  "therefore": "Every submission this round goes to NEW MODEL BASES, because a model prediction naturally correlates above 0.99 with the stack and keeps the moment apparatus inside its measured safe region.",
+  "hypotheses": {
+    "H1_restricted_target_horizon": {
+      "idea": "Bases that predict a SUB-WINDOW of the target, days 1-7 and days 24-30, instead of the 30-day sum. A different functional of the same conditional law has structurally different errors.",
+      "not_the_same_as": "the 7/14/30/60 multitask heads, which shared one network and one representation; these are separate bases entering the ridge on their own moments",
+      "cost": "GBDT, minutes"
+    },
+    "H2_expectile_heads": {
+      "idea": "GBDT on z with quantile objectives at 0.6 and 0.8. RMSLE wants the conditional mean; a base tracking a different functional contributes wherever the conditional shape varies across users.",
+      "not_the_same_as": "Tweedie and ZILN, already rejected, which model E[y] rather than a functional of z",
+      "cost": "GBDT, minutes"
+    },
+    "H3_count_target": {
+      "idea": "Poisson base predicting the NUMBER of order-days in the window, plus a base for mean log-check given an order.",
+      "not_the_same_as": "the hurdle decomposition, which multiplies P(y>0) by E[z|y>0] inside one model; here the targets themselves differ and each enters the ridge separately",
+      "cost": "GBDT, minutes"
+    },
+    "H4_cohort_seasonal_lift": {
+      "idea": "All 29 bases are strictly per-user. Cluster users on their normalised 409-day profile and give each cluster its realised lift over the SAME calendar window one year earlier, days 44-73, where labels exist. Cross-user information the pool structurally cannot contain.",
+      "not_the_same_as": "the LY feature at the individual level, worth +0.00001; this is a cohort statistic, which is what makes it estimable",
+      "cost": "clustering plus GBDT, tens of minutes"
+    },
+    "H5_event_indexed_sequence": {
+      "idea": "Feed the network the last N EVENTS with their inter-event gaps instead of the last N days. Time restriction is the one restricted view that measurably worked (sw28, +0.00011 real); event indexing is a different axis of the same idea.",
+      "not_the_same_as": "event-cadence features added to a day-indexed TCN, which were rejected; here the indexing of the sequence itself changes",
+      "cost": "TCN on GPU, hours, runs overnight"
+    },
+    "H6_rank_target": {
+      "idea": "Train on the population rank of z rather than z, then map back through the known marginal. Different loss geometry and insensitive to the heavy upper tail.",
+      "cost": "GBDT, minutes"
+    },
+    "H7_residual_gbdt_on_the_strongest_network": {
+      "idea": "GBDT trained on the training anchors to predict the residual of w409c as a function of the tabular features, capturing the network's systematic bias.",
+      "caveat": "closest to the branch closed today; the difference is that it is fitted on training-window labels and enters as its own base with its own probed moment, not as an offline correction applied to the anchor",
+      "cost": "GBDT, minutes"
+    }
+  },
+  "screening_protocol": "Every candidate is trained twice: on anchors up to 342 to produce a fold-378 validation vector, and on anchors up to 378 to produce the anchor-408 vector. The validation vector is scored against the 27-column proxy of the admitted pool (the 25 audit columns plus w409c and the decay base) on 96 fit-50k / score-200k splits, both matched and deployment-faithful.",
+  "promotion_gate": "conditional gain beyond the 27-column pool >= 0.00008, positive weight in at least 90 of 96 splits, and correlation with the stack at least 0.99 so the moment apparatus stays inside the region 155-159 showed to be safe. Only then is a probe built.",
+  "submission_policy": "probes are built in gate order and handed over marked ZOND; 130 and 147 are never touched",
+  "frozen_before_measurement": true,
+  "results_so_far": {
+    "H4_cohort_seasonal_lift": {
+      "matched_conditional_gain": 0.000173,
+      "full_deployment_gain": 0.0001018,
+      "sign_stability": "89 of 96, threshold 90",
+      "correlation_with_stack": 0.7035,
+      "verdict": "REJECTED by one split. Threshold not relaxed.",
+      "note": "carries real cross-user signal but cannot be delivered through the moment apparatus"
+    },
+    "H4b_stack_anchored_rebuild": {
+      "full_deployment_gain": -0.0003838,
+      "sign_stability": "66 of 96",
+      "verdict": "REJECTED, worse than the original",
+      "note": "pulling a candidate towards the stack shrinks its unique component faster than it shrinks the recovery noise"
+    },
+    "H5_event_indexed_tcn_weak": {
+      "standalone_rmsle": 1.79271,
+      "correlation_with_stack": 0.9825,
+      "matched_conditional_gain": -1.75e-05,
+      "sign_stability": "64 of 96",
+      "verdict": "REJECTED",
+      "note": "7 anchors, 2 epochs, width 128. The project's own decay result showed a weak backbone can hide a real structural effect, so a strong version is being measured before the axis is closed."
+    }
+  }
+}

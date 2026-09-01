@@ -1,0 +1,26 @@
+{
+  "tag": "154_extended_column_pool",
+  "date_msk": "2026-08-28",
+  "status": "frozen before measurement",
+  "why": "The 153 block is probe-limited, not idea-limited: 20 submissions a day cap K, so the quantity that matters is private gain per probe, not total gain. The 60 columns of 153 come from five channels and are all raw window sums and day counts. Two kinds of column are provably outside their linear span and were never tried: the funnel-split and conversion channels, and ratio features such as conversion rate, average check and short-over-long trend.",
+  "hypothesis": "A richer candidate pool raises the private gain available at K=20, because ratios and funnel splits are not linear combinations of raw window aggregates and therefore occupy directions the ridge currently cannot reach at any weight.",
+  "extended_pool": {
+    "channels_added": ["gmv_search", "gmv_cat", "search", "cat", "search_to_ord", "cat_to_ord"],
+    "ratio_families": [
+      "order-per-search conversion at each window",
+      "average check, gmv over orders, at each window",
+      "short-over-long trend, window w over window 365, for gmv orders and searches",
+      "search versus catalogue share of gmv",
+      "orders per active day"
+    ],
+    "guard": "every ratio uses a fixed additive denominator floor so it stays finite for inactive users, and the floor is chosen before measurement"
+  },
+  "procedure": "identical to 150 and 152: surrogate stack at folds 288, 318, 348, 378; ranking by mean absolute beta over 288, 318 and 348 only; audit at 378 with the 25 admitted validation columns as base, 48 splits of fit-50k / score-200k, columns passed through the exact build_gpu_probe transform",
+  "reading_key": {
+    "replace_the_batch": "private gain at K=20 exceeds the 153 value of 0.0004721 by at least 25 percent, that is >= 0.00059, AND the positive-split fraction stays at 48 of 48. Only then is the handed-over batch withdrawn, and only if no probe from it has been sent yet",
+    "extend_the_tail": "improvement below 25 percent but the new columns rank inside the top 30 -> keep ranks 1..20 of 153 untouched and offer the new columns as ranks 21 and beyond, which preserves the prefix rule",
+    "closed": "no improvement -> 153 stands as built, and this round is recorded as a negative result"
+  },
+  "why_the_prefix_rule_survives_either_way": "153 probes are independent measurements of one moment each. Appending or reordering the tail cannot invalidate an already-returned prefix, and the frozen key of 153 forbids choosing a subset after seeing answers, not extending the pool before them.",
+  "expected_sign": "positive but modest; FINDINGS 2.4b records that feature engineering inside the boosting bases was exhausted at 210 to 262 to 304 features, and the same saturation may well apply here"
+}

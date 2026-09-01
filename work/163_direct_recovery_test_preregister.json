@@ -1,0 +1,15 @@
+{
+  "tag": "163_direct_recovery_test",
+  "date_msk": "2026-08-28",
+  "status": "frozen before the measurement it describes",
+  "why_this_exists": "The 161 gate requires correlation with the stack of at least 0.99. That criterion is a PROXY for the thing that actually matters, which is whether the E[v^2] recovery error and the Gram mismatch destroy the column's contribution. 155-159 established the failure for a BLOCK of 20 such columns, where the damage scales with the block's conditioning. For a SINGLE column added to a 27-column pool the same argument does not carry over automatically, and the quantity can be measured directly instead of proxied.",
+  "what_changes": "For a single candidate the correlation criterion is replaced by a direct simulation of the deployment solve INCLUDING the E[v^2] proxy error, exactly as in 155 and 159. The correlation is still reported.",
+  "what_does_not_change": "The magnitude threshold stays at 0.00008 and the sign-stability requirement stays at 90 of 96 splits. Neither is relaxed. A candidate that fails the direct test is rejected even though the direct test is a different instrument from the one written in 161.",
+  "threshold_committed_before_running": {
+    "conditional_gain_under_full_deployment_simulation": 0.00008,
+    "sign_stability": "the candidate's ridge weight has the same sign in at least 90 of 96 splits",
+    "note": "a consistently negative weight is acceptable, as recorded for sw28 on 26.08: the sign reflects parameterisation when the column enters as a contrast against bases already in the pool"
+  },
+  "honest_statement": "This is a criterion change made after seeing that H4 clears the magnitude gate at +0.000173 but has correlation 0.7035. It is defensible only because the replacement is strictly more direct than the proxy it replaces and its threshold was written down before the number was computed. If the direct test fails, H4 is rejected and this file is the record of that.",
+  "frozen_before_measurement": true
+}

@@ -1,0 +1,521 @@
+{
+  "tag": "residcurve_pairsafe",
+  "uses_public_scores": false,
+  "uses_recovered_moments": false,
+  "uses_competition_target_mean": false,
+  "pair_safe": true,
+  "user_crossfit_folds": 2,
+  "training_user_fraction_within_calibration_half": 0.3,
+  "features": 304,
+  "boost_rounds": 300,
+  "pairs": [
+    {
+      "anchors": [
+        138,
+        168
+      ],
+      "training_anchors": [
+        204,
+        216,
+        228,
+        240,
+        252,
+        264,
+        276,
+        288,
+        300,
+        312,
+        324,
+        336,
+        348
+      ],
+      "correlation": -0.02362372948174004,
+      "folds": [
+        {
+          "evaluation_fold": 0,
+          "training_users": 37500,
+          "calibration_users": 125000,
+          "evaluation_users": 125000,
+          "calibration": [
+            {
+              "anchor": 138,
+              "slope": 1.087933657988421,
+              "intercept": -0.1451747384335089
+            },
+            {
+              "anchor": 168,
+              "slope": 1.0490517784788962,
+              "intercept": -0.0812710812171625
+            }
+          ]
+        },
+        {
+          "evaluation_fold": 1,
+          "training_users": 37500,
+          "calibration_users": 125000,
+          "evaluation_users": 125000,
+          "calibration": [
+            {
+              "anchor": 138,
+              "slope": 1.0809461826131748,
+              "intercept": -0.11627503090836366
+            },
+            {
+              "anchor": 168,
+              "slope": 1.0511955314994554,
+              "intercept": -0.09447748992164984
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "anchors": [
+        168,
+        198
+      ],
+      "training_anchors": [
+        120,
+        132,
+        228,
+        240,
+        252,
+        264,
+        276,
+        288,
+        300,
+        312,
+        324,
+        336,
+        348
+      ],
+      "correlation": -0.00023883608486748335,
+      "folds": [
+        {
+          "evaluation_fold": 0,
+          "training_users": 37500,
+          "calibration_users": 125000,
+          "evaluation_users": 125000,
+          "calibration": [
+            {
+              "anchor": 168,
+              "slope": 0.9977569244213769,
+              "intercept": 0.00857202929167809
+            },
+            {
+              "anchor": 198,
+              "slope": 0.988194512915874,
+              "intercept": 0.05368074668404112
+            }
+          ]
+        },
+        {
+          "evaluation_fold": 1,
+          "training_users": 37500,
+          "calibration_users": 125000,
+          "evaluation_users": 125000,
+          "calibration": [
+            {
+              "anchor": 168,
+              "slope": 1.001054132060446,
+              "intercept": 0.014936897770911142
+            },
+            {
+              "anchor": 198,
+              "slope": 1.0075097698928028,
+              "intercept": 0.027988333655174905
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "anchors": [
+        198,
+        228
+      ],
+      "training_anchors": [
+        120,
+        132,
+        144,
+        156,
+        168,
+        264,
+        276,
+        288,
+        300,
+        312,
+        324,
+        336,
+        348
+      ],
+      "correlation": -0.007623092744504292,
+      "folds": [
+        {
+          "evaluation_fold": 0,
+          "training_users": 37500,
+          "calibration_users": 125000,
+          "evaluation_users": 125000,
+          "calibration": [
+            {
+              "anchor": 198,
+              "slope": 0.9994787281457698,
+              "intercept": 0.056856354012044495
+            },
+            {
+              "anchor": 228,
+              "slope": 1.0145606910755849,
+              "intercept": 0.042170671465367245
+            }
+          ]
+        },
+        {
+          "evaluation_fold": 1,
+          "training_users": 37500,
+          "calibration_users": 125000,
+          "evaluation_users": 125000,
+          "calibration": [
+            {
+              "anchor": 198,
+              "slope": 0.9975617642477829,
+              "intercept": 0.03362014936540367
+            },
+            {
+              "anchor": 228,
+              "slope": 1.0188357529807026,
+              "intercept": 0.03510818929083699
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "anchors": [
+        228,
+        258
+      ],
+      "training_anchors": [
+        120,
+        132,
+        144,
+        156,
+        168,
+        180,
+        192,
+        288,
+        300,
+        312,
+        324,
+        336,
+        348
+      ],
+      "correlation": -0.007076714777042542,
+      "folds": [
+        {
+          "evaluation_fold": 0,
+          "training_users": 37500,
+          "calibration_users": 125000,
+          "evaluation_users": 125000,
+          "calibration": [
+            {
+              "anchor": 228,
+              "slope": 1.0075351808520432,
+              "intercept": -0.013878117403835856
+            },
+            {
+              "anchor": 258,
+              "slope": 1.0240702510411082,
+              "intercept": -0.014032233699428775
+            }
+          ]
+        },
+        {
+          "evaluation_fold": 1,
+          "training_users": 37500,
+          "calibration_users": 125000,
+          "evaluation_users": 125000,
+          "calibration": [
+            {
+              "anchor": 228,
+              "slope": 1.0139016668973146,
+              "intercept": 0.02042377698076239
+            },
+            {
+              "anchor": 258,
+              "slope": 1.0294265242938228,
+              "intercept": 0.008685043601929237
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "anchors": [
+        258,
+        288
+      ],
+      "training_anchors": [
+        120,
+        132,
+        144,
+        156,
+        168,
+        180,
+        192,
+        204,
+        216,
+        228,
+        324,
+        336,
+        348
+      ],
+      "correlation": 0.010300650001705585,
+      "folds": [
+        {
+          "evaluation_fold": 0,
+          "training_users": 37500,
+          "calibration_users": 125000,
+          "evaluation_users": 125000,
+          "calibration": [
+            {
+              "anchor": 258,
+              "slope": 1.0060188001798878,
+              "intercept": -0.07316817194772386
+            },
+            {
+              "anchor": 288,
+              "slope": 1.0028808333591315,
+              "intercept": -0.08806677336019768
+            }
+          ]
+        },
+        {
+          "evaluation_fold": 1,
+          "training_users": 37500,
+          "calibration_users": 125000,
+          "evaluation_users": 125000,
+          "calibration": [
+            {
+              "anchor": 258,
+              "slope": 1.007623590807891,
+              "intercept": -0.08336833392166311
+            },
+            {
+              "anchor": 288,
+              "slope": 0.9999621765918137,
+              "intercept": -0.08356341619621065
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "anchors": [
+        288,
+        318
+      ],
+      "training_anchors": [
+        120,
+        132,
+        144,
+        156,
+        168,
+        180,
+        192,
+        204,
+        216,
+        228,
+        240,
+        252,
+        348
+      ],
+      "correlation": 0.01196303092295275,
+      "folds": [
+        {
+          "evaluation_fold": 0,
+          "training_users": 37500,
+          "calibration_users": 125000,
+          "evaluation_users": 125000,
+          "calibration": [
+            {
+              "anchor": 288,
+              "slope": 0.9819397705261795,
+              "intercept": 0.002480432841523502
+            },
+            {
+              "anchor": 318,
+              "slope": 1.0012398838257277,
+              "intercept": 0.13177782687555595
+            }
+          ]
+        },
+        {
+          "evaluation_fold": 1,
+          "training_users": 37500,
+          "calibration_users": 125000,
+          "evaluation_users": 125000,
+          "calibration": [
+            {
+              "anchor": 288,
+              "slope": 0.976652433469445,
+              "intercept": 0.024916303886042306
+            },
+            {
+              "anchor": 318,
+              "slope": 1.0019616000945362,
+              "intercept": 0.15038464201866655
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "anchors": [
+        318,
+        348
+      ],
+      "training_anchors": [
+        120,
+        132,
+        144,
+        156,
+        168,
+        180,
+        192,
+        204,
+        216,
+        228,
+        240,
+        252,
+        264,
+        276,
+        288
+      ],
+      "correlation": 0.007337656384555956,
+      "folds": [
+        {
+          "evaluation_fold": 0,
+          "training_users": 37500,
+          "calibration_users": 125000,
+          "evaluation_users": 125000,
+          "calibration": [
+            {
+              "anchor": 318,
+              "slope": 0.9738559130178998,
+              "intercept": 0.10047143179435858
+            },
+            {
+              "anchor": 348,
+              "slope": 0.974945371083826,
+              "intercept": -0.030219568221318046
+            }
+          ]
+        },
+        {
+          "evaluation_fold": 1,
+          "training_users": 37500,
+          "calibration_users": 125000,
+          "evaluation_users": 125000,
+          "calibration": [
+            {
+              "anchor": 318,
+              "slope": 0.9920411849663034,
+              "intercept": 0.043539346667321066
+            },
+            {
+              "anchor": 348,
+              "slope": 0.9927277595905265,
+              "intercept": -0.0809125258776639
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "anchors": [
+        348,
+        378
+      ],
+      "training_anchors": [
+        120,
+        132,
+        144,
+        156,
+        168,
+        180,
+        192,
+        204,
+        216,
+        228,
+        240,
+        252,
+        264,
+        276,
+        288,
+        300,
+        312
+      ],
+      "correlation": 0.008094933922711973,
+      "folds": [
+        {
+          "evaluation_fold": 0,
+          "training_users": 37500,
+          "calibration_users": 125000,
+          "evaluation_users": 125000,
+          "calibration": [
+            {
+              "anchor": 348,
+              "slope": 0.9807692071035318,
+              "intercept": -0.07357191874521006
+            },
+            {
+              "anchor": 378,
+              "slope": 0.947574126931759,
+              "intercept": -0.2578590813273981
+            }
+          ]
+        },
+        {
+          "evaluation_fold": 1,
+          "training_users": 37500,
+          "calibration_users": 125000,
+          "evaluation_users": 125000,
+          "calibration": [
+            {
+              "anchor": 348,
+              "slope": 0.983736317341112,
+              "intercept": -0.07276980766795543
+            },
+            {
+              "anchor": 378,
+              "slope": 0.9521474436797394,
+              "intercept": -0.27526315757723385
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "mean_adjacent_residual_correlation": -0.00010826273202851119,
+  "pair_positive_count": 4,
+  "pair_count": 8,
+  "pair_standard_deviation": 0.012158606367082849,
+  "two_way_block_bootstrap_p05": -0.007218570174321721,
+  "two_way_block_bootstrap_p50": 0.0002545643887796983,
+  "two_way_block_bootstrap_p95": 0.006444453932423759,
+  "negative_control_mean": 0.001167786455547217,
+  "positive_control_mean": 0.011297080691314715,
+  "control_thresholds": {
+    "maximum_absolute_negative": 0.003,
+    "minimum_positive": 0.006,
+    "maximum_positive": 0.014
+  },
+  "decision_threshold": {
+    "minimum_mean_correlation": 0.003,
+    "minimum_positive_pairs": 6,
+    "minimum_bootstrap_p05": 0.0
+  },
+  "elapsed_seconds": 398.0227704048157,
+  "controls_valid": true,
+  "supports_stable_user_residual_branch": false
+}

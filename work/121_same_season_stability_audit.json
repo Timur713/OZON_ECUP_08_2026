@@ -1,0 +1,697 @@
+{
+  "candidate": "121_offline_gift_holdout.csv",
+  "uses_public_scores": false,
+  "target": "2025-02-14 through 2025-03-15",
+  "protocol": "96 fixed 10k-fit to independent-40k-score user splits",
+  "baseline": "best independently calibrated single head chosen by score-fold oracle",
+  "lambda": 0.003,
+  "heads": [
+    "cls43hold_combined",
+    "cls43hold_hurdle",
+    "cls43hold_direct",
+    "cls43exacthold_combined",
+    "cls43exacthold_hurdle",
+    "cls43exacthold_direct"
+  ],
+  "mean_gain_over_oracle_single": 0.0003068387360263894,
+  "gain_standard_error": 1.829326218136716e-05,
+  "positive_gain_splits": 91,
+  "positive_gain_fraction": 0.9479166666666666,
+  "gain_p05": 2.6891630204861627e-06,
+  "gain_p50": 0.00038147566719248793,
+  "gain_p95": 0.0004571453385615598,
+  "rows": [
+    {
+      "repeat": 0,
+      "ensemble_score": 1.684591908429028,
+      "oracle_single_score": 1.685036663873945,
+      "gain_over_oracle_single": 0.0004447554449169555,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 1,
+      "ensemble_score": 1.6827064817878417,
+      "oracle_single_score": 1.682876426502471,
+      "gain_over_oracle_single": 0.00016994471462927763,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 2,
+      "ensemble_score": 1.6846590692508892,
+      "oracle_single_score": 1.684113282076664,
+      "gain_over_oracle_single": -0.0005457871742251541,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 3,
+      "ensemble_score": 1.6878066741898472,
+      "oracle_single_score": 1.6880210383668575,
+      "gain_over_oracle_single": 0.00021436417701026222,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 4,
+      "ensemble_score": 1.6850115151208416,
+      "oracle_single_score": 1.6854558153369523,
+      "gain_over_oracle_single": 0.000444300216110749,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 5,
+      "ensemble_score": 1.6849496686915515,
+      "oracle_single_score": 1.6853881994213211,
+      "gain_over_oracle_single": 0.00043853072976962615,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 6,
+      "ensemble_score": 1.686788628019028,
+      "oracle_single_score": 1.687162610003067,
+      "gain_over_oracle_single": 0.00037398198403892913,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 7,
+      "ensemble_score": 1.6843077571754141,
+      "oracle_single_score": 1.68440015779464,
+      "gain_over_oracle_single": 9.240061922577425e-05,
+      "oracle_single": "cls43hold_hurdle"
+    },
+    {
+      "repeat": 8,
+      "ensemble_score": 1.681429054101434,
+      "oracle_single_score": 1.6818692735656557,
+      "gain_over_oracle_single": 0.00044021946422168057,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 9,
+      "ensemble_score": 1.6844456057754875,
+      "oracle_single_score": 1.6848789248231588,
+      "gain_over_oracle_single": 0.0004333190476712989,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 10,
+      "ensemble_score": 1.6781222305503447,
+      "oracle_single_score": 1.6784823007809555,
+      "gain_over_oracle_single": 0.00036007023061079835,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 11,
+      "ensemble_score": 1.6751418886289304,
+      "oracle_single_score": 1.67553033604045,
+      "gain_over_oracle_single": 0.00038844741151966566,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 12,
+      "ensemble_score": 1.6885706378652787,
+      "oracle_single_score": 1.6886954790812432,
+      "gain_over_oracle_single": 0.0001248412159644552,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 13,
+      "ensemble_score": 1.6796531738632763,
+      "oracle_single_score": 1.6800287856370684,
+      "gain_over_oracle_single": 0.0003756117737920839,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 14,
+      "ensemble_score": 1.685222834537495,
+      "oracle_single_score": 1.6856711982499417,
+      "gain_over_oracle_single": 0.0004483637124466089,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 15,
+      "ensemble_score": 1.6775178398297752,
+      "oracle_single_score": 1.6778814396919342,
+      "gain_over_oracle_single": 0.0003635998621589476,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 16,
+      "ensemble_score": 1.683883936557863,
+      "oracle_single_score": 1.6842717480233447,
+      "gain_over_oracle_single": 0.0003878114654816134,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 17,
+      "ensemble_score": 1.686620245231185,
+      "oracle_single_score": 1.6870753888539918,
+      "gain_over_oracle_single": 0.00045514362280685283,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 18,
+      "ensemble_score": 1.682967036828437,
+      "oracle_single_score": 1.6833655751354737,
+      "gain_over_oracle_single": 0.0003985383070366222,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 19,
+      "ensemble_score": 1.6817934642966195,
+      "oracle_single_score": 1.681974540220225,
+      "gain_over_oracle_single": 0.00018107592360561142,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 20,
+      "ensemble_score": 1.6854649855375572,
+      "oracle_single_score": 1.6859172756001701,
+      "gain_over_oracle_single": 0.0004522900626129367,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 21,
+      "ensemble_score": 1.680569028657325,
+      "oracle_single_score": 1.6807529891360524,
+      "gain_over_oracle_single": 0.0001839604787274851,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 22,
+      "ensemble_score": 1.6836332811462347,
+      "oracle_single_score": 1.6835884444716138,
+      "gain_over_oracle_single": -4.4836674620851724e-05,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 23,
+      "ensemble_score": 1.6819432509476575,
+      "oracle_single_score": 1.6823608020352245,
+      "gain_over_oracle_single": 0.0004175510875670252,
+      "oracle_single": "cls43hold_hurdle"
+    },
+    {
+      "repeat": 24,
+      "ensemble_score": 1.6846866699517866,
+      "oracle_single_score": 1.684857765025456,
+      "gain_over_oracle_single": 0.00017109507366930288,
+      "oracle_single": "cls43hold_hurdle"
+    },
+    {
+      "repeat": 25,
+      "ensemble_score": 1.679817649955228,
+      "oracle_single_score": 1.6801882358515765,
+      "gain_over_oracle_single": 0.0003705858963485298,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 26,
+      "ensemble_score": 1.6854734887313778,
+      "oracle_single_score": 1.6858478606139842,
+      "gain_over_oracle_single": 0.00037437188260636134,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 27,
+      "ensemble_score": 1.6827160103889602,
+      "oracle_single_score": 1.683183312484111,
+      "gain_over_oracle_single": 0.0004673020951506679,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 28,
+      "ensemble_score": 1.6831330178118464,
+      "oracle_single_score": 1.6832006610159793,
+      "gain_over_oracle_single": 6.764320413288338e-05,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 29,
+      "ensemble_score": 1.6842109781729173,
+      "oracle_single_score": 1.6843419219058118,
+      "gain_over_oracle_single": 0.00013094373289446182,
+      "oracle_single": "cls43hold_hurdle"
+    },
+    {
+      "repeat": 30,
+      "ensemble_score": 1.6896827878702414,
+      "oracle_single_score": 1.6901588368333231,
+      "gain_over_oracle_single": 0.00047604896308173217,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 31,
+      "ensemble_score": 1.6866072003805475,
+      "oracle_single_score": 1.6869604289449942,
+      "gain_over_oracle_single": 0.0003532285644467503,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 32,
+      "ensemble_score": 1.6824235616783136,
+      "oracle_single_score": 1.6824868227476375,
+      "gain_over_oracle_single": 6.326106932386111e-05,
+      "oracle_single": "cls43hold_hurdle"
+    },
+    {
+      "repeat": 33,
+      "ensemble_score": 1.6757352745273695,
+      "oracle_single_score": 1.6759761284721526,
+      "gain_over_oracle_single": 0.00024085394478312594,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 34,
+      "ensemble_score": 1.6860282320655038,
+      "oracle_single_score": 1.68642881536107,
+      "gain_over_oracle_single": 0.00040058329556624805,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 35,
+      "ensemble_score": 1.6792979858746842,
+      "oracle_single_score": 1.6797095514547498,
+      "gain_over_oracle_single": 0.0004115655800656093,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 36,
+      "ensemble_score": 1.6859108043966122,
+      "oracle_single_score": 1.6859798760180174,
+      "gain_over_oracle_single": 6.907162140512568e-05,
+      "oracle_single": "cls43hold_direct"
+    },
+    {
+      "repeat": 37,
+      "ensemble_score": 1.683908735688434,
+      "oracle_single_score": 1.6842841970060543,
+      "gain_over_oracle_single": 0.0003754613176203403,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 38,
+      "ensemble_score": 1.687251864536063,
+      "oracle_single_score": 1.687726155483983,
+      "gain_over_oracle_single": 0.0004742909479200641,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 39,
+      "ensemble_score": 1.6800992448155427,
+      "oracle_single_score": 1.680506658424085,
+      "gain_over_oracle_single": 0.00040741360854235076,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 40,
+      "ensemble_score": 1.68277918797229,
+      "oracle_single_score": 1.6830881137749936,
+      "gain_over_oracle_single": 0.0003089258027035857,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 41,
+      "ensemble_score": 1.6855381480022615,
+      "oracle_single_score": 1.6859654087959197,
+      "gain_over_oracle_single": 0.0004272607936581796,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 42,
+      "ensemble_score": 1.6791823479675259,
+      "oracle_single_score": 1.6795690004187402,
+      "gain_over_oracle_single": 0.0003866524512143865,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 43,
+      "ensemble_score": 1.678997974788663,
+      "oracle_single_score": 1.679389055086419,
+      "gain_over_oracle_single": 0.00039108029775603015,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 44,
+      "ensemble_score": 1.6804043534371145,
+      "oracle_single_score": 1.6805715822017664,
+      "gain_over_oracle_single": 0.0001672287646519166,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 45,
+      "ensemble_score": 1.6864995542164065,
+      "oracle_single_score": 1.6869151941764358,
+      "gain_over_oracle_single": 0.00041563996002924597,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 46,
+      "ensemble_score": 1.6856702856219206,
+      "oracle_single_score": 1.6857481342078724,
+      "gain_over_oracle_single": 7.784858595183408e-05,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 47,
+      "ensemble_score": 1.6864343019336023,
+      "oracle_single_score": 1.6868811524787442,
+      "gain_over_oracle_single": 0.0004468505451418192,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 48,
+      "ensemble_score": 1.682013043105678,
+      "oracle_single_score": 1.6824108889303042,
+      "gain_over_oracle_single": 0.00039784582462631946,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 49,
+      "ensemble_score": 1.6863614373267735,
+      "oracle_single_score": 1.6862052073897054,
+      "gain_over_oracle_single": -0.0001562299370680975,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 50,
+      "ensemble_score": 1.6857848373528652,
+      "oracle_single_score": 1.6862400833056206,
+      "gain_over_oracle_single": 0.0004552459527553676,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 51,
+      "ensemble_score": 1.684215333069327,
+      "oracle_single_score": 1.6846546541768839,
+      "gain_over_oracle_single": 0.00043932110755684484,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 52,
+      "ensemble_score": 1.683727121321175,
+      "oracle_single_score": 1.6841194022746944,
+      "gain_over_oracle_single": 0.00039228095351928616,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 53,
+      "ensemble_score": 1.6837710124967935,
+      "oracle_single_score": 1.6842063902509026,
+      "gain_over_oracle_single": 0.00043537775410906754,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 54,
+      "ensemble_score": 1.6873020474923708,
+      "oracle_single_score": 1.6874748162178816,
+      "gain_over_oracle_single": 0.00017276872551086342,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 55,
+      "ensemble_score": 1.6837374287097417,
+      "oracle_single_score": 1.6840637338675848,
+      "gain_over_oracle_single": 0.00032630515784304315,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 56,
+      "ensemble_score": 1.6846253758141914,
+      "oracle_single_score": 1.6850757205164653,
+      "gain_over_oracle_single": 0.0004503447022738971,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 57,
+      "ensemble_score": 1.6839629372175953,
+      "oracle_single_score": 1.6843759914745016,
+      "gain_over_oracle_single": 0.0004130542569062978,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 58,
+      "ensemble_score": 1.6843984921003277,
+      "oracle_single_score": 1.6844793938255134,
+      "gain_over_oracle_single": 8.090172518571137e-05,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 59,
+      "ensemble_score": 1.6830830262167644,
+      "oracle_single_score": 1.6834067130592332,
+      "gain_over_oracle_single": 0.0003236868424687511,
+      "oracle_single": "cls43hold_hurdle"
+    },
+    {
+      "repeat": 60,
+      "ensemble_score": 1.6838131371487577,
+      "oracle_single_score": 1.6841007545725617,
+      "gain_over_oracle_single": 0.0002876174238040097,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 61,
+      "ensemble_score": 1.6778994786560473,
+      "oracle_single_score": 1.678271901192082,
+      "gain_over_oracle_single": 0.0003724225360346445,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 62,
+      "ensemble_score": 1.681686873184573,
+      "oracle_single_score": 1.6820512224606725,
+      "gain_over_oracle_single": 0.00036434927609940715,
+      "oracle_single": "cls43hold_hurdle"
+    },
+    {
+      "repeat": 63,
+      "ensemble_score": 1.6791197503732938,
+      "oracle_single_score": 1.679226782796884,
+      "gain_over_oracle_single": 0.00010703242359033638,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 64,
+      "ensemble_score": 1.6808965464721646,
+      "oracle_single_score": 1.681344379819497,
+      "gain_over_oracle_single": 0.00044783334733233815,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 65,
+      "ensemble_score": 1.6859804830920417,
+      "oracle_single_score": 1.6863581209344356,
+      "gain_over_oracle_single": 0.0003776378423938631,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 66,
+      "ensemble_score": 1.682506194441661,
+      "oracle_single_score": 1.6827622536740219,
+      "gain_over_oracle_single": 0.00025605923236082795,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 67,
+      "ensemble_score": 1.6817513841212677,
+      "oracle_single_score": 1.681555235317269,
+      "gain_over_oracle_single": -0.00019614880399876355,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 68,
+      "ensemble_score": 1.6840137897924201,
+      "oracle_single_score": 1.6844434058881796,
+      "gain_over_oracle_single": 0.00042961609575953297,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 69,
+      "ensemble_score": 1.687160259382385,
+      "oracle_single_score": 1.687437106067329,
+      "gain_over_oracle_single": 0.0002768466849440987,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 70,
+      "ensemble_score": 1.6819296682299183,
+      "oracle_single_score": 1.6822610189672456,
+      "gain_over_oracle_single": 0.00033135073732726283,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 71,
+      "ensemble_score": 1.680270319244225,
+      "oracle_single_score": 1.680655632736216,
+      "gain_over_oracle_single": 0.00038531349199111276,
+      "oracle_single": "cls43hold_hurdle"
+    },
+    {
+      "repeat": 72,
+      "ensemble_score": 1.6780807575821368,
+      "oracle_single_score": 1.6782827231254192,
+      "gain_over_oracle_single": 0.00020196554328233418,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 73,
+      "ensemble_score": 1.6795629700635144,
+      "oracle_single_score": 1.6795061389425194,
+      "gain_over_oracle_single": -5.683112099497123e-05,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 74,
+      "ensemble_score": 1.68493401617654,
+      "oracle_single_score": 1.6850396074469567,
+      "gain_over_oracle_single": 0.00010559127041664951,
+      "oracle_single": "cls43hold_hurdle"
+    },
+    {
+      "repeat": 75,
+      "ensemble_score": 1.6789521832395409,
+      "oracle_single_score": 1.6793592550961756,
+      "gain_over_oracle_single": 0.0004070718566346887,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 76,
+      "ensemble_score": 1.6788825521751953,
+      "oracle_single_score": 1.6793122885669423,
+      "gain_over_oracle_single": 0.00042973639174692657,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 77,
+      "ensemble_score": 1.6859401228206936,
+      "oracle_single_score": 1.6863639002546422,
+      "gain_over_oracle_single": 0.00042377743394861334,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 78,
+      "ensemble_score": 1.6796941212757226,
+      "oracle_single_score": 1.6797458477288474,
+      "gain_over_oracle_single": 5.172645312478963e-05,
+      "oracle_single": "cls43hold_direct"
+    },
+    {
+      "repeat": 79,
+      "ensemble_score": 1.6859015583789456,
+      "oracle_single_score": 1.686351892733986,
+      "gain_over_oracle_single": 0.00045033435504038266,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 80,
+      "ensemble_score": 1.6875360412892546,
+      "oracle_single_score": 1.6876128310366671,
+      "gain_over_oracle_single": 7.67897474125423e-05,
+      "oracle_single": "cls43hold_direct"
+    },
+    {
+      "repeat": 81,
+      "ensemble_score": 1.684647889903598,
+      "oracle_single_score": 1.6846664210124989,
+      "gain_over_oracle_single": 1.8531108900932125e-05,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 82,
+      "ensemble_score": 1.6865641540632832,
+      "oracle_single_score": 1.6868716554429566,
+      "gain_over_oracle_single": 0.00030750137967339164,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 83,
+      "ensemble_score": 1.682772683347311,
+      "oracle_single_score": 1.6832243979675354,
+      "gain_over_oracle_single": 0.00045171462022453035,
+      "oracle_single": "cls43hold_direct"
+    },
+    {
+      "repeat": 84,
+      "ensemble_score": 1.6798584447054676,
+      "oracle_single_score": 1.680287808719632,
+      "gain_over_oracle_single": 0.0004293640141643795,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 85,
+      "ensemble_score": 1.6798737999464008,
+      "oracle_single_score": 1.6803165018318869,
+      "gain_over_oracle_single": 0.00044270188548600764,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 86,
+      "ensemble_score": 1.6844372696949583,
+      "oracle_single_score": 1.6847440726690108,
+      "gain_over_oracle_single": 0.00030680297405250023,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 87,
+      "ensemble_score": 1.6790279490483868,
+      "oracle_single_score": 1.6794745338726633,
+      "gain_over_oracle_single": 0.00044658482427650803,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 88,
+      "ensemble_score": 1.6799424281463555,
+      "oracle_single_score": 1.6803461006277232,
+      "gain_over_oracle_single": 0.000403672481367634,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 89,
+      "ensemble_score": 1.681860904621746,
+      "oracle_single_score": 1.6821333741971958,
+      "gain_over_oracle_single": 0.0002724695754496853,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 90,
+      "ensemble_score": 1.6797199245627916,
+      "oracle_single_score": 1.6801627012761875,
+      "gain_over_oracle_single": 0.000442776713395876,
+      "oracle_single": "cls43hold_direct"
+    },
+    {
+      "repeat": 91,
+      "ensemble_score": 1.6844119909187572,
+      "oracle_single_score": 1.6848425936225209,
+      "gain_over_oracle_single": 0.0004306027037637161,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 92,
+      "ensemble_score": 1.676928601832616,
+      "oracle_single_score": 1.677346965695863,
+      "gain_over_oracle_single": 0.0004183638632471176,
+      "oracle_single": "cls43hold_hurdle"
+    },
+    {
+      "repeat": 93,
+      "ensemble_score": 1.6750791942307948,
+      "oracle_single_score": 1.6755441356345633,
+      "gain_over_oracle_single": 0.0004649414037685151,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 94,
+      "ensemble_score": 1.68244140167144,
+      "oracle_single_score": 1.6828643483005408,
+      "gain_over_oracle_single": 0.0004229466291008066,
+      "oracle_single": "cls43hold_combined"
+    },
+    {
+      "repeat": 95,
+      "ensemble_score": 1.6850581855983835,
+      "oracle_single_score": 1.6855210290943636,
+      "gain_over_oracle_single": 0.0004628434959801364,
+      "oracle_single": "cls43hold_combined"
+    }
+  ]
+}

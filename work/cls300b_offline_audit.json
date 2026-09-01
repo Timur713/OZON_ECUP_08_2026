@@ -1,0 +1,28 @@
+{
+  "candidate": "cls300b",
+  "validation_sha256": "83e5949d92df29c0f39e95ffc492ffbc2895ebe4c3e2658eecb0b3fe4c24ffc9",
+  "protocol": "96 fixed 50k-fit to independent-200k evaluation splits, ridge lambda=0.003",
+  "individual": {
+    "mean_independent_private_gain": -0.000014138819697235202,
+    "private_gain_se": 0.0000025966219336527944,
+    "private_gain_positive_fraction": 0.13541666666666666,
+    "mean_degrees_added": 0.653420188262963,
+    "candidate_weight_negative_fraction": 0.40625
+  },
+  "joint_with_w409c": {
+    "mean_independent_private_gain": 0.00020484804905179788,
+    "mean_degrees_added": 1.3038966889315564,
+    "cls300b_weight_negative_fraction": 0.25,
+    "reference_w409c_gain": 0.00022066,
+    "approximate_marginal_vs_reference": -0.00001581
+  },
+  "joint_with_w409c_w409twoa_cls120": {
+    "mean_independent_private_gain": 0.00030539429758678904,
+    "mean_degrees_added": 2.5674695777215475,
+    "cls300b_weight_negative_fraction": 0.22916666666666666,
+    "reference_without_cls300b_gain": 0.00031795218635821687,
+    "marginal_vs_reference": -0.00001255788877142783
+  },
+  "decision": "reject_before_leaderboard",
+  "reason": "negative independent gain alone and negative marginal contribution to both relevant stacks"
+}

@@ -1,0 +1,40 @@
+{
+  "tag": "170_family_transfer_calibration",
+  "date_msk": "2026-08-29",
+  "method": "three candidates that passed the 165 sweep already have public moments, so their exact marginal contribution to the CURRENT pool of 130 is computable with no submission",
+  "rows": [
+    {
+      "candidate": "cls409class (111)",
+      "offline_gain_fold378": 0.0006434,
+      "public_marginal_gain": 8.506301494293211e-06,
+      "transfer_ratio": 0.013220860264677045,
+      "degrees_added": 0.6869115739079845,
+      "net_after_empirical_penalty": -1.8626705675072177e-05
+    },
+    {
+      "candidate": "cls409hyb (108)",
+      "offline_gain_fold378": 0.0003884,
+      "public_marginal_gain": 3.7690744891794026e-06,
+      "transfer_ratio": 0.009704105275951088,
+      "degrees_added": 0.7607363591905347,
+      "net_after_empirical_penalty": -2.6280011698846718e-05
+    },
+    {
+      "candidate": "w409_position (131)",
+      "offline_gain_fold378": 0.000169,
+      "public_marginal_gain": 3.0992662905626744e-05,
+      "transfer_ratio": 0.18338853790311685,
+      "degrees_added": 0.618435633000356,
+      "net_after_empirical_penalty": 6.564455402112684e-06
+    }
+  ],
+  "cls409_family_transfer_ratio": 0.011462482770314066,
+  "prediction_for_cls409dense": {
+    "offline_gain_fold378": 0.0002476,
+    "predicted_public_marginal_gain": 2.8381107339297625e-06,
+    "degrees_added": 0.7532,
+    "predicted_net": -2.6913289266070235e-05,
+    "decision": "DO NOT SUBMIT. The probe was built and validated, but two siblings measured against this exact pool put the family's offline-to-public transfer at about 1 percent, which makes the predicted net clearly negative. One submission saved."
+  },
+  "what_this_adds_to_the_journal": "The journal recorded qualitatively that the cls409 temporal proxy did not transfer. This puts a number on it against the current pool: about 1 percent for the cls409 family and about 18 percent for the w409_exact family. Fold-378 conditional gain is not a common currency across model families."
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "candidate": "work/w409c_val.npy",
+    "lambda": 0.003,
+    "base_columns": 25,
+    "oracle_base_score_250k": 1.6651398250946639,
+    "oracle_augmented_score_250k": 1.6649139568586868,
+    "oracle_gain_250k": 0.00022586823597703365,
+    "oracle_degrees_added": 0.6573355719808873,
+    "oracle_candidate_weight": 0.2640491753331425,
+    "repeats": 96,
+    "mean_fitted_public_gain": 0.00022885455774984687,
+    "mean_independent_private_gain": 0.00021737656915206635,
+    "private_gain_se": 1.4259105391937446e-06,
+    "private_gain_positive_fraction": 1.0,
+    "private_gain_min": 0.00017523067567326578,
+    "private_gain_max": 0.00024647686794665447,
+    "mean_degrees_added": 0.6572253404576035,
+    "mean_candidate_weight": 0.2603436935610434,
+    "candidate_weight_negative_fraction": 0.0
+  }
+]

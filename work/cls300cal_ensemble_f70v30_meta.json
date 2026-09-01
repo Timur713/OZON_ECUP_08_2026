@@ -1,0 +1,31 @@
+{
+  "output": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/cls300cal_ensemble_f70v30.npy",
+  "vectors": [
+    "work/calendar_hurdle_full.npy",
+    "work/cls300cal_val_server_best_val_components.npz:hurdle"
+  ],
+  "weights": [
+    0.7,
+    0.3
+  ],
+  "correlations": [
+    [
+      1.0,
+      0.954338
+    ],
+    [
+      0.954338,
+      1.0
+    ]
+  ],
+  "component_means": [
+    2.874385277737707,
+    3.0450804304685293
+  ],
+  "component_stds": [
+    1.519708139962629,
+    1.2872108340701875
+  ],
+  "meta_mean": 9.003997547551989e-17,
+  "meta_std": 0.9903644931827562
+}

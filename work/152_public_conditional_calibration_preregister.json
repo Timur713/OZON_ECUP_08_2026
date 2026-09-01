@@ -1,0 +1,24 @@
+{
+  "tag": "152_public_conditional_calibration",
+  "date": "2026-08-28",
+  "uses_public_scores": "yes, if promoted: the weights of the new columns would be fitted from recovered public moments, exactly like every other base in the 130 pool",
+  "background": "150 and 151 asked whether a conditional correction fitted on one fold transfers to another. That question only matters for a leaderboard-free deployment. It does not have to be answered for the measured branch, because there the correction is fitted at the competition anchor itself through recovered moments. What must hold instead is much weaker: that conditional structure of comparable magnitude EXISTS at the competition anchor. 150 measured that structure at four separate folds and found it every time, at 0.00115, 0.00177, 0.00290 and 0.00388 of in-fold gain.",
+  "hypothesis": "Adding a small number of standardised historical aggregate columns directly to the 25-base ridge buys more than the empirical public-to-private transfer cost of those extra degrees of freedom.",
+  "why_this_is_not_the_old_rejected_idea": "FINDINGS records 'calibration by features: +0.001 for 6 submissions, does not pay off'. That verdict was reached under a 5-per-day submission limit and against the old 0.0000165 per-df cost model. The submission budget is now 20 per day and the cost model is the audited 0.0000395 per df. The arithmetic therefore has to be redone rather than inherited.",
+  "design": {
+    "audit": "the project's own fit-50k-score-200k protocol at fold 378, unchanged, so the public-to-private optimism is paid inside the measurement rather than estimated afterwards",
+    "base_design": "the 25 admitted validation columns plus intercept, exactly as work/evaluate_validation_ridge.py",
+    "candidate_design": "base plus the top-K standardised historical columns",
+    "feature_ranking": "by mean absolute beta over folds 288, 318 and 348 ONLY. Fold 378 labels never touch the ranking, so K is not selected on the fold that scores it",
+    "K_grid": [2, 4, 6, 8, 12, 16, 24, 76],
+    "repeats": 48
+  },
+  "reading_key": {
+    "promote": "the best K on the grid has mean independent private gain >= 0.00040 with a positive gain in >= 90 percent of splits, AND the same K is at or above 0.00020 at every one of the four folds of the 150 surrogate. Then spend probes to measure those K moments at anchor 408",
+    "diagnostic": "best mean gain in [0.00015, 0.00040) -> record, do not spend probes today, revisit only if nothing better exists",
+    "closed": "best mean gain < 0.00015 -> branch closed, no probes"
+  },
+  "probe_cost_if_promoted": "two probes per column, using two different mixing weights, so that E[v^2] on the public 50k is solved for exactly instead of being proxied by the 250k value. K=8 therefore costs 16 of the 20 daily submissions",
+  "expected_sign": "positive; the four in-fold measurements of 150 are all far above the df cost, and the only question is how fast the gain decays as K shrinks",
+  "frozen_before_measurement": true
+}

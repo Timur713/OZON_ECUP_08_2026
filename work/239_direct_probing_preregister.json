@@ -1,0 +1,21 @@
+{
+  "tag": "239_direct_leaderboard_probing",
+  "date_msk": "2026-08-30",
+  "status": "frozen before the batch is built",
+  "what_changes": "Until now every candidate had to clear an OFFLINE gate before a probe was spent. This batch drops that requirement and measures candidates directly on the leaderboard.",
+  "why": [
+    "The offline-to-public transfer ratio is measured at about one sixth, but the variance around it is enormous: cls409 transferred at 1 percent, the position base at 18, this composite at 16, and the decay base at 162, meaning offline UNDERSTATED it by more than half. A filter that noisy rejects good bases as often as it rejects bad ones.",
+    "Every offline source is exhausted. Fourteen axes gave two passes, the composite mechanism gave one pass and is now closed in every form, and the six group composites add +0.0000531 jointly for 2.709 df, which is below their own df cost.",
+    "The submission budget is 20 per day and has never been the binding constraint; at most five have been used on any day."
+  ],
+  "what_it_costs": "Direct leaderboard selection is adaptive selection with no offline evidence behind it. Each admitted base carries the standard 0.00004 charge and, unlike every previous admission, no independent confirmation. This trades private safety for public position, which is the stated priority.",
+  "selection_rule_fixed_before_building": "From the 72 models whose correlation with the current best solution lies in 0.985 to 0.997, the safe band for moment recovery established in 155-159, take the eight with the best calibrated fold-378 score subject to spreading across families, so the batch is not eight draws of one recipe.",
+  "reading_key": {
+    "per_probe": "a base is admitted if its marginal public gain exceeds its own df cost at 0.0000395 per degree, that is the positive-net gate. The strict and adaptive gates are NOT applied here, and that relaxation is the whole point of this batch and is recorded as such.",
+    "assembly": "all admitted bases enter the all-pool solution at lambda 0.0003, the configuration that produced 240",
+    "stop": "if the first four probes yield less than 0.00005 of combined marginal gain, the batch is abandoned and the remaining probes are not spent"
+  },
+  "honest_expectation": "Each recently admitted base has been worth about 0.0001 of public. Eight probes with perhaps a quarter of them landing would be worth 0.0002 against a gap of 0.00046. This is a real attempt at the gap and not a plan that certainly closes it.",
+  "what_stays_untouched": "171, 183, 200, 204 and 240 are frozen. Nothing in this batch overwrites a measured file.",
+  "frozen_before_measurement": true
+}

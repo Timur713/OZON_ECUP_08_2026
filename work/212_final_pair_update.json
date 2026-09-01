@@ -1,0 +1,66 @@
+{
+  "tag": "212_final_pair_update",
+  "date_msk": "2026-08-29",
+  "status": "RECOMMENDATION. 171 and 183 remain selected and untouched until their replacement is measured.",
+  "lambda_sweep_on_the_admitted_pool": {
+    "0.0005": 1.6468361127,
+    "0.001": 1.646794101,
+    "0.002": 1.6467520223,
+    "0.003": 1.6467344844,
+    "0.004": 1.6467290916,
+    "0.005": 1.6467306602,
+    "0.006": 1.6467364907,
+    "note": "private optimum at 0.004, worth 5.4e-06 against the 0.003 in use, which also has better public. 0.003 stays, as in every previous round."
+  },
+  "adaptive_charge_basis": "0.00004 for each of 146 and 131, admitted against a frozen rejection, and 0.00004 for each of 191 and 178, selected out of a sweep of about thirty candidates",
+  "table": {
+    "171": {
+      "public": 1.6460211139,
+      "source": "measured",
+      "df": 22.102124,
+      "adaptive_bases": 2,
+      "adjusted_private": 1.6469741477980002
+    },
+    "183": {
+      "public": 1.6457843,
+      "source": "measured",
+      "df": 41.998,
+      "adaptive_bases": 2,
+      "adjusted_private": 1.6475232210000001
+    },
+    "200": {
+      "public": 1.6457998906,
+      "source": "expected",
+      "df": 23.660604,
+      "adaptive_bases": 4,
+      "adjusted_private": 1.646894484458
+    },
+    "204": {
+      "public": 1.6455144876,
+      "source": "expected",
+      "df": 40.34928,
+      "adaptive_bases": 4,
+      "adjusted_private": 1.64726828416
+    },
+    "205": {
+      "public": 1.6456307222,
+      "source": "expected",
+      "df": 32.274433,
+      "adaptive_bases": 4,
+      "adjusted_private": 1.6470655623035
+    },
+    "208": {
+      "public": 1.6464627791,
+      "source": "expected",
+      "df": 14.73,
+      "adaptive_bases": 4,
+      "adjusted_private": 1.6472046140999999
+    }
+  },
+  "recommended_pair_once_200_is_measured": [
+    "200_shape_anchor_l003.csv",
+    "171_upside_position_sw28_l003.csv"
+  ],
+  "why": "200 is the best adjusted private of everything built and its public matches 183 to 1.6e-05 at half the degrees of freedom. 171 is the right second slot because it contains neither 191 nor 178, so it hedges exactly the selection risk 200 carries.",
+  "why_not_204_as_a_final": "204 is 0.00029 better on public and 0.00033 worse on adjusted private. It is the file to send for leaderboard position, not the file to defend on the hidden 80 percent."
+}

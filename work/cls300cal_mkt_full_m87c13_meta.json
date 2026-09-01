@@ -1,0 +1,32 @@
+{
+  "output": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/cls300cal_mkt_full_m87c13.npy",
+  "vectors": [
+    "work/cls300mkt_full_server_components.npz:hurdle",
+    "work/calendar_hurdle_full.npy"
+  ],
+  "weights": [
+    0.87,
+    0.13
+  ],
+  "raw_blend": false,
+  "correlations": [
+    [
+      1.0,
+      0.97309
+    ],
+    [
+      0.97309,
+      1.0
+    ]
+  ],
+  "component_means": [
+    3.181532522027075,
+    2.874385277737707
+  ],
+  "component_stds": [
+    1.448489803964513,
+    1.519708139962629
+  ],
+  "meta_mean": 9.413270163349807e-17,
+  "meta_std": 0.9969518890416782
+}

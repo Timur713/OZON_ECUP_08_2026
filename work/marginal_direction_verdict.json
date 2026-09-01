@@ -1,0 +1,15 @@
+{
+  "probe": "144_probe_marginal_buyer",
+  "public": 1.8535516233521285,
+  "decided_msk": "2026-08-26T18:35:00+03:00",
+  "preregistration": "work/144_marginal_direction_preregister.json",
+  "recovered_cross_moment_c": 0.000279,
+  "thresholds": {"break_even_one_df": 0.01140, "best_ever_base": 0.02566, "meaningful": 0.04057, "closes_gap_to_top3": 0.05593},
+  "implied_rmsle_gain": 2e-08,
+  "df_cost": 3.95e-05,
+  "net": -3.948e-05,
+  "verdict": "REJECTED, and not marginally: c is 40x below break-even. The competition-season shift is NOT heterogeneous along the buyer margin in any way our ensemble misses. The ensemble is already well calibrated along this direction.",
+  "what_it_rules_out": "The hypothesis that our 29 bases share a common seasonal blind spot with a p*(1-p) signature. Since the season is known to act through P(y>0) rather than basket size, the buyer margin was the single most mechanically-motivated shape for such a blind spot. Its absence is strong evidence that no simple reweighting of the existing prediction along a shift-shaped direction is available.",
+  "consistency_with_earlier_direction_probes": "Earlier direction probes were all below the 0.0114 break-even. This probe is an order of magnitude smaller still.",
+  "no_follow_up_directions": "The preregistered key required |c| >= 0.0114 to justify extending to a set of shift-shaped directions. It failed by 40x, so the axis is closed with no further probes."
+}

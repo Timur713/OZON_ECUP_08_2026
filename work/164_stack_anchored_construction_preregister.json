@@ -1,0 +1,27 @@
+{
+  "tag": "164_stack_anchored_candidates",
+  "date_msk": "2026-08-28",
+  "status": "frozen before measurement",
+  "h4_verdict": "REJECTED. Under the full deployment simulation of 163 it gives +0.0001018, which clears the 0.00008 magnitude threshold, but its ridge weight is sign-stable in only 89 of 96 splits against a required 90. The threshold is not relaxed, exactly as it was not relaxed for 118, 131 and 146.",
+  "what_the_failure_revealed": "H4 was built as a STANDALONE weak model, so it correlates 0.7035 with the stack. 155-159 showed that is precisely the region where the moment recovery stops cancelling. The weakness is in how the candidate is PACKAGED, not in the mechanism it carries.",
+  "construction": "Every candidate is rebuilt as stack + delta, where stack is the pool's own fitted prediction and delta is the candidate's information expressed as a deviation, scaled so that the column correlates about 0.96 with the stack. The span the ridge can reach is unchanged, because the stack is already inside it and the ridge can subtract it, but the probed vector now sits in the correlation region where E_all[p^2] - sum_j w_j E_all[v_j^2] cancels and the recovered moment is clean.",
+  "why_this_is_not_threshold_shopping": "The thresholds are untouched: 0.00008 on the gain and 90 of 96 on sign stability, under the same full deployment simulation. What changes is the candidate itself, and it changes for a reason that was measured hours before H4 was built. A rebuilt candidate is a new measurement, and it carries the standard 0.00004 adaptive-selection charge on top because the rebuild follows an observed near-miss.",
+  "effective_gate_for_this_round": {
+    "gain_under_full_deployment_simulation": 0.00012,
+    "note": "0.00008 standing threshold plus 0.00004 adaptive-selection charge for rebuilding after a near-miss",
+    "sign_stability": "90 of 96"
+  },
+  "delta_scale": "chosen before measuring so that correlation with the stack lands near 0.96; the scale is not tuned against the gain",
+  "frozen_before_measurement": true,
+  "result": {
+    "h4_anchored": {
+      "full_deployment_gain": -0.0003838,
+      "standard_error": 8.1e-05,
+      "sign_stability": "66 of 96",
+      "correlation_with_stack": 0.9578,
+      "verdict": "REJECTED, and worse than the unanchored version"
+    },
+    "what_it_teaches": "There is no free lunch in the packaging. The recovery error on a probed column is roughly fixed in absolute size, because it comes from the sampling of E[v^2]; the SIGNAL is the column's unique component. Pulling the column towards the stack to make the recovery cancel also shrinks the unique component, and it shrinks faster than the noise does. Far from the span the unique part is large but the recovery is dirty; near the span the recovery is clean but there is nothing left to recover. H4 carries about +0.0001 of real conditional gain that the moment apparatus cannot deliver at either end of that trade.",
+    "consequence_for_the_round": "Candidates must be genuine model predictions of the target, which land at correlation 0.99 with the stack while still carrying an independent component, rather than weak standalone constructs pushed to either end of the correlation range. That is what H1, H2, H3 and H6 are."
+  }
+}

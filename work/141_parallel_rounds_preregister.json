@@ -1,0 +1,32 @@
+{
+  "preregistered_msk": "2026-08-26T14:45:00+03:00",
+  "uses_public_scores": false,
+  "round_A_gpu_exact_seed_average": {
+    "what": "EXP409AVG = average of 9 seeds of the exact PLAIN w409 backbone (93, 2718, 3141, 4242, 5150, 6060, 7070, 8080, 9090)",
+    "why": "Every AVG_ base we own is built from the OLD architecture. On the same fold the exact backbone is much stronger per model: exw409_s93 = 1.667960 against tcn409 = 1.674067. We have never built a multi-seed average of the strong architecture, only single seeds of it (102_probe_w409c, 127 decay).",
+    "reading_key": {
+      "single_seed_reference": 1.667959883,
+      "interesting_if_standalone_fold378_better_than_single_by": 0.0008,
+      "admission_gate": "incremental gain beyond the admitted pool {w409c, decay_s93} >= 0.00008, positive_fraction >= 0.90, negative weight fraction <= 0.10",
+      "caveat_recorded_in_advance": "The measured between-seed correlation in the OLD family was 0.9968, leaving only +0.00038 correlation from 3 seeds to infinity. If the exact family behaves the same, this round is expected to FAIL its admission gate. It is run because the exact family is a stronger and never-averaged architecture, not because averaging itself is expected to be worth much."
+    }
+  },
+  "round_B_cpu_gbdt_factorial": {
+    "what": "Decompose the scaled GBDT into single-factor cells against the measured control",
+    "control_fold378": 1.672805394,
+    "control_recipe": "14 anchors stride 12, learning_rate 0.05, 250 rounds, 127 leaves, 2 seeds",
+    "cells": {
+      "gbdtG3_leaves": "leaves 127 -> 255, everything else at control",
+      "gbdtG2_lr": "learning_rate 0.05 -> 0.02 with 1500 rounds, everything else at control",
+      "gbdtG1_density": "anchors 14 -> 41 (stride 4), everything else at control",
+      "gbdtscale": "all four factors together, already running"
+    },
+    "why": "The scaled run changes four factors at once. That is the same confound that invalidated the morning TCN density test, and it would leave a win unattributable and a loss uninformative. The decomposition is queued behind the scaled run so it never competes for cores.",
+    "reading_key": {
+      "interesting_if_cell_beats_control_by": 0.0020,
+      "axis_closed_if_best_cell_beats_control_by_less_than": 0.0005,
+      "admission_still_requires": "anchor-408 prediction, incremental >= 0.00008 beyond the admitted pool, then a public gate built with --expect-baseline 1.6461788499434364"
+    }
+  },
+  "no_submission_without_explicit_user_decision": true
+}

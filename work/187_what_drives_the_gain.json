@@ -1,0 +1,91 @@
+{
+  "tag": "187_what_drives_the_gain",
+  "date_msk": "2026-08-29",
+  "observation": "Across every model this round produced, the conditional gain tracks DECORRELATION from the stack far better than it tracks standalone quality, but decorrelation alone is not sufficient.",
+  "evidence": [
+    {
+      "model": "divB_st24a  stride 24 phase 0",
+      "one_minus_correlation": 0.0052,
+      "conditional_gain": 0.0001236,
+      "standalone": 1.71871
+    },
+    {
+      "model": "divB_st36a  stride 36 phase 0",
+      "one_minus_correlation": 0.0063,
+      "conditional_gain": 8.08e-05,
+      "standalone": 1.78145
+    },
+    {
+      "model": "divH_st48a  stride 48 phase 0",
+      "one_minus_correlation": 0.0033,
+      "conditional_gain": 3.42e-05,
+      "standalone": 1.70792
+    },
+    {
+      "model": "divC_u33a   33% of users",
+      "one_minus_correlation": 0.0075,
+      "conditional_gain": 2.96e-05,
+      "standalone": 1.70424
+    },
+    {
+      "model": "divE_s43    extended + valid",
+      "one_minus_correlation": 0.003,
+      "conditional_gain": 1.02e-05,
+      "standalone": 1.6815
+    },
+    {
+      "model": "divB_st24b  stride 24 phase 12",
+      "one_minus_correlation": 0.0032,
+      "conditional_gain": -7.2e-06,
+      "standalone": 1.71748
+    },
+    {
+      "model": "divB_st36b  stride 36 phase 12",
+      "one_minus_correlation": 0.003,
+      "conditional_gain": -8.5e-06,
+      "standalone": 1.70861
+    },
+    {
+      "model": "divB_st36c  stride 36 phase 24",
+      "one_minus_correlation": 0.0032,
+      "conditional_gain": -1.47e-05,
+      "standalone": 1.70111
+    },
+    {
+      "model": "divC_u50a   50% of users",
+      "one_minus_correlation": 0.0025,
+      "conditional_gain": -2.4e-06,
+      "standalone": 1.67152
+    }
+  ],
+  "reading": "The three models with a positive gain above 0.00003 sit at 1-corr of 0.0052, 0.0063 and 0.0033, while every model at 0.0030 to 0.0032 is at or below zero. That is the ridge paying for the orthogonal component, exactly as FINDINGS 2.8 describes. But the relation is not monotone: divC_u33a is the second most decorrelated model in the set at 0.0075 and returns only 0.0000296, and divB_st36a is more decorrelated than divB_st24a yet gains less. Decorrelation is necessary and not sufficient; the orthogonal component also has to carry signal rather than noise, and user bagging produces orthogonal NOISE.",
+  "why_it_matters_for_the_probe": "It gives divB_st24a a mechanism it did not have an hour ago. Its advantage over its own complementary phase is not an unexplained phase preference: at stride 24 phase 0 the model lands at correlation 0.9948 with the stack while phase 12 lands at 0.9968, and the gain follows the correlation. That is still a property of one draw rather than a designed mechanism, so the caveat in the handover stands, but the result is less arbitrary than it looked.",
+  "why_sparser_is_not_better": "Stride 48 produces a model that is MORE correlated with the stack (0.9967) than stride 24 (0.9948), not less. Removing more anchors past a point makes the model regress toward a generic average rather than toward a distinctive view, so the axis peaks at stride 24 and declines.",
+  "confirmation_from_the_shape_model": {
+    "divK_shape": {
+      "standalone": 1.80183,
+      "correlation_with_stack": 0.9926,
+      "one_minus_correlation": 0.0074,
+      "conditional_gain": -2.16e-05,
+      "verdict": "REJECTED"
+    },
+    "why_it_is_a_clean_test": "The shape model was queued BECAUSE the 187 analysis predicted that removing level would decorrelate it. The prediction held exactly: at 1-corr 0.0074 it is among the most decorrelated models of the night, tied with the 33-percent user bag. And like that bag it returns nothing. Two independent constructions now sit at the top of the decorrelation ranking and at the bottom of the gain ranking, which settles the 'necessary but not sufficient' reading rather than leaving it as one anecdote.",
+    "what_it_rules_out": "Manufacturing decorrelation on purpose does not work. The orthogonal component has to arise from a genuinely different VIEW OF THE SIGNAL, not from discarding part of the input. Removing level and removing users are both subtractions, and both produce orthogonal noise."
+  },
+  "CORRECTION": {
+    "what_i_got_wrong": "I closed the shape axis on the 2-epoch run, which scored -0.0000216, and wrote that decorrelation obtained by subtracting part of the input yields orthogonal noise. The 4-epoch run of the SAME model scores +0.0003185, the largest single-base gain of the round, and is the strongest model of the night standalone at a calibrated 1.667826 against the matched control's 1.667960.",
+    "why_the_2_epoch_run_misled": "Removing level does not discard information the way removing users does; it makes the SAME information harder to use, because the network has to rebuild level from shape. That needs a longer schedule. At 2 epochs the model was simply undertrained, at a calibrated 1.675942.",
+    "the_lesson_is_the_project_s_own": "FINDINGS already records it from the decay result: a structural change has to be tested on a strong matched backbone, because a weak control can hide a real effect entirely. I applied that lesson to H5 earlier tonight and then failed to apply it to the shape model.",
+    "what_survives_of_the_original_reading": "User bagging remains orthogonal noise: at 33 percent of users it is as decorrelated as the shape model and returns +0.0000296 at 2 epochs. The corrected claim is narrower: decorrelation is necessary and not sufficient, and a decorrelated representation may need more training than the pool's standard schedule before its orthogonal component carries signal. Whether user bagging would also pay at 4 epochs is now an open question rather than a closed one, and divM_plain_e4 and divM_plain_e6 are queued as the control that separates 'shape helps' from 'four epochs helps'."
+  },
+  "joint_of_the_two_passers": {
+    "divK_shape_e4_alone": 0.0003185,
+    "divB_st24a_alone": 0.0001236,
+    "joint": 0.0004043,
+    "sum_of_singles": 0.000442,
+    "overlap": "9 percent, so they are nearly additive",
+    "shape_e4_beyond_st24a": 0.0002807,
+    "st24a_beyond_shape_e4": 8.58e-05,
+    "conclusion": "both probes are worth spending; st24a still nets +0.0000569 after its 0.731 df"
+  }
+}

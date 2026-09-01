@@ -1,0 +1,40 @@
+{
+  "tag": "smoke_w409_exact_event",
+  "seed": 93,
+  "architecture": "exact_w409c_plus_event",
+  "only_change_from_w409c": "event",
+  "channels": [
+    "gmv",
+    "to_ord",
+    "to_cart",
+    "searches",
+    "active",
+    "search",
+    "cat"
+  ],
+  "window": 409,
+  "width": 96,
+  "anchors": [
+    186,
+    198,
+    210,
+    222,
+    234,
+    246,
+    258,
+    270,
+    282,
+    294,
+    306,
+    318,
+    330,
+    342
+  ],
+  "stride": 12,
+  "user_fraction": 1.0,
+  "head": "direct",
+  "decays": [],
+  "epochs": 1,
+  "parameters": 265857,
+  "private_selection": "fixed 50k calibration / independent 200k scoring"
+}

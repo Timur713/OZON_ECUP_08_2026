@@ -1,0 +1,176 @@
+{
+  "tag": "153_conditional_block",
+  "date_msk": "2026-08-28",
+  "status": "frozen before any submission of this round",
+  "what_is_being_admitted": "a BLOCK of standardised historical aggregate columns added directly to the ridge design of 130, with their weights fitted from public moments at anchor 408 exactly like every other base in the pool",
+  "columns": "the top 24 of the 76 shared historical columns, ordered by mean absolute beta over folds 288, 318 and 348 only. Fold 378, which scores the audit, never touches the ordering. Each column is passed through the exact build_gpu_probe transform, so the audited vector and the probed vector are the same object",
+  "why_this_is_admissible_at_all": [
+    "150 and 151 asked whether an offline-fitted conditional direction transfers across folds and the frozen key closed that branch at -1.7e-05 on the newest fold. 153 does not need transfer: the weights are fitted at the competition anchor itself, so the only requirement is that conditional structure EXISTS at anchor 408",
+    "existence was measured at four separate folds with the project's own fit-50k / score-200k protocol, so the public-to-private optimism of the extra degrees of freedom is paid inside the measurement rather than estimated afterwards",
+    "the organiser confirmed on 25.08.2026 that calibrating on public by any means is permitted; individual labels are never recovered and submission stays manual"
+  ],
+  "offline_measurements_frozen_now": {
+    "protocol": "fold 378, 25 admitted validation columns as base, 48 independent 50k/200k user splits, lambda 0.003, columns passed through the exact build_gpu_probe transform",
+    "private_gain_by_k": {
+      "6": 0.00030929420694379245,
+      "10": 0.00037238454695139495,
+      "12": 0.00033065830390526424,
+      "16": 0.00046325248247946577,
+      "20": 0.0004721114277084724,
+      "24": 0.0004988304449340305,
+      "30": 0.0005545866816503986,
+      "40": 0.0005010907715733565,
+      "60": 0.0004602198860861051
+    },
+    "public_gain_by_k": {
+      "6": 0.0004560537818453457,
+      "10": 0.000657323469950071,
+      "12": 0.0007063915791773271,
+      "16": 0.0009181945430528823,
+      "20": 0.0010658501191440999,
+      "24": 0.0012018140685984512,
+      "30": 0.0014165806747839932,
+      "40": 0.0016522995025880134,
+      "60": 0.002148201071605007
+    },
+    "added_df_by_k": {
+      "6": 5.620122697184587,
+      "10": 9.369917519488764,
+      "12": 11.273690389922088,
+      "16": 14.938653782628677,
+      "20": 18.637442086447777,
+      "24": 22.209404578478427,
+      "30": 27.580932504436788,
+      "40": 36.632537500206794,
+      "60": 55.196023081591505
+    },
+    "standard_error_by_k": {
+      "6": 1.0151450363547026e-05,
+      "10": 1.2923966060093842e-05,
+      "12": 1.4526915474648567e-05,
+      "16": 1.5093518085005456e-05,
+      "20": 1.556956779609535e-05,
+      "24": 1.681463949416857e-05,
+      "30": 1.6628487548643473e-05,
+      "40": 1.9423739703888857e-05,
+      "60": 2.6564897220237547e-05
+    },
+    "positive_split_fraction": "48 of 48 at every K",
+    "worst_of_four_folds_surrogate_duplicated_set": {
+      "6": 0.0002019,
+      "12": 0.0004894,
+      "24": 0.0004284,
+      "76": 0.0002548
+    },
+    "implied_transfer_price_per_df": 3.06e-05
+  },
+  "falsifiable_prediction_recorded_before_submission": {
+    "expected_public_gain_over_130": {
+      "6": 0.0004560537818453457,
+      "10": 0.000657323469950071,
+      "12": 0.0007063915791773271,
+      "16": 0.0009181945430528823,
+      "20": 0.0010658501191440999,
+      "24": 0.0012018140685984512,
+      "30": 0.0014165806747839932,
+      "40": 0.0016522995025880134,
+      "60": 0.002148201071605007
+    },
+    "expected_public_score": {
+      "6": 1.6457228,
+      "10": 1.6455215,
+      "12": 1.6454725,
+      "16": 1.6452607,
+      "20": 1.645113,
+      "24": 1.644977,
+      "30": 1.6447623,
+      "40": 1.6445266,
+      "60": 1.6440306
+    },
+    "baseline_expected_public_of_130": 1.6461788499434364,
+    "note": "point predictions from the fold-378 audit, not gates. The audit scores a different 30-day window, so a shortfall is informative rather than disqualifying; the gate decides admission."
+  },
+  "admission_gate": {
+    "form": "private_gain_estimate = fitted_public_gain_of_the_block - added_df * 0.0000395",
+    "requirement": "private_gain_estimate >= 0.00016, which is the standing 0.00008 magnitude threshold plus a 0.00008 adaptive-selection charge at the doubled rate the project uses for rounds that follow an observed result",
+    "equivalent_public_thresholds": {
+      "6": 0.00038199,
+      "10": 0.00053011,
+      "12": 0.00060531,
+      "16": 0.00075008,
+      "20": 0.00089618,
+      "24": 0.00103727,
+      "30": 0.00124945,
+      "40": 0.00160699,
+      "60": 0.00234024
+    },
+    "if_it_fails": "the block is not admitted, 130 and 147 stay as the two finals, no re-parameterisation, no subset search over the 24 columns, no lambda change",
+    "no_subset_search": "the block is admitted or rejected whole at the K actually measured. Choosing the best-scoring subset after seeing the public answers is exactly the winner's-curse move that 2.2 of FINDINGS already rejected"
+  },
+  "probe_protocol": {
+    "base_submission": "130_private_safe_exact_decay_l003.csv at 1.6461706600883055",
+    "weight": 0.3,
+    "count": 30,
+    "order": "by the frozen ranking, so any prefix that fits the daily limit is a usable block",
+    "each_probe": "measures E[z * column] for exactly one column; probes are independent and a partial batch still yields a valid smaller block",
+    "marking": "every file handed over is marked ZOND",
+    "manifest": "work/153_probe_manifest.json",
+    "extension_note": "Extended from 24 to 30 before any submission, because the fold-378 audit puts the private optimum at K=30 (+0.0005546). Ranks 1..24 are unchanged, so the prefix rule is preserved and an earlier partial batch stays valid."
+  },
+  "risk_accepted": "this raises effective df from 20.53 to roughly 29 at K=12 or 39 at K=24. That is a deliberate move away from the low-df posture of 130 and it is justified only by the fact that the private gain was measured with the df cost paid, at four folds, with 48 of 48 splits positive. If the block is admitted it becomes a THIRD candidate; the decision about whether it replaces a final slot is the user's, not this round's.",
+  "amendment_before_any_submission": {
+    "when": "2026-08-28, after the probe files were built and before a single one was sent",
+    "defect": "16 of the 76 historical columns were exact duplicates of another column. A day has positive GMV exactly when it has an order, so gmv_d{w} and to_ord_d{w} are the same vector; the active channel is already binary, so active_s{w} equals active_d{w}; and the GMV and order recencies coincide for the same reason. Four of the first 24 ranked columns were duplicates, which would have spent four probes on moments the block already owned.",
+    "fix": "columns deduplicated at correlation 0.99995, leaving 60 unique. Ranking, audit and probe files rebuilt on the unique set. No public submission had been made, so nothing is being re-read after an answer.",
+    "duplicate_groups": {
+      "gmv_d7": [
+        "to_ord_d7"
+      ],
+      "gmv_d14": [
+        "to_ord_d14"
+      ],
+      "gmv_d30": [
+        "to_ord_d30"
+      ],
+      "gmv_d60": [
+        "to_ord_d60"
+      ],
+      "gmv_d90": [
+        "to_ord_d90"
+      ],
+      "gmv_d180": [
+        "to_ord_d180"
+      ],
+      "gmv_d365": [
+        "to_ord_d365"
+      ],
+      "gmv_recency": [
+        "to_ord_recency"
+      ],
+      "gmv_age": [
+        "to_ord_age"
+      ],
+      "active_s7": [
+        "active_d7"
+      ],
+      "active_s14": [
+        "active_d14"
+      ],
+      "active_s30": [
+        "active_d30"
+      ],
+      "active_s60": [
+        "active_d60"
+      ],
+      "active_s90": [
+        "active_d90"
+      ],
+      "active_s180": [
+        "active_d180"
+      ],
+      "active_s365": [
+        "active_d365"
+      ]
+    }
+  }
+}

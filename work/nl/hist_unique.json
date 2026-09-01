@@ -1,0 +1,178 @@
+{
+  "original_columns": 76,
+  "unique_columns": 60,
+  "kept_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    74,
+    75
+  ],
+  "kept_names": [
+    "gmv_s7",
+    "gmv_s14",
+    "gmv_s30",
+    "gmv_s60",
+    "gmv_s90",
+    "gmv_s180",
+    "gmv_s365",
+    "gmv_d7",
+    "gmv_d14",
+    "gmv_d30",
+    "gmv_d60",
+    "gmv_d90",
+    "gmv_d180",
+    "gmv_d365",
+    "gmv_recency",
+    "gmv_age",
+    "to_ord_s7",
+    "to_ord_s14",
+    "to_ord_s30",
+    "to_ord_s60",
+    "to_ord_s90",
+    "to_ord_s180",
+    "to_ord_s365",
+    "searches_s7",
+    "searches_s14",
+    "searches_s30",
+    "searches_s60",
+    "searches_s90",
+    "searches_s180",
+    "searches_s365",
+    "searches_d7",
+    "searches_d14",
+    "searches_d30",
+    "searches_d60",
+    "searches_d90",
+    "searches_d180",
+    "searches_d365",
+    "to_cart_s7",
+    "to_cart_s14",
+    "to_cart_s30",
+    "to_cart_s60",
+    "to_cart_s90",
+    "to_cart_s180",
+    "to_cart_s365",
+    "to_cart_d7",
+    "to_cart_d14",
+    "to_cart_d30",
+    "to_cart_d60",
+    "to_cart_d90",
+    "to_cart_d180",
+    "to_cart_d365",
+    "active_s7",
+    "active_s14",
+    "active_s30",
+    "active_s60",
+    "active_s90",
+    "active_s180",
+    "active_s365",
+    "active_recency",
+    "active_age"
+  ],
+  "duplicate_groups": {
+    "gmv_d7": [
+      "to_ord_d7"
+    ],
+    "gmv_d14": [
+      "to_ord_d14"
+    ],
+    "gmv_d30": [
+      "to_ord_d30"
+    ],
+    "gmv_d60": [
+      "to_ord_d60"
+    ],
+    "gmv_d90": [
+      "to_ord_d90"
+    ],
+    "gmv_d180": [
+      "to_ord_d180"
+    ],
+    "gmv_d365": [
+      "to_ord_d365"
+    ],
+    "gmv_recency": [
+      "to_ord_recency"
+    ],
+    "gmv_age": [
+      "to_ord_age"
+    ],
+    "active_s7": [
+      "active_d7"
+    ],
+    "active_s14": [
+      "active_d14"
+    ],
+    "active_s30": [
+      "active_d30"
+    ],
+    "active_s60": [
+      "active_d60"
+    ],
+    "active_s90": [
+      "active_d90"
+    ],
+    "active_s180": [
+      "active_d180"
+    ],
+    "active_s365": [
+      "active_d365"
+    ]
+  }
+}

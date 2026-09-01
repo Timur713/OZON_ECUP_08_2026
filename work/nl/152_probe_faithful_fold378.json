@@ -1,0 +1,88 @@
+{
+  "tag": "152_probe_faithful",
+  "note": "columns passed through the exact build_gpu_probe transform",
+  "base_mean_public": 1.6653016918763115,
+  "base_mean_private": 1.6653996138086438,
+  "column_order": [
+    "to_ord_d365",
+    "gmv_d365",
+    "active_recency",
+    "to_ord_d180",
+    "gmv_d180",
+    "gmv_s365",
+    "active_s180",
+    "active_d180",
+    "to_cart_d180",
+    "searches_d90",
+    "searches_d180",
+    "to_cart_d90",
+    "searches_s180",
+    "to_cart_s90",
+    "searches_d60",
+    "to_cart_d60",
+    "to_ord_s180",
+    "searches_s365",
+    "to_cart_d365",
+    "to_cart_s365",
+    "gmv_recency",
+    "to_ord_recency",
+    "searches_d365",
+    "gmv_s60"
+  ],
+  "clipped_fraction": {
+    "to_ord_d365": 0.0,
+    "gmv_d365": 0.0,
+    "active_recency": 0.0,
+    "to_ord_d180": 0.0,
+    "gmv_d180": 0.0,
+    "gmv_s365": 0.141384,
+    "active_s180": 0.0,
+    "active_d180": 0.0,
+    "to_cart_d180": 0.0,
+    "searches_d90": 0.0,
+    "searches_d180": 0.0,
+    "to_cart_d90": 0.0,
+    "searches_s180": 0.0,
+    "to_cart_s90": 0.0,
+    "searches_d60": 0.0,
+    "to_cart_d60": 0.0,
+    "to_ord_s180": 0.0,
+    "searches_s365": 0.0,
+    "to_cart_d365": 0.0,
+    "to_cart_s365": 0.0,
+    "gmv_recency": 0.0,
+    "to_ord_recency": 0.0,
+    "searches_d365": 0.0,
+    "gmv_s60": 0.0
+  },
+  "by_k": {
+    "6": {
+      "mean_private_gain": 0.0003136959601439532,
+      "standard_error": 9.612740399659597e-06,
+      "positive_fraction": 1.0,
+      "mean_public_gain": 0.0003824756997206358,
+      "added_df": 3.7593251547324513
+    },
+    "12": {
+      "mean_private_gain": 0.00038321479203432446,
+      "standard_error": 1.2968470022223265e-05,
+      "positive_fraction": 1.0,
+      "mean_public_gain": 0.0006479196031989829,
+      "added_df": 8.433304555269366
+    },
+    "18": {
+      "mean_private_gain": 0.0003413274833664742,
+      "standard_error": 1.5267993939083485e-05,
+      "positive_fraction": 1.0,
+      "mean_public_gain": 0.0007946568412626245,
+      "added_df": 14.102084841232431
+    },
+    "24": {
+      "mean_private_gain": 0.0004711364813382024,
+      "standard_error": 1.5587122140372274e-05,
+      "positive_fraction": 1.0,
+      "mean_public_gain": 0.001066062333242838,
+      "added_df": 18.69143838860865
+    }
+  }
+}

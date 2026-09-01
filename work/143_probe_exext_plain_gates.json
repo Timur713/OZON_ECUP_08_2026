@@ -1,0 +1,43 @@
+{
+  "probe_tag": "143_probe_exext_plain",
+  "extra_scores": {
+    "83_probe_cls300": "1.6488394251718939",
+    "86_probe_cls300_probability": "1.6558577069",
+    "85_probe_w210a": "1.6482434279349687",
+    "89_probe_w300a": "1.6472946857056134",
+    "92_probe_cls409_r26": "1.647041762499095",
+    "102_probe_w409c": "1.646720938726788",
+    "127_probe_w409_exact_decay_s93": "1.6464824096735666"
+  },
+  "lambda": 0.003,
+  "marginal_baseline_expected_public": 1.6461788499434364,
+  "marginal_degrees_added": 0.4143241116385319,
+  "empirical_penalty_per_degree": 3.95e-05,
+  "positive_empirical_cost": 1.6365802409722007e-05,
+  "strict_double_empirical_cost": 3.2731604819444015e-05,
+  "adaptive_selection_cost": 4e-05,
+  "strict_with_adaptive_cost": 7.273160481944402e-05,
+  "positive_empirical_net_gate": 1.646724125017,
+  "strict_gate": 1.646691841004,
+  "strict_with_adaptive_gate": 1.646636261924,
+  "positive_weight_neutral_score": 1.646845483497,
+  "positive_gate_state": {
+    "score": 1.646724125017,
+    "expected_public": 1.646162484140928,
+    "marginal_public_gain": 1.6365802508522265e-05,
+    "primary_weight": 0.11117124769393656
+  },
+  "strict_gate_state": {
+    "score": 1.646691841004,
+    "expected_public": 1.6461461183387742,
+    "marginal_public_gain": 3.273160466221725e-05,
+    "primary_weight": 0.14074385422823865
+  },
+  "strict_with_adaptive_gate_state": {
+    "score": 1.646636261924,
+    "expected_public": 1.6461061183389925,
+    "marginal_public_gain": 7.273160444398741e-05,
+    "primary_weight": 0.191653709060597
+  },
+  "adaptive_selection_bias_included": true
+}

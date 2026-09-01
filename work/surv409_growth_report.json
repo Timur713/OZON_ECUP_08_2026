@@ -1,0 +1,16 @@
+{
+  "tag": "surv409_growth",
+  "uses_public_scores": false,
+  "selection_fold": 342,
+  "untouched_holdout_fold": 378,
+  "selected_epoch": 1,
+  "selected_hurdle_weight": 0.25,
+  "selection_private_score": 1.7553653247154324,
+  "holdout_private_score": 1.688152887797379,
+  "holdout_slope": 1.5887760805720887,
+  "holdout_intercept": -3.2304544528479227,
+  "monotonic_probability_violations": 0,
+  "validation_file": "/home/ubuntu/ecup/work/surv409_growth_val.npy",
+  "w409c_same_split_score": 1.6679244053251892,
+  "gain_vs_w409c": -0.02022848247218989
+}

@@ -1,0 +1,45 @@
+{
+  "tag": "158_transfer_price_under_the_real_solve",
+  "by_lambda": {
+    "0.001": {
+      "degrees_of_freedom": 23.436146595801773,
+      "matched_price_per_df": 9.543795935550077e-06,
+      "real_solve_price_per_df": 9.280240616256372e-06,
+      "ratio": 0.9723846443204033,
+      "matched_total_gap": 0.00022366980062596872,
+      "real_solve_total_gap": 0.00021749307952689811
+    },
+    "0.003": {
+      "degrees_of_freedom": 20.280968895878726,
+      "matched_price_per_df": 4.8282669745477074e-06,
+      "real_solve_price_per_df": 4.767867888404775e-06,
+      "ratio": 0.9874905247656505,
+      "matched_total_gap": 9.792193233180053e-05,
+      "real_solve_total_gap": 9.669698034439622e-05
+    },
+    "0.01": {
+      "degrees_of_freedom": 15.288563834809787,
+      "matched_price_per_df": -7.10247677800213e-06,
+      "real_solve_price_per_df": -6.7676329556507945e-06,
+      "ratio": 0.9528553442950468,
+      "matched_total_gap": -0.0001085866696057397,
+      "real_solve_total_gap": -0.00010346738845302961
+    },
+    "0.03": {
+      "degrees_of_freedom": 10.697277630735243,
+      "matched_price_per_df": -2.8392407550728258e-05,
+      "real_solve_price_per_df": -2.7452520049367296e-05,
+      "ratio": 0.966896519793833,
+      "matched_total_gap": -0.0003037214661751238,
+      "real_solve_total_gap": -0.00029366722863140754
+    },
+    "0.1": {
+      "degrees_of_freedom": 6.8748610779978145,
+      "matched_price_per_df": -6.693179376432834e-05,
+      "real_solve_price_per_df": -6.522990026703149e-05,
+      "ratio": 0.9745727194569245,
+      "matched_total_gap": -0.0004601467838309577,
+      "real_solve_total_gap": -0.000448446502467494
+    }
+  }
+}

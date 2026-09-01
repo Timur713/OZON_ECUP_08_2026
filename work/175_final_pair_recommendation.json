@@ -1,0 +1,57 @@
+{
+  "tag": "175_final_pair_recommendation",
+  "date_msk": "2026-08-29",
+  "status": "RECOMMENDATION ONLY. The finals are selected on the competition site by the user; nothing here changes a selection.",
+  "deadline": "finals must be chosen by 31.08.2026 12:00 MSK",
+  "recommended_pair": [
+    "171_upside_position_sw28_l003.csv",
+    "147_private_safe_nonnegative_current_l001.csv"
+  ],
+  "table": {
+    "130": {
+      "public": 1.6461706601,
+      "measured": true,
+      "df": 20.530728,
+      "private_estimate": 1.6469816239,
+      "selection_charge": 0.0,
+      "adjusted_private": 1.6469816239
+    },
+    "147": {
+      "public": 1.6466762024,
+      "measured": true,
+      "df": 12.96,
+      "private_estimate": 1.6471881224,
+      "selection_charge": 0.0,
+      "adjusted_private": 1.6471881224
+    },
+    "171": {
+      "public": 1.6460211139,
+      "measured": true,
+      "df": 22.102124,
+      "private_estimate": 1.6468941478,
+      "selection_charge": 8e-05,
+      "adjusted_private": 1.6469741478
+    },
+    "174": {
+      "public": 1.6466161623,
+      "measured": false,
+      "df": 13.800086,
+      "private_estimate": 1.6471612657,
+      "selection_charge": 8e-05,
+      "adjusted_private": 1.6472412657
+    }
+  },
+  "best_of_two_adjusted_private": {
+    "130+147": 1.6469816239,
+    "171+147": 1.6469741478,
+    "171+174": 1.6469741478
+  },
+  "why_171_replaces_130": "171 is better than 130 on measured public by 0.0001495 and on the private estimate by 0.0000875, and it stays ahead by 0.0000075 after the project's own 0.00004-per-base selection charge is applied to both bases it added. The margin is thin and is stated as thin.",
+  "why_147_and_not_174_for_the_second_slot": "174 ties 171+147 numerically, but it is built on the same pool as 171 and therefore contains 131 and 146 too. The risk the second slot exists to insure against is precisely the adaptive-selection bias of those two bases, which the df formula does not model. 147 contains neither, so it is the only one of the two that actually hedges. Numerical equality with a structurally worse hedge is not a reason to prefer it.",
+  "diversity_of_the_recommended_pair": {
+    "correlation": 0.9997542,
+    "rms_log_distance": 0.036124,
+    "note": "more diverse than the current pair, which sits at 0.9998312 and 0.029927"
+  },
+  "if_the_user_prefers_to_be_conservative": "keeping 130+147 costs 0.0000075 of expected adjusted private and gives up 0.0001495 of measured public. That is a defensible choice and the difference is inside the noise of the transfer-cost model."
+}

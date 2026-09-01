@@ -1,0 +1,28 @@
+{
+  "train_anchor": 43,
+  "final_anchor": 408,
+  "features": 222,
+  "seeds": [
+    43,
+    44
+  ],
+  "best_iterations": [
+    [
+      144,
+      163,
+      132
+    ],
+    [
+      126,
+      144,
+      102
+    ]
+  ],
+  "validation_calibrated_score": 1.6714794468042764,
+  "hurdle_mix": 0.5,
+  "validation_coefficients": [
+    1.020689811481762,
+    -0.026800751627855626
+  ],
+  "elapsed_seconds": 79.46995568275452
+}

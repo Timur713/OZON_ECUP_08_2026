@@ -1,0 +1,38 @@
+[
+  {
+    "candidates": [
+      "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/w409c_val.npy",
+      "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/w409twoa_val.npy",
+      "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/directevent409_growth_val.npy"
+    ],
+    "lambda": 0.003,
+    "base_columns": 25,
+    "oracle_base_score_250k": 1.6651398250946639,
+    "oracle_augmented_score_250k": 1.6648239532263567,
+    "oracle_gain_250k": 0.0003158718683071715,
+    "oracle_degrees_added": 2.1477960028983887,
+    "oracle_candidate_weights": {
+      "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/w409c_val.npy": 0.1929737684825236,
+      "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/w409twoa_val.npy": 0.1328685203450193,
+      "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/directevent409_growth_val.npy": -0.0655970005404913
+    },
+    "repeats": 96,
+    "mean_fitted_public_gain": 0.00035271180003281405,
+    "mean_independent_private_gain": 0.00027717708706305927,
+    "private_gain_se": 3.649230437725232e-06,
+    "private_gain_positive_fraction": 1.0,
+    "private_gain_min": 0.0001386920454642393,
+    "private_gain_max": 0.00033885468549210707,
+    "mean_degrees_added": 2.1472921793503885,
+    "mean_candidate_weights": {
+      "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/w409c_val.npy": 0.1873360342042514,
+      "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/w409twoa_val.npy": 0.13881564847859915,
+      "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/directevent409_growth_val.npy": -0.06422261872807873
+    },
+    "candidate_weight_negative_fraction": {
+      "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/w409c_val.npy": 0.0,
+      "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/w409twoa_val.npy": 0.010416666666666666,
+      "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/directevent409_growth_val.npy": 0.9583333333333334
+    }
+  }
+]

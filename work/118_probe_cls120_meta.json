@@ -1,0 +1,23 @@
+{
+  "tag": "118_probe_cls120",
+  "file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/submissions/118_probe_cls120.csv",
+  "vector": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/cls120_full_server_final.npy",
+  "vector_key": null,
+  "candidate_file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/118_probe_cls120_candidate.npy",
+  "base_submission": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/submissions/91_ridge26_measured.csv",
+  "base_score": 1.6466387804455878,
+  "weight": 0.3,
+  "inverted": false,
+  "mean_log": 2.323288699999999,
+  "prediction_min": 0.0,
+  "prediction_max": 15036.496971424978,
+  "base_mean": 2.3232887,
+  "candidate_mean": 2.323288699999999,
+  "base_second_moment": 8.050132187871089,
+  "candidate_second_moment": 8.050120170157333,
+  "cross_base_candidate": 8.003625163247907,
+  "probe_second_moment": 8.030598155935113,
+  "corr_base_candidate": 0.9824686934126834,
+  "distance_squared": 0.09300203153260839,
+  "ez_base": 8.051021807301879
+}

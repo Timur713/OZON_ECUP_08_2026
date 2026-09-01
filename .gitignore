@@ -1,0 +1,93 @@
+# ---- Python / environment ----
+.venv/
+__pycache__/
+*.pyc
+
+# ---- OS noise ----
+.DS_Store
+
+# ---- Credentials: never commit ----
+*.pem
+*.key
+.env
+.env.*
+
+# ---- Competition data (not redistributable; obtain from organizers) ----
+data/*.parquet
+export/data/
+export/*.parquet
+work/*.parquet
+example/sample_submit.csv
+
+# ---- Model artifacts and intermediate matrices (regenerable by the pipeline) ----
+work/mat/
+work/*.npy
+work/*.npz
+work/*.pt
+work/*.pth
+# same rule one level down, e.g. work/nl/ audit frames
+work/**/*.npy
+work/**/*.npz
+
+# Minimal frozen tensors required to audit the selected final pair without the
+# non-redistributable training parquet. Keep this allowlist intentionally tight.
+!work/ridge22_keys.npy
+!work/basis_prior_year_gmv.npy
+!work/v4_zh_final.npy
+!work/cfg3_final.npy
+!work/tcn45_final.npy
+!work/tcn90_final.npy
+!work/tcn180two_final.npy
+!work/tcn270_final.npy
+!work/tcn409_final.npy
+!work/tcn365v336_final.npy
+!work/tcn365b_final.npy
+!work/seq_final.npy
+!work/gru180_final.npy
+!work/tcn365_final.npy
+!work/AVG_GBD.npy
+!work/AVG_W120.npy
+!work/AVG_W150.npy
+!work/AVG_W365.npy
+!work/AVG_W409.npy
+!work/AVG_W90.npy
+!work/AVG_W45.npy
+!work/AVG_W60.npy
+!work/AVG_W180.npy
+!work/AVG_W270.npy
+!work/191_probe_shape_e4_candidate.npy
+!work/178_probe_divB_st24a_candidate.npy
+!work/146_probe_sw28_meanreversion_candidate.npy
+!work/131_probe_w409_exact_position_s93_candidate.npy
+!work/127_probe_w409_exact_decay_s93_candidate.npy
+!work/102_probe_w409c_candidate.npy
+!work/83_probe_cls300_candidate.npy
+!work/86_probe_cls300_probability_candidate.npy
+!work/85_probe_w210a_candidate.npy
+!work/89_probe_w300a_candidate.npy
+!work/92_probe_cls409_r26_candidate.npy
+!work/mat/
+work/mat/*
+!work/mat/uids.npy
+
+# ---- Logs and runtime state ----
+work/*.log
+work/*.err
+work/*.pid
+work/*.partial
+logs/
+nohup.out
+
+# ---- Export archives ----
+*.tgz
+export/
+
+# ---- Submissions ----
+# Excluded wholesale (567 MB of probe outputs). Only the TWO selected finals
+# are force-added. Every other submission this repository documents is
+# regenerable byte-exactly by the reproduce_*.py scripts, so a reviewer can
+# rebuild any of them and check the documented SHA-256 without us shipping
+# hundreds of megabytes of intermediate CSV.
+submissions/*
+!submissions/147_private_safe_nonnegative_current_l001.csv
+!submissions/200_shape_anchor_l003.csv

@@ -1,0 +1,27 @@
+{
+  "preregistered_msk": "2026-08-26T18:15:00+03:00",
+  "probe": "144_probe_marginal_buyer",
+  "hypothesis": "Our ensemble is miscalibrated along the MARGINAL-BUYER direction on the shifted competition season, and no historical model can know this because the information is not in the history.",
+  "mechanism": [
+    "FINDINGS 5 measured that the competition window raises P(y>0) by x1.097 and E[z|y>0] by only x1.016. The season converts BUYERS, it does not enlarge baskets.",
+    "A shift that converts buyers acts hardest on users near the decision margin, so its signature is p*(1-p), maximal at p=0.5 and vanishing at both extremes.",
+    "Residuals of a model are orthogonal to its features on the TRAINING distribution, not on a shifted one. Every one of our 29 bases is trained on historical seasons and therefore shares this identical blind spot, which is exactly why improving individual bases has produced nothing all day.",
+    "p*(1-p) is NOT a function of zhat: two users with the same zhat can have p=0.9 with a small basket or p=0.5 with a large one. Measured corr(p, p(1-p)) = -0.46, so it is not collinear with the linear probability base 86 either.",
+    "We calibrate only the GLOBAL mean to M1. Nothing in the pipeline corrects the SHAPE of the seasonal shift."
+  ],
+  "what_is_measured": "c = E[(z - base) * u] where u is p*(1-p) orthogonalised against the current prediction 130 and a constant, then scaled to unit variance. Correlation of u with the base prediction is 1.5e-15.",
+  "payoff_thresholds": {
+    "break_even_on_one_df": 0.01140,
+    "matches_our_best_ever_single_base": 0.02566,
+    "meaningful_0.0005": 0.04057,
+    "closes_the_public_gap_to_top3": 0.05593
+  },
+  "prior": "Earlier hand-crafted direction probes measured effects below break-even. Those directions were static user attributes the models already use. This one is different in kind: it targets the SEASONAL SHIFT rather than a user attribute. That is the reason to expect a different answer, and it is also the reason it could still fail.",
+  "reading_key": {
+    "if_abs_c_below_0.0114": "direction is dead, the seasonal shift is not heterogeneous along the buyer margin, branch closed with no further probes",
+    "if_between_0.0114_and_0.0406": "real but small, treat as one ordinary base, admit only through the usual gate",
+    "if_above_0.0406": "the seasonal-shift calibration axis is REAL. Then extend to a small set of shift-shaped directions and calibrate the shape on public, which is explicitly permitted by the organiser",
+    "no_post_hoc_threshold_changes": true
+  },
+  "sign_is_not_predicted": "The mechanism predicts the direction matters but not the sign of the miscalibration, so both signs count as a pass. This is recorded before the answer precisely so a sign flip cannot be claimed afterwards as a prediction."
+}

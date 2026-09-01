@@ -1,0 +1,34 @@
+{
+  "probe": "146_probe_sw28_meanreversion",
+  "public": 1.6603005407,
+  "decided_msk": "2026-08-26T20:05:00+03:00",
+  "preregistration": "work/146_mean_reversion_preregister.json",
+  "recovered": {
+    "ez_sw28": 7.77516146,
+    "baseline_expected_public": 1.6461788499,
+    "expected_public_with_sw28": 1.6460663509,
+    "marginal_gain": 0.0001125,
+    "ridge_weight": 0.04309,
+    "degrees_added": 0.95259,
+    "empirical_private_if_adopted": 1.6469149421,
+    "empirical_private_of_130": 1.6469898137,
+    "private_improvement_if_adopted": 7.487e-05
+  },
+  "gates": {
+    "positive_net_cost": 3.763e-05, "positive_net": "PASS",
+    "strict_cost": 7.525e-05, "strict": "PASS",
+    "strict_plus_standard_adaptive_cost": 0.00011525, "strict_plus_standard_adaptive": "FAIL by 2.75e-06",
+    "strict_plus_doubled_adaptive_cost": 0.00015525, "strict_plus_doubled_adaptive": "FAIL"
+  },
+  "verdict": "REJECTED by the frozen key. It fails the strict+adaptive gate at BOTH the doubled cost I imposed for this adaptive round AND the standard 0.00004 adaptive cost every other admitted base was held to, missing the latter by 2.75e-06. The rejection therefore does not depend on the doubling and requires no judgement call about it. The threshold is not relaxed after the fact.",
+  "most_important_result_of_the_day": {
+    "claim": "The offline 96-split apparatus predicted this public outcome before the probe.",
+    "offline_prediction": 0.00010687,
+    "public_measurement": 0.0001125,
+    "agreement": 5.6e-06,
+    "why_it_matters": "This is independent evidence that the offline gate machinery measures real signal rather than public-fitting noise, which is exactly the property a repo review will challenge. It also means the day's many negative verdicts were genuine rejections, not measurement failures."
+  },
+  "sign_flip_explained": "The 3-column offline audit gave sw28 a weight of -0.053 as a mean-reversion contrast. In the full 29-base ridge it enters at +0.043, because the full pool already contains W45, W60 and W90 and the contrast role is occupied. The mean-reversion reading was right in substance and wrong in parameterisation.",
+  "not_adopted_reasoning": "The private improvement would be 7.5e-05, which does not change standing. Overriding a preregistered gate after exploring roughly ten axes in one day carries accumulated selection bias, and the defensibility of never having relaxed a frozen threshold is worth more at repo review than 7.5e-05.",
+  "branch_closed": "No re-parameterisation, no second probe on this signal, per the frozen key."
+}

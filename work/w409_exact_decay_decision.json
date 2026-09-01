@@ -1,0 +1,51 @@
+{
+  "hypothesis": "multiscale hidden-state time pooling on the exact successful w409c recipe",
+  "only_change_from_w409c": "four normalized hidden-state decay pools",
+  "uses_public_scores": false,
+  "uses_recovered_moments": false,
+  "seeds": [
+    93,
+    1310
+  ],
+  "single_independent_gain": 7.198942687196748e-06,
+  "incremental_gain_beyond_w409c": -4.5314143483031195e-06,
+  "positive_fraction": 0.8645833333333334,
+  "single_negative_weight_fraction": 0.10416666666666667,
+  "joint_negative_weight_fraction": 0.3333333333333333,
+  "individual_seed_gains": [
+    0.00028221590572262884,
+    6.863417928112958e-05
+  ],
+  "strict_thresholds": {
+    "single_gain": 0.00012,
+    "incremental_beyond_w409c": 8e-05,
+    "positive_fraction": 0.9,
+    "maximum_negative_weight_fraction": 0.1,
+    "minimum_each_seed_gain": 0.0
+  },
+  "diagnostic_thresholds": {
+    "single_gain": 4e-05,
+    "incremental_beyond_w409c": 2e-05,
+    "positive_fraction": 0.75,
+    "maximum_negative_weight_fraction": 0.25,
+    "minimum_each_seed_gain": -2e-05
+  },
+  "strict_checks": {
+    "single_gain": false,
+    "incremental_beyond_w409c": false,
+    "positive_fraction": false,
+    "single_weight_sign": false,
+    "joint_weight_sign": false,
+    "both_seeds_noncatastrophic": true
+  },
+  "diagnostic_checks": {
+    "single_gain": false,
+    "incremental_beyond_w409c": false,
+    "positive_fraction": true,
+    "single_weight_sign": true,
+    "joint_weight_sign": false,
+    "both_seeds_noncatastrophic": true
+  },
+  "tier": "reject",
+  "decision": "reject without CSV"
+}

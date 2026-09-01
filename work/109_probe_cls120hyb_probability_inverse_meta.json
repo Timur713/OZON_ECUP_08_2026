@@ -1,0 +1,23 @@
+{
+  "tag": "109_probe_cls120hyb_probability_inverse",
+  "file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/submissions/109_probe_cls120hyb_probability_inverse.csv",
+  "vector": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/cls120hyb_full_server_components.npz",
+  "vector_key": "probability",
+  "candidate_file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/109_probe_cls120hyb_probability_inverse_candidate.npy",
+  "base_submission": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/submissions/91_ridge26_measured.csv",
+  "base_score": 1.6466387804455878,
+  "weight": 0.3,
+  "inverted": true,
+  "mean_log": 2.3232886999999995,
+  "prediction_min": 0.005432958804145934,
+  "prediction_max": 28967.7448660451,
+  "base_mean": 2.3232887,
+  "candidate_mean": 2.3232887,
+  "base_second_moment": 8.050132187871089,
+  "candidate_second_moment": 8.050007762737836,
+  "cross_base_candidate": 7.955257279802992,
+  "probe_second_moment": 8.010273528220495,
+  "corr_base_candidate": 0.9642539928400665,
+  "distance_squared": 0.1896253910029416,
+  "ez_base": 8.051021807301879
+}

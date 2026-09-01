@@ -1,0 +1,42 @@
+[
+  {
+    "candidate": "work/cls30_val_server_val.npy",
+    "lambda": 0.003,
+    "base_columns": 25,
+    "oracle_base_score_250k": 1.6651398250946639,
+    "oracle_augmented_score_250k": 1.6651090825432844,
+    "oracle_gain_250k": 3.074255137947013e-05,
+    "oracle_degrees_added": 0.9606078808693255,
+    "oracle_candidate_weight": -0.027432916104452934,
+    "repeats": 96,
+    "mean_fitted_public_gain": 4.547034484541727e-05,
+    "mean_independent_private_gain": 1.0850997659494118e-05,
+    "private_gain_se": 2.6631280770244327e-06,
+    "private_gain_positive_fraction": 0.7916666666666666,
+    "private_gain_min": -0.00010703899907760217,
+    "private_gain_max": 3.3957017734120853e-05,
+    "mean_degrees_added": 0.9606103554213005,
+    "mean_candidate_weight": -0.028063411241363658,
+    "candidate_weight_negative_fraction": 0.9270833333333334
+  },
+  {
+    "candidate": "work/cls240_val_server_val.npy",
+    "lambda": 0.003,
+    "base_columns": 25,
+    "oracle_base_score_250k": 1.6651398250946639,
+    "oracle_augmented_score_250k": 1.6651197414560814,
+    "oracle_gain_250k": 2.0083638582413244e-05,
+    "oracle_degrees_added": 0.6643096513237445,
+    "oracle_candidate_weight": 0.07046627882949467,
+    "repeats": 96,
+    "mean_fitted_public_gain": 2.5613316426950177e-05,
+    "mean_independent_private_gain": 1.0738410694960399e-05,
+    "private_gain_se": 1.3432181429089695e-06,
+    "private_gain_positive_fraction": 0.875,
+    "private_gain_min": -4.5531825098477086e-05,
+    "private_gain_max": 2.5237550799639408e-05,
+    "mean_degrees_added": 0.664294145289693,
+    "mean_candidate_weight": 0.06276575506467952,
+    "candidate_weight_negative_fraction": 0.11458333333333333
+  }
+]

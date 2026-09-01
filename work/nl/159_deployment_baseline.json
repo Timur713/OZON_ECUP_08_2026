@@ -1,0 +1,171 @@
+{
+  "tag": "159_deployment_baseline",
+  "baseline_is": "the 25-base pool solved the way the project actually solves it",
+  "baseline_mean_private": 1.666025314924454,
+  "by_k": {
+    "6": {
+      "raw_columns_as_153_would_have_done": {
+        "mean_private_gain": -0.00019867259742808083,
+        "positive_fraction": 0.5625
+      },
+      "orthogonal_whitened_by_new_lambda": {
+        "0.003": {
+          "mean_private_gain": -0.0003400756744228878,
+          "positive_fraction": 0.4583333333333333
+        },
+        "0.03": {
+          "mean_private_gain": -0.0003034546400262905,
+          "positive_fraction": 0.5
+        },
+        "0.1": {
+          "mean_private_gain": -0.00022280926761801081,
+          "positive_fraction": 0.5208333333333334
+        },
+        "0.3": {
+          "mean_private_gain": -7.102557209410591e-05,
+          "positive_fraction": 0.6041666666666666
+        },
+        "1.0": {
+          "mean_private_gain": 0.00010089966633245832,
+          "positive_fraction": 0.8125
+        },
+        "3.0": {
+          "mean_private_gain": 0.00011874043776067174,
+          "positive_fraction": 0.8958333333333334
+        },
+        "10.0": {
+          "mean_private_gain": 5.8980586631377875e-05,
+          "positive_fraction": 0.9583333333333334
+        }
+      },
+      "best_new_lambda": 3.0,
+      "orthogonal_whitened_without_proxy_error": {
+        "mean_private_gain": 0.00011989448427119724,
+        "positive_fraction": 0.9375
+      }
+    },
+    "12": {
+      "raw_columns_as_153_would_have_done": {
+        "mean_private_gain": -0.0010460469858805017,
+        "positive_fraction": 0.1875
+      },
+      "orthogonal_whitened_by_new_lambda": {
+        "0.003": {
+          "mean_private_gain": -0.0012475594846425991,
+          "positive_fraction": 0.08333333333333333
+        },
+        "0.03": {
+          "mean_private_gain": -0.0011555070059760901,
+          "positive_fraction": 0.10416666666666667
+        },
+        "0.1": {
+          "mean_private_gain": -0.000950577023601254,
+          "positive_fraction": 0.1875
+        },
+        "0.3": {
+          "mean_private_gain": -0.0005525460070922028,
+          "positive_fraction": 0.2916666666666667
+        },
+        "1.0": {
+          "mean_private_gain": -4.391099901197385e-05,
+          "positive_fraction": 0.5625
+        },
+        "3.0": {
+          "mean_private_gain": 0.00012447171900669315,
+          "positive_fraction": 0.8333333333333334
+        },
+        "10.0": {
+          "mean_private_gain": 7.914864456118331e-05,
+          "positive_fraction": 1.0
+        }
+      },
+      "best_new_lambda": 3.0,
+      "orthogonal_whitened_without_proxy_error": {
+        "mean_private_gain": 0.0001336827201001515,
+        "positive_fraction": 0.9375
+      }
+    },
+    "20": {
+      "raw_columns_as_153_would_have_done": {
+        "mean_private_gain": -0.0021828421541153498,
+        "positive_fraction": 0.08333333333333333
+      },
+      "orthogonal_whitened_by_new_lambda": {
+        "0.003": {
+          "mean_private_gain": -0.0025576373514742262,
+          "positive_fraction": 0.0
+        },
+        "0.03": {
+          "mean_private_gain": -0.002384310158851386,
+          "positive_fraction": 0.0625
+        },
+        "0.1": {
+          "mean_private_gain": -0.0019972365602717915,
+          "positive_fraction": 0.08333333333333333
+        },
+        "0.3": {
+          "mean_private_gain": -0.001238837292019443,
+          "positive_fraction": 0.08333333333333333
+        },
+        "1.0": {
+          "mean_private_gain": -0.0002401008611698415,
+          "positive_fraction": 0.5208333333333334
+        },
+        "3.0": {
+          "mean_private_gain": 0.00014257102246569933,
+          "positive_fraction": 0.8125
+        },
+        "10.0": {
+          "mean_private_gain": 0.00011262860770271572,
+          "positive_fraction": 1.0
+        }
+      },
+      "best_new_lambda": 3.0,
+      "orthogonal_whitened_without_proxy_error": {
+        "mean_private_gain": 0.00020994703271039658,
+        "positive_fraction": 0.9791666666666666
+      }
+    },
+    "30": {
+      "raw_columns_as_153_would_have_done": {
+        "mean_private_gain": -0.0026333571081859123,
+        "positive_fraction": 0.020833333333333332
+      },
+      "orthogonal_whitened_by_new_lambda": {
+        "0.003": {
+          "mean_private_gain": -0.0031783198848492947,
+          "positive_fraction": 0.0
+        },
+        "0.03": {
+          "mean_private_gain": -0.002962462574572259,
+          "positive_fraction": 0.0
+        },
+        "0.1": {
+          "mean_private_gain": -0.0024804324866770553,
+          "positive_fraction": 0.020833333333333332
+        },
+        "0.3": {
+          "mean_private_gain": -0.0015361321050361189,
+          "positive_fraction": 0.0625
+        },
+        "1.0": {
+          "mean_private_gain": -0.0002934552540985412,
+          "positive_fraction": 0.5
+        },
+        "3.0": {
+          "mean_private_gain": 0.00018094152834401597,
+          "positive_fraction": 0.8541666666666666
+        },
+        "10.0": {
+          "mean_private_gain": 0.00014163827333367462,
+          "positive_fraction": 1.0
+        }
+      },
+      "best_new_lambda": 3.0,
+      "orthogonal_whitened_without_proxy_error": {
+        "mean_private_gain": 0.00025708934353366186,
+        "positive_fraction": 0.9791666666666666
+      }
+    }
+  }
+}

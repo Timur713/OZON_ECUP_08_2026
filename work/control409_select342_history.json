@@ -1,0 +1,47 @@
+[
+  {
+    "epoch": 1,
+    "score": 1.7648116491076802,
+    "combined_score": 1.7648311853408813,
+    "component_scores": {
+      "combined": 1.7648311853408813,
+      "hurdle": 1.765080451965332,
+      "direct": 1.7652028799057007,
+      "probability": 1.8100037574768066,
+      "magnitude": 1.9260566234588623
+    },
+    "best_hurdle_weight": 0.6000000000000001,
+    "slope": 1.155585697412818,
+    "intercept": -0.1250481817003509
+  },
+  {
+    "epoch": 2,
+    "score": 1.837998672832616,
+    "combined_score": 1.8507672548294067,
+    "component_scores": {
+      "combined": 1.8507672548294067,
+      "hurdle": 1.8567123413085938,
+      "direct": 1.8379987478256226,
+      "probability": 1.873423457145691,
+      "magnitude": 1.9439269304275513
+    },
+    "best_hurdle_weight": 0.0,
+    "slope": 0.9678835217320935,
+    "intercept": -0.1813868874198436
+  },
+  {
+    "epoch": 3,
+    "score": 1.8505005363976696,
+    "combined_score": 1.9198702573776245,
+    "component_scores": {
+      "combined": 1.9198702573776245,
+      "hurdle": 1.9581488370895386,
+      "direct": 1.8505005836486816,
+      "probability": 1.9792009592056274,
+      "magnitude": 2.083172082901001
+    },
+    "best_hurdle_weight": 0.0,
+    "slope": 0.8389122803643663,
+    "intercept": -0.23182390137830988
+  }
+]

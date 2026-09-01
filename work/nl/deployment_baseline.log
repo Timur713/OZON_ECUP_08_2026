@@ -1,0 +1,4 @@
+K=  6 raw=-0.0001987 pos=0.56 | orth(lam=  3.0)=+0.0001187 pos=0.90 | orth_no_proxy=+0.0001199 pos=0.94
+K= 12 raw=-0.0010460 pos=0.19 | orth(lam=  3.0)=+0.0001245 pos=0.83 | orth_no_proxy=+0.0001337 pos=0.94
+K= 20 raw=-0.0021828 pos=0.08 | orth(lam=  3.0)=+0.0001426 pos=0.81 | orth_no_proxy=+0.0002099 pos=0.98
+K= 30 raw=-0.0026334 pos=0.02 | orth(lam=  3.0)=+0.0001809 pos=0.85 | orth_no_proxy=+0.0002571 pos=0.98

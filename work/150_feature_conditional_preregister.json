@@ -1,0 +1,28 @@
+{
+  "tag": "150_feature_conditional_correction",
+  "date": "2026-08-28",
+  "uses_public_scores": false,
+  "uses_recovered_moments": false,
+  "hypothesis": "The frozen 25-base linear stack leaves a bias that is conditional on simple historical user aggregates and linear in them. Measured out of fold at anchor 378, adding 44 standardised historical features linearly to the ridge is worth 0.0010983 RMSLE, while a boosted stacker over the same inputs is worth 0.0002983 LESS than that, so the effect is a missing linear term and not a missing nonlinearity.",
+  "question": "Is that conditional term a stable mechanism, or a within-fold seasonal artefact that a same-fold fit can always absorb?",
+  "mechanism_if_true": "Base models are trained on anchors whose 30-day windows differ seasonally from the scored window. If the seasonal lift is heterogeneous across user types in a way that repeats, the resulting bias is predictable from user aggregates and one fitted correction direction transfers across folds.",
+  "mechanism_if_false": "Each fold's optimal beta encodes that fold's own seasonal lift profile. Fitting on the scored fold is then pure in-fold absorption, exactly the inversion already documented for the January anchor in FINDINGS 2.1, and nothing transfers.",
+  "design": {
+    "folds": [288, 318, 348, 378],
+    "target_window": "days V+1..V+30, non-overlapping across the four folds",
+    "surrogate_stack": "LightGBM on z over the same 44 historical features, trained on the 8 anchors V-114..V-30 step 12, so every fold has a matched training budget and a matched 30-day forecast horizon",
+    "baseline_at_fold": "out-of-fold affine recalibration (slope and intercept) of the surrogate stack; this is free in the real setting because both moments are recoverable",
+    "correction": "beta_A = OLS of (truth_A - affine_A) on the 44 standardised features at fold A",
+    "transfer_statistic": "gain(A -> B) = RMSLE_baseline(B) - RMSLE(baseline(B) + t * features_B @ beta_A) with the single scale t fitted out of fold at B",
+    "positive_control": "gain(A -> A), expected to be of order 0.0011",
+    "negative_control": "beta drawn from a random rotation of the feature space, expected 0"
+  },
+  "reading_key": {
+    "transfers": "mean gain over the 12 ordered pairs A != B >= 0.00030 AND positive in >= 9 of 12 pairs -> build one real candidate base and spend exactly one probe",
+    "diagnostic": "mean gain in [0.00008, 0.00030) -> diagnostic only, needs an independent second confirmation before any probe",
+    "closed": "mean gain < 0.00008 or fewer than 9 of 12 pairs positive -> the fold-378 number is in-fold seasonal absorption, branch closed, no CSV and no probe"
+  },
+  "expected_sign": "positive if the hypothesis holds; the project's prior from FINDINGS 2.1 is that it does not",
+  "cost_if_promoted": "one added base, about 1 degree of freedom, empirical private price 0.0000395 per df",
+  "frozen_before_measurement": true
+}

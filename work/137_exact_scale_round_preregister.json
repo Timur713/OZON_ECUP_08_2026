@@ -1,0 +1,43 @@
+{
+  "preregistered_msk": "2026-08-26T11:55:00+03:00",
+  "round": "exact-backbone scaling: window length, anchor density, width",
+  "uses_public_scores": false,
+  "motivation": [
+    "The structural round on this backbone is closed: decay, position, buyer and combined position+decay all re-express the same representation. Only seed93 decay landed, and its seed-average fails, so it is seed luck rather than a mechanism.",
+    "FINDINGS 2.3 states the axes that create real diversity are WINDOW and SEED, not architecture or head. The last four experiments all varied architecture.",
+    "The exact backbone hardcodes window=409 and a sparse 14-anchor schedule (186..348 stride 12). The 'two epochs then overfit' rule in FINDINGS 2.6 was measured on that sparse schedule, so anchor density has never been separated from epoch count.",
+    "Raw data confirmed to be pre-aggregated user x day over 17 numeric columns. There is no unused richer source (no item_id, category_id or query text), so the remaining gap is modelling capacity on the same channels.",
+    "Gap to public top-3 is 0.00095, which equals a signal correlated only r~0.038 with our residual. This is a capacity gap, not a missing-data gap."
+  ],
+  "phase_A_window_fanout": {
+    "trainer": "work/train_exact_scale.py",
+    "variant": "plain",
+    "windows": [120, 180, 240, 300, 409],
+    "seeds": [93, 1310],
+    "width": 96,
+    "anchor_start": 186,
+    "anchor_stride": 12,
+    "epochs": 2
+  },
+  "phase_B_scale": {
+    "note": "Launched only after phase A completes. Varies anchor density and width at the window chosen by phase A, to test whether the two-epoch overfit rule is an artifact of sparse anchors.",
+    "anchor_stride": [12, 4, 2],
+    "anchor_start": [186, 43],
+    "width": [96, 192],
+    "epochs": [2, 3, 4]
+  },
+  "offline_gates": {
+    "audited_against": "the CURRENT admitted pool {w409c, decay_s93}, never against {w409c} alone",
+    "incremental_beyond_admitted_pool_min": 0.00008,
+    "positive_fraction_min": 0.90,
+    "maximum_negative_weight_fraction": 0.10,
+    "rationale": "Standing project thresholds, unchanged for this round."
+  },
+  "known_limitation_recorded_in_advance": "The 96-split audit sits on the January anchor 378, which FINDINGS 2.1 shows mis-ranks models relative to the real gift-peak target, and window length is exactly the axis it got wrong historically. A passing offline gate is therefore necessary but NOT sufficient; any candidate must still clear a public probe against a gate computed with the full admitted pool via --expect-baseline 1.6461788499434364.",
+  "submission_policy": "No probe is submitted on offline results alone. At most the single best candidate per phase is probed, and only if it clears the offline gate.",
+  "position_tail_stopped": {
+    "what": "server_position_tail.sh (seeds 1310/2718 multitask relative-position) killed at 11:47 MSK, trainer PID 40037",
+    "why": "Its promotion target is a position base. The leaderboard already answered that question directly: against the corrected pool, probe 131 fails the strict gate by 0.0000375 and strict+adaptive by 0.0001027. Spending 2.3 GPU-hours to re-derive a negative offline is waste while the window axis has never been tested on the strong backbone.",
+    "reversible": true
+  }
+}

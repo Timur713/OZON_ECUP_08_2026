@@ -1,0 +1,20 @@
+{
+  "tag": "160_final_pair_direct_comparison",
+  "date_msk": "2026-08-28",
+  "status": "frozen before measurement",
+  "question": "Which of the two frozen finals is actually better on private users, measured rather than inferred?",
+  "why_it_is_worth_measuring_again": "STRATEGY chooses 147 as the second slot on a BREAK-EVEN argument: 147 overtakes 130 only if the true transfer price is at least 1.69 times the 0.0000395 estimate. That argument is one algebraic step away from a parameter. The same question can be answered directly by running both recipes through the fit-50k / score-200k protocol and reading which one scores better on the held-out 200k, with no per-df model in the chain at all.",
+  "recipes": {
+    "130_analogue": "ridge, lambda 0.003, all columns free",
+    "147_analogue": "nonnegative ridge, lambda 0.001, intercept free"
+  },
+  "protocol": "fold 378, the 25 admitted validation columns, 200 independent 50k/200k user splits. Both the matched solve and the deployment-faithful solve (Gram over all 250k, right-hand side from the public 50k) are reported, because the deployment solve is what actually produces the submitted files.",
+  "reading_key": {
+    "confirms_130_as_slot_one": "the 130 recipe has the better mean private score AND wins in more than half the splits -> the current pair and its roles stand unchanged",
+    "reverses_the_roles": "the 147 recipe has the better mean private score by at least one standard error AND wins in more than half the splits -> report to the user that the slot roles should be swapped; the decision remains the user's",
+    "inconclusive": "the difference is inside one standard error -> report as inconclusive and leave the pair as it is"
+  },
+  "what_this_cannot_settle": "fold 378 scores the January window with validation-fold base predictions, not the gift window with the competition bases. It measures the RECIPES against each other under a realistic solve, not the two frozen files themselves. It is evidence about the choice, not a replacement for it.",
+  "no_action_without_the_user": "these two files are the competition finals. Nothing about them is changed by this round; the output is a recommendation with numbers attached.",
+  "frozen_before_measurement": true
+}

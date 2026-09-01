@@ -1,0 +1,68 @@
+{
+  "file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/submissions/122_offline_diverse_no_replica.csv",
+  "sha256": "218e141ec943e634d5547b16a85e0e2acbfb678b17108c440a5eca3f84299b48",
+  "construction": "historical_validation_only_no_w409c_replication",
+  "uses_public_scores": false,
+  "uses_recovered_moments": false,
+  "uses_competition_target_mean": false,
+  "structural_constraint": "exclude dominant TCN409_replication",
+  "families": [
+    "GBD262",
+    "W120_seed_average",
+    "TCN180_two_head",
+    "TCN365_growing_anchor",
+    "TCN409"
+  ],
+  "lambda_grid": [
+    0.001,
+    0.003,
+    0.01,
+    0.03
+  ],
+  "cv_protocol": "96 fixed 50k-fit to independent-200k-score user splits",
+  "cv": [
+    {
+      "lambda": 0.001,
+      "mean_independent_private": 1.6690841172656936,
+      "private_score_se": 0.0001269887516156968,
+      "mean_active_components": 4.979166666666667
+    },
+    {
+      "lambda": 0.003,
+      "mean_independent_private": 1.6690818431072991,
+      "private_score_se": 0.00012690301613392277,
+      "mean_active_components": 4.989583333333333
+    },
+    {
+      "lambda": 0.01,
+      "mean_independent_private": 1.669089621202901,
+      "private_score_se": 0.00012679612016282135,
+      "mean_active_components": 5.0
+    },
+    {
+      "lambda": 0.03,
+      "mean_independent_private": 1.6691508759795832,
+      "private_score_se": 0.00012655211476751482,
+      "mean_active_components": 5.0
+    }
+  ],
+  "selected_lambda": 0.003,
+  "validation_score_full_250k": 1.6690071533165518,
+  "active_components": 5,
+  "weights": {
+    "GBD262": 0.25150076845002384,
+    "W120_seed_average": 0.24019741882583542,
+    "TCN180_two_head": 0.09701565490062256,
+    "TCN365_growing_anchor": 0.05263814513407033,
+    "TCN409": 0.3196137798489651,
+    "const": -0.30628836707942364
+  },
+  "raw_final_mean_log1p": 2.1559651767726353,
+  "historical_only_forecast_mean_log1p": 2.320535330938203,
+  "applied_shift_before_clipping": 0.16457015416556775,
+  "output_mean_log1p": 2.320535330938203,
+  "output_std_log1p": 1.5390620812653115,
+  "prediction_min": 0.17888627043326905,
+  "prediction_max": 8961.741090205858,
+  "rows": 250000
+}

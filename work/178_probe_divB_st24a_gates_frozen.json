@@ -1,0 +1,53 @@
+{
+  "tag": "178_probe_divB_st24a",
+  "date_msk": "2026-08-29",
+  "frozen_before_submission": true,
+  "what_it_measures": "a network trained on a DISJOINT HALF of the usual anchors, stride 24 instead of 12, everything else the frozen w409c-plus-decay recipe. Which anchors a model trains on is one of the two axes the project never varied.",
+  "base_submission": "171_upside_position_sw28_l003.csv at 1.6460211139",
+  "weight": 0.3,
+  "offline_evidence": {
+    "standalone_calibrated_fold378": 1.673758,
+    "matched_control_for_the_recipe": 1.66796,
+    "conditional_gain_beyond_the_pool": 0.0001236,
+    "deployment_faithful_gain": 9.75e-05,
+    "sign_stability": "96 of 96, consistently NEGATIVE weight",
+    "correlation_with_stack": 0.9948,
+    "note_on_the_sign": "a stable negative weight means the base enters as a contrast against the full-anchor models, the same parameterisation sw28 had. The sign was measured offline on 96 splits before any submission, which is the condition the 26.08 preregistration set for accepting it."
+  },
+  "gates": {
+    "marginal_baseline_expected_public": 1.6460381032772344,
+    "degrees_added": 0.7397221442926849,
+    "positive_weight_neutral_score": 1.64680776798,
+    "positive_empirical_net_gate": 1.646967339674,
+    "strict_gate": 1.647045765709,
+    "strict_with_adaptive_gate": 1.647125948282
+  },
+  "reading_key": {
+    "admit_only_if": "public score <= 1.647125948282, the strict gate plus the standard 0.00004 adaptive charge",
+    "if_it_fails": "branch closed, no re-parameterisation, no second probe on the same anchor-phase signal"
+  },
+  "honest_prior": "the offline-to-public transfer ratio measured today varies enormously by family: about 1 percent for cls409, 18 percent for the position base, and 162 percent for the decay base, which offline UNDERSTATED. A single ratio cannot be extrapolated, which is exactly why this needs a probe rather than an assumption.",
+  "score_to_outcome_map": {
+    "no_gain_at": 1.646807768,
+    "positive_net_gate": {
+      "probe_score": 1.64696734,
+      "assembled_public": 1.6460088843,
+      "marginal_gain": 2.922e-05,
+      "weight": -0.06043
+    },
+    "strict_gate": {
+      "probe_score": 1.647045766,
+      "assembled_public": 1.6459796652,
+      "marginal_gain": 5.844e-05,
+      "weight": -0.09014
+    },
+    "strict_plus_adaptive_gate": {
+      "probe_score": 1.647125948,
+      "assembled_public": 1.6459396652,
+      "marginal_gain": 9.844e-05,
+      "weight": -0.12051
+    },
+    "degrees_added": 0.7397
+  },
+  "what_this_means_for_the_target": "Even if 178 lands exactly on the decisive gate, the assembled solution is 1.6459397. Top-3 is 1.6448003. One admitted base of this kind is worth about 0.0001, so closing the remaining 0.0011 would take roughly ten more admissions of the same size. This round can improve the standing; it cannot reach top-3 by base additions of this type."
+}

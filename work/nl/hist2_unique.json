@@ -1,0 +1,473 @@
+{
+  "original_columns": 213,
+  "unique_columns": 162,
+  "kept_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    154,
+    155,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    181,
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209,
+    210,
+    211,
+    212
+  ],
+  "kept_names": [
+    "gmv_s7",
+    "gmv_s14",
+    "gmv_s30",
+    "gmv_s60",
+    "gmv_s90",
+    "gmv_s180",
+    "gmv_s365",
+    "gmv_d7",
+    "gmv_d14",
+    "gmv_d30",
+    "gmv_d60",
+    "gmv_d90",
+    "gmv_d180",
+    "gmv_d365",
+    "gmv_search_s7",
+    "gmv_search_s14",
+    "gmv_search_s30",
+    "gmv_search_s60",
+    "gmv_search_s90",
+    "gmv_search_s180",
+    "gmv_search_s365",
+    "gmv_search_d7",
+    "gmv_search_d14",
+    "gmv_search_d30",
+    "gmv_search_d60",
+    "gmv_search_d90",
+    "gmv_search_d180",
+    "gmv_search_d365",
+    "gmv_cat_s7",
+    "gmv_cat_s14",
+    "gmv_cat_s30",
+    "gmv_cat_s60",
+    "gmv_cat_s90",
+    "gmv_cat_s180",
+    "gmv_cat_s365",
+    "gmv_cat_d7",
+    "gmv_cat_d14",
+    "gmv_cat_d30",
+    "gmv_cat_d60",
+    "gmv_cat_d90",
+    "gmv_cat_d180",
+    "gmv_cat_d365",
+    "to_ord_s7",
+    "to_ord_s14",
+    "to_ord_s30",
+    "to_ord_s60",
+    "to_ord_s90",
+    "to_ord_s180",
+    "to_ord_s365",
+    "to_cart_s7",
+    "to_cart_s14",
+    "to_cart_s30",
+    "to_cart_s60",
+    "to_cart_s90",
+    "to_cart_s180",
+    "to_cart_s365",
+    "to_cart_d7",
+    "to_cart_d14",
+    "to_cart_d30",
+    "to_cart_d60",
+    "to_cart_d90",
+    "to_cart_d180",
+    "to_cart_d365",
+    "searches_s7",
+    "searches_s14",
+    "searches_s30",
+    "searches_s60",
+    "searches_s90",
+    "searches_s180",
+    "searches_s365",
+    "searches_d7",
+    "searches_d14",
+    "searches_d30",
+    "searches_d60",
+    "searches_d90",
+    "searches_d180",
+    "searches_d365",
+    "cat_s7",
+    "cat_s14",
+    "cat_s30",
+    "cat_s60",
+    "cat_s90",
+    "cat_s180",
+    "cat_s365",
+    "search_to_ord_s7",
+    "search_to_ord_s14",
+    "search_to_ord_s30",
+    "search_to_ord_s60",
+    "search_to_ord_s90",
+    "search_to_ord_s180",
+    "search_to_ord_s365",
+    "cat_to_ord_s7",
+    "cat_to_ord_s14",
+    "cat_to_ord_s30",
+    "cat_to_ord_s60",
+    "cat_to_ord_s90",
+    "cat_to_ord_s180",
+    "cat_to_ord_s365",
+    "active_s7",
+    "active_s14",
+    "active_s30",
+    "active_s60",
+    "active_s90",
+    "active_s180",
+    "active_s365",
+    "gmv_recency",
+    "gmv_age",
+    "to_cart_recency",
+    "to_cart_age",
+    "active_recency",
+    "active_age",
+    "conv_ord_per_search_7",
+    "conv_cart_per_search_7",
+    "conv_ord_per_cart_7",
+    "check_7",
+    "search_share_gmv_7",
+    "orders_per_active_day_7",
+    "conv_ord_per_search_14",
+    "conv_cart_per_search_14",
+    "conv_ord_per_cart_14",
+    "check_14",
+    "search_share_gmv_14",
+    "orders_per_active_day_14",
+    "conv_ord_per_search_30",
+    "conv_cart_per_search_30",
+    "conv_ord_per_cart_30",
+    "check_30",
+    "search_share_gmv_30",
+    "orders_per_active_day_30",
+    "conv_ord_per_search_60",
+    "conv_cart_per_search_60",
+    "conv_ord_per_cart_60",
+    "check_60",
+    "search_share_gmv_60",
+    "orders_per_active_day_60",
+    "conv_ord_per_search_90",
+    "conv_cart_per_search_90",
+    "conv_ord_per_cart_90",
+    "check_90",
+    "search_share_gmv_90",
+    "orders_per_active_day_90",
+    "conv_ord_per_search_180",
+    "conv_cart_per_search_180",
+    "conv_ord_per_cart_180",
+    "check_180",
+    "search_share_gmv_180",
+    "orders_per_active_day_180",
+    "conv_ord_per_search_365",
+    "conv_cart_per_search_365",
+    "conv_ord_per_cart_365",
+    "check_365",
+    "search_share_gmv_365",
+    "orders_per_active_day_365",
+    "trend_gmv_7_over_365",
+    "trend_to_ord_7_over_365",
+    "trend_searches_7_over_365",
+    "trend_gmv_30_over_365",
+    "trend_to_ord_30_over_365",
+    "trend_searches_30_over_365",
+    "trend_gmv_90_over_365",
+    "trend_to_ord_90_over_365",
+    "trend_searches_90_over_365"
+  ],
+  "duplicate_groups": {
+    "gmv_d7": [
+      "to_ord_d7"
+    ],
+    "gmv_d14": [
+      "to_ord_d14"
+    ],
+    "gmv_d30": [
+      "to_ord_d30"
+    ],
+    "gmv_d60": [
+      "to_ord_d60"
+    ],
+    "gmv_d90": [
+      "to_ord_d90"
+    ],
+    "gmv_d180": [
+      "to_ord_d180"
+    ],
+    "gmv_d365": [
+      "to_ord_d365"
+    ],
+    "searches_d7": [
+      "search_s7",
+      "search_d7"
+    ],
+    "searches_d14": [
+      "search_s14",
+      "search_d14"
+    ],
+    "searches_d30": [
+      "search_s30",
+      "search_d30"
+    ],
+    "searches_d60": [
+      "search_s60",
+      "search_d60"
+    ],
+    "searches_d90": [
+      "search_s90",
+      "search_d90"
+    ],
+    "searches_d180": [
+      "search_s180",
+      "search_d180"
+    ],
+    "searches_d365": [
+      "search_s365",
+      "search_d365"
+    ],
+    "cat_s7": [
+      "cat_d7"
+    ],
+    "cat_s14": [
+      "cat_d14"
+    ],
+    "cat_s30": [
+      "cat_d30"
+    ],
+    "cat_s60": [
+      "cat_d60"
+    ],
+    "cat_s90": [
+      "cat_d90"
+    ],
+    "cat_s180": [
+      "cat_d180"
+    ],
+    "cat_s365": [
+      "cat_d365"
+    ],
+    "gmv_search_d7": [
+      "search_to_ord_d7"
+    ],
+    "gmv_search_d14": [
+      "search_to_ord_d14"
+    ],
+    "gmv_search_d30": [
+      "search_to_ord_d30"
+    ],
+    "gmv_search_d60": [
+      "search_to_ord_d60"
+    ],
+    "gmv_search_d90": [
+      "search_to_ord_d90"
+    ],
+    "gmv_search_d180": [
+      "search_to_ord_d180"
+    ],
+    "gmv_search_d365": [
+      "search_to_ord_d365"
+    ],
+    "gmv_cat_d7": [
+      "cat_to_ord_d7"
+    ],
+    "gmv_cat_d14": [
+      "cat_to_ord_d14"
+    ],
+    "gmv_cat_d30": [
+      "cat_to_ord_d30"
+    ],
+    "gmv_cat_d60": [
+      "cat_to_ord_d60"
+    ],
+    "gmv_cat_d90": [
+      "cat_to_ord_d90"
+    ],
+    "gmv_cat_d180": [
+      "cat_to_ord_d180"
+    ],
+    "gmv_cat_d365": [
+      "cat_to_ord_d365"
+    ],
+    "active_s7": [
+      "active_d7"
+    ],
+    "active_s14": [
+      "active_d14"
+    ],
+    "active_s30": [
+      "active_d30"
+    ],
+    "active_s60": [
+      "active_d60"
+    ],
+    "active_s90": [
+      "active_d90"
+    ],
+    "active_s180": [
+      "active_d180"
+    ],
+    "active_s365": [
+      "active_d365"
+    ],
+    "gmv_recency": [
+      "to_ord_recency"
+    ],
+    "gmv_age": [
+      "to_ord_age"
+    ]
+  }
+}

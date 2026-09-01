@@ -1,0 +1,96 @@
+{
+  "tag": "residual_growth_validation",
+  "base_tag": "multi_anchor_growth",
+  "validation_only": true,
+  "uses_public_scores": false,
+  "uses_recovered_moments": false,
+  "folds": [
+    270,
+    306,
+    342,
+    378
+  ],
+  "evaluation_folds": [
+    342,
+    378
+  ],
+  "selection_folds": [
+    342
+  ],
+  "untouched_holdout_fold": 378,
+  "protocol": "train residual correction only on strictly earlier temporal folds",
+  "features": 314,
+  "head_features": [
+    "direct",
+    "hurdle",
+    "direct_minus_hurdle"
+  ],
+  "residual_history_features": [
+    "last",
+    "mean",
+    "median",
+    "absolute_mean",
+    "last_minus_mean",
+    "trend"
+  ],
+  "base_scores": [
+    {
+      "fold": 342,
+      "score": 1.7525134887444718,
+      "slope": 0.9974425706732845,
+      "intercept": -0.015931383602760807
+    },
+    {
+      "fold": 378,
+      "score": 1.673539538936582,
+      "slope": 0.9439371255850166,
+      "intercept": -0.2809958653715957
+    }
+  ],
+  "selection_grid": {
+    "iterations": [
+      50,
+      100,
+      200
+    ],
+    "shrinkages": [
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "minimum_untouched_holdout_gain": 0.00015,
+    "requires_selection_folds_nonnegative": true
+  },
+  "selected": {
+    "kind": "lightgbm",
+    "iteration": 50,
+    "shrinkage": 0.5,
+    "folds": [
+      {
+        "fold": 342,
+        "score": 1.7522484737314816,
+        "gain_vs_base": 0.00026501501299014407,
+        "slope": 1.0017579728462283,
+        "intercept": -0.01986619832320391
+      },
+      {
+        "fold": 378,
+        "score": 1.6735949740355223,
+        "gain_vs_base": -5.543509894034848e-05,
+        "slope": 0.9408695330073675,
+        "intercept": -0.27548570369099135
+      }
+    ],
+    "mean_score": 1.712921723883502,
+    "worst_score": 1.7522484737314816,
+    "mean_gain_vs_base": 0.0001047899570248978,
+    "worst_gain_vs_base": -5.543509894034848e-05,
+    "selection_objective": 1.7522484737314816
+  },
+  "accepted": false,
+  "validation_file": "/home/ubuntu/ecup/work/residual_growth_validation_val.npy",
+  "candidate_file": null,
+  "elapsed_seconds": 75.65126585960388
+}

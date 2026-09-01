@@ -1,0 +1,41 @@
+{
+  "frozen_date_msk": "2026-08-25",
+  "frozen_before": [
+    "pair-safe residual diagnostic result",
+    "direct-only untouched holdout result",
+    "any new public leaderboard response"
+  ],
+  "hypothesis": "A customer's cross-fitted residual in the immediately preceding completed 30-day window contains persistent latent propensity not captured by the six-family clean stack.",
+  "trigger": {
+    "pair_safe_controls_valid": true,
+    "preholdout_pair_count": 7,
+    "preholdout_minimum_mean_correlation": 0.003,
+    "preholdout_minimum_positive_pairs": 6
+  },
+  "construction": {
+    "base": "same six-family nonnegative ridge as 120",
+    "lambda": 0.001,
+    "lambda_search": false,
+    "validation_feature": "cross-fitted residual at anchor 348 from the held-out pair (348,378)",
+    "final_feature": "cross-fitted residual at anchor 378 from the held-out pair (348,378)",
+    "constraint": "nonnegative coefficient for the residual basis",
+    "mean_calibration": "reuse the frozen leaderboard-free rolling-origin mean forecast of 120",
+    "public_information_used": false
+  },
+  "promotion_gates": {
+    "mean_independent_private_gain_min": 0.00012,
+    "positive_gain_splits_min": 90,
+    "total_splits": 96,
+    "residual_weight_positive_splits_min": 90,
+    "full_validation_gain_min": 0.0001,
+    "final_rms_log_distance_from_120_min": 0.01,
+    "finite_nonnegative_unique_plain_csv": true
+  },
+  "prohibited_posthoc_actions": [
+    "negative/inverted residual feature",
+    "lambda search",
+    "subset search",
+    "threshold relaxation",
+    "public probe before all offline gates pass"
+  ]
+}

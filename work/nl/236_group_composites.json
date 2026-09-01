@@ -1,0 +1,122 @@
+{
+  "anchors": {
+    "members": [
+      "bank_st24_s2011",
+      "bank_st24_s2012",
+      "bank_st24_s2013",
+      "bank_st36_s2021",
+      "bank_st36_s2022",
+      "divA_s43_st12",
+      "divB_avg",
+      "divB_st24a",
+      "divB_st24b",
+      "divB_st36a",
+      "divB_st36b",
+      "divB_st36c",
+      "divG_e4_st24",
+      "divH_st48a",
+      "divH_st48b",
+      "divH_st48c",
+      "divL_mask60_st24",
+      "divV_magn_st24",
+      "divV_prob_st24"
+    ],
+    "count": 19,
+    "chosen_lambda": 0.003,
+    "out_of_fold_rmsle": 1.6675103035909151
+  },
+  "capacity": {
+    "members": [
+      "divG_e4_w192",
+      "divR_w192_e4",
+      "divR_w192_e6",
+      "divR_w256_e6",
+      "divR_w384_e4"
+    ],
+    "count": 5,
+    "chosen_lambda": 0.003,
+    "out_of_fold_rmsle": 1.6683685907378991
+  },
+  "dailycal": {
+    "members": [
+      "bank_daily_s2031",
+      "bank_daily_s2032",
+      "divS_cal_e2",
+      "divT_gift_e4",
+      "divU_daily03_cal",
+      "divU_daily03_e2",
+      "divU_daily03_e4",
+      "divU_daily03_gift",
+      "divU_daily10_e2",
+      "divU_daily10_e4"
+    ],
+    "count": 10,
+    "chosen_lambda": 0.003,
+    "out_of_fold_rmsle": 1.6669184084766206
+  },
+  "other": {
+    "members": [
+      "bank_pos_s2041",
+      "divC_u33a",
+      "divC_u50a",
+      "divC_u50b",
+      "divE_s43id",
+      "divG_e4",
+      "divG_e6_u50",
+      "divG_e6",
+      "divL_mask14",
+      "divL_mask30",
+      "divL_mask60",
+      "divL_mask90",
+      "divM_plain_e4",
+      "divM_plain_e6",
+      "gbdtfair1250",
+      "gbdtfair625",
+      "gbdtlong"
+    ],
+    "count": 17,
+    "chosen_lambda": 0.003,
+    "out_of_fold_rmsle": 1.6659874170746445
+  },
+  "repr": {
+    "members": [
+      "divQ_cumulative_e4",
+      "divQ_cumulative_e6",
+      "divQ_daynorm_e4",
+      "divQ_daynorm_e6",
+      "divQ_diff_e4",
+      "divQ_occurrence_e4",
+      "divQ_rankday_e4"
+    ],
+    "count": 7,
+    "chosen_lambda": 0.003,
+    "out_of_fold_rmsle": 1.6675752379623086
+  },
+  "shape": {
+    "members": [
+      "bank_shape_e4_s2001",
+      "bank_shape_e4_s2002",
+      "bank_shape_e4_s2003",
+      "divK_shape_e4",
+      "divK_shape_pos",
+      "divK_shape_st24",
+      "divK_shape",
+      "divM_shape_e4_s2",
+      "divM_shape_e4_s3",
+      "divM_shape_e4_st24",
+      "divM_shape_e6",
+      "divM_shape_e8",
+      "divP_shape_e4_s501",
+      "divP_shape_e4_s502",
+      "divP_shape_e4_s503",
+      "divQ_daynorm_shape_e4",
+      "divR_shape_w192_e4",
+      "divU_daily03_shape",
+      "divV_magn_shape",
+      "divV_prob_shape"
+    ],
+    "count": 20,
+    "chosen_lambda": 0.003,
+    "out_of_fold_rmsle": 1.6659473173955772
+  }
+}

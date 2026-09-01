@@ -1,0 +1,29 @@
+{
+  "tag": "221_gift_season_definitively_closed",
+  "date_msk": "2026-08-29",
+  "claim": "The 2025 gift window, days 44 to 73, carries nothing that transfers to the 2026 window. Four independent attempts, each removing a different objection to the previous one.",
+  "attempts": [
+    {
+      "what": "121_offline_gift_holdout, a model trained on the same-season 2025 holdout",
+      "result": "public 1.7621018713; frozen conditional direction was nonpositive",
+      "when": "26.08"
+    },
+    {
+      "what": "extended anchor range back to day 43, no validity channel",
+      "result": "calibrated 1.669851, conditional -0.0000105",
+      "objection_removed": "none; the window is 90 percent left padding"
+    },
+    {
+      "what": "the same with a validity channel marking real days",
+      "result": "calibrated 1.681500, conditional +0.0000102",
+      "objection_removed": "padding; the channel recovered 0.0245 of standalone quality"
+    },
+    {
+      "what": "the same plus four calendar channels, so the network can finally represent WHICH season each anchor sits in",
+      "result": "calibrated 1.669473, conditional +0.0000140, deployment -0.0000059",
+      "objection_removed": "the network could not distinguish the same-season anchor from any other"
+    }
+  ],
+  "conclusion": "Each attempt removed the objection that explained the previous failure, and the result did not move. The year-over-year shape of this season does not repeat at the user level. This is now a measured property of the data rather than a limitation of the models.",
+  "collateral": "Calendar channels also fail on the standard anchor range at -0.0000132. With fourteen anchors spanning July to February there is no seasonal function to generalise, and the competition window lies outside that range in any case."
+}

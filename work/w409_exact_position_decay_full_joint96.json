@@ -1,0 +1,42 @@
+[
+  {
+    "candidates": [
+      "/home/ubuntu/ecup/work/w409c_val.npy",
+      "/home/ubuntu/ecup/work/w409_exact_decay_s93_val.npy",
+      "/home/ubuntu/ecup/work/w409_exact_position_s93_val.npy",
+      "/home/ubuntu/ecup/work/w409_exact_position_decay_s93_val.npy"
+    ],
+    "lambda": 0.003,
+    "base_columns": 25,
+    "oracle_base_score_250k": 1.665139825094663,
+    "oracle_augmented_score_250k": 1.664577008225839,
+    "oracle_gain_250k": 0.0005628168688238677,
+    "oracle_degrees_added": 2.322360354570808,
+    "oracle_candidate_weights": {
+      "/home/ubuntu/ecup/work/w409c_val.npy": 0.0847848082416118,
+      "/home/ubuntu/ecup/work/w409_exact_decay_s93_val.npy": 0.12082472938105691,
+      "/home/ubuntu/ecup/work/w409_exact_position_s93_val.npy": 0.22613563984370735,
+      "/home/ubuntu/ecup/work/w409_exact_position_decay_s93_val.npy": 0.14419940914685936
+    },
+    "repeats": 96,
+    "mean_fitted_public_gain": 0.0006091531969111044,
+    "mean_independent_private_gain": 0.000524066853576396,
+    "private_gain_se": 4.752656552252168e-06,
+    "private_gain_positive_fraction": 1.0,
+    "private_gain_min": 0.0003144124611289545,
+    "private_gain_max": 0.0006093601010366267,
+    "mean_degrees_added": 2.3217820967892018,
+    "mean_candidate_weights": {
+      "/home/ubuntu/ecup/work/w409c_val.npy": 0.07975310439651558,
+      "/home/ubuntu/ecup/work/w409_exact_decay_s93_val.npy": 0.1258901611863074,
+      "/home/ubuntu/ecup/work/w409_exact_position_s93_val.npy": 0.22185652031917905,
+      "/home/ubuntu/ecup/work/w409_exact_position_decay_s93_val.npy": 0.14741233738141446
+    },
+    "candidate_weight_negative_fraction": {
+      "/home/ubuntu/ecup/work/w409c_val.npy": 0.0625,
+      "/home/ubuntu/ecup/work/w409_exact_decay_s93_val.npy": 0.041666666666666664,
+      "/home/ubuntu/ecup/work/w409_exact_position_s93_val.npy": 0.0,
+      "/home/ubuntu/ecup/work/w409_exact_position_decay_s93_val.npy": 0.010416666666666666
+    }
+  }
+]

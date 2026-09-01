@@ -1,0 +1,42 @@
+{
+  "question": "Why are public top 1-3 ahead of us, and where can the gap physically come from?",
+  "decided_msk": "2026-08-26T14:20:00+03:00",
+  "uses_public_scores": "only already-measured moments; no new probe",
+  "finding_1_gap_is_in_bases_not_weighting": {
+    "all_measured_pool_unregularized_fitted_public": 1.6461002591,
+    "frozen_130_expected_public": 1.6461788499,
+    "top1_public": 1.6450006841,
+    "gap_of_top1_below_our_absolute_weighting_ceiling": 0.0010996,
+    "conclusion": "Perfect, unregularised weighting of every base we have still loses to top-1 by 0.0011. Stacking, lambda and calibration are provably exhausted; the deficit is in the base models."
+  },
+  "finding_2_base_library_saturated": {
+    "measured_bases": 24,
+    "best_single_base": {"name": "W365", "corr_with_z": 0.70125, "standalone_rmsle": 1.651401},
+    "full_ensemble_corr": 0.70354,
+    "top1_implied_corr": 0.70405,
+    "ensemble_gain_over_best_single_in_corr": 0.0023,
+    "conclusion": "All bases sit at corr 0.65-0.70 with mutual correlation above 0.99. The whole 29-base ensemble buys only +0.0023 correlation over the single best base."
+  },
+  "finding_3_seed_averaging_nearly_exhausted": {
+    "method": "E[z*v] is linear in v, so the exact real-target correlation of any average of measured bases is computable with no probe. Between-seed correlation estimates the variance-reduction curve.",
+    "family_w365": {"between_seed_corr": 0.996766, "corr_1_seed": 0.700402, "corr_3_seeds": 0.701158, "corr_infinite_seeds": 0.701537, "standalone_3": 1.651599, "standalone_inf": 1.650735},
+    "conclusion": "Only +0.00038 correlation remains between the current 3-seed averages and infinite averaging, and the 29-base ridge already performs most of that noise averaging. Seed farming is NOT the lever. Hypothesis raised and refuted by exact measurement."
+  },
+  "finding_4_validation_is_not_inverted": {
+    "paired_bases": 11,
+    "pearson_fold378_vs_real": 0.8181,
+    "spearman_fold378_vs_real": 0.7091,
+    "outlier": "tcn365v336 has fold378 1.750386 against real 1.653626, but it used a growing-anchor validation so its fold score is not comparable",
+    "conclusion": "FINDINGS 2.1 ('Spearman -0.9, validation inverted') does NOT survive a wider sample. It was computed on 6 models with an outlier. The correct statement is that fold 378 ranks COARSE quality correctly but has no resolution at the 0.0001 scale where every admission decision of this project lives. That, not inversion, explains why marginal offline gates failed to transfer to public."
+  },
+  "finding_5_comparison_artifact": {
+    "our_public_is_fitted": 1.6461706601,
+    "our_honest_estimate": 1.6469898137,
+    "top1_public": 1.6450006841,
+    "top1_entries": 76,
+    "top3_entries": 75,
+    "conclusion": "Our public score is fitted to recovered public moments; our honest estimate is 0.00082 worse. If the leaders also calibrated on public across 75-76 entries, part of their lead is the same optimism and will regress on private. The private ordering is materially more open than the public board suggests."
+  },
+  "no_richer_data_exists": "train.parquet is already aggregated to user x day over 17 numeric columns, with no item_id, category_id or query text. All 17 columns are in use.",
+  "remaining_target": "82% of achievable variance is the buy/no-buy event (p(1-p)mu^2 = 4.271 vs p*sigma^2 = 0.965). The decomposition E[z|x] = P(y>0|x) * E[z|x,y>0] is EXACT because z = log1p(y) is exactly 0 when y = 0. A better P(buy) model is therefore the highest-leverage single component left."
+}

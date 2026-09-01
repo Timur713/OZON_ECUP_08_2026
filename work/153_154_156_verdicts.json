@@ -1,0 +1,19 @@
+{
+  "date_msk": "2026-08-28",
+  "public_submissions_spent_on_this_line": 0,
+  "verdicts": {
+    "153_conditional_block": {
+      "outcome": "CLOSED, not submitted, zero probes spent",
+      "why": "155 and 159 showed the 152 audit did not model the solve the project performs. Under the deployment-faithful solve the raw block is negative at every K, from -0.00020 at K=6 to -0.00263 at K=30."
+    },
+    "154_extended_column_pool": {
+      "outcome": "CLOSED, no improvement",
+      "why": "213 columns from 11 channels plus conversion, check and trend ratios, deduplicated to 162. Under the same deployment protocol the best arm reaches +0.00016 against +0.00026 for the original 60-column pool, so the richer pool is worse, not better. The reading key required at least a 25 percent improvement."
+    },
+    "156_orthogonal_whitened_block": {
+      "outcome": "CLOSED by the halved-K clause",
+      "why": "Orthogonalising the block against the base span and whitening it removes the noise amplification and restores a positive sign: +0.00014 at K=20 with the proxy error and +0.00021 without. Only the no-proxy arm clears 0.00020, and that arm costs two probes per column, which halves the affordable K. At K=10 to 15 the same arm gives about +0.00013, below the 0.00016 gate. The threshold is not relaxed."
+    }
+  },
+  "what_survives": "Two measurement results survive as durable findings. First, a boosted stacker over the base predictions is 0.00030 WORSE than a linear one with the same inputs, so the ensemble lacks linear terms rather than nonlinearity. Second, the moment-recovery apparatus is safe only for columns that correlate above about 0.99 with the pool; for anything less correlated, the 250k Gram against a public right-hand side and the 250k E[v^2] proxy stop cancelling and the recovered weights are amplified by the ill-conditioned inverse. This is a real limit of the method and it explains the old FINDINGS line that calibration by features does not pay off."
+}

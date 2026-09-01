@@ -1,0 +1,362 @@
+[
+  {
+    "model": "grp_shape",
+    "corr": 0.9969564273575596,
+    "calibrated": 1.6659472260162789
+  },
+  {
+    "model": "grp_dailycal",
+    "corr": 0.9966497952449329,
+    "calibrated": 1.666918272705291
+  },
+  {
+    "model": "grp_anchors",
+    "corr": 0.9969195764850378,
+    "calibrated": 1.6675097106031682
+  },
+  {
+    "model": "grp_repr",
+    "corr": 0.9964478070560293,
+    "calibrated": 1.6675750993760299
+  },
+  {
+    "model": "divP_shape_e4_s502",
+    "corr": 0.9959380033412393,
+    "calibrated": 1.668086867526507
+  },
+  {
+    "model": "divK_shape_e4",
+    "corr": 0.9962313894188792,
+    "calibrated": 1.668144609275721
+  },
+  {
+    "model": "grp_capacity",
+    "corr": 0.996771192946244,
+    "calibrated": 1.6683684271334442
+  },
+  {
+    "model": "divC_u50a",
+    "corr": 0.9965407301011405,
+    "calibrated": 1.668582483963883
+  },
+  {
+    "model": "divG_e6",
+    "corr": 0.9959808245124184,
+    "calibrated": 1.6687599305493641
+  },
+  {
+    "model": "divQ_daynorm_shape_e4",
+    "corr": 0.9957936070966763,
+    "calibrated": 1.6688559468531239
+  },
+  {
+    "model": "bank_shape_e4_s2002",
+    "corr": 0.9958775025737586,
+    "calibrated": 1.6691158385673945
+  },
+  {
+    "model": "divU_daily03_e4",
+    "corr": 0.994678538479246,
+    "calibrated": 1.6691372363979629
+  },
+  {
+    "model": "divU_daily03_gift",
+    "corr": 0.9947647733506535,
+    "calibrated": 1.6691493919929472
+  },
+  {
+    "model": "divU_daily10_e2",
+    "corr": 0.9964257199899401,
+    "calibrated": 1.669163009662485
+  },
+  {
+    "model": "bank_daily_s2031",
+    "corr": 0.9956588556854865,
+    "calibrated": 1.6693122419596444
+  },
+  {
+    "model": "divQ_diff_e4",
+    "corr": 0.9947644998123575,
+    "calibrated": 1.6693283348589736
+  },
+  {
+    "model": "divU_daily03_e2",
+    "corr": 0.9954007715439106,
+    "calibrated": 1.6695537576352855
+  },
+  {
+    "model": "divR_w192_e4",
+    "corr": 0.9958580335346348,
+    "calibrated": 1.6695891176255324
+  },
+  {
+    "model": "bank_st36_s2022",
+    "corr": 0.9958245811876232,
+    "calibrated": 1.6696630521330131
+  },
+  {
+    "model": "bank_st24_s2013",
+    "corr": 0.9962250452419543,
+    "calibrated": 1.6697767030107418
+  },
+  {
+    "model": "divC_u50b",
+    "corr": 0.9953863715257628,
+    "calibrated": 1.6697990895475494
+  },
+  {
+    "model": "divB_st36b",
+    "corr": 0.9957714723181752,
+    "calibrated": 1.669884274493427
+  },
+  {
+    "model": "divB_st36c",
+    "corr": 0.9949957995975842,
+    "calibrated": 1.6699000519981957
+  },
+  {
+    "model": "divC_u33a",
+    "corr": 0.9949803348677758,
+    "calibrated": 1.6699377727603375
+  },
+  {
+    "model": "divB_st24b",
+    "corr": 0.996195497172847,
+    "calibrated": 1.6699402017265317
+  },
+  {
+    "model": "divB_avg",
+    "corr": 0.9965474235825896,
+    "calibrated": 1.670025298865879
+  },
+  {
+    "model": "divU_daily10_e4",
+    "corr": 0.9951343696934176,
+    "calibrated": 1.670029845354007
+  },
+  {
+    "model": "divH_st48c",
+    "corr": 0.9955976477573891,
+    "calibrated": 1.6700546204975346
+  },
+  {
+    "model": "divT_gift_e4",
+    "corr": 0.9947694672864629,
+    "calibrated": 1.6700780615434607
+  },
+  {
+    "model": "divM_shape_e4_st24",
+    "corr": 0.995601920341743,
+    "calibrated": 1.6701271931812698
+  },
+  {
+    "model": "bank_st24_s2012",
+    "corr": 0.9966415552031506,
+    "calibrated": 1.670210559516108
+  },
+  {
+    "model": "divE_s43_valid",
+    "corr": 0.9963018453836364,
+    "calibrated": 1.6702518134967848
+  },
+  {
+    "model": "divG_e4",
+    "corr": 0.9943230704242574,
+    "calibrated": 1.6702569931311562
+  },
+  {
+    "model": "divA_s43_st12",
+    "corr": 0.9956783980024174,
+    "calibrated": 1.6702657076758138
+  },
+  {
+    "model": "divG_e4_w192",
+    "corr": 0.9956958861528111,
+    "calibrated": 1.670279286555445
+  },
+  {
+    "model": "divU_daily03_shape",
+    "corr": 0.9954162487897223,
+    "calibrated": 1.6702822879678219
+  },
+  {
+    "model": "divM_plain_e6",
+    "corr": 0.9939271227917352,
+    "calibrated": 1.670344542199571
+  },
+  {
+    "model": "divH_st48a",
+    "corr": 0.995768651161903,
+    "calibrated": 1.6707874383322525
+  },
+  {
+    "model": "divM_shape_e8",
+    "corr": 0.9934566044039951,
+    "calibrated": 1.6707988787323749
+  },
+  {
+    "model": "divP_shape_e4_s501",
+    "corr": 0.9947018707636676,
+    "calibrated": 1.6708120876234733
+  },
+  {
+    "model": "divU_daily03_cal",
+    "corr": 0.9909805878914815,
+    "calibrated": 1.670858908856854
+  },
+  {
+    "model": "divH_st48b",
+    "corr": 0.9955466912889894,
+    "calibrated": 1.670926546389223
+  },
+  {
+    "model": "divP_shape_e4_s503",
+    "corr": 0.9943801589374637,
+    "calibrated": 1.6711982506805745
+  },
+  {
+    "model": "divR_w192_e6",
+    "corr": 0.9948758139958039,
+    "calibrated": 1.6712281754267262
+  },
+  {
+    "model": "divS_cal_e2",
+    "corr": 0.994235620932277,
+    "calibrated": 1.671269958848084
+  },
+  {
+    "model": "divQ_daynorm_e4",
+    "corr": 0.9933123693474967,
+    "calibrated": 1.6713062247611528
+  },
+  {
+    "model": "divM_shape_e4_s3",
+    "corr": 0.9954775940679885,
+    "calibrated": 1.6714116529251213
+  },
+  {
+    "model": "bank_daily_s2032",
+    "corr": 0.9935675380633914,
+    "calibrated": 1.6714960270848458
+  },
+  {
+    "model": "bank_shape_e4_s2003",
+    "corr": 0.9948802583430081,
+    "calibrated": 1.6716533038524168
+  },
+  {
+    "model": "bank_shape_e4_s2001",
+    "corr": 0.9927722872457984,
+    "calibrated": 1.6718663555514257
+  },
+  {
+    "model": "divM_plain_e4",
+    "corr": 0.9934274280205044,
+    "calibrated": 1.6718679168576362
+  },
+  {
+    "model": "divQ_daynorm_e6",
+    "corr": 0.9933102198446989,
+    "calibrated": 1.672103298175623
+  },
+  {
+    "model": "bank_pos_s2041",
+    "corr": 0.995970789207337,
+    "calibrated": 1.6724411122745264
+  },
+  {
+    "model": "divM_shape_e4_s2",
+    "corr": 0.9943831365579826,
+    "calibrated": 1.6724423062697125
+  },
+  {
+    "model": "divK_shape_st24",
+    "corr": 0.9939646742118754,
+    "calibrated": 1.6725233841707838
+  },
+  {
+    "model": "divR_w384_e4",
+    "corr": 0.994253995495012,
+    "calibrated": 1.67325306554946
+  },
+  {
+    "model": "divR_w256_e6",
+    "corr": 0.9942515256944725,
+    "calibrated": 1.673333126769277
+  },
+  {
+    "model": "bank_st36_s2021",
+    "corr": 0.9945579701956117,
+    "calibrated": 1.673759255562882
+  },
+  {
+    "model": "gbdtfair1250",
+    "corr": 0.995924627235864,
+    "calibrated": 1.6738881047586254
+  },
+  {
+    "model": "bank_st24_s2011",
+    "corr": 0.994454431591112,
+    "calibrated": 1.6739765836971128
+  },
+  {
+    "model": "gbdtfair625",
+    "corr": 0.9958223967375462,
+    "calibrated": 1.6740012627784364
+  },
+  {
+    "model": "gbdtlong",
+    "corr": 0.9956185730848673,
+    "calibrated": 1.6741509086245154
+  },
+  {
+    "model": "divM_shape_e6",
+    "corr": 0.9934480562116034,
+    "calibrated": 1.6741966277690699
+  },
+  {
+    "model": "divB_st24a",
+    "corr": 0.9948183312908704,
+    "calibrated": 1.6742763682098072
+  },
+  {
+    "model": "divQ_cumulative_e4",
+    "corr": 0.9917077265398356,
+    "calibrated": 1.6744201267487666
+  },
+  {
+    "model": "divK_shape_pos",
+    "corr": 0.9936070514820093,
+    "calibrated": 1.6744784510091315
+  },
+  {
+    "model": "divB_st36a",
+    "corr": 0.9933285277946938,
+    "calibrated": 1.675468966126647
+  },
+  {
+    "model": "divG_e4_st24",
+    "corr": 0.9926374802540673,
+    "calibrated": 1.6755316484351896
+  },
+  {
+    "model": "divQ_cumulative_e6",
+    "corr": 0.9894653628869076,
+    "calibrated": 1.6756989167933407
+  },
+  {
+    "model": "divG_e6_u50",
+    "corr": 0.9912234365132753,
+    "calibrated": 1.6759708622593574
+  },
+  {
+    "model": "divK_shape",
+    "corr": 0.9920335583833381,
+    "calibrated": 1.676261229527067
+  },
+  {
+    "model": "divR_shape_w192_e4",
+    "corr": 0.9873874913732705,
+    "calibrated": 1.686241179959938
+  }
+]

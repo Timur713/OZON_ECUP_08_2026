@@ -1,0 +1,11 @@
+[
+  {
+    "file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/submissions/120_offline_rules_safe_meanforecast.csv",
+    "rows": 250000,
+    "unique_users": 250000,
+    "prediction_min": 0.12687851759968352,
+    "prediction_max": 13991.698897651228,
+    "mean_log1p": 2.320535330938203,
+    "bytes": 6606153
+  }
+]

@@ -1,0 +1,66 @@
+{
+  "base_private": 1.6646650940756562,
+  "base_df": 23.021618439768734,
+  "singles": {
+    "divU_daily03_e4_val": {
+      "gain": 9.858678586499119e-05,
+      "df_added": 0.7375860129943241,
+      "positive_splits": 96
+    },
+    "divM_shape_e8_val": {
+      "gain": 9.583689493642782e-05,
+      "df_added": 0.7516489173159115,
+      "positive_splits": 96
+    },
+    "divM_plain_e6_val": {
+      "gain": 3.0549199619325784e-05,
+      "df_added": 0.7883423522251505,
+      "positive_splits": 84
+    },
+    "divR_w256_e6_val": {
+      "gain": 8.546027487373505e-05,
+      "df_added": 0.7337973141818352,
+      "positive_splits": 96
+    },
+    "divB_st36a_val": {
+      "gain": 9.786338859234708e-06,
+      "df_added": 0.6261038971290098,
+      "positive_splits": 81
+    }
+  },
+  "joint": {
+    "members": [
+      "divU_daily03_e4_val",
+      "divM_shape_e8_val",
+      "divM_plain_e6_val",
+      "divR_w256_e6_val",
+      "divB_st36a_val"
+    ],
+    "gain": 0.00022467005120353997,
+    "df_added": 3.621805573917893,
+    "positive_splits": 96,
+    "sum_of_singles": 0.00032021949415371453
+  },
+  "leave_one_out": {
+    "divU_daily03_e4_val": {
+      "incremental_gain_given_the_others": 2.4423968826306486e-05,
+      "df_it_costs": 0.721107399373107
+    },
+    "divM_shape_e8_val": {
+      "incremental_gain_given_the_others": 3.89264617864186e-05,
+      "df_it_costs": 0.7459428077276975
+    },
+    "divM_plain_e6_val": {
+      "incremental_gain_given_the_others": 5.59727502652078e-06,
+      "df_it_costs": 0.7810069772960446
+    },
+    "divR_w256_e6_val": {
+      "incremental_gain_given_the_others": 7.9866352383752e-05,
+      "df_it_costs": 0.7305499141459002
+    },
+    "divB_st36a_val": {
+      "incremental_gain_given_the_others": -3.9363576773907005e-06,
+      "df_it_costs": 0.6266685082553174
+    }
+  }
+}

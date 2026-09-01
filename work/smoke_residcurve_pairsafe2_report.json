@@ -1,0 +1,89 @@
+{
+  "tag": "smoke_residcurve_pairsafe2",
+  "uses_public_scores": false,
+  "uses_recovered_moments": false,
+  "uses_competition_target_mean": false,
+  "pair_safe": true,
+  "user_crossfit_folds": 2,
+  "training_user_fraction_within_calibration_half": 0.5,
+  "features": 304,
+  "boost_rounds": 2,
+  "pairs": [
+    {
+      "anchors": [
+        138,
+        168
+      ],
+      "training_anchors": [
+        204,
+        216,
+        228,
+        240,
+        252,
+        264,
+        276,
+        288,
+        300,
+        312,
+        324,
+        336,
+        348
+      ],
+      "correlation": 0.185186689407501,
+      "folds": [
+        {
+          "evaluation_fold": 0,
+          "training_users": 64,
+          "calibration_users": 128,
+          "evaluation_users": 128,
+          "calibration": [
+            {
+              "anchor": 138,
+              "slope": 17.633354110688977,
+              "intercept": -41.70865800177743
+            },
+            {
+              "anchor": 168,
+              "slope": 12.569373230436073,
+              "intercept": -28.90286171873725
+            }
+          ]
+        },
+        {
+          "evaluation_fold": 1,
+          "training_users": 64,
+          "calibration_users": 128,
+          "evaluation_users": 128,
+          "calibration": [
+            {
+              "anchor": 138,
+              "slope": 14.401881064025321,
+              "intercept": -31.724215638523425
+            },
+            {
+              "anchor": 168,
+              "slope": 15.632074990889214,
+              "intercept": -34.34385772194404
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "mean_adjacent_residual_correlation": 0.185186689407501,
+  "pair_positive_count": 1,
+  "pair_count": 1,
+  "pair_standard_deviation": 0.0,
+  "two_way_block_bootstrap_p05": 0.064561761488389,
+  "two_way_block_bootstrap_p50": 0.18515035612022196,
+  "two_way_block_bootstrap_p95": 0.3129118469295594,
+  "negative_control_mean": 0.012398743423537095,
+  "positive_control_mean": 0.02037463216539462,
+  "decision_threshold": {
+    "minimum_mean_correlation": 0.003,
+    "minimum_positive_pairs": 1,
+    "minimum_bootstrap_p05": 0.0
+  },
+  "elapsed_seconds": 0.6261038780212402,
+  "supports_stable_user_residual_branch": true
+}

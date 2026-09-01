@@ -1,0 +1,23 @@
+{
+  "tag": "143_probe_exext_plain",
+  "file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/submissions/143_probe_exext_plain.csv",
+  "vector": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/EXEXT_plain_final.npy",
+  "vector_key": null,
+  "candidate_file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/143_probe_exext_plain_candidate.npy",
+  "base_submission": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/submissions/130_private_safe_exact_decay_l003.csv",
+  "base_score": 1.6461706600883055,
+  "weight": 0.3,
+  "inverted": false,
+  "mean_log": 2.3232887,
+  "prediction_min": 0.0,
+  "prediction_max": 12296.302686222349,
+  "base_mean": 2.3232887,
+  "candidate_mean": 2.323288699999999,
+  "base_second_moment": 8.051268280184239,
+  "candidate_second_moment": 8.045863884098436,
+  "cross_base_candidate": 8.039469039328948,
+  "probe_second_moment": 8.045826203377294,
+  "corr_base_candidate": 0.9965688313214977,
+  "distance_squared": 0.0181940856247773,
+  "ez_base": 8.052360569024334
+}

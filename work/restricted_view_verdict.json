@@ -1,0 +1,24 @@
+{
+  "round": "restricted-view bases",
+  "preregistration": "work/145_restricted_view_preregister.json",
+  "decided_msk": "2026-08-26T19:35:00+03:00",
+  "uses_public_scores": false,
+  "cells": {
+    "rv_search":   {"standalone": 1.678326, "incremental": -1.567e-05, "weight": 0.01785, "neg_frac": 0.302},
+    "rv_cat":      {"standalone": 2.055014, "incremental": -1.675e-05, "weight": 0.00425, "neg_frac": 0.312},
+    "rv_noamount": {"standalone": 1.679878, "incremental": -1.325e-05, "weight": 0.03674, "neg_frac": 0.125},
+    "rv_activity": {"standalone": 1.907833, "incremental": 4.888e-05, "weight": -0.02884, "neg_frac": 1.0},
+    "rv_intent":   {"standalone": 1.686211, "incremental": -1.613e-05, "weight": -0.00206, "neg_frac": 0.542},
+    "rv_gmvonly":  {"standalone": 1.681332, "incremental": -1.570e-05, "weight": -0.01381, "neg_frac": 0.656},
+    "sw28":        {"standalone": 1.817629, "incremental": 1.0687e-04, "weight": -0.05268, "neg_frac": 1.0,
+                    "se": 4.55e-06, "positive_fraction": 1.0, "min": 2.150e-04, "max": 5.139e-04,
+                    "net_after_df": 8.317e-05},
+    "sw14":        {"standalone": 1.919958, "incremental": 6.20e-06, "weight": -0.01390, "neg_frac": 0.917}
+  },
+  "verdict_by_frozen_key": "FAILED. Seven cells miss the magnitude gate. sw28 CLEARS the magnitude gate (+0.00010687 against 0.00008) with an exceptionally stable gain (se 4.6e-06, positive on 96/96 splits) but its ridge weight is negative on 96/96 splits, violating the preregistered maximum_negative_weight_fraction of 0.10. The threshold is NOT relaxed after seeing the result.",
+  "channel_restriction_is_closed": "Restricting the CHANNEL view (search side, catalog side, no-amount, activity, intent, money-only) produced negative incremental gain in every case. Channel decomposition does not decorrelate a model from the pool.",
+  "what_did_work": "Restricting the TIME view. Window 28 is the only cell with a real effect, and window 14 is already too short (+6.2e-06). The effect is therefore specific to a short-but-not-tiny recent window.",
+  "interpretation_of_the_negative_weight": "Adding sw28 with weight -0.05 to a pool that already contains w409c and decay spans the same subspace as adding the contrast 'long history minus recent 28 days' with a POSITIVE weight. The sign is a property of the parameterisation, not evidence that the signal is spurious. The mechanism is mean reversion: for a user on a temporary spike, the last 28 days overstate the long-run rate and the ridge subtracts it.",
+  "why_this_is_not_post_hoc_inversion": "The STRATEGY rule states that a negative post-hoc weight does not turn a FAILED PROBE into a finding. No probe was submitted here. The sign was measured offline across 96 splits before any public exposure.",
+  "follow_up": "A separate round with its own frozen key and an explicitly charged adaptive-selection cost, since the hypothesis was formed after seeing this result. See work/146_mean_reversion_preregister.json."
+}

@@ -1,0 +1,20 @@
+{
+  "tag": "151_pooled_conditional_direction",
+  "date": "2026-08-28",
+  "uses_public_scores": false,
+  "uses_recovered_moments": false,
+  "why_this_extension_exists": "The frozen key of 150 aggregated all 12 ordered fold pairs and returned 'transfers' at mean 0.00038 with 9 of 12 positive. Reading the cells shows the aggregate is the wrong estimand for the decision. Deployment fits beta on the newest fold and applies it 30 days forward. The row that matches that geometry, 378 -> everything else, averages 4.14e-05, and the single closest analogue 348 -> 378 is 2.9e-06. The aggregate is carried by transfers INTO folds 288 and 318, which are backward in time and seasonally adjacent to their sources, and which deployment can never use. This is the same class of defect as the gate-pool error of 26.08 and it points the same way, towards leniency.",
+  "decision_on_150": "Not promoted. No CSV, no probe. The aggregate key is recorded as passed and as mis-specified; the standing 0.00008 magnitude gate is not relaxed and is not the thing that failed here, since the deployment-geometry statistic does not reach it.",
+  "hypothesis_151": "A single beta is a noisy estimate of one common conditional direction. If a common direction exists, the leave-one-fold-out average of the other three betas must beat every single-fold beta on the held-out fold, and must do so on the newest fold as well as the older ones.",
+  "design": {
+    "estimator": "beta_pooled(-V) = mean of beta_A over the three folds A != V",
+    "statistic": "gain of applying beta_pooled(-V) at fold V, single scale fitted out of fold at V, measured against the same affine baseline as 150",
+    "controls": "the four single-fold betas measured in 150 on the same held-out folds, and the random-direction control"
+  },
+  "reading_key": {
+    "promote": "gain of the pooled direction is >= 0.00008 on EVERY one of the four held-out folds, including 378 -> then build one candidate base at anchor 408 and spend exactly one probe",
+    "closed": "any held-out fold gives less than 0.00008 -> the conditional direction is fold-specific seasonal absorption, branch closed for good, no CSV and no probe"
+  },
+  "expected_sign": "positive only if a common direction exists; the 150 cell structure and the beta correlations of 0.14 to 0.42 argue it does not",
+  "frozen_before_measurement": true
+}

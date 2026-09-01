@@ -1,0 +1,76 @@
+{
+  "base_private": 1.6642950092069697,
+  "base_df": 23.527644047416207,
+  "singles": {
+    "grp_shape_val": {
+      "gain": 4.104327682785911e-05,
+      "df_added": 0.44006040498474874,
+      "positive_splits": 95
+    },
+    "grp_anchors_val": {
+      "gain": -7.74639730379926e-06,
+      "df_added": 0.49258327198952756,
+      "positive_splits": 27
+    },
+    "grp_other_val": {
+      "gain": -4.084722958377455e-06,
+      "df_added": 0.39153635947933196,
+      "positive_splits": 47
+    },
+    "grp_dailycal_val": {
+      "gain": 3.629915422111163e-06,
+      "df_added": 0.43643418841943316,
+      "positive_splits": 73
+    },
+    "grp_repr_val": {
+      "gain": -1.5392525244381044e-05,
+      "df_added": 0.5253772270806252,
+      "positive_splits": 14
+    },
+    "grp_capacity_val": {
+      "gain": 5.442550226349614e-06,
+      "df_added": 0.4991348539042946,
+      "positive_splits": 68
+    }
+  },
+  "joint": {
+    "members": [
+      "grp_shape_val",
+      "grp_anchors_val",
+      "grp_other_val",
+      "grp_dailycal_val",
+      "grp_repr_val",
+      "grp_capacity_val"
+    ],
+    "gain": 5.312019722456448e-05,
+    "df_added": 2.7086054057139535,
+    "positive_splits": 92,
+    "sum_of_singles": 2.289209696976213e-05
+  },
+  "leave_one_out": {
+    "grp_shape_val": {
+      "incremental_gain_given_the_others": 5.2008596925001704e-05,
+      "df_it_costs": 0.4305689725009678
+    },
+    "grp_anchors_val": {
+      "incremental_gain_given_the_others": -5.897002868164118e-06,
+      "df_it_costs": 0.44331270041491067
+    },
+    "grp_other_val": {
+      "incremental_gain_given_the_others": 3.3512416138919052e-06,
+      "df_it_costs": 0.3957604876643366
+    },
+    "grp_dailycal_val": {
+      "incremental_gain_given_the_others": 1.5000907558661292e-05,
+      "df_it_costs": 0.41564608106270384
+    },
+    "grp_repr_val": {
+      "incremental_gain_given_the_others": -6.11256019837636e-06,
+      "df_it_costs": 0.501162068580669
+    },
+    "grp_capacity_val": {
+      "incremental_gain_given_the_others": 1.8465591028496892e-05,
+      "df_it_costs": 0.4602124130462961
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "pool": "25 audit columns + w409c + decay_s93",
+  "base_matched_private": 1.6646650940756562,
+  "base_deployment_private": 1.6653687034861575,
+  "candidates": {
+    "divU_daily03_shape_val": {
+      "standalone_rmsle": 1.6926616799340783,
+      "correlation_with_stack": 0.9961117359782723,
+      "matched_conditional_gain": -1.63258907547754e-05,
+      "matched_standard_error": 3.2357719835584316e-06,
+      "matched_positive_splits": 23,
+      "deployment_conditional_gain": -3.845048138956947e-05,
+      "deployment_positive_splits": 18,
+      "positive_weight_splits": 74,
+      "mean_weight": 0.04131512113974527,
+      "gate": "FAIL"
+    },
+    "divU_daily03_gift_val": {
+      "standalone_rmsle": 1.6911508750826427,
+      "correlation_with_stack": 0.9961764357931965,
+      "matched_conditional_gain": 9.405317596856283e-05,
+      "matched_standard_error": 2.075693767713387e-06,
+      "matched_positive_splits": 95,
+      "deployment_conditional_gain": 6.065588025928881e-05,
+      "deployment_positive_splits": 83,
+      "positive_weight_splits": 96,
+      "mean_weight": 0.15807869126282822,
+      "gate": "PASS"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "audited_msk": "2026-08-26T11:30:00+03:00",
+  "defect": "calculate_probe_gates.py was invoked for probes 131 and 133 with an --extra list that omitted the admitted base 127_probe_w409_exact_decay_s93. The marginal pool was stale instead of using the true current 130 pool baseline 1.6461788499.",
+  "direction_of_error": "Too lenient. The stale baseline credits a candidate for signal the admitted decay base already supplies.",
+  "affected_probes": {
+    "131_probe_w409_exact_position_s93": {
+      "stale_strict_with_adaptive_gate": 1.646543370187,
+      "corrected_strict_with_adaptive_gate": 1.64644238953,
+      "corrected_strict_gate": 1.646507584265,
+      "corrected_positive_empirical_net_gate": 1.646561310412,
+      "actual_public": 1.6465450851,
+      "stale_verdict": "fail by 0.000001715 (hairline)",
+      "corrected_verdict": "fail strict by 0.0000375008 and strict+adaptive by 0.0001026956; passes only the weak positive-net gate",
+      "effect_on_decision": "None. 131 was already rejected. The correction only makes the rejection decisive rather than a near-miss, and removes any basis for revisiting it."
+    },
+    "133_probe_w409_exact_buyer_s93": {
+      "stale_strict_with_adaptive_gate": 1.646636534462,
+      "corrected_strict_with_adaptive_gate": 1.646493550993,
+      "corrected_strict_gate": 1.64655652326,
+      "corrected_positive_empirical_net_gate": 1.646603606734,
+      "corrected_positive_weight_neutral_score": 1.646794465118,
+      "gate_tightened_by": 0.000142983469,
+      "effect_on_decision": "Moot. The branch was rejected offline before any submission because its incremental gain beyond the admitted pool is only +0.00003356."
+    }
+  },
+  "corrected_files": [
+    "work/133_probe_w409_exact_buyer_s93_gates_corrected.json",
+    "work/131_gates_corrected_diagnostic.json"
+  ],
+  "rule_going_forward": "Every future probe gate MUST pass --extra for the complete admitted candidate set of the current primary submission, currently: 83, 85, 86, 89, 92, 102, 127. Verify marginal_baseline_expected_public equals the current primary expected_public before trusting any gate.",
+  "no_public_score_was_read_to_produce_this_correction": true
+}

@@ -1,0 +1,17 @@
+{
+  "uses_public_scores": false,
+  "uses_recovered_moments": false,
+  "uses_competition_target_mean": false,
+  "preregister": "/home/ubuntu/ecup/work/lagged_residual_followup_preregister.json",
+  "pair_report": "/home/ubuntu/ecup/work/residcurve_pairsafe_report.json",
+  "trigger_checks": {
+    "controls_valid": true,
+    "full_diagnostic_support_diagnostic_only": false,
+    "preholdout_mean": -0.001280147968420009,
+    "preholdout_positive_pairs": 3,
+    "preholdout_mean_pass": false,
+    "preholdout_sign_pass": false
+  },
+  "promoted": false,
+  "decision": "pair-safe trigger failed; no candidate or CSV built"
+}

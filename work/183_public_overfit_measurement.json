@@ -1,0 +1,28 @@
+{
+  "tag": "183_allpool_overfit_l0",
+  "date_msk": "2026-08-29",
+  "file": "submissions/183_allpool_overfit_l0.csv",
+  "sha256": "68ab02e2ca4e84a5118d46d6545f0a1a895c3811e751c114a50ddbf0a05de4d1",
+  "role": "MEASUREMENT, not a final candidate. Its empirical private estimate is 1.6473966, which is 0.0005 WORSE than 171. It must never be selected as a final.",
+  "what_it_tests": "The solver reports expected_public using the Gram over all 250 000 users, so it estimates the POPULATION score of the fitted weights. When lambda is tiny the weights are fitted hard to the public moments, and the actual public score should come in BELOW that population estimate by the in-sample optimism. Every solution the project has ever sent used lambda >= 0.001, where the optimism is small and the prediction matched the actual to between 1e-08 and 1e-05. Nobody has measured the optimism at the other end.",
+  "why_it_matters": "If the optimism at 42 df is as large as the audit implies, the true public of this file lands near top-3 while its private is clearly worse. That would say the leaders' advantage is at least partly public fitting rather than better models, and it would quantify exactly how much of the 0.0012 gap is reachable that way.",
+  "prediction_recorded_before_submission": {
+    "expected_public_from_the_solver": 1.645737716092746,
+    "degrees_of_freedom": 41.998,
+    "measured_public_optimism_at_20_28_df": 0.000373,
+    "linear_extrapolation_to_42_df": 0.0007723722512572725,
+    "predicted_actual_public": 1.6449653438414886,
+    "predicted_range": [
+      1.6449,
+      1.6458
+    ],
+    "note": "the extrapolation is linear in df and therefore crude; the point of the submission is to replace it with a measurement"
+  },
+  "empirical_private_estimate": 1.6473966475423736,
+  "private_estimate_of_171": 1.6468941478,
+  "how_to_read_the_answer": {
+    "if_actual_is_near_1.6457": "there is no hidden public optimism, the ceiling stands, and the 0.0012 gap is genuinely about model quality",
+    "if_actual_is_near_1.6450": "roughly 0.0008 of the gap is public fitting rather than modelling, and the leaders' public standing overstates their private standing by a similar amount",
+    "either_way": "this file does not become a final; what it buys is knowing which of the two worlds we are in before the finals are chosen"
+  }
+}

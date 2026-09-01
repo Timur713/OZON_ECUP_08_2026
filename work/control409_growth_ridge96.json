@@ -1,0 +1,22 @@
+[
+  {
+    "candidate": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/control409_growth_val.npy",
+    "lambda": 0.003,
+    "base_columns": 25,
+    "oracle_base_score_250k": 1.6651398250946639,
+    "oracle_augmented_score_250k": 1.6651232508740796,
+    "oracle_gain_250k": 1.6574220584208987e-05,
+    "oracle_degrees_added": 0.8014495750948214,
+    "oracle_candidate_weight": -0.03926558652549398,
+    "repeats": 96,
+    "mean_fitted_public_gain": 2.9128570978871615e-05,
+    "mean_independent_private_gain": 5.317126471955647e-06,
+    "private_gain_se": 1.579025388572635e-06,
+    "private_gain_positive_fraction": 0.71875,
+    "private_gain_min": -4.697860952274091e-05,
+    "private_gain_max": 2.1988041784881673e-05,
+    "mean_degrees_added": 0.801163559971533,
+    "mean_candidate_weight": -0.04397061974734575,
+    "candidate_weight_negative_fraction": 0.8541666666666666
+  }
+]

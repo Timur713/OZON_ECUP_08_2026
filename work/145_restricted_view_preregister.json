@@ -1,0 +1,26 @@
+{
+  "preregistered_msk": "2026-08-26T18:50:00+03:00",
+  "round": "restricted-view bases: weak but structurally different",
+  "uses_public_scores": false,
+  "methodological_correction": "Every experiment I ran today chased a STRONGER base (better backbone, more anchors, greater width, fresher anchors). Today's measurement proves that is the wrong objective: the base-to-ensemble transfer coefficient is 0.21%, and a base carrying a genuine 0.002-0.004 standalone gain contributed -0.0000013. A ridge pays only for the component of a base ORTHOGONAL to the existing span. FINDINGS 2.4 already said this: tcn45 is garbage standalone at 1.754 yet takes weight 0.07, while tcn270 at corr 0.9956 contributes zero.",
+  "why_the_pool_is_saturated": "All 29 bases see the SAME thing: the full 409-day history across all channels. Collinearity above 0.99 is structurally forced. No base built on the full view can be decorrelated from the others, however good it is.",
+  "hypothesis": "Deliberately RESTRICTING what a model can see produces a weak model whose errors are decorrelated from the full-view pool, which is what the ridge actually pays for.",
+  "cells": {
+    "rv_search": "search side only: searches, search, gmv_search, search_to_cart, search_to_ord, has_search_to_ord, has_search_to_cart",
+    "rv_cat": "catalog side only: cat, gmv_cat, cat_to_cart, cat_to_ord, has_cat_to_ord, has_cat_to_cart",
+    "rv_noamount": "no monetary channel at all: to_ord, to_cart, searches, active, search, cat",
+    "rv_activity": "pure presence rhythm: active, searches",
+    "rv_intent": "funnel intent only: to_cart, to_ord, search_to_cart, search_to_ord, cat_to_cart, cat_to_ord",
+    "rv_gmvonly": "money alone: gmv",
+    "sw28": "full base channels, window 28",
+    "sw14": "full base channels, window 14"
+  },
+  "expected_standalone": "All of these should be WEAK, plausibly 1.68-1.80. A weak standalone score is NOT a failure in this round and must not be used to reject a cell.",
+  "reading_key": {
+    "the_only_thing_that_counts": "incremental gain beyond the CURRENT admitted pool {w409c, decay_s93} in the 96-split audit",
+    "gate": "incremental >= 0.00008, positive_fraction >= 0.90, negative weight fraction <= 0.10",
+    "promote_at_most": "the single best cell, and only through a public probe against a gate built with --expect-baseline 1.6461788499434364",
+    "axis_closed_if": "no cell reaches incremental 0.00004, i.e. not even half the standing gate"
+  },
+  "honest_prior": "This is the first round today whose design matches what the measurement says the ridge pays for, rather than contradicting it. That is a real reason for hope. It is still an untested hypothesis, and eight axes have closed negatively today."
+}

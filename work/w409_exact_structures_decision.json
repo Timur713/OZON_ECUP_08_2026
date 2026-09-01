@@ -1,0 +1,50 @@
+{
+  "hypothesis": "position/cadence features can help when attached to the exact strong w409c backbone",
+  "uses_public_scores": false,
+  "seed": 93,
+  "thresholds": {
+    "single_gain": 0.00012,
+    "incremental_beyond_w409c": 8e-05,
+    "positive_fraction": 0.9,
+    "maximum_negative_weight_fraction": 0.1
+  },
+  "variants": [
+    {
+      "variant": "position",
+      "tag": "w409_exact_position_s93",
+      "single_independent_gain": 0.00045432920903277124,
+      "incremental_gain_beyond_w409c": 0.00026128414349406903,
+      "positive_fraction": 1.0,
+      "single_negative_weight_fraction": 0.0,
+      "joint_negative_weight_fraction": 0.0,
+      "checks": {
+        "single_gain": true,
+        "incremental_beyond_w409c": true,
+        "positive_fraction": true,
+        "single_weight_sign": true,
+        "joint_weight_sign": true
+      },
+      "passed": true
+    },
+    {
+      "variant": "event",
+      "tag": "w409_exact_event_s93",
+      "single_independent_gain": 0.00023198789180889587,
+      "incremental_gain_beyond_w409c": 7.282208983615254e-05,
+      "positive_fraction": 1.0,
+      "single_negative_weight_fraction": 0.0,
+      "joint_negative_weight_fraction": 0.0,
+      "checks": {
+        "single_gain": true,
+        "incremental_beyond_w409c": false,
+        "positive_fraction": true,
+        "single_weight_sign": true,
+        "joint_weight_sign": true
+      },
+      "passed": false
+    }
+  ],
+  "passed_variants": [
+    "position"
+  ]
+}

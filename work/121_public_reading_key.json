@@ -1,0 +1,38 @@
+{
+  "created_before_public_score": true,
+  "created_at_msk": "2026-08-25T17:58:50+03:00",
+  "candidate": "submissions/121_offline_gift_holdout.csv",
+  "sha256": "7106f7f0601c387dd0e9cd6efa00fc58f2b2dc1ea37af0d106714cb9cf4f56c0",
+  "construction_frozen": true,
+  "uses_public_scores_in_construction": false,
+  "uses_recovered_moments_in_construction": false,
+  "hypothesis": "same-calendar gift-season user-holdout shape transfers from 2025-02-14..2025-03-15 to the 2026 target and adds signal distinct from w409c",
+  "submission_purpose": "measure the already-frozen seasonal family; not tune it",
+  "frozen_after_score": [
+    "model architecture and seeds",
+    "component set and lambda",
+    "historical-only mean forecast",
+    "prediction vector and calibration"
+  ],
+  "reading_order": [
+    "record the score without changing any candidate",
+    "recover the aggregate candidate-target cross moment once",
+    "measure conditional gain and effective added df against the frozen baseline",
+    "run the fixed 50k-to-200k transfer audit",
+    "retain only if all admission gates pass"
+  ],
+  "admission_gates": {
+    "candidate_weight_positive": true,
+    "minimum_projected_conditional_gain": 0.00012,
+    "minimum_positive_independent_splits_out_of_96": 90,
+    "maximum_negative_weight_splits_out_of_96": 5,
+    "minimum_rms_log_distance": 0.01
+  },
+  "forbidden": [
+    "retrain or recalibrate 121 after seeing its score",
+    "search blend weights or thresholds on the public score",
+    "invert a negative coefficient",
+    "weaken admission gates after the result",
+    "automatic leaderboard submission"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "preregistered_msk": "2026-08-26T19:40:00+03:00",
+  "probe": "146_probe_sw28_meanreversion",
+  "status": "ADAPTIVE follow-up. The hypothesis was formed after seeing the sw28 result in the restricted-view round, so an extra adaptive-selection cost is charged on top of the usual strict cost.",
+  "hypothesis": "A short 28-day view of the same data enters the ridge as a MEAN-REVERSION CONTRAST against the long-history bases. For a user on a temporary activity spike the recent 28 days overstate the long-run rate, and the ensemble is improved by subtracting that component.",
+  "offline_evidence_already_measured": {
+    "incremental_beyond_admitted_pool": 0.00010687,
+    "standing_magnitude_gate": 0.00008,
+    "standard_error": 4.55e-06,
+    "positive_fraction_across_96_splits": 1.0,
+    "min_gain": 0.000215,
+    "max_gain": 0.000514,
+    "ridge_weight": -0.05268,
+    "negative_weight_fraction": 1.0,
+    "net_after_empirical_df_cost": 8.317e-05
+  },
+  "why_the_negative_weight_is_not_a_disqualifier": "Adding sw28 with a negative coefficient to a pool already containing w409c and decay spans the same subspace as adding the contrast 'long minus recent-28' with a positive coefficient. The sign reflects parameterisation. The admitted pool of 130 itself carries negative weights on 85_probe_w210a (-0.098) and 83_probe_cls300 (-0.070), so negative coefficients are not disqualifying in the final model. The STRATEGY prohibition concerns inverting a FAILED PUBLIC PROBE after the fact; no probe was submitted here and the sign was measured offline on 96 splits.",
+  "window_specificity_supports_the_mechanism": "Window 14 gives only +6.2e-06 and window 409 is the long baseline itself. The effect is specific to a short-but-not-tiny recent window, which is what a mean-reversion correction should look like rather than a generic short-window artefact.",
+  "channel_restriction_separately_refuted": "All six channel-restricted views produced NEGATIVE incremental gain. Only the time restriction worked, so this is not a generic 'restricted view helps' claim.",
+  "gate_construction": {
+    "base_submission": "130_private_safe_exact_decay_l003.csv at 1.6461706600883055",
+    "weight": 0.30,
+    "lambda": 0.003,
+    "expect_baseline": 1.6461788499434364,
+    "allow_negative_weight": true,
+    "adaptive_cost": 0.00008,
+    "adaptive_cost_note": "DOUBLE the usual 0.00004, charged because this round is explicitly adaptive to an observed result."
+  },
+  "reading_key": {
+    "admit_only_if": "public score clears the strict+adaptive gate computed with the doubled adaptive cost",
+    "if_it_fails": "branch closed permanently, no re-parameterisation, no threshold relaxation, no second probe on the same signal",
+    "no_post_hoc_changes": true
+  }
+}

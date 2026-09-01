@@ -1,0 +1,16 @@
+{
+  "received_date_msk": "2026-08-25",
+  "source": "organizer chat response transcribed by the team owner",
+  "question_context": "whether public RMSLE may be used for global calibration/ensemble weights and whether public/private clients are randomly split",
+  "organizer_response": [
+    "Да, клиенты разбиты случайно",
+    "Калиброваться можно как угодно, но излишняя вера в результаты на паблике без уверенной схемы локальной валидации может обернуться болезненным уроком на будущее 🙂 В этой задаче пока еще оверфитограмма не велика, но как говориться \"еще не вечер\""
+  ],
+  "decision": {
+    "aggregate_public_metric_calibration_formally_permitted": true,
+    "random_user_split_confirmed": true,
+    "public_overfit_statistical_risk_remains": true,
+    "freeze_112_without_post_response_retuning": true
+  },
+  "review_note": "Archive the original chat screenshot/export with the final repository evidence; this file records the team-provided transcription."
+}

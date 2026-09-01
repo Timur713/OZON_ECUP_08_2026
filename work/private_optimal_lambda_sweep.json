@@ -1,0 +1,884 @@
+{
+  "pool_candidates": [
+    "102_probe_w409c",
+    "127_probe_w409_exact_decay_s93",
+    "83_probe_cls300",
+    "85_probe_w210a",
+    "86_probe_cls300_probability",
+    "89_probe_w300a",
+    "92_probe_cls409_r26"
+  ],
+  "model_count": 29,
+  "empirical_transfer_penalty_per_degree": 3.95e-05,
+  "theoretical_transfer_penalty_per_degree": 3.3e-05,
+  "private_optimal_lambda_empirical": {
+    "lambda": 0.0036897117491197875,
+    "expected_public": 1.6462094983927902,
+    "degrees_of_freedom": 19.70246734248776,
+    "theoretical_private": 1.6468596798150923,
+    "empirical_private": 1.6469877458528184
+  },
+  "private_optimal_lambda_theoretical": {
+    "lambda": 0.002851441117420658,
+    "expected_public": 1.6461720982537726,
+    "degrees_of_freedom": 20.729612258472464,
+    "theoretical_private": 1.6468561754583022,
+    "empirical_private": 1.6469909179379822
+  },
+  "sweep": [
+    {
+      "lambda": 0.0,
+      "expected_public": 1.6459998354283567,
+      "degrees_of_freedom": 29.999999999996827,
+      "theoretical_private": 1.6469898354283565,
+      "empirical_private": 1.6471848354283565
+    },
+    {
+      "lambda": 0.0001,
+      "expected_public": 1.646007817303672,
+      "degrees_of_freedom": 28.873752754662455,
+      "theoretical_private": 1.646960651144576,
+      "empirical_private": 1.6471483305374812
+    },
+    {
+      "lambda": 0.00010897060040870079,
+      "expected_public": 1.64600883886387,
+      "degrees_of_freedom": 28.78928770323652,
+      "theoretical_private": 1.6469588853580768,
+      "empirical_private": 1.647146015728148
+    },
+    {
+      "lambda": 0.00011874591753432754,
+      "expected_public": 1.6460099620894344,
+      "degrees_of_freedom": 28.699538402382927,
+      "theoretical_private": 1.646957046856713,
+      "empirical_private": 1.6471435938563286
+    },
+    {
+      "lambda": 0.00012939813929797745,
+      "expected_public": 1.6460111922270566,
+      "degrees_of_freedom": 28.604300259723512,
+      "theoretical_private": 1.6469551341356274,
+      "empirical_private": 1.6471410620873157
+    },
+    {
+      "lambda": 0.00014100592931069302,
+      "expected_public": 1.6460125341249279,
+      "degrees_of_freedom": 28.503373841049044,
+      "theoretical_private": 1.6469531454616826,
+      "empirical_private": 1.6471384173916492
+    },
+    {
+      "lambda": 0.00015365500778173057,
+      "expected_public": 1.6460139921694201,
+      "degrees_of_freedom": 28.396566229022863,
+      "theoretical_private": 1.646951078854978,
+      "empirical_private": 1.6471356565354665
+    },
+    {
+      "lambda": 0.00016743878453778774,
+      "expected_public": 1.6460155702391919,
+      "degrees_of_freedom": 28.28369240232311,
+      "theoretical_private": 1.6469489320884685,
+      "empirical_private": 1.6471327760890837
+    },
+    {
+      "lambda": 0.00018245904882785818,
+      "expected_public": 1.6460172716809416,
+      "degrees_of_freedom": 28.164576621163647,
+      "theoretical_private": 1.64694670270944,
+      "empirical_private": 1.6471297724574776
+    },
+    {
+      "lambda": 0.0001988267210077218,
+      "expected_public": 1.646019099310422,
+      "degrees_of_freedom": 28.039053802613378,
+      "theoretical_private": 1.6469443880859083,
+      "empirical_private": 1.6471266419356252
+    },
+    {
+      "lambda": 0.00021666267165504688,
+      "expected_public": 1.6460210554413015,
+      "degrees_of_freedom": 27.90697086491508,
+      "theoretical_private": 1.6469419854798437,
+      "empirical_private": 1.6471233807904657
+    },
+    {
+      "lambda": 0.00023609861416403656,
+      "expected_public": 1.6460231419433238,
+      "degrees_of_freedom": 27.768188016024165,
+      "theoretical_private": 1.6469394921478526,
+      "empirical_private": 1.6471199853699567
+    },
+    {
+      "lambda": 0.0002572780774111728,
+      "expected_public": 1.6460253603299486,
+      "degrees_of_freedom": 27.622579956306687,
+      "theoretical_private": 1.6469369054685068,
+      "empirical_private": 1.6471164522382227
+    },
+    {
+      "lambda": 0.00028035746567491704,
+      "expected_public": 1.6460277118744107,
+      "degrees_of_freedom": 27.470036960486347,
+      "theoretical_private": 1.6469342230941066,
+      "empirical_private": 1.6471127783343498
+    },
+    {
+      "lambda": 0.00030550721363657436,
+      "expected_public": 1.6460301977519858,
+      "degrees_of_freedom": 27.31046579968282,
+      "theoretical_private": 1.6469314431233752,
+      "empirical_private": 1.6471089611510732
+    },
+    {
+      "lambda": 0.0003329130449916673,
+      "expected_public": 1.6460328192054439,
+      "degrees_of_freedom": 27.14379046107247,
+      "theoretical_private": 1.6469285642906593,
+      "empirical_private": 1.6471049989286561
+    },
+    {
+      "lambda": 0.00036277734396630845,
+      "expected_public": 1.6460355777299798,
+      "degrees_of_freedom": 26.969952622392896,
+      "theoretical_private": 1.6469255861665186,
+      "empirical_private": 1.6471008908585643
+    },
+    {
+      "lambda": 0.000395320649866824,
+      "expected_public": 1.6460384752738029,
+      "degrees_of_freedom": 26.788911840447007,
+      "theoretical_private": 1.6469225093645377,
+      "empirical_private": 1.6470966372915006
+    },
+    {
+      "lambda": 0.0004307832856994559,
+      "expected_public": 1.646041514450472,
+      "degrees_of_freedom": 26.600645418770075,
+      "theoretical_private": 1.6469193357492915,
+      "empirical_private": 1.6470922399445136
+    },
+    {
+      "lambda": 0.00046942713288702654,
+      "expected_public": 1.6460446987596138,
+      "degrees_of_freedom": 26.405147929749724,
+      "theoretical_private": 1.6469160686412956,
+      "empirical_private": 1.647087702102839
+    },
+    {
+      "lambda": 0.0005115375651883426,
+      "expected_public": 1.6460480328130218,
+      "degrees_of_freedom": 26.202430380605755,
+      "theoretical_private": 1.6469127130155818,
+      "empirical_private": 1.6470830288130558
+    },
+    {
+      "lambda": 0.0005574255561017861,
+      "expected_public": 1.6460515225638295,
+      "degrees_of_freedom": 25.992519030171007,
+      "theoretical_private": 1.646909275691825,
+      "empirical_private": 1.6470782270655213
+    },
+    {
+      "lambda": 0.0006074299753156563,
+      "expected_public": 1.6460551755368957,
+      "degrees_of_freedom": 25.775453884766137,
+      "theoretical_private": 1.646905765515093,
+      "empirical_private": 1.647073305965344
+    },
+    {
+      "lambda": 0.0006619200911638937,
+      "expected_public": 1.6460590010589227,
+      "degrees_of_freedom": 25.551286923211343,
+      "theoretical_private": 1.6469021935273886,
+      "empirical_private": 1.6470682768923894
+    },
+    {
+      "lambda": 0.0007212982975671146,
+      "expected_public": 1.646063010486779,
+      "degrees_of_freedom": 25.32008012394564,
+      "theoretical_private": 1.6468985731308692,
+      "empirical_private": 1.6470631536516749
+    },
+    {
+      "lambda": 0.0007860030855966229,
+      "expected_public": 1.6460672174322286,
+      "degrees_of_freedom": 25.081903387813718,
+      "theoretical_private": 1.6468949202440264,
+      "empirical_private": 1.6470579526160471
+    },
+    {
+      "lambda": 0.0008565122816055543,
+      "expected_public": 1.6460716379804876,
+      "degrees_of_freedom": 24.836832467312743,
+      "theoretical_private": 1.646891253451909,
+      "empirical_private": 1.6470526928629465
+    },
+    {
+      "lambda": 0.0009333465758398347,
+      "expected_public": 1.6460762908989475,
+      "degrees_of_freedom": 24.5849470249419,
+      "theoretical_private": 1.6468875941507706,
+      "empirical_private": 1.6470473963064327
+    },
+    {
+      "lambda": 0.001017073367586719,
+      "expected_public": 1.6460811978310663,
+      "degrees_of_freedom": 24.32632894863192,
+      "theoretical_private": 1.6468839666863713,
+      "empirical_private": 1.6470420878245373
+    },
+    {
+      "lambda": 0.00110831095525624,
+      "expected_public": 1.6460863834688342,
+      "degrees_of_freedom": 24.061061049628254,
+      "theoretical_private": 1.646880398483472,
+      "empirical_private": 1.6470367953802945
+    },
+    {
+      "lambda": 0.001207733102338132,
+      "expected_public": 1.6460918756956835,
+      "degrees_of_freedom": 23.78922625739835,
+      "theoretical_private": 1.6468769201621776,
+      "empirical_private": 1.6470315501328507
+    },
+    {
+      "lambda": 0.0013160740129524926,
+      "expected_public": 1.646097705690268,
+      "degrees_of_freedom": 23.510907407592768,
+      "theoretical_private": 1.6468735656347184,
+      "empirical_private": 1.6470263865328678
+    },
+    {
+      "lambda": 0.001434133753737214,
+      "expected_public": 1.6461039079805264,
+      "degrees_of_freedom": 23.226187692738414,
+      "theoretical_private": 1.6468703721743867,
+      "empirical_private": 1.6470213423943896
+    },
+    {
+      "lambda": 0.0015627841621112804,
+      "expected_public": 1.6461105204367508,
+      "degrees_of_freedom": 22.935151813427144,
+      "theoretical_private": 1.6468673804465939,
+      "empirical_private": 1.6470164589333811
+    },
+    {
+      "lambda": 0.001702975284544748,
+      "expected_public": 1.6461175841925622,
+      "degrees_of_freedom": 22.637887831310014,
+      "theoretical_private": 1.6468646344909954,
+      "empirical_private": 1.647011780761899
+    },
+    {
+      "lambda": 0.0018557423923801926,
+      "expected_public": 1.64612514348344,
+      "degrees_of_freedom": 22.334489686783296,
+      "theoretical_private": 1.646862181643104,
+      "empirical_private": 1.647007355826068
+    },
+    {
+      "lambda": 0.0020222136270154844,
+      "expected_public": 1.6461332453941337,
+      "degrees_of_freedom": 22.02506030587571,
+      "theoretical_private": 1.6468600723842277,
+      "empirical_private": 1.6470032352762158
+    },
+    {
+      "lambda": 0.0022036183309053405,
+      "expected_public": 1.6461419395087173,
+      "degrees_of_freedom": 21.70971518526094,
+      "theoretical_private": 1.646858360109831,
+      "empirical_private": 1.6469994732585351
+    },
+    {
+      "lambda": 0.002401296125903741,
+      "expected_public": 1.6461512774601708,
+      "degrees_of_freedom": 21.38858631322604,
+      "theoretical_private": 1.6468571008085071,
+      "empirical_private": 1.6469961266195432
+    },
+    {
+      "lambda": 0.002616706805988178,
+      "expected_public": 1.646161312380163,
+      "degrees_of_freedom": 21.061826260449532,
+      "theoretical_private": 1.646856352646758,
+      "empirical_private": 1.6469932545174508
+    },
+    {
+      "lambda": 0.002851441117420658,
+      "expected_public": 1.6461720982537726,
+      "degrees_of_freedom": 20.729612258472464,
+      "theoretical_private": 1.6468561754583022,
+      "empirical_private": 1.6469909179379822
+    },
+    {
+      "lambda": 0.0031072325059538584,
+      "expected_public": 1.6461836891880623,
+      "degrees_of_freedom": 20.39215007737007,
+      "theoretical_private": 1.6468566301406156,
+      "empirical_private": 1.6469891791161184
+    },
+    {
+      "lambda": 0.003385969917832239,
+      "expected_public": 1.6461961386075152,
+      "degrees_of_freedom": 20.04967751742697,
+      "theoretical_private": 1.6468577779655904,
+      "empirical_private": 1.6469881008694536
+    },
+    {
+      "lambda": 0.0036897117491197875,
+      "expected_public": 1.6462094983927902,
+      "degrees_of_freedom": 19.70246734248776,
+      "theoretical_private": 1.6468596798150923,
+      "empirical_private": 1.6469877458528184
+    },
+    {
+      "lambda": 0.004020701046366208,
+      "expected_public": 1.6462238179821829,
+      "degrees_of_freedom": 19.35082950430334,
+      "theoretical_private": 1.6468623953558248,
+      "empirical_private": 1.6469881757476028
+    },
+    {
+      "lambda": 0.004381382070864173,
+      "expected_public": 1.646239143457032,
+      "degrees_of_freedom": 18.995112536102077,
+      "theoretical_private": 1.6468659821707234,
+      "empirical_private": 1.646989450402208
+    },
+    {
+      "lambda": 0.004774418348819863,
+      "expected_public": 1.6462555166332835,
+      "degrees_of_freedom": 18.635704027999846,
+      "theoretical_private": 1.6468704948662074,
+      "empirical_private": 1.6469916269423894
+    },
+    {
+      "lambda": 0.005202712340732183,
+      "expected_public": 1.6462729741813187,
+      "degrees_of_freedom": 18.273030134565147,
+      "theoretical_private": 1.6468759841757594,
+      "empirical_private": 1.646994758871634
+    },
+    {
+      "lambda": 0.005669426875233431,
+      "expected_public": 1.6462915467951864,
+      "degrees_of_freedom": 17.90755410348016,
+      "theoretical_private": 1.6468824960806012,
+      "empirical_private": 1.6469988951822738
+    },
+    {
+      "lambda": 0.00617800850567412,
+      "expected_public": 1.6463112584306878,
+      "degrees_of_freedom": 17.53977385168373,
+      "theoretical_private": 1.6468900709677934,
+      "empirical_private": 1.6470040794978293
+    },
+    {
+      "lambda": 0.006732212961933693,
+      "expected_public": 1.646332125629636,
+      "degrees_of_freedom": 17.17021864952929,
+      "theoretical_private": 1.6468987428450703,
+      "empirical_private": 1.6470103492662924
+    },
+    {
+      "lambda": 0.007336132885411524,
+      "expected_public": 1.6463541569452458,
+      "degrees_of_freedom": 16.799445002880194,
+      "theoretical_private": 1.6469085386303408,
+      "empirical_private": 1.6470177350228596
+    },
+    {
+      "lambda": 0.007994228052013093,
+      "expected_public": 1.6463773524812941,
+      "degrees_of_freedom": 16.428031846398707,
+      "theoretical_private": 1.6469194775322253,
+      "empirical_private": 1.647026259739227
+    },
+    {
+      "lambda": 0.008711358306319453,
+      "expected_public": 1.6464017035555862,
+      "degrees_of_freedom": 16.056575178157207,
+      "theoretical_private": 1.6469315705364653,
+      "empirical_private": 1.6470359382751234
+    },
+    {
+      "lambda": 0.009492819450149535,
+      "expected_public": 1.6464271924962819,
+      "degrees_of_freedom": 15.685682276021385,
+      "theoretical_private": 1.6469448200113905,
+      "empirical_private": 1.6470467769461847
+    },
+    {
+      "lambda": 0.01034438235054189,
+      "expected_public": 1.6464537925779639,
+      "degrees_of_freedom": 15.315965640373518,
+      "theoretical_private": 1.6469592194440963,
+      "empirical_private": 1.6470587732207587
+    },
+    {
+      "lambda": 0.011272335555957174,
+      "expected_public": 1.646481468102514,
+      "degrees_of_freedom": 14.948036806513056,
+      "theoretical_private": 1.6469747533171288,
+      "empirical_private": 1.6470719155563711
+    },
+    {
+      "lambda": 0.012283531735409992,
+      "expected_public": 1.6465101746279927,
+      "degrees_of_freedom": 14.582500164530082,
+      "theoretical_private": 1.6469913971334222,
+      "empirical_private": 1.6470861833844916
+    },
+    {
+      "lambda": 0.013385438283469588,
+      "expected_public": 1.6465398593462812,
+      "degrees_of_freedom": 14.21994691553716,
+      "theoretical_private": 1.6470091175944939,
+      "empirical_private": 1.647101547249445
+    },
+    {
+      "lambda": 0.014586192464832903,
+      "expected_public": 1.64657046160731,
+      "degrees_of_freedom": 13.860949282078415,
+      "theoretical_private": 1.6470278729336185,
+      "empirical_private": 1.6471179691039521
+    },
+    {
+      "lambda": 0.015894661505697086,
+      "expected_public": 1.6466019135841343,
+      "degrees_of_freedom": 13.506055078121339,
+      "theoretical_private": 1.6470476134017122,
+      "empirical_private": 1.64713540275972
+    },
+    {
+      "lambda": 0.017320508075688777,
+      "expected_public": 1.6466341410688587,
+      "degrees_of_freedom": 13.155782730953213,
+      "theoretical_private": 1.6470682818989801,
+      "empirical_private": 1.6471537944867314
+    },
+    {
+      "lambda": 0.018874261643915567,
+      "expected_public": 1.6466670643849364,
+      "degrees_of_freedom": 12.810616834099637,
+      "theoretical_private": 1.6470898147404616,
+      "empirical_private": 1.6471730837498832
+    },
+    {
+      "lambda": 0.020567396236083915,
+      "expected_public": 1.6467005993968096,
+      "degrees_of_freedom": 12.471004297114868,
+      "theoretical_private": 1.6471121425386144,
+      "empirical_private": 1.6471932040665456
+    },
+    {
+      "lambda": 0.022412415166897195,
+      "expected_public": 1.6467346585936715,
+      "degrees_of_freedom": 12.137351144940727,
+      "theoretical_private": 1.6471351911814545,
+      "empirical_private": 1.6472140839638967
+    },
+    {
+      "lambda": 0.024422943373458593,
+      "expected_public": 1.646769152220808,
+      "degrees_of_freedom": 11.810020006289308,
+      "theoretical_private": 1.6471588828810158,
+      "empirical_private": 1.6472356480110566
+    },
+    {
+      "lambda": 0.026613828031534833,
+      "expected_public": 1.646803989429767,
+      "degrees_of_freedom": 11.489328317009543,
+      "theoretical_private": 1.6471831372642283,
+      "empirical_private": 1.6472578178982888
+    },
+    {
+      "lambda": 0.029001248197702653,
+      "expected_public": 1.6468390794178387,
+      "degrees_of_freedom": 11.175547250593876,
+      "theoretical_private": 1.6472078724771082,
+      "empirical_private": 1.6472805135342372
+    },
+    {
+      "lambda": 0.0316028342870541,
+      "expected_public": 1.6468743325280883,
+      "degrees_of_freedom": 10.868901373676948,
+      "theoretical_private": 1.6472330062734197,
+      "empirical_private": 1.6473036541323487
+    },
+    {
+      "lambda": 0.03443779826876961,
+      "expected_public": 1.6469096612833805,
+      "degrees_of_freedom": 10.56956900976893,
+      "theoretical_private": 1.6472584570607027,
+      "empirical_private": 1.6473271592592664
+    },
+    {
+      "lambda": 0.037527075541015455,
+      "expected_public": 1.6469449813313848,
+      "degrees_of_freedom": 10.277683279684966,
+      "theoretical_private": 1.6472841448796143,
+      "empirical_private": 1.6473509498209324
+    },
+    {
+      "lambda": 0.04089347953287124,
+      "expected_public": 1.6469802122820818,
+      "degrees_of_freedom": 9.993333772594644,
+      "theoretical_private": 1.6473099922965775,
+      "empirical_private": 1.6473749489660994
+    },
+    {
+      "lambda": 0.044561870174978965,
+      "expected_public": 1.6470152784244654,
+      "degrees_of_freedom": 9.716568787805507,
+      "theoretical_private": 1.647335925194463,
+      "empirical_private": 1.6473990828915837
+    },
+    {
+      "lambda": 0.048559337483020396,
+      "expected_public": 1.6470501093148053,
+      "degrees_of_freedom": 9.447398074884479,
+      "theoretical_private": 1.6473618734512765,
+      "empirical_private": 1.6474232815387633
+    },
+    {
+      "lambda": 0.05291540160973462,
+      "expected_public": 1.6470846402343602,
+      "degrees_of_freedom": 9.18579598912251,
+      "theoretical_private": 1.6473877715020013,
+      "empirical_private": 1.6474474791759306
+    },
+    {
+      "lambda": 0.05766223084280314,
+      "expected_public": 1.647118812519889,
+      "degrees_of_freedom": 8.931704971203999,
+      "theoretical_private": 1.6474135587839387,
+      "empirical_private": 1.6474716148662516
+    },
+    {
+      "lambda": 0.0628348791584537,
+      "expected_public": 1.647152573775374,
+      "degrees_of_freedom": 8.685039254730953,
+      "theoretical_private": 1.6474391800707802,
+      "empirical_private": 1.647495632825936
+    },
+    {
+      "lambda": 0.0684715450850486,
+      "expected_public": 1.6471858779777,
+      "degrees_of_freedom": 8.445688703289242,
+      "theoretical_private": 1.6474645857049086,
+      "empirical_private": 1.6475194826814799
+    },
+    {
+      "lambda": 0.07461385378829172,
+      "expected_public": 1.64721868549307,
+      "degrees_of_freedom": 8.213522680147147,
+      "theoretical_private": 1.6474897317415147,
+      "empirical_private": 1.6475431196389358
+    },
+    {
+      "lambda": 0.08130716446117171,
+      "expected_public": 1.6472509630239573,
+      "degrees_of_freedom": 7.988393858404139,
+      "theoretical_private": 1.6475145800212847,
+      "empirical_private": 1.6475665045813643
+    },
+    {
+      "lambda": 0.08860090528862861,
+      "expected_public": 1.6472826835090038,
+      "degrees_of_freedom": 7.7701418871853,
+      "theoretical_private": 1.647539098191281,
+      "empirical_private": 1.6475896041135476
+    },
+    {
+      "lambda": 0.09654893846056294,
+      "expected_public": 1.6473138260000246,
+      "degrees_of_freedom": 7.558596839874893,
+      "theoretical_private": 1.6475632596957406,
+      "empirical_private": 1.6476123905751996
+    },
+    {
+      "lambda": 0.10520995792870258,
+      "expected_public": 1.64734437554152,
+      "degrees_of_freedom": 7.353582382826231,
+      "theoretical_private": 1.6475870437601532,
+      "empirical_private": 1.6476348420456417
+    },
+    {
+      "lambda": 0.11464792284464871,
+      "expected_public": 1.6473743230787072,
+      "degrees_of_freedom": 7.154918616820507,
+      "theoretical_private": 1.6476104353930623,
+      "empirical_private": 1.6476569423640717
+    },
+    {
+      "lambda": 0.12493252987991774,
+      "expected_public": 1.6474036654202722,
+      "degrees_of_freedom": 6.9624245580413975,
+      "theoretical_private": 1.6476334254306875,
+      "empirical_private": 1.6476786811903148
+    },
+    {
+      "lambda": 0.13613972791592602,
+      "expected_public": 1.6474324052819287,
+      "degrees_of_freedom": 6.775920239821461,
+      "theoretical_private": 1.6476560106498428,
+      "empirical_private": 1.6477000541314017
+    },
+    {
+      "lambda": 0.14835227890475625,
+      "expected_public": 1.6474605514365277,
+      "degrees_of_freedom": 6.595228430218959,
+      "theoretical_private": 1.647678193974725,
+      "empirical_private": 1.6477210629595214
+    },
+    {
+      "lambda": 0.16166036904250325,
+      "expected_public": 1.6474881189961739,
+      "degrees_of_freedom": 6.420175973067433,
+      "theoretical_private": 1.6476999848032852,
+      "empirical_private": 1.64774171594711
+    },
+    {
+      "lambda": 0.17616227476853744,
+      "expected_public": 1.6475151298516322,
+      "degrees_of_freedom": 6.2505947710472025,
+      "theoretical_private": 1.6477213994790767,
+      "empirical_private": 1.6477620283450884
+    },
+    {
+      "lambda": 0.19196508850890048,
+      "expected_public": 1.6475416132945162,
+      "degrees_of_freedom": 6.086322438265641,
+      "theoretical_private": 1.647742461934979,
+      "empirical_private": 1.6477820230308278
+    },
+    {
+      "lambda": 0.20918550952324275,
+      "expected_public": 1.6475676068483993,
+      "degrees_of_freedom": 5.927202656603454,
+      "theoretical_private": 1.6477632045360673,
+      "empirical_private": 1.647801731353335
+    },
+    {
+      "lambda": 0.22795070569547782,
+      "expected_public": 1.6475931573363538,
+      "degrees_of_freedom": 5.773085274684102,
+      "theoretical_private": 1.6477836691504184,
+      "empirical_private": 1.6478211942047039
+    },
+    {
+      "lambda": 0.2483992526322327,
+      "expected_public": 1.647618322214574,
+      "degrees_of_freedom": 5.623826190814153,
+      "theoretical_private": 1.6478039084788707,
+      "empirical_private": 1.647840463349111
+    },
+    {
+      "lambda": 0.2706821570040695,
+      "expected_public": 1.647643171204899,
+      "degrees_of_freedom": 5.479287061843711,
+      "theoretical_private": 1.6478239876779397,
+      "empirical_private": 1.6478596030438417
+    },
+    {
+      "lambda": 0.29496397168655697,
+      "expected_public": 1.6476677882633823,
+      "degrees_of_freedom": 5.3393348788842605,
+      "theoretical_private": 1.6478439863143854,
+      "empirical_private": 1.6478786919910984
+    },
+    {
+      "lambda": 0.3214240109361914,
+      "expected_public": 1.647692273927751,
+      "degrees_of_freedom": 5.203841448556655,
+      "theoretical_private": 1.6478640006955534,
+      "empirical_private": 1.647897825664969
+    },
+    {
+      "lambda": 0.35025767457489587,
+      "expected_public": 1.6477167480938777,
+      "degrees_of_freedom": 5.072682815291074,
+      "theoretical_private": 1.6478841466267824,
+      "empirical_private": 1.6479171190650816
+    },
+    {
+      "lambda": 0.38167789096181776,
+      "expected_public": 1.6477413532804686,
+      "degrees_of_freedom": 4.945738656545377,
+      "theoretical_private": 1.6479045626561346,
+      "empirical_private": 1.647936709957402
+    },
+    {
+      "lambda": 0.41591668940835913,
+      "expected_public": 1.6477662584522834,
+      "degrees_of_freedom": 4.822891678978335,
+      "theoretical_private": 1.6479254138776898,
+      "empirical_private": 1.6479567626736031
+    },
+    {
+      "lambda": 0.4532269136482802,
+      "expected_public": 1.647791663485577,
+      "degrees_of_freedom": 4.704027039869077,
+      "theoretical_private": 1.6479468963778927,
+      "empirical_private": 1.6479774725536518
+    },
+    {
+      "lambda": 0.4938840890163549,
+      "expected_public": 1.647817804375363,
+      "degrees_of_freedom": 4.589031814584818,
+      "theoretical_private": 1.6479692424252443,
+      "empirical_private": 1.6479990711320391
+    },
+    {
+      "lambda": 0.5381884571241647,
+      "expected_public": 1.6478449593027031,
+      "degrees_of_freedom": 4.4777945277223505,
+      "theoretical_private": 1.647992726522118,
+      "empirical_private": 1.648021832186548
+    },
+    {
+      "lambda": 0.5864671930585256,
+      "expected_public": 1.6478734557018502,
+      "degrees_of_freedom": 4.370204762642586,
+      "theoretical_private": 1.6480176724590174,
+      "empirical_private": 1.6480460787899747
+    },
+    {
+      "lambda": 0.6390768214759297,
+      "expected_public": 1.6479036784919028,
+      "degrees_of_freedom": 4.266152861347905,
+      "theoretical_private": 1.6480444615363272,
+      "empirical_private": 1.6480721915299261
+    },
+    {
+      "lambda": 0.6964058494351623,
+      "expected_public": 1.6479360796659117,
+      "degrees_of_freedom": 4.165529723833023,
+      "theoretical_private": 1.6480735421467982,
+      "empirical_private": 1.648100618090003
+    },
+    {
+      "lambda": 0.7588776354108092,
+      "expected_public": 1.6479711894623112,
+      "degrees_of_freedom": 4.06822671297131,
+      "theoretical_private": 1.6481054409438394,
+      "empirical_private": 1.6481318844174737
+    },
+    {
+      "lambda": 0.8269535156745101,
+      "expected_public": 1.648009629379517,
+      "degrees_of_freedom": 3.9741356675044432,
+      "theoretical_private": 1.6481407758565447,
+      "empirical_private": 1.6481666077383834
+    },
+    {
+      "lambda": 0.9011362111313743,
+      "expected_public": 1.6480521273344162,
+      "degrees_of_freedom": 3.883149021692575,
+      "theoretical_private": 1.648180271252132,
+      "empirical_private": 1.648205511720773
+    },
+    {
+      "lambda": 0.9819735397700763,
+      "expected_public": 1.648099535309676,
+      "degrees_of_freedom": 3.7951600256562386,
+      "theoretical_private": 1.6482247755905226,
+      "empirical_private": 1.6482494441306894
+    },
+    {
+      "lambda": 1.0700624621420254,
+      "expected_public": 1.6481528498830782,
+      "degrees_of_freedom": 3.710063055533021,
+      "theoretical_private": 1.6482752819639108,
+      "empirical_private": 1.6482993973737718
+    },
+    {
+      "lambda": 1.1660534897442907,
+      "expected_public": 1.648213236084296,
+      "degrees_of_freedom": 3.6277539975291577,
+      "theoretical_private": 1.6483329519662144,
+      "empirical_private": 1.6483565323671985
+    },
+    {
+      "lambda": 1.2706554888609631,
+      "expected_public": 1.648282055079989,
+      "degrees_of_freedom": 3.548130685118597,
+      "theoretical_private": 1.648399143392598,
+      "empirical_private": 1.6484222062420513
+    },
+    {
+      "lambda": 1.3846409153379051,
+      "expected_public": 1.6483608962460183,
+      "degrees_of_freedom": 3.471093364444001,
+      "theoretical_private": 1.648475442327045,
+      "empirical_private": 1.648498004433914
+    },
+    {
+      "lambda": 1.5088515189482443,
+      "expected_public": 1.6484516142442018,
+      "degrees_of_freedom": 3.3965451598333645,
+      "theoretical_private": 1.6485637002344764,
+      "empirical_private": 1.6485857777780153
+    },
+    {
+      "lambda": 1.6442045594737054,
+      "expected_public": 1.6485563717783014,
+      "degrees_of_freedom": 3.3243925096585523,
+      "theoretical_private": 1.64866607673112,
+      "empirical_private": 1.6486876852824328
+    },
+    {
+      "lambda": 1.7916995804057325,
+      "expected_public": 1.6486776887566517,
+      "degrees_of_freedom": 3.2545455428337426,
+      "theoretical_private": 1.6487850887595652,
+      "empirical_private": 1.6488062433055937
+    },
+    {
+      "lambda": 1.9524257902882975,
+      "expected_public": 1.6488184986328591,
+      "degrees_of_freedom": 3.186918368259151,
+      "theoretical_private": 1.6489236669390117,
+      "empirical_private": 1.6489443819084053
+    },
+    {
+      "lambda": 2.1275701062114813,
+      "expected_public": 1.6489822127259646,
+      "degrees_of_freedom": 3.121429253477187,
+      "theoretical_private": 1.6490852198913293,
+      "empirical_private": 1.649105509181477
+    },
+    {
+      "lambda": 2.318425918854687,
+      "expected_public": 1.649172793330559,
+      "degrees_of_freedom": 3.058000674568684,
+      "theoretical_private": 1.6492737073528199,
+      "empirical_private": 1.6492935843572045
+    },
+    {
+      "lambda": 2.526402643806888,
+      "expected_public": 1.6493948364070647,
+      "degrees_of_freedom": 2.9965592265525167,
+      "theoretical_private": 1.649493722861541,
+      "empirical_private": 1.6495132004965136
+    },
+    {
+      "lambda": 2.753036129697659,
+      "expected_public": 1.6496536645825057,
+      "degrees_of_freedom": 2.9370353917986716,
+      "theoretical_private": 1.6497505867504352,
+      "empirical_private": 1.6497696774804818
+    },
+    {
+      "lambda": 3.0,
+      "expected_public": 1.6499554310804285,
+      "degrees_of_freedom": 2.8793631726511295,
+      "theoretical_private": 1.650050450065126,
+      "empirical_private": 1.6500691659257483
+    }
+  ]
+}

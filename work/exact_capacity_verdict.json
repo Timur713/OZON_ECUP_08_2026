@@ -1,0 +1,29 @@
+{
+  "round": "exact backbone scaling: window, anchor density, width",
+  "decided_msk": "2026-08-26T13:45:00+03:00",
+  "preregistrations": [
+    "work/137_exact_scale_round_preregister.json",
+    "work/138_exact_capacity_preregister.json",
+    "work/139_capacity_factorial_preregister.json"
+  ],
+  "uses_public_scores": false,
+  "matched_control": {"tag": "exw409_s93", "anchors": 14, "range": "186..342", "width": 96, "standalone": 1.667959883, "reference_w409c": 1.667924, "script_validated": true},
+  "phase_A_window": {
+    "exw120_s93": {"incremental_beyond_admitted": -6.0e-06, "weight": -0.0100},
+    "exw180_s93": {"incremental_beyond_admitted": -6.7e-06, "weight": -0.0240},
+    "exw240_s93": {"incremental_beyond_admitted": -1.126e-05, "weight": -0.0119},
+    "verdict": "Window axis closed. Every new window takes a negative ridge weight because the old-architecture bases W120/W180/W270 already occupy that axis in the 25-column pool."
+  },
+  "phase_B_confounded": {
+    "excap_d4_w96": {"anchors": 77, "range": "43..347", "standalone": 1.687211805, "verdict": "discarded as confounded: density and range changed together, and at window 409 an anchor at day 43 is 365/409 zero padding"}
+  },
+  "phase_B_factorial": {
+    "C1_density_only": {"anchors": 41, "range": "186..346", "width": 96, "standalone": 1.669571464, "delta_vs_control": 0.001612, "incremental_beyond_admitted": 2.211e-05, "gate_passed": false},
+    "C2_width_only": {"anchors": 14, "width": 192, "parameters": 970241, "standalone": 1.668254604, "delta_vs_control": 0.000295, "incremental_beyond_admitted": 3.07e-06, "gate_passed": false}
+  },
+  "verdict": "CAPACITY REFUTED by the preregistered key, which required a cell to beat the control by >= 0.0015 to confirm and recorded refutation if no cell beat it by more than 0.0005. Neither cell beat the control at all. The exact backbone is saturated at 14 anchors and width 96.",
+  "mechanistic_finding": "Anchor density behaves like epoch count, not like data volume. The target is a 30-day window, so stride-4 anchors share 26 of 30 target days and are near-duplicates. C1 was BETTER than the control at epoch 1 (1.669571 vs 1.671809) and then degraded at epoch 2 (1.677816) while the control improved (1.667960). More anchors therefore buy faster convergence and earlier overfitting, not more information.",
+  "findings_2_6_status": "Refined, not overturned. 'Two epochs then overfit' survives a 3x change in anchor density because the optimum is set by total gradient steps over heavily overlapping anchors.",
+  "axes_closed_today": ["backbone structure (decay/position/buyer/combined)", "window length on the strong backbone", "anchor density", "model width"],
+  "consequence": "The modelling axis is exhausted within this recipe. Remaining effort should go to final-pair selection and repo review rather than to further base search."
+}

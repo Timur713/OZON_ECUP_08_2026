@@ -1,0 +1,11 @@
+{
+  "candidate": "123_offline_capped_w035",
+  "candidate_frozen_before_120_122_scores": true,
+  "basis_excludes_120_122_scores": true,
+  "projection_columns": 33,
+  "approx_public_score": 1.6492634480590562,
+  "projection_rms": 0.00467706491716053,
+  "r2": 0.9999908610075495,
+  "strict_score_uncertainty_approx": 0.009303721592255943,
+  "decision_use": "diagnostic only; no weights, mean, cap, or submission file changed"
+}

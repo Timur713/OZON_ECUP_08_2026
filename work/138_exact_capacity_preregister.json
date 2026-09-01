@@ -1,0 +1,25 @@
+{
+  "preregistered_msk": "2026-08-26T12:05:00+03:00",
+  "round": "phase B - exact backbone capacity: anchor density, width, epochs",
+  "uses_public_scores": false,
+  "phase_A_result_already_known": {
+    "windows_tested": [120, 180, 240],
+    "incremental_beyond_admitted_pool": [-6.0e-06, -6.7e-06, -1.126e-05],
+    "verdict": "Window axis on the exact backbone is closed. All candidates take a negative ridge weight because the old-architecture window bases W120/W180/W270 already occupy that axis in the 25-column pool.",
+    "note": "exw300_s93 and exw409_s93 were still queued; the seed-1310 sweep is cancelled as redundant."
+  },
+  "hypothesis": "Our sequence models are data-starved, not architecture-starved. The exact backbone trains on only 14 anchors (186..348 stride 12). FINDINGS 2.6 ('two epochs then overfit') was measured on that sparse schedule, so it may describe anchor scarcity rather than a real capacity ceiling. Increasing anchor density and width should produce a genuinely stronger backbone instead of another clone.",
+  "runs": {
+    "control_sparse": "exw409_s93: window 409, width 96, anchor_start 186, stride 12, epochs 2. Matched control for the new script, so any phase-B gain is attributable to density/width and not to the rewrite.",
+    "B1_dense": "excap_d4_w96: anchor_start 43, stride 4, width 96, epochs 2",
+    "B2_dense_wide": "excap_d4_w192: anchor_start 43, stride 4, width 192, epochs 2",
+    "B3_dense_wide_long": "excap_d4_w192_e3: anchor_start 43, stride 4, width 192, epochs 3"
+  },
+  "reading_key": {
+    "primary_gate": "incremental gain beyond the CURRENT admitted pool {w409c, decay_s93} >= 0.00008, positive_fraction >= 0.90, negative weight fraction <= 0.10",
+    "replacement_criterion": "Capacity is confirmed as the bottleneck ONLY if a dense run beats the matched sparse control's standalone calibrated validation score by at least 0.0015. w409c scores 1.667924 on the same split; the sparse control establishes the like-for-like reference. A better standalone score alone does NOT admit the base; it only justifies continuing to invest GPU in this axis.",
+    "epoch_rule_test": "If the dense runs keep improving at epoch 3 while the sparse control degrades after epoch 2, FINDINGS 2.6 is an artifact of anchor scarcity and must be rewritten."
+  },
+  "known_limitation": "Same January-anchor caveat as phase A: a passing offline gate is necessary but not sufficient, and any probe must clear a public gate built with --expect-baseline 1.6461788499434364.",
+  "submission_policy": "At most one probe from this phase, only after the offline gate passes."
+}

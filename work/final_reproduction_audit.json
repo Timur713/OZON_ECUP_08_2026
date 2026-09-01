@@ -1,0 +1,36 @@
+{
+  "verified_at_msk": "2026-09-01",
+  "command": "python work/reproduce_frozen_finals.py",
+  "canonical_scope": "SHA-256 plus schema, user order, uniqueness, finite and nonnegative predictions",
+  "rebuild_scope": "numerical equivalence in log1p space with documented cross-platform tolerances",
+  "environment": {
+    "python": "3.12.7",
+    "machine": "x86_64",
+    "numpy": "2.5.2",
+    "scipy": "1.18.1"
+  },
+  "canonical_artifacts": {
+    "147_private_safe_nonnegative_current_l001.csv": "0c61bd73bfd0f699a25d893d3ba3cb762016021e446eb153fcbeef6d0bba51c2",
+    "200_shape_anchor_l003.csv": "77b428ca6af9e74ffbdf22749cacfc87e76048d5dceef80146d557dabb21c598"
+  },
+  "rebuilds": {
+    "147_private_safe_nonnegative_current_l001.csv": {
+      "numerically_reproduced": true,
+      "byte_exact_across_platform": false,
+      "rms_log1p_delta": 9.465837850618045e-07,
+      "max_abs_log1p_delta": 8.430089276423303e-06,
+      "max_weight_delta": 6.903665734719899e-06,
+      "release_tolerance_rms_log1p": 5e-06,
+      "release_tolerance_max_abs_log1p": 5e-05
+    },
+    "200_shape_anchor_l003.csv": {
+      "numerically_reproduced": true,
+      "byte_exact_across_platform": false,
+      "rms_log1p_delta": 1.1989279518443955e-12,
+      "max_abs_log1p_delta": 1.4061640740692383e-11,
+      "max_weight_delta": 2.2133319482753322e-11,
+      "release_tolerance_rms_log1p": 5e-11,
+      "release_tolerance_max_abs_log1p": 5e-10
+    }
+  }
+}

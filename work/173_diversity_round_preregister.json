@@ -1,0 +1,103 @@
+{
+  "tag": "173_diversity_queue",
+  "date_msk": "2026-08-29",
+  "status": "frozen before any of the runs finished",
+  "situation": "Top-3 is 1.6448002878. The best sent solution is 171 at a measured 1.6460211139. The ceiling of the CURRENT base library, fitted with lambda -> 0 over every measured moment, is 1.6457377161 at df 42. The gap from that ceiling to top-3 is 0.0009374, so no reweighting of what exists can reach the target and new bases are mandatory.",
+  "two_axes_never_varied": {
+    "which_anchors_a_model_trains_on": "Every network in the pool trains on anchors 186..348 with stride 12. The project varied anchor DENSITY, which it measured as harmful because 30-day targets four days apart are near-duplicates, and it varied the RANGE slightly (186..378 against 186..342, worth -0.0000013). It never trained on a substantially earlier range. Starting at anchor 43 puts the 2025 gift window, days 44 to 73, into the training set. That window is the only labelled stretch sharing the target's calendar position, and no model in the pool has ever seen it as a training anchor.",
+    "which_users_a_model_sees": "Every model trains on all 250 000 users. Bagging over users is a standard diversity source and appears nowhere in the journal."
+  },
+  "why_these_and_not_more_capacity": "Width, depth, seeds, architecture, loss and channel set are all measured null (FINDINGS 2.3, 2.6, 2.7). Window length is the one axis that produced diversity, and it is exhausted from 28 to 409. Anchors and users are the two remaining dimensions of the training distribution itself.",
+  "queue": "18 runs, all holding the frozen w409c recipe fixed and changing only the anchor set, the user subset, or a documented cross of the two",
+  "screening": "each base is scored against the 27-column proxy of the admitted pool on 96 fit-50k / score-200k splits, matched and deployment-faithful, exactly as in 162",
+  "promotion_gate": {
+    "conditional_gain_beyond_the_pool": 8e-05,
+    "sign_stability": "90 of 96",
+    "correlation_with_stack": 0.99,
+    "selection_correction": "18 candidates screened, so the maximum-of-18 bias is about 2.4 standard errors, roughly 0.00003 at the measured standard error; the effective threshold is 0.00011 and a probe is spent only above it"
+  },
+  "honest_expectation": "Each base admitted in this project's history has been worth about 0.0002 of public at best, and most were worth nothing. Closing 0.00094 would need roughly five admissions at the historical best rate. This queue is the best available shot, not a plan that reaches top-3 by arithmetic.",
+  "overnight_constraint": "The user is asleep and no probe can be submitted until morning, so the overnight deliverable is trained bases, offline screening, and a ranked probe batch ready to send.",
+  "frozen_before_measurement": true,
+  "results": {
+    "group_A_extended_anchor_range_without_a_validity_channel": {
+      "divA_s43_st12": {
+        "standalone_calibrated": 1.669851,
+        "conditional_gain": -1.05e-05,
+        "verdict": "REJECTED"
+      },
+      "diagnosis": "a 409-day window at anchor 43 is 90 percent left padding, an input distribution the competition anchor never presents. The remaining group-A runs were cancelled and requeued as group E with a channel marking real days."
+    },
+    "group_B_disjoint_anchor_phases": {
+      "divB_st24a": {
+        "standalone_calibrated": 1.673758,
+        "conditional_gain": 0.0001236,
+        "deployment_gain": 9.75e-05,
+        "sign_stability": "96 of 96 negative",
+        "correlation": 0.9948,
+        "verdict": "PASS, probe 178 built"
+      },
+      "divB_st36a": {
+        "conditional_gain": 8.08e-05,
+        "verdict": "REJECTED, below the 0.00011 corrected threshold"
+      },
+      "divB_st24b": {
+        "conditional_gain": -7.2e-06,
+        "verdict": "REJECTED"
+      },
+      "divB_st36b": {
+        "conditional_gain": -8.5e-06,
+        "verdict": "REJECTED"
+      },
+      "divB_st36c": {
+        "conditional_gain": -1.32e-05,
+        "verdict": "REJECTED"
+      }
+    },
+    "how_many_probes_group_B_is_worth": {
+      "joint_of_the_two_passers": 0.000139,
+      "sum_of_singles": 0.0002044,
+      "st36a_incremental_given_st24a": 1.54e-05,
+      "family_average_of_all_five": 4.64e-05,
+      "conclusion": "ONE probe. The two passers overlap, so the second buys 0.0000154 for 0.63 df and does not pay. The family average is worse than the single best member, which is the expected result: averaging siblings reconstructs the full-anchor model, and that model is already in the pool. The value here is the CONTRAST a single sparse-anchor model provides, and contrast is exactly what averaging destroys."
+    },
+    "what_the_passing_case_confirms": "FINDINGS 2.4 again. divB_st24a is 0.0058 WORSE than the matched control standalone and still contributes, because it is dissimilar. Strength was never the criterion.",
+    "group_C_user_bagging": {
+      "divC_u50a": {
+        "standalone": 1.67152,
+        "conditional_gain": -2.4e-06,
+        "verdict": "REJECTED"
+      },
+      "divC_u50b": {
+        "standalone": 1.67332,
+        "conditional_gain": -1.38e-05,
+        "verdict": "REJECTED"
+      },
+      "divC_u33a": {
+        "standalone": 1.70424,
+        "conditional_gain": 2.96e-05,
+        "verdict": "REJECTED"
+      },
+      "axis_verdict": "CLOSED. Bagging over users produces models that are weaker without being different: at 50 percent of users the correlation with the stack is 0.9975 and the gain is zero, and at 33 percent the model is much weaker and still worth only 0.0000296. Resampling rows does not move a model off the manifold the pool already spans, whereas resampling ANCHORS does, because it changes which target windows the model has ever seen."
+    },
+    "long_boosting_run": {
+      "gbdtlong": {
+        "rounds": 2500,
+        "learning_rate": 0.01,
+        "num_leaves": 255,
+        "standalone": 1.73197,
+        "conditional_gain": -1.38e-05,
+        "verdict": "REJECTED"
+      },
+      "note": "ten times the rounds at a fifth of the learning rate is worse standalone than the 250-round bases it was meant to improve on, so the short schedules in the pool were not leaving anything on the table."
+    },
+    "group_E_extended_range_with_a_validity_channel": {
+      "divE_s43_valid": {
+        "standalone": 1.6815,
+        "conditional_gain": 1.02e-05,
+        "verdict": "REJECTED"
+      },
+      "what_it_separates": "Group A tested the extended anchor range with no way for the network to tell real days from left padding, and the model came out at 1.70600. With the validity channel it reaches 1.68150, so the channel recovered 0.0245 of standalone quality and the padding diagnosis was right. The conditional gain is still 0.0000102. The extended range therefore fails for a reason that has nothing to do with padding: the 2025 gift-season anchors carry no signal that transfers to the 2026 window. This is an independent confirmation of the 121 verdict, reached from the training side rather than the holdout side."
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "output": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/cls300cal_mkt_val_m87c13.npy",
+  "vectors": [
+    "work/cls300mkt_val_best_val_components.npz:hurdle",
+    "work/cls300cal_val_server_best_val_components.npz:hurdle"
+  ],
+  "weights": [
+    0.87,
+    0.13
+  ],
+  "raw_blend": false,
+  "correlations": [
+    [
+      1.0,
+      0.99124
+    ],
+    [
+      0.99124,
+      1.0
+    ]
+  ],
+  "component_means": [
+    2.687579235937953,
+    3.0450804304685293
+  ],
+  "component_stds": [
+    1.421011146214376,
+    1.2872108340701875
+  ],
+  "meta_mean": -5.4285465012071655e-17,
+  "meta_std": 0.9990087207826541
+}

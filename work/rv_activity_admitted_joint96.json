@@ -1,0 +1,38 @@
+[
+  {
+    "candidates": [
+      "/home/ubuntu/ecup/work/w409c_val.npy",
+      "/home/ubuntu/ecup/work/w409_exact_decay_s93_val.npy",
+      "/home/ubuntu/ecup/work/rv_activity_val.npy"
+    ],
+    "lambda": 0.003,
+    "base_columns": 25,
+    "oracle_base_score_250k": 1.665139825094663,
+    "oracle_augmented_score_250k": 1.664708590227217,
+    "oracle_gain_250k": 0.0004312348674460065,
+    "oracle_degrees_added": 2.1275838192042684,
+    "oracle_candidate_weights": {
+      "/home/ubuntu/ecup/work/w409c_val.npy": 0.1949553796356852,
+      "/home/ubuntu/ecup/work/w409_exact_decay_s93_val.npy": 0.2593723216436736,
+      "/home/ubuntu/ecup/work/rv_activity_val.npy": -0.027311559689865286
+    },
+    "repeats": 96,
+    "mean_fitted_public_gain": 0.00048076284005900183,
+    "mean_independent_private_gain": 0.00038936945632206166,
+    "private_gain_se": 4.396852742936946e-06,
+    "private_gain_positive_fraction": 1.0,
+    "private_gain_min": 0.00024520411350503757,
+    "private_gain_max": 0.00044582077817723054,
+    "mean_degrees_added": 2.1269848670707865,
+    "mean_candidate_weights": {
+      "/home/ubuntu/ecup/work/w409c_val.npy": 0.1903427305229974,
+      "/home/ubuntu/ecup/work/w409_exact_decay_s93_val.npy": 0.2656633184153715,
+      "/home/ubuntu/ecup/work/rv_activity_val.npy": -0.028838593565148705
+    },
+    "candidate_weight_negative_fraction": {
+      "/home/ubuntu/ecup/work/w409c_val.npy": 0.0,
+      "/home/ubuntu/ecup/work/w409_exact_decay_s93_val.npy": 0.0,
+      "/home/ubuntu/ecup/work/rv_activity_val.npy": 1.0
+    }
+  }
+]

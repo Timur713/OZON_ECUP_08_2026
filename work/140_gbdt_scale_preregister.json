@@ -1,0 +1,24 @@
+{
+  "preregistered_msk": "2026-08-26T14:30:00+03:00",
+  "round": "scaled hurdle GBDT - the one base family with headroom",
+  "uses_public_scores": false,
+  "why_this_and_not_more_sequence_models": [
+    "Measured: perfect unregularised weighting of every base we own still loses to top-1 by 0.0011, so the deficit is in bases, not stacking.",
+    "Measured: seed averaging has only +0.00038 correlation left and the ridge already performs most of it.",
+    "Measured: for TCNs, anchor density behaves like epoch count and hurts. But for trees, denser anchors are extra ROWS, and the existing dense-anchor GBDT (GBD) is already our second best base at 1.651738 standalone.",
+    "The current production GBDT is modest: 17 anchors, learning_rate 0.05, ~300 rounds, 2 seeds. That is a plausible place for a coarse 0.002+ gain.",
+    "82% of achievable variance is the buy/no-buy event and the hurdle factorisation E[z] = P(y>0) * E[z|y>0] is EXACT, so improving the classifier is the highest-leverage single component."
+  ],
+  "validation_tool_is_matched_to_the_question": "fold 378 ranks coarse quality with Spearman +0.71 against the exactly-measured real-target quality, but has no resolution at 0.0001. This round hunts a COARSE base-level gain of 0.002+, which fold 378 can resolve. That is the opposite of the marginal gates that kept failing to transfer.",
+  "runs": {
+    "control": "anchors range(186,349,12) = 14, learning_rate 0.05, rounds 250*n/14, leaves 127 - matched to the current production recipe",
+    "scaled": "anchors range(186,349,4) = 41, learning_rate 0.02, rounds 1500, leaves 255"
+  },
+  "no_leakage": "every training anchor a satisfies a+30 <= 378, so fold 378 stays untouched",
+  "reading_key": {
+    "interesting_if": "scaled beats control on untouched fold 378 by >= 0.0020",
+    "closed_if": "scaled beats control by < 0.0005, in which case the GBDT family is also saturated and the entire modelling axis is declared exhausted",
+    "admission_still_requires": "a full anchor-408 prediction, an incremental gain >= 0.00008 beyond the admitted pool {w409c, decay_s93}, and then a public probe against a gate built with --expect-baseline 1.6461788499434364"
+  },
+  "submission_policy": "at most one probe from this round, only after both the offline gate and the public gate discipline are satisfied"
+}

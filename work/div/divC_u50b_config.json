@@ -1,0 +1,49 @@
+{
+  "tag": "divC_u50b",
+  "seed": 222,
+  "architecture": "exact_w409c_plus_decay",
+  "only_change_from_w409c": "decay",
+  "channels": [
+    "gmv",
+    "to_ord",
+    "to_cart",
+    "searches",
+    "active",
+    "search",
+    "cat"
+  ],
+  "window": 409,
+  "width": 96,
+  "anchors": [
+    186,
+    198,
+    210,
+    222,
+    234,
+    246,
+    258,
+    270,
+    282,
+    294,
+    306,
+    318,
+    330,
+    342
+  ],
+  "stride": 12,
+  "anchor_phase": 0,
+  "user_fraction": 0.5,
+  "user_seed": 2,
+  "valid_channel": false,
+  "head": "direct",
+  "decays": [
+    7.0,
+    30.0,
+    90.0,
+    180.0
+  ],
+  "buyer_auxiliary_loss_weight": 0.0,
+  "epochs": 2,
+  "parameters": 313217,
+  "private_selection": "fixed 50k calibration / independent 200k scoring"
+}

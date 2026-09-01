@@ -1,0 +1,19 @@
+{
+  "file": "119_offline_rules_safe_6model.csv",
+  "sha256": "2286bc80b9fff46541ed292e4216e51a5f9f2de2fec341c3b32ef13aef1695f8",
+  "public_rmsle": 1.6543467867436692,
+  "uses_public_scores_in_construction": false,
+  "frozen_before_public": true,
+  "comparisons": {
+    "120_offline_rules_safe_meanforecast": {
+      "public_rmsle": 1.6493651732,
+      "improvement_over_119": 0.004981613543669105
+    },
+    "123_offline_capped_w035": {
+      "public_rmsle": 1.6493033021,
+      "improvement_over_119": 0.005043484643669104
+    }
+  },
+  "verdict": "rejected_negative_control",
+  "interpretation": "The frozen historical-only uncorrected stack under-transfers to the competition period. The preregistered rolling-origin mean correction is materially safer. The 123 contrast does not separately identify the cap effect because it also applies a historical mean shift. Do not post-hoc retune weights from this score."
+}

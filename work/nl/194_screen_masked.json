@@ -1,0 +1,67 @@
+{
+  "pool": "25 audit columns + w409c + decay_s93",
+  "base_matched_private": 1.6650693828525267,
+  "base_deployment_private": 1.66571501925089,
+  "candidates": {
+    "divL_mask14_val": {
+      "standalone_rmsle": 1.789229016573617,
+      "correlation_with_stack": 0.9728013895111431,
+      "matched_conditional_gain": -1.4270228168904164e-05,
+      "matched_standard_error": 3.1741808799715292e-06,
+      "matched_positive_splits": 42,
+      "deployment_conditional_gain": -4.4446083181414374e-05,
+      "deployment_positive_splits": 31,
+      "positive_weight_splits": 23,
+      "mean_weight": -0.01987956899600334,
+      "gate": "FAIL"
+    },
+    "divL_mask30_val": {
+      "standalone_rmsle": 1.8647320826809282,
+      "correlation_with_stack": 0.95111772411449,
+      "matched_conditional_gain": -1.674871182292398e-05,
+      "matched_standard_error": 3.5388968507001065e-06,
+      "matched_positive_splits": 38,
+      "deployment_conditional_gain": -5.431480926326495e-05,
+      "deployment_positive_splits": 32,
+      "positive_weight_splits": 66,
+      "mean_weight": 0.011275696793570966,
+      "gate": "FAIL"
+    },
+    "divL_mask60_val": {
+      "standalone_rmsle": 1.8324354593429741,
+      "correlation_with_stack": 0.9164903399163497,
+      "matched_conditional_gain": 2.99508723808443e-05,
+      "matched_standard_error": 2.923229358592655e-06,
+      "matched_positive_splits": 81,
+      "deployment_conditional_gain": -9.485860998190617e-06,
+      "deployment_positive_splits": 54,
+      "positive_weight_splits": 2,
+      "mean_weight": -0.04486671878562987,
+      "gate": "FAIL"
+    },
+    "divL_mask90_val": {
+      "standalone_rmsle": 1.8961441605549159,
+      "correlation_with_stack": 0.8919342571891296,
+      "matched_conditional_gain": 3.112415814923719e-06,
+      "matched_standard_error": 3.0091308469500715e-06,
+      "matched_positive_splits": 71,
+      "deployment_conditional_gain": -3.745755639331105e-05,
+      "deployment_positive_splits": 41,
+      "positive_weight_splits": 8,
+      "mean_weight": -0.025434692887062377,
+      "gate": "FAIL"
+    },
+    "divL_mask60_st24_val": {
+      "standalone_rmsle": 2.024886106978322,
+      "correlation_with_stack": 0.9142243026596153,
+      "matched_conditional_gain": 1.0332684671127135e-05,
+      "matched_standard_error": 2.7610675263138688e-06,
+      "matched_positive_splits": 70,
+      "deployment_conditional_gain": -2.6993498656561105e-05,
+      "deployment_positive_splits": 46,
+      "positive_weight_splits": 5,
+      "mean_weight": -0.031900861648402244,
+      "gate": "FAIL"
+    }
+  }
+}

@@ -1,0 +1,442 @@
+<title>Ставка на калибровку</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+:root{
+  --ground:#F4F6F9; --surface:#FFFFFF; --surface-2:#EDF0F5;
+  --ink:#151A24; --ink-2:#3B4453; --muted:#5A6474; --faint:#8791A1;
+  --rule:#DCE2EA; --rule-strong:#C3CCD8;
+  --accent:#2A46C8; --accent-soft:#93A4EA; --accent-wash:#E7EBFA;
+  --amber:#9A6210; --amber-wash:#F7EEDD;
+  --harm:#A82E24; --harm-wash:#F9E9E7;
+  --good:#0F6B51;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0D1017; --surface:#151A23; --surface-2:#1B212C;
+    --ink:#E4E9F1; --ink-2:#BFC8D6; --muted:#8D97A7; --faint:#6C7686;
+    --rule:#252C39; --rule-strong:#37404F;
+    --accent:#8CA0FF; --accent-soft:#4B5DA8; --accent-wash:#1B2138;
+    --amber:#E0A64A; --amber-wash:#2A2318;
+    --harm:#E88276; --harm-wash:#2E1B19;
+    --good:#4FC29A;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0D1017; --surface:#151A23; --surface-2:#1B212C;
+  --ink:#E4E9F1; --ink-2:#BFC8D6; --muted:#8D97A7; --faint:#6C7686;
+  --rule:#252C39; --rule-strong:#37404F;
+  --accent:#8CA0FF; --accent-soft:#4B5DA8; --accent-wash:#1B2138;
+  --amber:#E0A64A; --amber-wash:#2A2318;
+  --harm:#E88276; --harm-wash:#2E1B19;
+  --good:#4FC29A;
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--ground); color:var(--ink);
+  font-family:"Source Serif 4",Georgia,serif; font-size:17px; line-height:1.62;
+  margin:0; padding:0 24px 120px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1080px;margin:0 auto}
+.prose{max-width:66ch}
+h1,h2,h3,h4{font-family:"Golos Text",system-ui,sans-serif;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.3rem,5.2vw,3.5rem);font-weight:800;letter-spacing:-.025em;line-height:1.04}
+h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:700;letter-spacing:-.018em;line-height:1.15}
+h3{font-size:1.16rem;font-weight:700;letter-spacing:-.008em;line-height:1.3}
+h4{font-size:.95rem;font-weight:600;letter-spacing:-.005em}
+p{margin:0}
+a{color:var(--accent)}
+code,.mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-ligatures:none}
+code{font-size:.86em;background:var(--surface-2);padding:.12em .38em;border-radius:3px;color:var(--ink-2)}
+.num{font-variant-numeric:tabular-nums}
+
+.eyebrow{
+  font-family:"IBM Plex Mono",monospace;font-size:.7rem;font-weight:600;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--faint);
+}
+.stack{display:flex;flex-direction:column}
+.g8{gap:8px}.g12{gap:12px}.g16{gap:16px}.g20{gap:20px}.g24{gap:24px}.g32{gap:32px}.g40{gap:40px}
+
+/* header */
+header.hero{padding:72px 0 40px;border-bottom:2px solid var(--ink);margin-bottom:44px}
+.hero .lede{font-size:1.2rem;line-height:1.55;color:var(--ink-2);max-width:60ch}
+.hero-meta{
+  display:flex;flex-wrap:wrap;gap:8px 28px;padding-top:8px;
+  font-family:"IBM Plex Mono",monospace;font-size:.76rem;color:var(--muted);
+}
+.hero-meta b{color:var(--ink);font-weight:600}
+
+/* sections */
+section{padding-top:56px}
+.sec-head{display:flex;gap:16px;align-items:baseline;border-bottom:1px solid var(--rule-strong);padding-bottom:12px;margin-bottom:26px}
+.sec-num{
+  font-family:"IBM Plex Mono",monospace;font-size:.78rem;font-weight:600;color:var(--accent);
+  flex:none;padding-top:4px;
+}
+
+/* thesis box */
+.thesis{
+  background:var(--accent-wash);border-top:3px solid var(--accent);
+  padding:24px 26px;display:flex;flex-direction:column;gap:10px;
+}
+.thesis p{max-width:64ch}
+.thesis .big{font-family:"Golos Text",sans-serif;font-weight:700;font-size:1.22rem;line-height:1.32;letter-spacing:-.012em}
+
+/* metric tiles */
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.tile{background:var(--surface);padding:18px 18px 16px;display:flex;flex-direction:column;gap:5px}
+.tile .v{font-family:"Golos Text",sans-serif;font-size:1.85rem;font-weight:700;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.tile .k{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;color:var(--faint)}
+.tile .d{font-size:.88rem;line-height:1.4;color:var(--muted)}
+.tile.hl .v{color:var(--accent)}
+.tile.bad .v{color:var(--harm)}
+
+/* tables */
+.tw{overflow-x:auto;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+caption{caption-side:top;text-align:left;padding:14px 16px 12px;font-family:"IBM Plex Mono",monospace;
+  font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);border-bottom:1px solid var(--rule)}
+th,td{padding:9px 16px;text-align:right;border-bottom:1px solid var(--rule);white-space:nowrap}
+th:first-child,td:first-child{text-align:left;white-space:normal;min-width:190px}
+thead th{font-family:"IBM Plex Mono",monospace;font-size:.7rem;font-weight:600;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--muted);background:var(--surface-2)}
+tbody tr:last-child td{border-bottom:none}
+td.n{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;font-size:.86rem}
+tr.emph td{background:var(--accent-wash);font-weight:600}
+tr.emph td.n{color:var(--accent)}
+td.pos{color:var(--good)} td.neg{color:var(--harm)}
+
+/* chart */
+.chart{border:1px solid var(--rule);background:var(--surface);padding:22px 24px 18px}
+.bars{display:flex;flex-direction:column;gap:9px;margin-top:18px;position:relative}
+.bar-row{display:grid;grid-template-columns:minmax(150px,270px) 1fr 66px;gap:14px;align-items:center}
+.bar-row.sub .bl{padding-left:18px;color:var(--muted);font-size:.84rem}
+.bl{font-size:.9rem;line-height:1.3}
+.track{position:relative;height:19px;background:var(--surface-2)}
+.fill{position:absolute;left:0;top:0;bottom:0;background:var(--accent);border-radius:0 4px 4px 0}
+.fill.sub{background:var(--accent-soft)}
+.fill.harm{background:var(--harm)}
+.bv{font-family:"IBM Plex Mono",monospace;font-size:.82rem;font-variant-numeric:tabular-nums;text-align:right;color:var(--ink-2)}
+.refline{position:absolute;top:0;bottom:0;width:0;border-left:2px dashed var(--amber);z-index:2}
+.reflabel{display:flex;align-items:center;gap:8px;margin-top:14px;padding-top:12px;border-top:1px solid var(--rule);
+  font-family:"IBM Plex Mono",monospace;font-size:.74rem;color:var(--muted)}
+.swatch{width:18px;height:0;border-top:2px dashed var(--amber);flex:none}
+.chart-note{font-size:.84rem;color:var(--muted);margin-top:10px;line-height:1.45}
+
+/* callouts */
+.call{border-left:3px solid var(--accent);background:var(--surface);padding:16px 20px;display:flex;flex-direction:column;gap:8px}
+.call.warn{border-left-color:var(--amber);background:var(--amber-wash)}
+.call.harm{border-left-color:var(--harm);background:var(--harm-wash)}
+.call h4{font-family:"Golos Text",sans-serif}
+.call p{font-size:.94rem;line-height:1.55;color:var(--ink-2)}
+
+/* formula */
+.formula{background:var(--surface-2);border:1px solid var(--rule);padding:16px 20px;
+  font-family:"IBM Plex Mono",monospace;font-size:.85rem;line-height:1.9;overflow-x:auto;color:var(--ink-2)}
+.formula b{color:var(--accent);font-weight:600}
+
+/* kill list */
+.kill{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.kill-item{background:var(--surface);padding:16px 18px;display:flex;flex-direction:column;gap:6px}
+.kill-item .t{font-family:"Golos Text",sans-serif;font-weight:600;font-size:.95rem;color:var(--muted);text-decoration:line-through;text-decoration-color:var(--harm);text-decoration-thickness:1.5px}
+.kill-item .r{font-size:.86rem;line-height:1.45;color:var(--muted)}
+.kill-item .r b{color:var(--ink-2);font-weight:600}
+
+/* roadmap */
+.days{display:flex;flex-direction:column;gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.day{background:var(--surface);display:grid;grid-template-columns:104px 1fr;gap:20px;padding:16px 18px}
+.day .when{font-family:"IBM Plex Mono",monospace;font-size:.76rem;font-weight:600;color:var(--accent);letter-spacing:.04em;padding-top:2px}
+.day .what{display:flex;flex-direction:column;gap:6px}
+.day h4{font-family:"Golos Text",sans-serif}
+.day p{font-size:.9rem;line-height:1.5;color:var(--muted)}
+.day ul{margin:2px 0 0;padding-left:18px;font-size:.9rem;line-height:1.55;color:var(--muted)}
+.day li{margin-bottom:3px}
+
+ul.clean{margin:0;padding-left:20px}
+ul.clean li{margin-bottom:8px}
+ul.clean li::marker{color:var(--accent-soft)}
+
+footer{margin-top:72px;padding-top:24px;border-top:2px solid var(--ink);
+  font-family:"IBM Plex Mono",monospace;font-size:.76rem;color:var(--faint);line-height:1.7}
+
+@media (max-width:640px){
+  body{font-size:16px;padding:0 16px 80px}
+  .bar-row{grid-template-columns:1fr 58px;grid-template-areas:"l l" "t v"}
+  .bar-row .bl{grid-area:l}.bar-row .track{grid-area:t}.bar-row .bv{grid-area:v}
+  .day{grid-template-columns:1fr;gap:8px}
+  .sec-head{flex-direction:column;gap:6px}
+}
+</style>
+
+<div class="wrap">
+
+<header class="hero stack g20">
+  <div class="eyebrow">E-CUP 2026 · Трек 3 · Search User Value</div>
+  <h1>Ставка на калибровку</h1>
+  <p class="lede">Разрыв между 1-м и 50-м местом на лидерборде — <span class="mono num">0.0063</span> RMSLE. Правильная калибровка уровня прогноза стоит <span class="mono num">0.0439</span>. Это в семь раз больше всего турнирного разброса, и почти никто её не делает.</p>
+  <div class="hero-meta">
+    <span>Замеры: <b>22 августа 2026</b></span>
+    <span>Данные: <b>30 631 006 строк · 250 000 юзеров · 409 дней</b></span>
+    <span>Дедлайн: <b>31 августа</b></span>
+  </div>
+</header>
+
+<!-- 1 -->
+<section>
+  <div class="sec-head"><span class="sec-num">01</span><h2>Диагноз: во что на самом деле играем</h2></div>
+  <div class="stack g24">
+    <div class="tiles">
+      <div class="tile"><span class="k">Разрыв #1 ↔ #50</span><span class="v num">0.0063</span><span class="d">Весь турнир умещается в шестой знак после запятой</span></div>
+      <div class="tile bad"><span class="k">Шум public LB (50k)</span><span class="v num">±0.0102</span><span class="d">95% доверительный интервал — шире всего разброса топ-50</span></div>
+      <div class="tile"><span class="k">Шум private (200k)</span><span class="v num">±0.0025</span><span class="d">Итог решают истинные различия порядка 0.003+</span></div>
+      <div class="tile hl"><span class="k">Доля дисперсии «купит / не купит»</span><span class="v num">81.6%</span><span class="d">Классификация, а не регрессия суммы</span></div>
+    </div>
+
+    <div class="prose stack g16">
+      <p>Три факта задают всю стратегию.</p>
+      <p><b>Первый.</b> Метрика — RMSLE, то есть L2 по <code>z = log1p(y)</code>. Оптимальный прогноз — это <code>E[log1p(y)]</code>, а не <code>E[y]</code>. Отсюда прямое следствие: Tweedie и ZILN, которые честно моделируют матожидание выручки, оптимизируют не ту величину. Baseline-ноутбук организаторов прямым текстом предлагает «maybe with Tweedie due to heavy zero-inflation» — это ловушка, и в неё стоит не наступать.</p>
+      <p><b>Второй.</b> Раскладывая дисперсию <code>z</code> на бернуллиевскую часть <code>p(1−p)μ²</code> и «величинную» <code>pσ²</code>, получаем <span class="mono num">4.271</span> против <span class="mono num">0.965</span>. Больше четырёх пятых сигнала — в вопросе «совершит ли пользователь вообще хоть одну покупку». Топ-фичи обученной модели это подтверждают: <code>to_ord_s180</code>, <code>gmv_d180</code>, <code>to_ord_d180</code> — частота и регулярность за полгода, а не суммы.</p>
+      <p><b>Третий.</b> Public-лидерборд считается на 50 000 клиентов, и его собственный шум — <span class="mono num">±0.0102</span> при 95%. Разброс между 1-м и 50-м местом — <span class="mono num">0.0063</span>. <b>Публичный лидерборд для топа — это шум.</b> Оптимизировать под него означает оптимизировать под случайность; шейкап на private будет крупным.</p>
+    </div>
+
+    <div class="call">
+      <h4>Что из этого следует для режима работы</h4>
+      <p>Единственный надёжный компас — собственная rolling-origin валидация на 250 000 пользователей, где шум в четыре раза меньше публичного. Сабмиты тратим не на «попробовать и посмотреть», а на измерения (см. раздел 04) и на финальную проверку. Решение, выигрывающее по CV, но проигрывающее 0.003 на public, почти наверняка сильнее на private.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section>
+  <div class="sec-head"><span class="sec-num">02</span><h2>Сезонность есть — но не там, где её ищут</h2></div>
+  <div class="stack g24">
+    <div class="prose stack g16">
+      <p>Целевое окно — <b>14 февраля – 15 марта 2026</b>. В российском e-com это 23 февраля и 8 марта: два сильнейших подарочных пика. Обучающая выборка обрывается 13 февраля, ровно перед ними, а <code>sample_submit.csv</code> организаторов — это буквально факт GMV за 15 января – 13 февраля 2026 (проверено: расхождение <span class="mono num">0.0</span>). То есть дефолтный бенчмарк построен на низком сезоне сразу после январского провала.</p>
+      <p>Январский провал в данных виден отчётливо: <span class="mono num">929.5</span> тыс. GMV в день в декабре против <span class="mono num">703.2</span> тыс. в январе — минус 24%. А внутри целевого окна видна классическая подарочная механика: закупка идёт за 3–7 дней <i>до</i> праздника, а в сам праздник наступает провал. 3 марта 2025 — <span class="mono num">655.6</span> тыс., 7–8 марта — <span class="mono num">517.9</span> и <span class="mono num">510.7</span> тыс.</p>
+    </div>
+
+    <div class="tw">
+      <table>
+        <caption>Три окна: аналог прошлого года, целевой аналог и фактический наивный бенчмарк</caption>
+        <thead><tr><th>Окно</th><th>P(y&gt;0)</th><th>E[z | y&gt;0]</th><th>E[z]</th><th>GMV, млн</th></tr></thead>
+        <tbody>
+          <tr><td>15 янв – 13 фев <b>2025</b> <span style="color:var(--faint)">(наивное)</span></td><td class="n">0.3673</td><td class="n">4.1918</td><td class="n">1.5396</td><td class="n">14.39</td></tr>
+          <tr><td>14 фев – 15 мар <b>2025</b> <span style="color:var(--faint)">(целевое, год назад)</span></td><td class="n">0.4029</td><td class="n">4.2574</td><td class="n">1.7154</td><td class="n">16.73</td></tr>
+          <tr><td>15 янв – 13 фев <b>2026</b> <span style="color:var(--faint)">(= sample_submit)</span></td><td class="n">0.5407</td><td class="n">4.1470</td><td class="n">2.2421</td><td class="n">21.01</td></tr>
+          <tr class="emph"><td>Сезонный множитель 2025</td><td class="n">×1.0971</td><td class="n">×1.0156</td><td class="n">×1.1142</td><td class="n">×1.1628</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="thesis">
+      <p class="big">Февральско-мартовский подъём — это <i>больше покупателей</i>, а не <i>больше чек</i>.</p>
+      <p>Вероятность покупки растёт на <b>9.7%</b>, условный лог-чек — всего на <b>1.6%</b>. Значит, сезонную поправку нужно применять к <b>голове вероятности</b>, а не умножать прогноз GMV. Модель это подтверждает: обученная на летне-осенних якорях, она промахивается по <code>P(y&gt;0)</code> на <b>+9.4%</b> (0.5914 против 0.5407), а по <code>E[z|y&gt;0]</code> — всего на <b>−0.3%</b> (4.133 против 4.147). Вся ошибка уровня сидит ровно в одном месте.</p>
+    </div>
+
+    <div class="call harm">
+      <h4>Проверенная ловушка: не умножайте прогноз на сезонный коэффициент</h4>
+      <p>Интуитивный ход «GMV в целевом окне выше на 16.3%, значит домножим прогноз на 1.163» делает <b>хуже</b>. На аналоге 2025 года RMSLE наивного прогноза растёт с <span class="mono num">2.0333</span> до <span class="mono num">2.0594</span>. Причина: под RMSLE оптимальный прогноз — это <code>p·E[z|y&gt;0]</code>, сильно стянутый к нулю из-за массы нулевых таргетов. Оптимальная аффинная поправка в лог-пространстве имеет наклон <span class="mono num">a ≈ 0.60</span>, то есть прогноз надо <b>сжимать</b>, а не раздувать. Сезонность входит через <code>p</code> — и только через <code>p</code>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section>
+  <div class="sec-head"><span class="sec-num">03</span><h2>Рычаги, отранжированные по замеренному вкладу</h2></div>
+  <div class="stack g24">
+
+    <div class="chart">
+      <div class="eyebrow">Маржинальный выигрыш в RMSLE · валидация на якоре 2026-01-14 · 250 000 юзеров</div>
+      <div class="bars">
+        <div class="refline" style="left:calc(150px + 14px + (100% - 150px - 14px - 66px - 14px) * 0.14);"></div>
+        <div class="bar-row"><span class="bl">Калибровка уровня, полностью</span><span class="track"><span class="fill" style="width:97.6%"></span></span><span class="bv">0.0439</span></div>
+        <div class="bar-row sub"><span class="bl">— аффинная поправка ẑ → aẑ + b</span><span class="track"><span class="fill sub" style="width:91.6%"></span></span><span class="bv">0.0412</span></div>
+        <div class="bar-row sub"><span class="bl">— logit-сдвиг головы вероятности</span><span class="track"><span class="fill sub" style="width:6.0%"></span></span><span class="bv">0.0027</span></div>
+        <div class="bar-row"><span class="bl">Блендинг hurdle + прямая L2</span><span class="track"><span class="fill" style="width:2.7%"></span></span><span class="bv">0.0012</span></div>
+        <div class="bar-row"><span class="bl">Hurdle вместо прямой L2</span><span class="track"><span class="fill" style="width:1.1%"></span></span><span class="bv">0.0005</span></div>
+      </div>
+      <div class="reflabel"><span class="swatch"></span><span>Пунктир — весь разрыв между 1-м и 50-м местом лидерборда (0.0063)</span></div>
+      <p class="chart-note">Отсчёт от откалиброванной прямой L2-модели (RMSLE 1.6863), кроме верхней группы — она считается от сырого hurdle-прогноза (1.7270). Переход от наивной авторегрессии (≈2.21) к настроенному GBDT даёт ещё около 0.48 — это входной билет, а не преимущество: он есть у всех в топе.</p>
+    </div>
+
+    <div class="prose stack g16">
+      <p>Картина однозначна. Архитектурные решения — hurdle против прямой регрессии, блендинг голов — дают доли тысячной. Они нужны, но они не выигрывают турнир. Выигрывает калибровка уровня, и она на порядок крупнее всего остального.</p>
+      <p>Важно, что <b>этот выигрыш достижим без подглядывания в таргет</b>. Проверено на скользящей валидации: если взять наклон <code>a</code> с предыдущего якоря, а свободный член <code>b</code> подобрать так, чтобы средний прогноз совпал с оценкой популяционного уровня <code>L</code>, получается <span class="mono num">1.6852</span> против оракульных <span class="mono num">1.6851</span>. Практически весь выигрыш восстанавливается. Более того, схема устойчива: ошибка в оценке <code>L</code> на ±3% стоит всего <span class="mono num">0.0013</span>.</p>
+    </div>
+
+    <div class="tw">
+      <table>
+        <caption>Полная лестница результатов на валидационном якоре 2026-01-14</caption>
+        <thead><tr><th>Конфигурация</th><th>RMSLE</th><th>Δ к предыдущей</th></tr></thead>
+        <tbody>
+          <tr><td>Наивная авторегрессия (аналог sample_submit)</td><td class="n">≈ 2.2100</td><td class="n">—</td></tr>
+          <tr><td>Оптимальная аффинная модель на одной фиче</td><td class="n">1.8970</td><td class="n pos">−0.3130</td></tr>
+          <tr><td>GBDT, прямая L2 по z, без калибровки</td><td class="n">1.7293</td><td class="n pos">−0.1677</td></tr>
+          <tr><td>GBDT, hurdle (p × μ), без калибровки</td><td class="n">1.7270</td><td class="n pos">−0.0023</td></tr>
+          <tr><td>+ аффинная калибровка</td><td class="n">1.6858</td><td class="n pos">−0.0412</td></tr>
+          <tr class="emph"><td>+ logit-сдвиг вероятности перед аффинной</td><td class="n">1.6831</td><td class="n pos">−0.0027</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="call warn">
+      <h4>Цена промаха по уровню</h4>
+      <p>Штраф квадратичен: <code>ΔMSE = (s−1)²·E[ẑ²]</code>, где <code>E[ẑ²] ≈ 10.3</code>. Промах на 3% стоит <span class="mono num">+0.0028</span> RMSLE, на 5% — <span class="mono num">+0.0078</span>, на 10% — <span class="mono num">+0.0309</span>. Уже пятипроцентная ошибка выбрасывает из топ-50. Именно поэтому уровень нужно не угадывать, а измерять.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section>
+  <div class="sec-head"><span class="sec-num">04</span><h2>Как узнать уровень точно</h2></div>
+  <div class="stack g24">
+    <div class="prose stack g16">
+      <p>Есть два независимых источника оценки <code>L = E[z]</code> для окна 14 февраля – 15 марта 2026. Их стоит использовать оба и сверить.</p>
+      <p><b>Источник A — перенос год-к-году.</b> Отношение <code>E[z]</code> 2026 к 2025 на одинаковых календарных окнах поразительно стабильно: по пятнадцати перекрывающимся окнам января оно лежит в диапазоне <span class="mono num">1.4563 – 1.4708</span> и медленно снижается. Умножая факт целевого окна 2025 года на этот множитель, получаем <code>L ≈ 1.7154 × 1.456 = 2.498</code>. Тот же ответ даёт эквивалентный путь через сезонный множитель.</p>
+      <p>Осторожная версия — переносить не долю, а <i>шансы</i>: отношение шансов даёт <code>P = 0.578</code> вместо <code>0.593</code>, и <code>L = 2.434</code>. Итоговая вилка — <b>2.434 … 2.498</b>, точечная оценка <b>2.47</b>. Ширина вилки 2.6%, что стоит примерно <span class="mono num">0.0005</span> RMSLE — терпимо, но лучше её закрыть.</p>
+    </div>
+
+    <div class="tw">
+      <table>
+        <caption>Экстраполяция параметров целевого окна 14 фев – 15 мар 2026</caption>
+        <thead><tr><th>Величина</th><th>Метод долей</th><th>Метод шансов</th><th>Рекомендация</th></tr></thead>
+        <tbody>
+          <tr><td>P(y &gt; 0)</td><td class="n">0.5931</td><td class="n">0.5778</td><td class="n">0.5855</td></tr>
+          <tr><td>E[z | y &gt; 0]</td><td class="n">4.2119</td><td class="n">4.2119</td><td class="n">4.2119</td></tr>
+          <tr class="emph"><td>L = E[z]</td><td class="n">2.4982</td><td class="n">2.4335</td><td class="n">2.4660</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prose stack g16">
+      <p><b>Источник B — измерение уровня прямо на лидерборде.</b> Оценку можно не выводить, а получить точно. Сабмит целиком из нулей возвращает <code>S₀ = √(E[z²])</code> по публичным 50 000. Сабмит из константы <code>c</code> при <code>k = log1p(c)</code> возвращает <code>S₁² = E[z²] − 2k·E[z] + k²</code>. Два уравнения — две неизвестные.</p>
+    </div>
+
+    <div class="formula">
+      <b>M₂</b> = S₀²<br>
+      <b>M₁</b> = (M₂ + k² − S₁²) / (2k)&nbsp;&nbsp;&nbsp;<span style="color:var(--faint)">← это и есть E[z] на публичном сплите</span><br><br>
+      третий сабмит собственным прогнозом ẑ даёт E[z·ẑ] = (M₂ + E[ẑ²] − S₂²) / 2,<br>
+      а значит и <b>точно оптимальные (a, b)</b> для пересчёта ẑ → aẑ + b
+    </div>
+
+    <div class="prose stack g16">
+      <p>Схема проверена численно на симуляции: восстановленное <code>M₁</code> совпадает с истинным с точностью <span class="mono num">2·10⁻¹⁶</span>. Три сабмита из примерно сорока пяти оставшихся закрывают вопрос уровня полностью и дают оптимальную двухпараметрическую поправку.</p>
+    </div>
+
+    <div class="call warn">
+      <h4>Границы разумного</h4>
+      <p>Глобальные две константы, оценённые по 50 000 наблюдений, переносятся на private без риска: сплит случайный, а статистическая ошибка такой оценки ничтожна. Дробить зондирование по сегментам — уже переобучение под public, и на 200 000 приватных клиентов оно обернётся минусом. Кроме того, топ-15 команд проходят ревью репозитория, а пятеро финалистов защищают решение перед жюри: решение должно быть сильным <i>само по себе</i>, а калибровка — обоснованной сезонным анализом, а не «подобранной по лидерборду». Держите источник A ведущим, а B — подтверждающим.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section>
+  <div class="sec-head"><span class="sec-num">05</span><h2>Архитектура решения</h2></div>
+  <div class="stack g24">
+    <div class="prose stack g16">
+      <p>Инженерная основа, которая снимает главное неудобство задачи. Организаторы предупреждают, что заполнение пропусков нулями раздувает данные до 100 млн строк. Ответ — плотные матрицы <code>пользователь × день</code> размером 250 000 × 409 по каждому счётчику: gmv, to_ord, to_cart, searches, флаг активности, разрезы search/cat. Это около 2 ГБ, и после одного префиксного суммирования <b>любое оконное агрегирование за любой якорь становится вычитанием двух столбцов</b>. Полный набор из 102 фич за девять якорей строится за 17 секунд вместо часов батчевой обработки из baseline.</p>
+    </div>
+
+    <div class="formula">
+cs = cumsum(M, axis=1)<br>
+window_sum(t−W+1, t) = cs[:, t+1] − cs[:, t−W+1]<br>
+recency(t)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = t − maximum.accumulate(where(M &gt; 0, arange, −1))[:, t]
+    </div>
+
+    <div class="stack g16">
+      <h3>Стек модели</h3>
+      <ul class="clean">
+        <li><b>Две головы.</b> Классификатор <code>P(y&gt;0)</code> на logloss и регрессор <code>E[z | y&gt;0]</code> на L2 по подвыборке покупателей. Произведение <code>p̂·μ̂</code> — это в точности оптимум RMSLE, поскольку <code>E[z] = p·E[z|y&gt;0]</code>. Плюс отдельная прямая L2-модель по всем пользователям; блендим 40/60 в пользу hurdle.</li>
+        <li><b>Фичи.</b> Окна 7/14/30/60/90/180 дней по суммам, числу ненулевых дней и recency для каждого счётчика; tenure; коэффициенты конверсии cart → ord; средний чек; доли каталога и поиска; отношения окон как трендовые признаки. Ставку делаем на частотно-регулярностные признаки за 180 дней — по важности они доминируют.</li>
+        <li><b>Валидация.</b> Rolling-origin: якоря с шагом 17 дней, обучение строго на якорях, чьё целевое окно заканчивается до начала валидационного. Никаких случайных фолдов.</li>
+        <li><b>Калибровка в два шага.</b> Сначала logit-сдвиг <code>p̂</code> до целевого <code>P = 0.5855</code>, затем аффинная поправка с наклоном, снятым со скользящей валидации, и свободным членом, выводящим средний прогноз на <code>L = 2.466</code>. После сдвига вероятности свободный член аффинной части становится почти нулевым (<span class="mono num">b ≈ 0.03</span>), а наклон — чистым сжатием (<span class="mono num">a ≈ 0.92</span>). Это разделение и делает схему устойчивой.</li>
+      </ul>
+    </div>
+
+    <div class="call">
+      <h4>Главная непроверенная идея — фича «то же окно год назад»</h4>
+      <p>Для финального якоря 13 февраля 2026 окно «минус 365 дней» попадает ровно на 14 февраля – 15 марта 2025, то есть на подарочный сезон прошлого года. Персональный факт «покупал ли этот пользователь подарки в прошлом феврале-марте и на сколько» — сильнейший из известных признаков в сезонном ритейле, и он доступен именно там, где нужен. Ограничение: у обучающих якорей раньше дня 364 такой фичи нет. Практический путь — подать её с NaN на старых якорях (LightGBM умеет) либо дообучить отдельную голову на якорях 364–378. Это первый эксперимент, который я бы запустил.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section>
+  <div class="sec-head"><span class="sec-num">06</span><h2>Проверено и закрыто: куда не тратить дни</h2></div>
+  <div class="kill">
+    <div class="kill-item"><span class="t">Утечка через user_id</span><span class="r">Корреляция id с датой первой активности <b>−0.0016</b>, все десять децилей по среднему GMV идентичны. Идентификаторы рандомизированы, когорты не восстанавливаются. Закрыто.</span></div>
+    <div class="kill-item"><span class="t">Tweedie / ZILN loss</span><span class="r">Обе моделируют <b>E[y]</b>, метрика требует <b>E[log1p y]</b>. Рекомендация из baseline-ноутбука ведёт не туда.</span></div>
+    <div class="kill-item"><span class="t">Умножение прогноза на сезонный коэффициент</span><span class="r">На аналоге 2025 года ухудшает RMSLE с <b>2.0333 до 2.0594</b>. Сезонность входит через вероятность, а не через сумму.</span></div>
+    <div class="kill-item"><span class="t">Нормировка таргета на уровень якоря</span><span class="r">Обучение на <code>z / L(якорь)</code> с последующим домножением дало <b>1.7188</b> против <b>1.7078</b> у сырой модели. Post-hoc калибровка строго лучше.</span></div>
+    <div class="kill-item"><span class="t">Разворачивание данных нулями</span><span class="r">100 млн строк не нужны. Плотные матрицы 250k × 409 занимают около 2 ГБ и дают любое окно за одно вычитание.</span></div>
+    <div class="kill-item"><span class="t">Гонка за public-лидербордом</span><span class="r">Шум <b>±0.0102</b> при разбросе топ-50 в <b>0.0063</b>. Разница в 0.003 на public не значит ничего.</span></div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section>
+  <div class="sec-head"><span class="sec-num">07</span><h2>План на девять дней</h2></div>
+  <div class="days">
+    <div class="day"><span class="when">Дни 1–2</span><div class="what">
+      <h4>Фундамент и честная валидация</h4>
+      <p>Плотные матрицы, генератор фич, rolling-origin с тремя валидационными якорями. Воспроизвести опорную точку 1.6831 и зафиксировать её как контрольную.</p>
+      <ul><li>Каркас репозитория сразу с фиксированными сидами и README — топ-15 проходят ревью, переписывать в последний день дорого</li></ul>
+    </div></div>
+    <div class="day"><span class="when">Дни 3–4</span><div class="what">
+      <h4>Фичи: там, где сидят 80% сигнала</h4>
+      <p>Всё, что улучшает предсказание <b>факта покупки</b>.</p>
+      <ul>
+        <li>Фича «то же календарное окно год назад» + флаг подарочного покупателя</li>
+        <li>BTYD-признаки: межпокупочные интервалы, их дисперсия, Pareto/NBD-оценка вероятности «жив»</li>
+        <li>Профиль дней недели, доля выходных, длина текущей серии неактивности против исторической</li>
+        <li>Разрезы search против cat как прокси намерения</li>
+      </ul>
+    </div></div>
+    <div class="day"><span class="when">Дни 5–6</span><div class="what">
+      <h4>Ансамбль и вторая архитектура</h4>
+      <p>CatBoost рядом с LightGBM на тех же фичах — разная регуляризация даёт независимые ошибки. Если остаётся время, последовательная модель (GRU или небольшой трансформер) поверх сырых дневных рядов за последние 180 дней: 250k × 180 × 16 в float16 умещается примерно в 1.4 ГБ и ловит то, чего не видят оконные агрегаты.</p>
+    </div></div>
+    <div class="day"><span class="when">День 7</span><div class="what">
+      <h4>Измерение уровня на лидерборде</h4>
+      <p>Три сабмита: нули, константа, собственный прогноз. Восстановить M₁, M₂ и точные (a, b). Сверить с оценкой 2.466 из сезонного анализа. Расхождение больше 5% — сигнал, что где-то ошибка в рассуждении, и его надо найти, а не замазать константой.</p>
+    </div></div>
+    <div class="day"><span class="when">Дни 8–9</span><div class="what">
+      <h4>Заморозка, репозиторий, презентация</h4>
+      <p>Никаких новых идей. Финальные прогоны, отбор двух сабмитов, воспроизводимость от нуля, текст защиты.</p>
+    </div></div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section>
+  <div class="sec-head"><span class="sec-num">08</span><h2>Выбор двух финальных решений</h2></div>
+  <div class="stack g24">
+    <div class="prose stack g16">
+      <p>Правила дают два финальных сабмита. Соблазн — взять два лучших по public. Учитывая, что шум public шире всего турнирного разброса, это выбор наугад. Разумнее развести решения по <b>единственному источнику реального риска</b> — по оценке уровня.</p>
+    </div>
+    <div class="tiles">
+      <div class="tile hl"><span class="k">Сабмит 1 · основной</span><span class="v">L = 2.47</span><span class="d">Полный ансамбль, уровень из сезонного переноса, подтверждённый зондированием. Точечная оценка.</span></div>
+      <div class="tile"><span class="k">Сабмит 2 · страховка</span><span class="v">L = 2.43</span><span class="d">Тот же ансамбль, консервативный уровень по методу шансов. Защищает от сценария, где рост год-к-году замедлился сильнее ожидаемого.</span></div>
+    </div>
+    <div class="prose stack g16">
+      <p>Обе конфигурации строятся на одном и том же ансамбле — расходятся только в одной константе. Это осознанный отказ от диверсификации по архитектуре: разброс между hurdle, прямой L2 и их блендом составляет <span class="mono num">0.0012</span>, тогда как разброс по уровню — <span class="mono num">0.0439</span>. Хеджировать надо там, где риск, а не там, где привычно.</p>
+    </div>
+    <div class="call">
+      <h4>Финал: три раунда, не один</h4>
+      <p>Топ-15 по private проходят ревью репозитория, из них выбирают пятерых финалистов, из пятёрки — трёх победителей на очной защите в Москве. Значит, чистый код с фиксированными сидами и внятная история «почему именно так» — это не гигиена, а вторая половина шансов. Обоснование сезонной калибровки через разложение <code>E[z] = p·E[z|y&gt;0]</code> и данные прошлогоднего февраля — сильный и запоминающийся нарратив для защиты. По регламенту трека допускаются классический ML, временные ряды, BTYD и нейросети, а проприетарные модели запрещены — весь описанный стек этому соответствует.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Все числа получены на локальных замерах по train.parquet 22 августа 2026. Валидационный якорь — 2026-01-14,<br>
+  обучение на девяти якорях с 2025-07-30 по 2025-12-13, 102 признака, LightGBM, 600 итераций.<br>
+  Значения RMSLE на валидации не сопоставимы напрямую с лидербордом: целевое окно другое.
+</footer>
+
+</div>

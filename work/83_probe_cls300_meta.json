@@ -1,0 +1,21 @@
+{
+  "tag": "83_probe_cls300",
+  "file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/submissions/83_probe_cls300.csv",
+  "vector": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/cls300_full_server_final.npy",
+  "vector_key": null,
+  "candidate_file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/83_probe_cls300_candidate.npy",
+  "base_score": 1.6468181197,
+  "weight": 0.3,
+  "mean_log": 2.3232890519173677,
+  "prediction_min": 0.0,
+  "prediction_max": 14801.480733395872,
+  "base_mean": 2.323289202739097,
+  "candidate_mean": 2.3232886999999995,
+  "base_second_moment": 8.049916462302521,
+  "candidate_second_moment": 8.01049879244691,
+  "cross_base_candidate": 7.999566751523341,
+  "probe_second_moment": 8.02522199348826,
+  "corr_base_candidate": 0.9883883970306635,
+  "distance_squared": 0.061281751702748764,
+  "ez_base": 8.050618621465139
+}

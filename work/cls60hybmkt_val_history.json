@@ -1,0 +1,32 @@
+[
+  {
+    "epoch": 1,
+    "score": 1.7459287849434484,
+    "combined_score": 1.748136281967163,
+    "component_scores": {
+      "combined": 1.748136281967163,
+      "hurdle": 1.7495473623275757,
+      "direct": 1.7459288835525513,
+      "probability": 1.794237494468689,
+      "magnitude": 2.110180139541626
+    },
+    "best_hurdle_weight": 0.0,
+    "slope": 1.337585288303732,
+    "intercept": -0.9542183925956736
+  },
+  {
+    "epoch": 2,
+    "score": 1.733559721274848,
+    "combined_score": 1.7336808443069458,
+    "component_scores": {
+      "combined": 1.7336808443069458,
+      "hurdle": 1.7339658737182617,
+      "direct": 1.7336615324020386,
+      "probability": 1.7932826280593872,
+      "magnitude": 1.8097071647644043
+    },
+    "best_hurdle_weight": 0.35000000000000003,
+    "slope": 1.1927410595529828,
+    "intercept": -1.1211434965127907
+  }
+]

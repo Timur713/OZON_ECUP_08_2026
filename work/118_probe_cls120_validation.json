@@ -1,0 +1,11 @@
+[
+  {
+    "file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/submissions/118_probe_cls120.csv",
+    "rows": 250000,
+    "unique_users": 250000,
+    "prediction_min": 0.0,
+    "prediction_max": 15036.496971424978,
+    "mean_log1p": 2.323288699999999,
+    "bytes": 6614196
+  }
+]

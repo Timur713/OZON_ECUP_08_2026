@@ -1,0 +1,22 @@
+[
+  {
+    "candidate": "work/multi_anchor_growth_val_fast.npy",
+    "lambda": 0.003,
+    "base_columns": 25,
+    "oracle_base_score_250k": 1.6651398250946639,
+    "oracle_augmented_score_250k": 1.6651389226186475,
+    "oracle_gain_250k": 9.024760163622858e-07,
+    "oracle_degrees_added": 0.4162448932679581,
+    "oracle_candidate_weight": 0.0074691791310691055,
+    "repeats": 96,
+    "mean_fitted_public_gain": 1.3616029997167803e-05,
+    "mean_independent_private_gain": -4.95534204755325e-06,
+    "private_gain_se": 1.0769945047152554e-06,
+    "private_gain_positive_fraction": 0.4791666666666667,
+    "private_gain_min": -4.8225191917383725e-05,
+    "private_gain_max": 5.850724873024404e-06,
+    "mean_degrees_added": 0.4155762096987023,
+    "mean_candidate_weight": 0.018831428690491574,
+    "candidate_weight_negative_fraction": 0.3229166666666667
+  }
+]

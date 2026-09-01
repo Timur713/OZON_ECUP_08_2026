@@ -1,0 +1,62 @@
+{
+  "probe_tag": "191_probe_shape_e4",
+  "extra_scores": {
+    "146_probe_sw28_meanreversion": "1.6603005407",
+    "131_probe_w409_exact_position_s93": "1.6465450851",
+    "127_probe_w409_exact_decay_s93": "1.6464824096735666",
+    "102_probe_w409c": "1.646720938726788",
+    "83_probe_cls300": "1.6488394251718939",
+    "86_probe_cls300_probability": "1.6558577069",
+    "85_probe_w210a": "1.6482434279349687",
+    "89_probe_w300a": "1.6472946857056134",
+    "92_probe_cls409_r26": "1.647041762499095"
+  },
+  "lambda": 0.003,
+  "marginal_baseline_expected_public": 1.6460381032772344,
+  "marginal_degrees_added": 0.8219452207326654,
+  "empirical_penalty_per_degree": 3.95e-05,
+  "positive_empirical_cost": 3.246683621894028e-05,
+  "strict_double_empirical_cost": 6.493367243788056e-05,
+  "adaptive_selection_cost": 4e-05,
+  "strict_with_adaptive_cost": 0.00010493367243788056,
+  "positive_empirical_net_gate": 1.646566875473,
+  "strict_gate": 1.64646727624,
+  "strict_with_adaptive_gate": 1.646374621953,
+  "positive_weight_neutral_score": 1.646855011198,
+  "positive_gate_state": {
+    "score": 1.646566875473,
+    "expected_public": 1.6460056364410016,
+    "marginal_public_gain": 3.246683623281399e-05,
+    "primary_weight": 0.08070986454552034
+  },
+  "strict_gate_state": {
+    "score": 1.64646727624,
+    "expected_public": 1.6459731696048334,
+    "marginal_public_gain": 6.4933672401013e-05,
+    "primary_weight": 0.10860537876143797
+  },
+  "strict_with_adaptive_gate_state": {
+    "score": 1.646374621953,
+    "expected_public": 1.6459331696047048,
+    "marginal_public_gain": 0.00010493367252961683,
+    "primary_weight": 0.1345542541318204
+  },
+  "adaptive_selection_bias_included": true,
+  "negative_weight_branch_allowed": false,
+  "frozen_before_submission": true,
+  "date_msk": "2026-08-29",
+  "what_it_measures": "A network trained on the SHAPE of each user's history: every window is divided by that user's own mean activity, so level is removed entirely and the network has to rebuild it from shape. Four epochs instead of the pool's standard two, because the representation is harder to learn.",
+  "offline_evidence": {
+    "calibrated_fold378": 1.66782613,
+    "matched_control_for_the_recipe": 1.66796,
+    "conditional_gain_beyond_the_pool": 0.0003185,
+    "deployment_faithful_gain": 0.0002859,
+    "sign_stability": "96 of 96 positive",
+    "correlation_with_stack": 0.9962,
+    "two_epoch_version_of_the_same_model": -2.16e-05
+  },
+  "reading_key": {
+    "admit_only_if": "public score <= 1.646374622",
+    "if_it_fails": "branch closed, no re-parameterisation, no second probe on the shape representation"
+  }
+}

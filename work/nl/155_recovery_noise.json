@@ -1,0 +1,34 @@
+{
+  "tag": "155_recovery_noise",
+  "weight": 0.3,
+  "by_k": {
+    "6": {
+      "A_plain_audit_gain": 0.00030929420694379245,
+      "B_deployment_clean_gain": -0.0006818640520685759,
+      "C_deployment_with_proxy_error_gain": -0.0008243737132387491,
+      "cost_of_the_proxy": 0.00014250966117017316,
+      "C_positive_fraction": 0.041666666666666664
+    },
+    "12": {
+      "A_plain_audit_gain": 0.00033065830390526424,
+      "B_deployment_clean_gain": -0.0010886993809794965,
+      "C_deployment_with_proxy_error_gain": -0.00167174810169117,
+      "cost_of_the_proxy": 0.0005830487207116736,
+      "C_positive_fraction": 0.0
+    },
+    "20": {
+      "A_plain_audit_gain": 0.0004721114277084724,
+      "B_deployment_clean_gain": -0.0014372832017792898,
+      "C_deployment_with_proxy_error_gain": -0.002808543269926018,
+      "cost_of_the_proxy": 0.001371260068146728,
+      "C_positive_fraction": 0.0
+    },
+    "30": {
+      "A_plain_audit_gain": 0.0005545866816503986,
+      "B_deployment_clean_gain": -0.001816136267103613,
+      "C_deployment_with_proxy_error_gain": -0.0032590582239965804,
+      "cost_of_the_proxy": 0.0014429219568929674,
+      "C_positive_fraction": 0.0
+    }
+  }
+}

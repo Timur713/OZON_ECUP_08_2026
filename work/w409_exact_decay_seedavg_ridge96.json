@@ -1,0 +1,22 @@
+[
+  {
+    "candidate": "/home/ubuntu/ecup/work/promote_w409_exact_decay_val_seedavg.npy",
+    "lambda": 0.003,
+    "base_columns": 25,
+    "oracle_base_score_250k": 1.665139825094663,
+    "oracle_augmented_score_250k": 1.6651272531638661,
+    "oracle_gain_250k": 1.2571930796845265e-05,
+    "oracle_degrees_added": 0.3534695456113255,
+    "oracle_candidate_weight": 0.08684216147638653,
+    "repeats": 96,
+    "mean_fitted_public_gain": 1.9666258854700764e-05,
+    "mean_independent_private_gain": 7.198942687196748e-06,
+    "private_gain_se": 8.282863599882534e-07,
+    "private_gain_positive_fraction": 0.8645833333333334,
+    "private_gain_min": -3.782488568826459e-05,
+    "private_gain_max": 1.5960722691499285e-05,
+    "mean_degrees_added": 0.35359587064209275,
+    "mean_candidate_weight": 0.07979422904654374,
+    "candidate_weight_negative_fraction": 0.10416666666666667
+  }
+]

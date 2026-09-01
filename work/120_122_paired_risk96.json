@@ -1,0 +1,80 @@
+{
+  "scope": "paired historical user-split audit; not an absolute competition-private forecast",
+  "columns": [
+    "GBD262",
+    "W120_seed_average",
+    "TCN180_two_head",
+    "TCN365_growing_anchor",
+    "TCN409",
+    "TCN409_replication"
+  ],
+  "repeats": 96,
+  "public_users": 50000,
+  "private_users": 200000,
+  "solvers": {
+    "120_all_six_l001": {
+      "lambda": 0.001,
+      "columns": [
+        "GBD262",
+        "W120_seed_average",
+        "TCN180_two_head",
+        "TCN365_growing_anchor",
+        "TCN409",
+        "TCN409_replication"
+      ],
+      "mean_public": 1.666468474151291,
+      "mean_private": 1.66646800087909,
+      "mean_active": 5.041666666666667
+    },
+    "122_no_replication_l003": {
+      "lambda": 0.003,
+      "columns": [
+        "GBD262",
+        "W120_seed_average",
+        "TCN180_two_head",
+        "TCN365_growing_anchor",
+        "TCN409"
+      ],
+      "mean_public": 1.6690691221575216,
+      "mean_private": 1.6690818431072991,
+      "mean_active": 4.989583333333333
+    }
+  },
+  "challenger_minus_primary_private": {
+    "mean": 0.002613842228208855,
+    "se": 7.897845397058673e-06,
+    "min": 0.002244584576513109,
+    "median": 0.0026310434052185805,
+    "max": 0.0027401018594910287,
+    "p10": 0.0025140271224184385,
+    "p90": 0.0026950836306041115,
+    "challenger_win_fraction": 0.0
+  },
+  "capped_minus_primary_private": {
+    "mean": 0.0005818556545457917,
+    "se": 3.319271027433618e-06,
+    "min": 0.0003837746227126626,
+    "median": 0.0005920392612338565,
+    "max": 0.000621343891973769,
+    "p10": 0.0005454934492922225,
+    "p90": 0.0006057948708827476,
+    "capped_win_fraction": 0.0
+  },
+  "capped_solver": {
+    "tag": "123_all_six_l001_cap035",
+    "lambda": 0.001,
+    "max_model_weight": 0.35,
+    "columns": [
+      "GBD262",
+      "W120_seed_average",
+      "TCN180_two_head",
+      "TCN365_growing_anchor",
+      "TCN409",
+      "TCN409_replication"
+    ],
+    "mean_public": 1.6670442135134647,
+    "mean_private": 1.6670498565336362,
+    "mean_active": 5.885416666666667
+  },
+  "decision": "120 remains clean primary; 123 is preferred clean insurance because the concentration cap retains much more historical quality; 122 is the severe model-shift reserve"
+}

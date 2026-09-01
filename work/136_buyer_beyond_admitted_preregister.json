@@ -1,0 +1,33 @@
+{
+  "preregistered_utc": "2026-08-26T08:25:00Z",
+  "preregistered_msk": "2026-08-26T11:25:00+03:00",
+  "author_note": "Written BEFORE running the two missing joint audits and BEFORE submitting 133.",
+  "problem_found": [
+    "The frozen offline gate for w409_exact_buyer_s93 measured incremental gain beyond {w409c} ONLY.",
+    "Since 127 (exact decay) is admitted and is inside the current primary 130, the decision-relevant quantity is the incremental gain beyond {w409c, decay}.",
+    "The public gate file 133_probe_w409_exact_buyer_s93_gates.json was computed with a marginal pool that EXCLUDES 127, so its baseline is stale instead of using the true current 130 pool baseline 1.6461788499.",
+    "Both defects make the existing gates too LENIENT. Correcting them can only make admission harder, never easier."
+  ],
+  "measurements_to_run": {
+    "A": "evaluate_validation_ridge.py w409c_val w409_exact_decay_s93_val w409_exact_buyer_s93_val --joint --repeats 96 -> w409_exact_decay_buyer_joint96.json",
+    "B": "evaluate_validation_ridge.py w409c_val w409_exact_decay_s93_val w409_exact_position_s93_val w409_exact_buyer_s93_val --joint --repeats 96 -> w409_exact_decay_position_buyer_joint96.json"
+  },
+  "already_measured_reference_values": {
+    "w409c_only": 0.00021738,
+    "w409c_decay": 0.00034049,
+    "w409c_buyer": 0.00032839,
+    "w409c_decay_position": 0.00050805
+  },
+  "offline_gates_for_buyer": {
+    "incremental_beyond_w409c_decay_min": 0.00008,
+    "positive_fraction_min": 0.90,
+    "maximum_negative_weight_fraction": 0.10,
+    "rationale": "Same standing project thresholds already used for decay, position, event, survival and cadence branches. Not changed for this branch."
+  },
+  "decision_rule": {
+    "if_buyer_incremental_beyond_w409c_decay_below_0.00008": "133 is NOT submitted. The buyer branch is declared redundant with the admitted decay base and closed without a public probe. No inversion, no joint recovery, no threshold relaxation.",
+    "if_at_or_above_0.00008": "Recompute the 133 public gate with --extra 127_probe_w409_exact_decay_s93 1.6464824097 so the marginal pool matches the true 130 pool, then submit 133 as a PROBE against that corrected, stricter strict+adaptive gate."
+  },
+  "public_gate_correction_is_mandatory_regardless": true,
+  "uses_public_scores_for_this_offline_decision": false
+}

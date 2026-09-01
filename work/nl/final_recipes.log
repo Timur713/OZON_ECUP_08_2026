@@ -1,0 +1,3 @@
+matched     130=1.6656193 147=1.6658790 diff=+0.0002597 se=0.0000057 147_wins=0.015
+deployment  130=1.6662252 147=1.6662082 diff=-0.0000170 se=0.0000142 147_wins=0.510
+verdict: reverses_the_roles

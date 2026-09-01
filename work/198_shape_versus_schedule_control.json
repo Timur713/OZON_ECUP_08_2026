@@ -1,0 +1,31 @@
+{
+  "tag": "198_shape_versus_schedule",
+  "date_msk": "2026-08-29",
+  "question": "divK_shape_e4 changed TWO things at once against the pool's standard recipe: the representation, which drops each user's level, and the schedule, four epochs instead of two. Which one carries the +0.0003185?",
+  "control": "the ordinary representation on the same four-epoch schedule, everything else identical",
+  "results": {
+    "pool_standard_2_epochs_matched_control": {
+      "calibrated_fold378": 1.66796
+    },
+    "shape_4_epochs": {
+      "calibrated_fold378": 1.667826,
+      "conditional_gain": 0.0003185,
+      "correlation_with_stack": 0.9962,
+      "verdict": "PASS"
+    },
+    "plain_4_epochs": {
+      "calibrated_fold378": 1.671272,
+      "conditional_gain": 3.97e-05,
+      "correlation_with_stack": 0.9946,
+      "verdict": "FAIL"
+    },
+    "shape_2_epochs": {
+      "calibrated_fold378": 1.675942,
+      "conditional_gain": -2.16e-05,
+      "verdict": "FAIL"
+    }
+  },
+  "verdict": "The gain belongs to the REPRESENTATION, not to the schedule. Four epochs makes the ordinary model WORSE, 1.671272 against 1.667960 at two epochs, and its conditional gain is +0.0000397, eight times smaller than the shape model's. The pool is not undertrained; FINDINGS 2.6 stands. What the shape representation needs is more training than the ordinary one, because rebuilding level from shape is a harder problem, not because longer is better in general.",
+  "consequence": "The conditional retraining queue staged as work/nl/run_queue9_if_schedule.sh is NOT launched. Retraining the admitted recipes at longer schedules would have cost hours of GPU and made them worse.",
+  "why_this_control_was_worth_running_first": "The two explanations imply opposite actions. 'Schedule' would have meant the whole pool is undertrained and several bases are worth retraining, the one scenario left where the gap closes by more than a ten-thousandth at a time. 'Representation' means one new base. Running the control concurrently rather than fifth in the queue bought the answer 90 minutes earlier and avoided committing the rest of the night to the wrong branch."
+}

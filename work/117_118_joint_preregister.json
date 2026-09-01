@@ -1,0 +1,8 @@
+{
+  "joint_df": 21.21205882538871,
+  "joint_double_empirical_cost": 0.00010207404182906491,
+  "joint_adaptive_cost": 7e-05,
+  "joint_total_cost": 0.0001720740418290649,
+  "corr_117_118": 0.96883401884029,
+  "distance2_117_118": 0.1653238971294828
+}

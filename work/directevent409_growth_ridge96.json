@@ -1,0 +1,22 @@
+[
+  {
+    "candidate": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/directevent409_growth_val.npy",
+    "lambda": 0.003,
+    "base_columns": 25,
+    "oracle_base_score_250k": 1.6651398250946639,
+    "oracle_augmented_score_250k": 1.665056430504876,
+    "oracle_gain_250k": 8.339458978778858e-05,
+    "oracle_degrees_added": 0.7950304362383527,
+    "oracle_candidate_weight": -0.10307765757325954,
+    "repeats": 96,
+    "mean_fitted_public_gain": 9.302514233140019e-05,
+    "mean_independent_private_gain": 6.836481002057045e-05,
+    "private_gain_se": 2.2330855311855874e-06,
+    "private_gain_positive_fraction": 0.9791666666666666,
+    "private_gain_min": -1.920063331195543e-05,
+    "private_gain_max": 9.822351999377865e-05,
+    "mean_degrees_added": 0.7948128796150482,
+    "mean_candidate_weight": -0.10157630080345781,
+    "candidate_weight_negative_fraction": 0.9895833333333334
+  }
+]

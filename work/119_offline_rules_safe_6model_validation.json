@@ -1,0 +1,11 @@
+[
+  {
+    "file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/submissions/119_offline_rules_safe_6model.csv",
+    "rows": 250000,
+    "unique_users": 250000,
+    "prediction_min": 0.0,
+    "prediction_max": 12416.220382776019,
+    "mean_log1p": 2.201083894414944,
+    "bytes": 6608636
+  }
+]

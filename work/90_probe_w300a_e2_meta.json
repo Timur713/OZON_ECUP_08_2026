@@ -1,0 +1,21 @@
+{
+  "tag": "90_probe_w300a_e2",
+  "file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/submissions/90_probe_w300a_e2.csv",
+  "vector": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/w300a_final.npy",
+  "vector_key": null,
+  "candidate_file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/90_probe_w300a_e2_candidate.npy",
+  "base_score": 1.6468181197,
+  "weight": 0.3,
+  "mean_log": 2.323289051917368,
+  "prediction_min": 0.0,
+  "prediction_max": 13360.092705883542,
+  "base_mean": 2.323289202739097,
+  "candidate_mean": 2.3232887,
+  "base_second_moment": 8.049916462302521,
+  "candidate_second_moment": 8.047473700377735,
+  "cross_base_candidate": 8.03889067546029,
+  "probe_second_moment": 8.045065783255552,
+  "corr_base_candidate": 0.996301758174412,
+  "distance_squared": 0.01960881175967576,
+  "ez_base": 8.050618621465139
+}

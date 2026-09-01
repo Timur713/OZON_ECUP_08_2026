@@ -1,0 +1,22 @@
+{
+  "tag": "107_probe_cls43exacthold",
+  "file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/submissions/107_probe_cls43exacthold.csv",
+  "vector": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/cls43exacthold_full_server_final.npy",
+  "vector_key": null,
+  "candidate_file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/107_probe_cls43exacthold_candidate.npy",
+  "base_submission": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/submissions/91_ridge26_measured.csv",
+  "base_score": 1.6466387804455878,
+  "weight": 0.3,
+  "mean_log": 2.3232886999999995,
+  "prediction_min": 0.12813710096565895,
+  "prediction_max": 39273.26517804055,
+  "base_mean": 2.3232887,
+  "candidate_mean": 2.3232886999999995,
+  "base_second_moment": 8.050132187871089,
+  "candidate_second_moment": 8.050132187871089,
+  "cross_base_candidate": 7.546966992981003,
+  "probe_second_moment": 7.838802806017251,
+  "corr_base_candidate": 0.8103025671962713,
+  "distance_squared": 1.0063303897801719,
+  "ez_base": 8.051021807301879
+}

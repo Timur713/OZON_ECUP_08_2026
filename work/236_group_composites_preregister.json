@@ -1,0 +1,20 @@
+{
+  "tag": "236_group_composites",
+  "date_msk": "2026-08-30",
+  "status": "frozen before the composites are built",
+  "idea": "composite51 compressed fifty models into ONE direction and realised +0.0000871 on the all-pool solution. One direction cannot carry the collective span of fifty models: adding all of them to the pool was worth 0.00056 offline while the single composite captured 0.00037. Partitioning the bank into disjoint families and building one composite per family yields several directions and several degrees of freedom instead of one.",
+  "relation_to_the_230_key": "That key closed a reweighted composite and a second probe on the same fifty models. This is a decomposition of the bank into several directions rather than a reweighting of one, so it adds span rather than revisiting a rejected candidate. It remains a second attempt at the same mechanism and carries the doubled adaptive charge of 0.00008 per candidate.",
+  "partition": "by training family, fixed here before any composite is fitted: shape representation, anchor subsets, alternative representations, daily-head and calendar, capacity, hurdle objectives, and everything else. A model belongs to exactly one group.",
+  "construction": "per group, a ridge of its members on fold-378 labels, with the regularisation chosen from the fixed grid 0.003, 0.01, 0.03, 0.1, 0.3, 1.0 by the group composite's own out-of-fold score. Out-of-fold vectors are used for screening; the deployed vector uses weights fitted on all users.",
+  "screening": "against pool29 plus composite51, so signal that composite51 already delivers is not counted twice. Candidates are screened jointly as well as singly, and only those with a positive INCREMENTAL contribution given the others are probed.",
+  "gate_per_candidate": {
+    "magnitude": 0.00008,
+    "adaptive_cost": 0.00008,
+    "sign_stability": "90 of 96",
+    "correlation_with_stack": 0.99
+  },
+  "budget": "at most four probes from this round, taken in order of incremental contribution",
+  "honest_expectation": "The measured transfer ratio for this family is about one sixth, and each admitted base has recently been worth about 0.0001 of public. Four passing candidates would therefore be worth roughly 0.0002 to 0.0004, against a gap of 0.00046 to the next place. This can close a large part of that gap; it is not certain to close all of it.",
+  "if_all_fail": "the composite mechanism is closed in every form and no further construction of it is attempted.",
+  "frozen_before_measurement": true
+}

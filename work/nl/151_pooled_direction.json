@@ -1,0 +1,19 @@
+{
+  "tag": "151_pooled_conditional_direction",
+  "leave_one_fold_out_pooled_gain": {
+    "288": 0.0006982229599270529,
+    "318": 0.0015281280831025423,
+    "348": 8.229505333501308e-05,
+    "378": -1.6798817718877146e-05
+  },
+  "leave_one_fold_out_pooled_gain_unit_normalised": {
+    "288": 0.0007018906241180733,
+    "318": 0.001681099172975431,
+    "348": 8.507426408255192e-05,
+    "378": -1.654567494280279e-05
+  },
+  "worst_fold_gain": -1.6798817718877146e-05,
+  "worst_fold_gain_unit_normalised": -1.654567494280279e-05,
+  "threshold": 8e-05,
+  "verdict": "closed"
+}

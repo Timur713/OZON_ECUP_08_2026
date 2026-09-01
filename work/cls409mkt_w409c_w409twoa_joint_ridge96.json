@@ -1,0 +1,38 @@
+[
+  {
+    "candidates": [
+      "work/w409c_val.npy",
+      "work/w409twoa_val.npy",
+      "work/cls409mkt_val_server_val.npy"
+    ],
+    "lambda": 0.003,
+    "base_columns": 25,
+    "oracle_base_score_250k": 1.6651398250946639,
+    "oracle_augmented_score_250k": 1.664852110054337,
+    "oracle_gain_250k": 0.00028771504032687467,
+    "oracle_degrees_added": 2.1626213094360303,
+    "oracle_candidate_weights": {
+      "work/w409c_val.npy": 0.21015136562038272,
+      "work/w409twoa_val.npy": 0.13621562020296824,
+      "work/cls409mkt_val_server_val.npy": 0.009961136458792685
+    },
+    "repeats": 96,
+    "mean_fitted_public_gain": 0.0003238981803654617,
+    "mean_independent_private_gain": 0.0002512907722372823,
+    "private_gain_se": 3.3817172314751695e-06,
+    "private_gain_positive_fraction": 1.0,
+    "private_gain_min": 0.00013901762359069814,
+    "private_gain_max": 0.0003014965867529362,
+    "mean_degrees_added": 2.1621353387526963,
+    "mean_candidate_weights": {
+      "work/w409c_val.npy": 0.20442613800242904,
+      "work/w409twoa_val.npy": 0.14224744384387694,
+      "work/cls409mkt_val_server_val.npy": 0.00793310723031253
+    },
+    "candidate_weight_negative_fraction": {
+      "work/w409c_val.npy": 0.0,
+      "work/w409twoa_val.npy": 0.010416666666666666,
+      "work/cls409mkt_val_server_val.npy": 0.40625
+    }
+  }
+]

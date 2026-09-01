@@ -1,0 +1,49 @@
+{
+  "file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/submissions/123_offline_capped_w035.csv",
+  "sha256": "4a698bb23242ad19fd0edac4cab5c318c63544ea8012b97895f6fc86f36ac599",
+  "construction": "historical_only_bounded_nonnegative_ridge",
+  "frozen_before_120_122_scores": true,
+  "uses_public_scores": false,
+  "uses_recovered_moments": false,
+  "uses_competition_target_mean": false,
+  "lambda": 0.001,
+  "max_model_weight": 0.35,
+  "families": [
+    "GBD262",
+    "W120_seed_average",
+    "TCN180_two_head",
+    "TCN365_growing_anchor",
+    "TCN409",
+    "TCN409_replication"
+  ],
+  "cv_protocol": "96 fixed 50k-fit to independent-200k-score user splits",
+  "mean_public_score": 1.6670442135134647,
+  "mean_independent_private": 1.6670498565336362,
+  "private_score_se": 0.00012783672114869386,
+  "cap_fraction_by_model": {
+    "GBD262": 0.0,
+    "W120_seed_average": 0.0,
+    "TCN180_two_head": 0.0,
+    "TCN365_growing_anchor": 0.0,
+    "TCN409": 0.0,
+    "TCN409_replication": 1.0
+  },
+  "validation_score_full_250k": 1.6669729031610283,
+  "weights": {
+    "GBD262": 0.18057352289615464,
+    "W120_seed_average": 0.22351397082994942,
+    "TCN180_two_head": 0.03959011302536863,
+    "TCN365_growing_anchor": 0.03920394327302019,
+    "TCN409": 0.1504726630104671,
+    "TCN409_replication": 0.35,
+    "const": -0.24767628040157064
+  },
+  "historical_only_forecast_mean_log1p": 2.320535330938203,
+  "raw_final_mean_log1p": 2.1805881217521628,
+  "applied_shift_before_clipping": 0.1399472091860403,
+  "output_mean_log1p": 2.320535330938203,
+  "output_std_log1p": 1.5471208486803516,
+  "prediction_min": 0.15021307656991267,
+  "prediction_max": 11461.239659140105,
+  "rows": 250000
+}

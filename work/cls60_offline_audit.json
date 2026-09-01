@@ -1,0 +1,15 @@
+{
+  "candidate": "cls60",
+  "validation_sha256": "c76f0589260727d9efbb8dadd131f5863b84c860344dd972f14861218be54832",
+  "protocol": "96 fixed 50k-fit to independent-200k-score splits, ridge lambda=0.003",
+  "individual_private_gain": -0.000006925345366610529,
+  "individual_private_gain_se": 0.0000010159431665167805,
+  "individual_positive_fraction": 0.19791666666666666,
+  "individual_degrees_added": 0.515257401968309,
+  "joint_w409c_private_gain": 0.00021058777647427426,
+  "reference_w409c_private_gain": 0.00022066,
+  "joint_full_private_gain": 0.00031154147434213353,
+  "reference_full_private_gain": 0.00031795218635821687,
+  "decision": "reject_before_leaderboard",
+  "reason": "negative independent gain, negative marginal in both relevant stacks, unstable coefficient sign"
+}

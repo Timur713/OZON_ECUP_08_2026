@@ -1,0 +1,28 @@
+fold 288 K=  6 private=+0.0009604 pos=1.00
+fold 288 K= 12 private=+0.0010244 pos=1.00
+fold 288 K= 24 private=+0.0010896 pos=1.00
+fold 288 K= 76 private=+0.0009959 pos=1.00
+fold 318 K=  6 private=+0.0025920 pos=1.00
+fold 318 K= 12 private=+0.0033327 pos=1.00
+fold 318 K= 24 private=+0.0035752 pos=1.00
+fold 318 K= 76 private=+0.0031872 pos=1.00
+fold 348 K=  6 private=+0.0002019 pos=1.00
+fold 348 K= 12 private=+0.0004894 pos=1.00
+fold 348 K= 24 private=+0.0004284 pos=1.00
+fold 348 K= 76 private=+0.0002548 pos=0.96
+fold 378 K=  6 private=+0.0011753 pos=1.00
+fold 378 K= 12 private=+0.0017789 pos=1.00
+fold 378 K= 24 private=+0.0018879 pos=1.00
+fold 378 K= 76 private=+0.0020266 pos=1.00
+PCA378 K=  6 private=+0.0001349 pos=0.98
+PCA378 K= 12 private=+0.0003483 pos=1.00
+PCA378 K= 24 private=+0.0005430 pos=1.00
+PCA378 K= 76 private=+0.0003784 pos=0.98
+
+worst fold by K: {
+  "6": 0.00020188084741264156,
+  "12": 0.0004893597046834638,
+  "24": 0.0004283564843589975,
+  "76": 0.0002548429710544503
+}
+K values passing condition two: ['6', '12', '24', '76']

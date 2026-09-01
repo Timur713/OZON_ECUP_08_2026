@@ -1,0 +1,27 @@
+{
+  "preregistered_msk": "2026-08-26T13:10:00+03:00",
+  "round": "phase B2 - clean factorial isolation of anchor density and width",
+  "uses_public_scores": false,
+  "phase_B1_result": {
+    "control_sparse_exw409_s93": {"anchors": 14, "range": "186..342", "width": 96, "best": 1.667959883, "epoch1": 1.671808658, "epoch2": 1.667959883},
+    "reference_w409c_same_split": 1.667924,
+    "control_validates_script": true,
+    "excap_d4_w96": {"anchors": 77, "range": "43..347", "width": 96, "epoch1": 1.687211805, "epoch2": 1.723725264, "best": 1.687211805},
+    "verdict": "FAILED, worse than control by 0.019252 and degrading with training."
+  },
+  "design_flaw_identified": "excap_d4_w96 changed TWO factors at once: anchor density (stride 12 -> 4) and anchor range (start 186 -> 43). With window 409 an anchor at day 43 has left = 43-408 = -365, so 365 of 409 input days are zero padding. Early anchors are therefore mostly empty and carry a different input and target distribution. The observed failure is plausibly caused by RANGE, while DENSITY was the actual hypothesis. The result cannot separate them, so it does not yet refute the capacity hypothesis.",
+  "corrected_factorial": {
+    "C1_density_only": "anchor_start 186, anchor_stride 4, width 96, epochs 2 (41 anchors, same range as control)",
+    "C2_width_only": "anchor_start 186, anchor_stride 12, width 192, epochs 2 (14 anchors, same range as control)",
+    "C3_both": "anchor_start 186, anchor_stride 4, width 192, epochs 2, run only if C1 or C2 beats the control"
+  },
+  "control": "exw409_s93 best=1.667959883, already measured, shared by every cell",
+  "reading_key": {
+    "capacity_confirmed_if": "a cell beats the control standalone by >= 0.0015",
+    "capacity_refuted_if": "no cell beats the control by more than 0.0005, in which case the exact backbone is capacity-saturated at 14 anchors and width 96, and the whole scaling axis is closed",
+    "admission_still_requires": "incremental gain beyond the admitted pool {w409c, decay_s93} >= 0.00008, positive_fraction >= 0.90, negative weight fraction <= 0.10",
+    "epoch_rule_test": "FINDINGS 2.6 ('two epochs then overfit') is an artifact of anchor scarcity only if a denser cell is still improving at epoch 2 while the control is not"
+  },
+  "stopped": "excap_d4_w192 and excap_d4_w192_e3 killed before completion because they inherit the contaminated anchor range 43..347 and would repeat the same confound at 4x the GPU cost.",
+  "submission_policy": "unchanged: at most one probe from this phase, only after the offline gate passes"
+}

@@ -1,0 +1,75 @@
+{
+  "tag": "206_new_candidates_after_the_probes",
+  "date_msk": "2026-08-29",
+  "probe_outcomes": {
+    "191_probe_shape_e4": {
+      "actual": 1.646181,
+      "gate": 1.646374622,
+      "verdict": "PASSED by 0.0001936"
+    },
+    "178_probe_divB_st24a": {
+      "actual": 1.6469745,
+      "gate": 1.647125948,
+      "verdict": "PASSED by 0.0001514"
+    },
+    "183_allpool_overfit_l0": {
+      "actual": 1.6457843,
+      "solver_estimate": 1.6457377,
+      "my_prediction": 1.6449653,
+      "verdict": "prediction FALSIFIED; the actual is 0.0000466 WORSE than the population estimate, so there is no hidden public optimism and the ceiling is real"
+    }
+  },
+  "new_ceiling": {
+    "before_the_two_bases": 1.6457377161,
+    "after": 1.6454846813,
+    "moved_by": 0.0002530348
+  },
+  "candidates": {
+    "171 final now": {
+      "public": 1.6460211139,
+      "source": "measured",
+      "df": 22.102124,
+      "private_estimate": 1.6468941477980001,
+      "selection_charge": 8e-05,
+      "adjusted_private": 1.6469741477980002
+    },
+    "183 final now": {
+      "public": 1.6457843,
+      "source": "measured",
+      "df": 41.998,
+      "private_estimate": 1.647443221,
+      "selection_charge": 8e-05,
+      "adjusted_private": 1.6475232210000001
+    },
+    "200 NEW l=.003 admitted pool": {
+      "public": 1.6457998906,
+      "source": "expected",
+      "df": 23.660604,
+      "private_estimate": 1.646734484458,
+      "selection_charge": 0.00012,
+      "adjusted_private": 1.646854484458
+    },
+    "205 NEW l=.002 all pool": {
+      "public": 1.6456307222,
+      "source": "expected",
+      "df": 32.274433,
+      "private_estimate": 1.6469055623035,
+      "selection_charge": 0.00012,
+      "adjusted_private": 1.6470255623035
+    },
+    "204 NEW l=.0003 all pool": {
+      "public": 1.6455144876,
+      "source": "expected",
+      "df": 40.34928,
+      "private_estimate": 1.64710828416,
+      "selection_charge": 0.00012,
+      "adjusted_private": 1.64722828416
+    },
+    "sha256": {
+      "200_shape_anchor_l003": "77b428ca6af9e74ffbdf22749cacfc87e76048d5dceef80146d557dabb21c598",
+      "204_allpool_new_l0003": "88d30331ffac118d5cc5d04773f868d0af31108229d3aacdc2c31edf06382cb0",
+      "205_allpool_new_l002": "2ad802eb8dd09cacf3da5badd1707e0f132b6466f30d22ed9c3464d5fb65c180"
+    }
+  },
+  "note": "171 and 183 are untouched. Every file here is new."
+}

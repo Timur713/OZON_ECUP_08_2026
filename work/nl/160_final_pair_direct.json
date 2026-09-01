@@ -1,0 +1,22 @@
+{
+  "tag": "160_final_pair_direct_comparison",
+  "repeats": 200,
+  "mean_active_components_of_147_recipe": 9.255,
+  "arms": {
+    "matched": {
+      "mean_private_130_recipe": 1.6656192605033542,
+      "mean_private_147_recipe": 1.6658789589915046,
+      "mean_difference_147_minus_130": 0.0002596984881502107,
+      "standard_error": 5.732390474131815e-06,
+      "fraction_of_splits_where_147_wins": 0.015
+    },
+    "deployment": {
+      "mean_private_130_recipe": 1.666225179746939,
+      "mean_private_147_recipe": 1.6662082010754398,
+      "mean_difference_147_minus_130": -1.6978671499249254e-05,
+      "standard_error": 1.4154648848033413e-05,
+      "fraction_of_splits_where_147_wins": 0.51
+    }
+  },
+  "verdict": "reverses_the_roles"
+}

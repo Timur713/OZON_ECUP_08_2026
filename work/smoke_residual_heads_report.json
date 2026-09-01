@@ -1,0 +1,93 @@
+{
+  "tag": "smoke_residual_heads",
+  "base_tag": "smoke_growth_heads",
+  "uses_public_scores": false,
+  "uses_recovered_moments": false,
+  "folds": [
+    270,
+    306,
+    342,
+    378
+  ],
+  "evaluation_folds": [
+    342,
+    378
+  ],
+  "selection_folds": [
+    342
+  ],
+  "untouched_holdout_fold": 378,
+  "protocol": "train residual correction only on strictly earlier temporal folds",
+  "features": 314,
+  "head_features": [
+    "direct",
+    "hurdle",
+    "direct_minus_hurdle"
+  ],
+  "residual_history_features": [
+    "last",
+    "mean",
+    "median",
+    "absolute_mean",
+    "last_minus_mean",
+    "trend"
+  ],
+  "base_scores": [
+    {
+      "fold": 342,
+      "score": 1.75270683497691,
+      "slope": 1.0255590357869229,
+      "intercept": -0.007578164665059045
+    },
+    {
+      "fold": 378,
+      "score": 1.6285588344804098,
+      "slope": 0.998741874271399,
+      "intercept": -0.2653468302994538
+    }
+  ],
+  "selection_grid": {
+    "iterations": [
+      50
+    ],
+    "shrinkages": [
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "minimum_untouched_holdout_gain": 0.00015,
+    "requires_selection_folds_nonnegative": true
+  },
+  "selected": {
+    "kind": "lightgbm",
+    "iteration": 50,
+    "shrinkage": 0.25,
+    "folds": [
+      {
+        "fold": 342,
+        "score": 1.7524487023454682,
+        "gain_vs_base": 0.00025813263144169873,
+        "slope": 1.015261396751175,
+        "intercept": 0.02413872449104249
+      },
+      {
+        "fold": 378,
+        "score": 1.6291896082095565,
+        "gain_vs_base": -0.0006307737291466609,
+        "slope": 0.9937256574325585,
+        "intercept": -0.2489364630645165
+      }
+    ],
+    "mean_score": 1.6908191552775125,
+    "worst_score": 1.7524487023454682,
+    "mean_gain_vs_base": -0.00018632054885248106,
+    "worst_gain_vs_base": -0.0006307737291466609,
+    "selection_objective": 1.7524487023454682
+  },
+  "accepted": false,
+  "validation_file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/smoke_residual_heads_val.npy",
+  "candidate_file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/smoke_residual_heads_candidate_final.npy",
+  "elapsed_seconds": 1.418078899383545
+}

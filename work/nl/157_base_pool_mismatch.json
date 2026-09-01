@@ -1,0 +1,12 @@
+{
+  "tag": "157_base_pool_mismatch",
+  "note": "K = 0, the 25 admitted validation columns only",
+  "matched_gram_and_rhs_from_50k": 1.6653996138086438,
+  "mismatched_gram_250k_rhs_50k": 1.666025314924454,
+  "population_oracle_both_from_250k": 1.665004687384787,
+  "cost_of_the_mismatch": 0.0006257011158106682,
+  "cost_of_fitting_on_50k_at_all": 0.00039492642385631493,
+  "mismatch_hurts_in_fraction_of_splits": 1.0,
+  "median_abs_correlation_between_bases": 0.9823130903004729,
+  "min_abs_correlation_between_bases": 0.7977045536407115
+}

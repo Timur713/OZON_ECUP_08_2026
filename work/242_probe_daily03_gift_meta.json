@@ -1,0 +1,23 @@
+{
+  "tag": "242_probe_daily03_gift",
+  "file": "/Users/iosenkinmihail/Desktop/\u0445\u0430\u043a\u0430\u0442\u043e\u043d 3 \u0437\u0430\u0434\u0430\u0447\u0430/OZON_ECUP_2026_3/submissions/242_probe_daily03_gift.csv",
+  "vector": "/Users/iosenkinmihail/Desktop/\u0445\u0430\u043a\u0430\u0442\u043e\u043d 3 \u0437\u0430\u0434\u0430\u0447\u0430/OZON_ECUP_2026_3/work/div/divU_daily03_gift_final.npy",
+  "vector_key": null,
+  "candidate_file": "/Users/iosenkinmihail/Desktop/\u0445\u0430\u043a\u0430\u0442\u043e\u043d 3 \u0437\u0430\u0434\u0430\u0447\u0430/OZON_ECUP_2026_3/work/242_probe_daily03_gift_candidate.npy",
+  "base_submission": "/Users/iosenkinmihail/Desktop/\u0445\u0430\u043a\u0430\u0442\u043e\u043d 3 \u0437\u0430\u0434\u0430\u0447\u0430/OZON_ECUP_2026_3/submissions/240_allpool_composite_l0003.csv",
+  "base_score": 1.6454459655,
+  "weight": 0.3,
+  "inverted": false,
+  "mean_log": 2.3232886999999995,
+  "prediction_min": 0.0,
+  "prediction_max": 10536.729045862516,
+  "base_mean": 2.3232887,
+  "candidate_mean": 2.3232886999999995,
+  "base_second_moment": 8.055278794418312,
+  "candidate_second_moment": 8.046188376040176,
+  "cross_base_candidate": 8.037160467433518,
+  "probe_second_moment": 8.046850959430666,
+  "corr_base_candidate": 0.9948854425001358,
+  "distance_squared": 0.02714623559145289,
+  "ez_base": 8.055558534519042
+}

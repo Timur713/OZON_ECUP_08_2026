@@ -1,0 +1,18 @@
+{
+  "preregistered_msk": "2026-08-26T16:25:00+03:00",
+  "round": "does training-anchor RECENCY matter for the sequence backbone?",
+  "uses_public_scores": false,
+  "observation_that_motivates_it": "gbdt_f4.py trains on anchors range(186,379,12), i.e. up to 378. The exact TCN backbone trains on range(186, validation_anchor-29, 12), i.e. only up to 342, yet predicts final anchor 408 with that same model. Every TCN base we own, including the admitted 127, therefore never sees the most recent 66 days of target windows. The GBDT bases, which do see them, are among our best (GBD is our second-best base at 1.651738 standalone) while the TCN bases are weaker. That is consistent with recency mattering, but it is confounded by model family, so it must be tested directly.",
+  "test": {
+    "E1_recent": "anchors 186..342, 14 anchors, predict fold 378 - ALREADY MEASURED as exw409_s93 = 1.667959883",
+    "E2_older": "anchors 150..306, 14 anchors (same count, shifted 36 days older), predict fold 378",
+    "E3_much_older": "anchors 90..246, 14 anchors (same count, shifted 96 days older), predict fold 378"
+  },
+  "what_it_isolates": "anchor count, stride, window, width, seed and epochs are all held fixed. Only how recent the training anchors are changes.",
+  "reading_key": {
+    "recency_matters_if": "E1 beats E2 by >= 0.0015 and the ordering E1 < E2 < E3 holds",
+    "recency_irrelevant_if": "E1 and E2 differ by < 0.0005",
+    "action_if_recency_matters": "Retrain the final anchor-408 predictions of the key sequence bases with training anchors extended to 378 (targets end at 408, fully observed, no leakage into the 409-439 test window). This is a legitimate no-leakage change that has never been applied to the TCN library.",
+    "honest_limitation_recorded_in_advance": "A model trained with anchors up to 378 cannot be scored on fold 378, so the value of the extension is INFERRED from this recency test rather than measured directly. Any resulting base still has to clear the admitted-pool gate of 0.00008 and a public gate built with --expect-baseline 1.6461788499434364."
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "tag": "233_transfer_ratio_and_the_ceiling",
+  "date_msk": "2026-08-30",
+  "probe_230_outcome": {
+    "actual": 1.646068956,
+    "gates": {
+      "neutral": 1.646295862,
+      "positive_net": 1.646140773,
+      "strict": 1.646099673,
+      "strict_plus_adaptive": 1.646040039
+    },
+    "verdict": "passes neutral, positive-net and strict; FAILS the decisive strict-plus-adaptive gate by 0.00002892",
+    "what_it_would_have_given": {
+      "marginal_public_gain": 5.901e-05,
+      "degrees_added": 0.5067,
+      "net_after_empirical_df": 3.9e-05,
+      "assembled_public": 1.645740876
+    },
+    "decision": "REJECTED by the frozen key, which forbids re-parameterisation, a reweighted composite, or a second probe on the same 50 models. This is the fourth near-miss in the project's history after 118 at 4.6e-05, 131 at 1.7e-06 and 146 at 2.75e-06, and the threshold has never been relaxed."
+  },
+  "the_measurement_that_matters_more": {
+    "offline_to_public_transfer_ratios": {
+      "cls409class": {
+        "offline": 0.0006434,
+        "public": 8.5e-06,
+        "ratio": 0.013211066210755362
+      },
+      "cls409hyb": {
+        "offline": 0.0003884,
+        "public": 3.8e-06,
+        "ratio": 0.009783728115345005
+      },
+      "w409_exact_position": {
+        "offline": 0.000169,
+        "public": 3.1e-05,
+        "ratio": 0.18343195266272191
+      },
+      "composite51": {
+        "offline": 0.0003701,
+        "public": 5.9e-05,
+        "ratio": 0.15941637395298566
+      }
+    },
+    "reading": "Four bases now have both an offline conditional gain against the current pool and a measured public marginal gain. The cls409 family transfers at about 1 percent, the w409 position base at 18 percent and this composite at 16 percent. For the family that actually contributes, the multiplier is roughly one sixth.",
+    "consequence": "Closing the 0.00098 gap to top-3 through admitted bases needs about 0.006 of OFFLINE conditional gain. The largest offline gain this project has ever measured is 0.00037, from the composite of fifty models. Top-3 would therefore require roughly sixteen times the best offline result produced here, and the search has already covered fourteen axes with two passes.",
+    "status_of_the_claim": "This converts an earlier qualitative judgement into a measured one. It is a statement about the reachable gain per unit of offline evidence, not a claim that no better model exists."
+  }
+}

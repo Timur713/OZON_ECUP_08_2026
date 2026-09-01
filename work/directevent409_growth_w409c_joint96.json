@@ -1,0 +1,34 @@
+[
+  {
+    "candidates": [
+      "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/w409c_val.npy",
+      "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/directevent409_growth_val.npy"
+    ],
+    "lambda": 0.003,
+    "base_columns": 25,
+    "oracle_base_score_250k": 1.6651398250946639,
+    "oracle_augmented_score_250k": 1.664882417858758,
+    "oracle_gain_250k": 0.0002574072359058377,
+    "oracle_degrees_added": 1.4335429688043995,
+    "oracle_candidate_weights": {
+      "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/w409c_val.npy": 0.24257221561714884,
+      "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/directevent409_growth_val.npy": -0.07054987477055091
+    },
+    "repeats": 96,
+    "mean_fitted_public_gain": 0.00027226902643971246,
+    "mean_independent_private_gain": 0.0002341233509215538,
+    "private_gain_se": 2.592794097811524e-06,
+    "private_gain_positive_fraction": 1.0,
+    "private_gain_min": 0.00015271842139830127,
+    "private_gain_max": 0.0002771006802158027,
+    "mean_degrees_added": 1.4331579415041291,
+    "mean_candidate_weights": {
+      "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/w409c_val.npy": 0.23916063072455543,
+      "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/directevent409_growth_val.npy": -0.06942656438094288
+    },
+    "candidate_weight_negative_fraction": {
+      "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/w409c_val.npy": 0.0,
+      "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/directevent409_growth_val.npy": 0.96875
+    }
+  }
+]

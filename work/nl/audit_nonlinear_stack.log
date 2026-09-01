@@ -1,0 +1,16 @@
+fold 0 done 8s
+fold 1 done 15s
+fold 2 done 22s
+fold 3 done 30s
+fold 4 done 37s
+{
+  "linear_ridge_oof": 1.6652879651506962,
+  "nonlinear_bases_only_oof": 1.6696232422095825,
+  "nonlinear_bases_plus_features_oof": 1.6675136639530779,
+  "blend_ridge_plus_bases_only_oof": 1.6651910505092118,
+  "correlation_ridge_vs_bases_only": 0.995939572448895,
+  "blend_ridge_plus_bases_plus_features_oof": 1.664487902433294,
+  "correlation_ridge_vs_bases_plus_features": 0.995284531050089,
+  "gain_blend_bases_only": 9.691464148442464e-05,
+  "gain_blend_bases_plus_features": 0.0008000627174022945
+}

@@ -1,0 +1,216 @@
+{
+  "method": "fold-378 inner product rescaled to the anchor-408 level",
+  "accuracy": "order-of-magnitude; a returned score more than 0.02 away from the prediction should be re-checked for transcription",
+  "rows": [
+    {
+      "rank": 1,
+      "tag": "153_probe_hist01_gmv_d365",
+      "column": "gmv_d365",
+      "estimated_ez_candidate": 7.637648801627003,
+      "predicted_public": 1.6661951587056787
+    },
+    {
+      "rank": 2,
+      "tag": "153_probe_hist02_active_recency",
+      "column": "active_recency",
+      "estimated_ez_candidate": 4.313064708978929,
+      "predicted_public": 1.8301258521133514
+    },
+    {
+      "rank": 3,
+      "tag": "153_probe_hist03_gmv_d180",
+      "column": "gmv_d180",
+      "estimated_ez_candidate": 7.686514367246815,
+      "predicted_public": 1.6632952674663495
+    },
+    {
+      "rank": 4,
+      "tag": "153_probe_hist04_gmv_s365",
+      "column": "gmv_s365",
+      "estimated_ez_candidate": 7.271251900392943,
+      "predicted_public": 1.6609919578724646
+    },
+    {
+      "rank": 5,
+      "tag": "153_probe_hist05_active_s180",
+      "column": "active_s180",
+      "estimated_ez_candidate": 7.278716773493278,
+      "predicted_public": 1.6916491849451067
+    },
+    {
+      "rank": 6,
+      "tag": "153_probe_hist06_to_cart_d180",
+      "column": "to_cart_d180",
+      "estimated_ez_candidate": 7.417535474924392,
+      "predicted_public": 1.6815886616394986
+    },
+    {
+      "rank": 7,
+      "tag": "153_probe_hist07_searches_d90",
+      "column": "searches_d90",
+      "estimated_ez_candidate": 7.304658143276755,
+      "predicted_public": 1.6903927813388349
+    },
+    {
+      "rank": 8,
+      "tag": "153_probe_hist08_searches_d180",
+      "column": "searches_d180",
+      "estimated_ez_candidate": 7.3023677045700754,
+      "predicted_public": 1.6911965961615274
+    },
+    {
+      "rank": 9,
+      "tag": "153_probe_hist09_to_cart_d90",
+      "column": "to_cart_d90",
+      "estimated_ez_candidate": 7.417909620779022,
+      "predicted_public": 1.6805998054124702
+    },
+    {
+      "rank": 10,
+      "tag": "153_probe_hist10_searches_s180",
+      "column": "searches_s180",
+      "estimated_ez_candidate": 6.887813080175136,
+      "predicted_public": 1.7093671302428388
+    },
+    {
+      "rank": 11,
+      "tag": "153_probe_hist11_to_cart_s90",
+      "column": "to_cart_s90",
+      "estimated_ez_candidate": 6.8244956234637595,
+      "predicted_public": 1.7113430080973886
+    },
+    {
+      "rank": 12,
+      "tag": "153_probe_hist12_searches_d60",
+      "column": "searches_d60",
+      "estimated_ez_candidate": 7.294827396484173,
+      "predicted_public": 1.6906158816850714
+    },
+    {
+      "rank": 13,
+      "tag": "153_probe_hist13_to_cart_d60",
+      "column": "to_cart_d60",
+      "estimated_ez_candidate": 7.403575091610924,
+      "predicted_public": 1.6808518612324164
+    },
+    {
+      "rank": 14,
+      "tag": "153_probe_hist14_to_ord_s180",
+      "column": "to_ord_s180",
+      "estimated_ez_candidate": 7.219519875226784,
+      "predicted_public": 1.6856344700223735
+    },
+    {
+      "rank": 15,
+      "tag": "153_probe_hist15_searches_s365",
+      "column": "searches_s365",
+      "estimated_ez_candidate": 6.88613725935013,
+      "predicted_public": 1.7098759593818533
+    },
+    {
+      "rank": 16,
+      "tag": "153_probe_hist16_to_cart_d365",
+      "column": "to_cart_d365",
+      "estimated_ez_candidate": 7.381004458744241,
+      "predicted_public": 1.684399979524074
+    },
+    {
+      "rank": 17,
+      "tag": "153_probe_hist17_to_cart_s365",
+      "column": "to_cart_s365",
+      "estimated_ez_candidate": 6.8748595878077765,
+      "predicted_public": 1.708484899091024
+    },
+    {
+      "rank": 18,
+      "tag": "153_probe_hist18_gmv_recency",
+      "column": "gmv_recency",
+      "estimated_ez_candidate": 3.9013500076829617,
+      "predicted_public": 1.8577663966158822
+    },
+    {
+      "rank": 19,
+      "tag": "153_probe_hist19_searches_d365",
+      "column": "searches_d365",
+      "estimated_ez_candidate": 7.2735746709320495,
+      "predicted_public": 1.6933393136974917
+    },
+    {
+      "rank": 20,
+      "tag": "153_probe_hist20_gmv_s60",
+      "column": "gmv_s60",
+      "estimated_ez_candidate": 7.667002866576091,
+      "predicted_public": 1.6678141690622104
+    },
+    {
+      "rank": 21,
+      "tag": "153_probe_hist21_active_age",
+      "column": "active_age",
+      "estimated_ez_candidate": 5.950228408758814,
+      "predicted_public": 1.7132367072052481
+    },
+    {
+      "rank": 22,
+      "tag": "153_probe_hist22_to_cart_s180",
+      "column": "to_cart_s180",
+      "estimated_ez_candidate": 6.8748754464578585,
+      "predicted_public": 1.7072632678740864
+    },
+    {
+      "rank": 23,
+      "tag": "153_probe_hist23_gmv_s180",
+      "column": "gmv_s180",
+      "estimated_ez_candidate": 7.389547556174289,
+      "predicted_public": 1.6605952405961932
+    },
+    {
+      "rank": 24,
+      "tag": "153_probe_hist24_active_s60",
+      "column": "active_s60",
+      "estimated_ez_candidate": 7.262766903220188,
+      "predicted_public": 1.6906339572833096
+    },
+    {
+      "rank": 25,
+      "tag": "153_probe_hist25_to_ord_s90",
+      "column": "to_ord_s90",
+      "estimated_ez_candidate": 7.209902408284045,
+      "predicted_public": 1.6859194113773326
+    },
+    {
+      "rank": 26,
+      "tag": "153_probe_hist26_gmv_s30",
+      "column": "gmv_s30",
+      "estimated_ez_candidate": 7.55485538539076,
+      "predicted_public": 1.6753429776671842
+    },
+    {
+      "rank": 27,
+      "tag": "153_probe_hist27_to_cart_s60",
+      "column": "to_cart_s60",
+      "estimated_ez_candidate": 6.79924215929905,
+      "predicted_public": 1.7130627015400461
+    },
+    {
+      "rank": 28,
+      "tag": "153_probe_hist28_active_s365",
+      "column": "active_s365",
+      "estimated_ez_candidate": 7.260438880161473,
+      "predicted_public": 1.693739356725919
+    },
+    {
+      "rank": 29,
+      "tag": "153_probe_hist29_to_ord_s30",
+      "column": "to_ord_s30",
+      "estimated_ez_candidate": 7.10350302773662,
+      "predicted_public": 1.6873229153296532
+    },
+    {
+      "rank": 30,
+      "tag": "153_probe_hist30_searches_d30",
+      "column": "searches_d30",
+      "estimated_ez_candidate": 7.237681014015809,
+      "predicted_public": 1.6948285667662601
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "L1_bases_only": 1.6652879651506962,
+  "L2_bases_plus_linear_features": 1.6641896218799344,
+  "L3_plus_decile_conditional_slope": 1.6641837181752666,
+  "NL_blend_ridge_plus_boosted_stacker": 1.6644879024326744,
+  "gain_L2_over_L1": 0.001098343270761859,
+  "gain_L3_over_L1": 0.0011042469754296569,
+  "gain_NL_over_L1": 0.000800062718021799,
+  "gain_NL_over_L2": -0.00029828055274006005
+}

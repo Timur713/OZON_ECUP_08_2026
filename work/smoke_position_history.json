@@ -1,0 +1,17 @@
+[
+  {
+    "epoch": 1,
+    "score": 2.0775658120262532,
+    "combined_score": 2.2580177783966064,
+    "component_scores": {
+      "combined": 2.2580177783966064,
+      "hurdle": 2.3303544521331787,
+      "direct": 2.077565908432007,
+      "probability": 2.3996410369873047,
+      "magnitude": 2.325382709503174
+    },
+    "best_hurdle_weight": 0.0,
+    "slope": 40.11539674069506,
+    "intercept": 1.4572301515630857
+  }
+]

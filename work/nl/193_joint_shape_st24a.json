@@ -1,0 +1,36 @@
+{
+  "base_private": 1.6650693828525267,
+  "base_df": 21.507395502600122,
+  "singles": {
+    "divK_shape_e4_val": {
+      "gain": 0.0003184514994756503,
+      "df_added": 0.7837206764278264,
+      "positive_splits": 96
+    },
+    "divB_st24a_val": {
+      "gain": 0.00012356037631158548,
+      "df_added": 0.7345604320804782,
+      "positive_splits": 96
+    }
+  },
+  "joint": {
+    "members": [
+      "divK_shape_e4_val",
+      "divB_st24a_val"
+    ],
+    "gain": 0.000404288776870559,
+    "df_added": 1.5142229371686113,
+    "positive_splits": 96,
+    "sum_of_singles": 0.0004420118757872358
+  },
+  "leave_one_out": {
+    "divK_shape_e4_val": {
+      "incremental_gain_given_the_others": 0.00028072840055897347,
+      "df_it_costs": 0.7796625050881332
+    },
+    "divB_st24a_val": {
+      "incremental_gain_given_the_others": 8.583727739490861e-05,
+      "df_it_costs": 0.730502260740785
+    }
+  }
+}

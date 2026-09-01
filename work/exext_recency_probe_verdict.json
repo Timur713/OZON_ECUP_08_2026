@@ -1,0 +1,35 @@
+{
+  "probe": "143_probe_exext_plain",
+  "public": 1.6467897722441374,
+  "decided_msk": "2026-08-26T17:55:00+03:00",
+  "preregistration": "work/142_anchor_recency_preregister.json",
+  "frozen_gates": {
+    "positive_weight_neutral_score": 1.646845483497,
+    "positive_empirical_net_gate": 1.646724125017,
+    "strict_gate": 1.646691841004,
+    "strict_with_adaptive_gate": 1.646636261924
+  },
+  "recovered": {
+    "ridge_expected_public_with_candidate": 1.646180194281639,
+    "baseline_expected_public_130": 1.6461788499434364,
+    "marginal_public_gain": -1.3443382025357664e-06,
+    "ridge_weight": 0.05103568321563242,
+    "degrees_added": 0.4143241116385319,
+    "gain_after_empirical_transfer_penalty": -1.7710140612257774e-05,
+    "empirical_private_if_adopted": 1.6470075238515711,
+    "empirical_private_of_130": 1.6469898137109589
+  },
+  "verdict": "REJECTED. The marginal public gain is NEGATIVE (-1.34e-06) before any df cost is charged, and adopting the base would move the empirical private estimate from 1.6469898 to 1.6470075, i.e. worse. 130 is unchanged.",
+  "what_this_settles": "The anchor-recency defect is REAL at the base level: staleness costs 0.0022 per 36 days and 0.0071 per 96 days, measured monotonically with everything else held fixed. Extending training anchors from 342 to 378 removes a 66-day gap and should be worth roughly 0.004 standalone. It contributes NOTHING to the ensemble. The saturation, not the base quality, is binding.",
+  "three_independent_lines_now_agree": [
+    "Perfect unregularised weighting of every measured base gives 1.6461003, still 0.0011 short of top-1.",
+    "Direct measurement of base-to-ensemble propagation gives a transfer coefficient of 0.21%.",
+    "A base carrying a genuine ~0.002-0.004 standalone improvement produces a marginal ensemble gain of -0.0000013."
+  ],
+  "conclusion": "No single base, however much better, can move this ensemble. Our 29-base ridge is saturated with respect to the model family it is built from. Closing 0.001 would require a model that is different in kind, not better in degree.",
+  "actions": [
+    "130 remains the primary. No weights change.",
+    "EXEXT_decay runs stopped: they test the same refuted mechanism and would only tempt a second probe on a dead branch.",
+    "No further single-base search is justified by the evidence."
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "h4_cohortlift": {
+    "val": {
+      "correlation_with_stack": 0.9578262852212044,
+      "delta_sd": 0.470813846805116,
+      "stack_sd": 1.5693794893513837
+    },
+    "final": {
+      "correlation_with_stack": 0.9578262852212055,
+      "delta_sd": 0.48869603098139863,
+      "stack_sd": 1.6289867699390763
+    }
+  }
+}

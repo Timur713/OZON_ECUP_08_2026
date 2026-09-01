@@ -1,0 +1,19 @@
+{
+  "pool": "25 audit columns + w409c + decay_s93",
+  "base_matched_private": 1.6650693828525267,
+  "base_deployment_private": 1.66571501925089,
+  "candidates": {
+    "divB_avg_val": {
+      "standalone_rmsle": 1.7142413360589746,
+      "correlation_with_stack": 0.9971504898773832,
+      "matched_conditional_gain": 4.639264657731179e-05,
+      "matched_standard_error": 1.4212618154820097e-06,
+      "matched_positive_splits": 95,
+      "deployment_conditional_gain": 3.805201515157582e-05,
+      "deployment_positive_splits": 83,
+      "positive_weight_splits": 1,
+      "mean_weight": -0.1233194198472745,
+      "gate": "FAIL"
+    }
+  }
+}

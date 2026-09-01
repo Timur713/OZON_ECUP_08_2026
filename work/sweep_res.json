@@ -1,0 +1,72 @@
+[
+ [
+  1.6726233735940594,
+  3,
+  {
+   "learning_rate": 0.03,
+   "num_leaves": 511,
+   "min_data_in_leaf": 300,
+   "feature_fraction": 0.4,
+   "lambda_l2": 50.0
+  },
+  300,
+  300,
+  0.3
+ ],
+ [
+  1.6727885740360735,
+  4,
+  {
+   "learning_rate": 0.08,
+   "num_leaves": 127,
+   "min_data_in_leaf": 1000,
+   "feature_fraction": 0.5,
+   "lambda_l2": 30.0
+  },
+  500,
+  100,
+  0.2
+ ],
+ [
+  1.6728441312017948,
+  1,
+  {
+   "learning_rate": 0.05,
+   "num_leaves": 255,
+   "min_data_in_leaf": 100,
+   "feature_fraction": 0.5,
+   "lambda_l2": 20.0
+  },
+  100,
+  250,
+  0.3
+ ],
+ [
+  1.6731269352814961,
+  0,
+  {
+   "learning_rate": 0.05,
+   "num_leaves": 127,
+   "min_data_in_leaf": 200,
+   "feature_fraction": 0.6,
+   "lambda_l2": 10.0
+  },
+  250,
+  250,
+  0.3
+ ],
+ [
+  1.673631393922664,
+  2,
+  {
+   "learning_rate": 0.05,
+   "num_leaves": 63,
+   "min_data_in_leaf": 500,
+   "feature_fraction": 0.7,
+   "lambda_l2": 5.0
+  },
+  300,
+  300,
+  0.4
+ ]
+]

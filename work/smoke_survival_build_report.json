@@ -1,0 +1,16 @@
+{
+  "tag": "smoke_survival_build",
+  "uses_public_scores": false,
+  "selection_fold": 342,
+  "untouched_holdout_fold": 378,
+  "selected_epoch": 1,
+  "selected_hurdle_weight": 0.9500000000000001,
+  "selection_private_score": 1.8252387205815501,
+  "holdout_private_score": 1.8252387215508885,
+  "holdout_slope": 78.20092410283907,
+  "holdout_intercept": -10.32284126355381,
+  "monotonic_probability_violations": 0,
+  "validation_file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/smoke_survival_build_val.npy",
+  "w409c_same_split_score": 1.6172563333850185,
+  "gain_vs_w409c": -0.20798238816587
+}

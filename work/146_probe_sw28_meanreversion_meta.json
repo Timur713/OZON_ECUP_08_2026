@@ -1,0 +1,23 @@
+{
+  "tag": "146_probe_sw28_meanreversion",
+  "file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/submissions/146_probe_sw28_meanreversion.csv",
+  "vector": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/sw28_final.npy",
+  "vector_key": null,
+  "candidate_file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/146_probe_sw28_meanreversion_candidate.npy",
+  "base_submission": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/submissions/130_private_safe_exact_decay_l003.csv",
+  "base_score": 1.6461706600883055,
+  "weight": 0.3,
+  "inverted": false,
+  "mean_log": 2.3232887,
+  "prediction_min": 0.0,
+  "prediction_max": 19699.94584008321,
+  "base_mean": 2.3232887,
+  "candidate_mean": 2.3232887,
+  "base_second_moment": 8.051268280184239,
+  "candidate_second_moment": 8.051208209564873,
+  "cross_base_candidate": 7.766520618810972,
+  "probe_second_moment": 7.931668856051722,
+  "corr_base_candidate": 0.8927038459949288,
+  "distance_squared": 0.5694352521271666,
+  "ez_base": 8.052360569024334
+}

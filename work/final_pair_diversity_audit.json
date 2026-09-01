@@ -1,0 +1,83 @@
+{
+  "uses_labels": false,
+  "uses_public_scores": false,
+  "rows": 250000,
+  "files": {
+    "competition_quality": {
+      "filename": "200_shape_anchor_l003.csv",
+      "sha256": "77b428ca6af9e74ffbdf22749cacfc87e76048d5dceef80146d557dabb21c598",
+      "mean_log1p": 2.3232887,
+      "std_log1p": 1.6294193800306287
+    },
+    "competition_hedge": {
+      "filename": "147_private_safe_nonnegative_current_l001.csv",
+      "sha256": "0c61bd73bfd0f699a25d893d3ba3cb762016021e446eb153fcbeef6d0bba51c2",
+      "mean_log1p": 2.3232887,
+      "std_log1p": 1.6289675677950128
+    },
+    "120_clean_primary": {
+      "filename": "120_offline_rules_safe_meanforecast.csv",
+      "sha256": "a17623edb7de20da05cb2de682c6ed78a9b891de112645ef3e99d07c8b6a88ae",
+      "mean_log1p": 2.320535330938203,
+      "std_log1p": 1.5540455892327707
+    },
+    "122_clean_shift_reserve": {
+      "filename": "122_offline_diverse_no_replica.csv",
+      "sha256": "218e141ec943e634d5547b16a85e0e2acbfb678b17108c440a5eca3f84299b48",
+      "mean_log1p": 2.320535330938203,
+      "std_log1p": 1.5390620812653115
+    },
+    "123_clean_capped_insurance": {
+      "filename": "123_offline_capped_w035.csv",
+      "sha256": "4a698bb23242ad19fd0edac4cab5c318c63544ea8012b97895f6fc86f36ac599",
+      "mean_log1p": 2.320535330938203,
+      "std_log1p": 1.5471208486803516
+    }
+  },
+  "pairs": {
+    "competition_selected": {
+      "left": "competition_quality",
+      "right": "competition_hedge",
+      "correlation": 0.9996454519606631,
+      "rms_log_distance": 0.04338591386801707,
+      "mean_log_delta": 1.3269385590319871e-16,
+      "absolute_log_delta_quantiles": {
+        "p50": 0.02614904766926021,
+        "p90": 0.06906511235373274,
+        "p99": 0.12840507113711716,
+        "p999": 0.21419021566219756
+      }
+    },
+    "clean_preferred": {
+      "left": "120_clean_primary",
+      "right": "123_clean_capped_insurance",
+      "correlation": 0.9997469639777258,
+      "rms_log_distance": 0.0355626094599143,
+      "mean_log_delta": -9.066525308298878e-18,
+      "absolute_log_delta_quantiles": {
+        "p50": 0.02430150071675613,
+        "p90": 0.05709680682428786,
+        "p99": 0.0936115402684057,
+        "p999": 0.13538695072469584
+      }
+    },
+    "clean_severe_shift": {
+      "left": "120_clean_primary",
+      "right": "122_clean_shift_reserve",
+      "correlation": 0.9987523453482668,
+      "rms_log_distance": 0.07869382459090074,
+      "mean_log_delta": -1.808047045415151e-16,
+      "absolute_log_delta_quantiles": {
+        "p50": 0.05347713754945471,
+        "p90": 0.12653137071150353,
+        "p99": 0.20815355733121388,
+        "p999": 0.3003980204692663
+      }
+    }
+  },
+  "interpretation": {
+    "competition_selected": "selected quality/low-complexity pair; modest but larger separation than the previous competition pair",
+    "clean_preferred": "current quality-preserving clean pair; diversification is modest",
+    "clean_severe_shift": "more prediction diversity but historical quality cost makes it a reserve"
+  }
+}

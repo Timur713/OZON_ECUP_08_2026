@@ -1,0 +1,22 @@
+[
+  {
+    "candidate": "work/mark409_growth_val.npy",
+    "lambda": 0.003,
+    "base_columns": 25,
+    "oracle_base_score_250k": 1.6651398250946639,
+    "oracle_augmented_score_250k": 1.6650768721469718,
+    "oracle_gain_250k": 6.295294769209647e-05,
+    "oracle_degrees_added": 0.8507889436974914,
+    "oracle_candidate_weight": -0.07981894935802797,
+    "repeats": 96,
+    "mean_fitted_public_gain": 8.005965904682676e-05,
+    "mean_independent_private_gain": 4.898938918733442e-05,
+    "private_gain_se": 1.9692997835520775e-06,
+    "private_gain_positive_fraction": 0.9583333333333334,
+    "private_gain_min": -2.5159020092369033e-05,
+    "private_gain_max": 7.464636803167224e-05,
+    "mean_degrees_added": 0.8507646120287095,
+    "mean_candidate_weight": -0.08417536599080337,
+    "candidate_weight_negative_fraction": 1.0
+  }
+]

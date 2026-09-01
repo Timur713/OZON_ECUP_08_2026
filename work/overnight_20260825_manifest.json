@@ -1,0 +1,61 @@
+{
+  "objective": "find private-stable representation gain; no public tuning",
+  "started_msk": "2026-08-25T22:38:39+03:00",
+  "queue_rebuilt_msk": "2026-08-25T23:27:29+03:00",
+  "plain_csv_only": true,
+  "automatic_submission": false,
+  "cancelled": [
+    {
+      "experiment": "regularity seed2718",
+      "reason": "seed1310 was decisively worse on untouched holdout and had negative candidate weight in 95-96 of 96 resamples"
+    }
+  ],
+  "active_queue": [
+    {
+      "order": 1,
+      "experiment": "exact matched control seed1310",
+      "supervisor_pid": 407073
+    },
+    {
+      "order": 2,
+      "experiment": "marked-event seed1310",
+      "supervisor_pid": 407074
+    },
+    {
+      "order": 3,
+      "experiment": "marked-event seed2718",
+      "supervisor_pid": 430167
+    },
+    {
+      "order": 4,
+      "experiment": "exact matched control seed2718",
+      "supervisor_pid": 430175
+    },
+    {
+      "order": 5,
+      "experiment": "two-seed profile audit and conditional full refit",
+      "supervisor_pid": 430186
+    },
+    {
+      "order": 6,
+      "experiment": "relative-position seed1310 and seed2718",
+      "supervisor_pid": 430192
+    },
+    {
+      "order": 7,
+      "experiment": "seed31415 control, relative-position and marked-event confirmation",
+      "supervisor_pid": 430198
+    }
+  ],
+  "promotion_policy": {
+    "uses_public_scores": false,
+    "two_seed_before_full": true,
+    "third_seed_cannot_rescue_rejection": true,
+    "strict_or_diagnostic_candidate_requires_frozen_gate_before_manual_submission": true
+  },
+  "expected_outputs": [
+    "work/profile_promotion_decision.json",
+    "work/position_promotion_decision.json",
+    "work/seed31415_confirmation.json"
+  ]
+}

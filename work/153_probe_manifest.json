@@ -1,0 +1,250 @@
+{
+  "base": "130_private_safe_exact_decay_l003.csv",
+  "base_score": 1.6461706600883055,
+  "weight": 0.3,
+  "ez_base": 8.052360569024334,
+  "probes": [
+    {
+      "rank": 1,
+      "tag": "153_probe_hist01_gmv_d365",
+      "column": "gmv_d365",
+      "file": "submissions/153_probe_hist01_gmv_d365.csv",
+      "corr_with_130": 0.8362523325577246,
+      "clipped_fraction": 0.0
+    },
+    {
+      "rank": 2,
+      "tag": "153_probe_hist02_active_recency",
+      "column": "active_recency",
+      "file": "submissions/153_probe_hist02_active_recency.csv",
+      "corr_with_130": -0.43928104414154046,
+      "clipped_fraction": 0.0
+    },
+    {
+      "rank": 3,
+      "tag": "153_probe_hist03_gmv_d180",
+      "column": "gmv_d180",
+      "file": "submissions/153_probe_hist03_gmv_d180.csv",
+      "corr_with_130": 0.8538961038588674,
+      "clipped_fraction": 0.0
+    },
+    {
+      "rank": 4,
+      "tag": "153_probe_hist04_gmv_s365",
+      "column": "gmv_s365",
+      "file": "submissions/153_probe_hist04_gmv_s365.csv",
+      "corr_with_130": 0.8688081119037223,
+      "clipped_fraction": 0.13428
+    },
+    {
+      "rank": 5,
+      "tag": "153_probe_hist05_active_s180",
+      "column": "active_s180",
+      "file": "submissions/153_probe_hist05_active_s180.csv",
+      "corr_with_130": 0.7198110517389195,
+      "clipped_fraction": 0.003648
+    },
+    {
+      "rank": 6,
+      "tag": "153_probe_hist06_to_cart_d180",
+      "column": "to_cart_d180",
+      "file": "submissions/153_probe_hist06_to_cart_d180.csv",
+      "corr_with_130": 0.7639929582341306,
+      "clipped_fraction": 0.0
+    },
+    {
+      "rank": 7,
+      "tag": "153_probe_hist07_searches_d90",
+      "column": "searches_d90",
+      "file": "submissions/153_probe_hist07_searches_d90.csv",
+      "corr_with_130": 0.7298622347496259,
+      "clipped_fraction": 0.0
+    },
+    {
+      "rank": 8,
+      "tag": "153_probe_hist08_searches_d180",
+      "column": "searches_d180",
+      "file": "submissions/153_probe_hist08_searches_d180.csv",
+      "corr_with_130": 0.7310680625084097,
+      "clipped_fraction": 0.0
+    },
+    {
+      "rank": 9,
+      "tag": "153_probe_hist09_to_cart_d90",
+      "column": "to_cart_d90",
+      "file": "submissions/153_probe_hist09_to_cart_d90.csv",
+      "corr_with_130": 0.7612112601037834,
+      "clipped_fraction": 0.0
+    },
+    {
+      "rank": 10,
+      "tag": "153_probe_hist10_searches_s180",
+      "column": "searches_s180",
+      "file": "submissions/153_probe_hist10_searches_s180.csv",
+      "corr_with_130": 0.5633328889705146,
+      "clipped_fraction": 0.0
+    },
+    {
+      "rank": 11,
+      "tag": "153_probe_hist11_to_cart_s90",
+      "column": "to_cart_s90",
+      "file": "submissions/153_probe_hist11_to_cart_s90.csv",
+      "corr_with_130": 0.5353102266993085,
+      "clipped_fraction": 0.0
+    },
+    {
+      "rank": 12,
+      "tag": "153_probe_hist12_searches_d60",
+      "column": "searches_d60",
+      "file": "submissions/153_probe_hist12_searches_d60.csv",
+      "corr_with_130": 0.7252466290408913,
+      "clipped_fraction": 0.0
+    },
+    {
+      "rank": 13,
+      "tag": "153_probe_hist13_to_cart_d60",
+      "column": "to_cart_d60",
+      "file": "submissions/153_probe_hist13_to_cart_d60.csv",
+      "corr_with_130": 0.7542544483417767,
+      "clipped_fraction": 0.0
+    },
+    {
+      "rank": 14,
+      "tag": "153_probe_hist14_to_ord_s180",
+      "column": "to_ord_s180",
+      "file": "submissions/153_probe_hist14_to_ord_s180.csv",
+      "corr_with_130": 0.6696141596021546,
+      "clipped_fraction": 0.0
+    },
+    {
+      "rank": 15,
+      "tag": "153_probe_hist15_searches_s365",
+      "column": "searches_s365",
+      "file": "submissions/153_probe_hist15_searches_s365.csv",
+      "corr_with_130": 0.5639917590449739,
+      "clipped_fraction": 0.0
+    },
+    {
+      "rank": 16,
+      "tag": "153_probe_hist16_to_cart_d365",
+      "column": "to_cart_d365",
+      "file": "submissions/153_probe_hist16_to_cart_d365.csv",
+      "corr_with_130": 0.7528169856874637,
+      "clipped_fraction": 0.0
+    },
+    {
+      "rank": 17,
+      "tag": "153_probe_hist17_to_cart_s365",
+      "column": "to_cart_s365",
+      "file": "submissions/153_probe_hist17_to_cart_s365.csv",
+      "corr_with_130": 0.5536538191142906,
+      "clipped_fraction": 0.0
+    },
+    {
+      "rank": 18,
+      "tag": "153_probe_hist18_gmv_recency",
+      "column": "gmv_recency",
+      "file": "submissions/153_probe_hist18_gmv_recency.csv",
+      "corr_with_130": -0.5694667989506239,
+      "clipped_fraction": 0.0
+    },
+    {
+      "rank": 19,
+      "tag": "153_probe_hist19_searches_d365",
+      "column": "searches_d365",
+      "file": "submissions/153_probe_hist19_searches_d365.csv",
+      "corr_with_130": 0.7220742394872727,
+      "clipped_fraction": 0.0
+    },
+    {
+      "rank": 20,
+      "tag": "153_probe_hist20_gmv_s60",
+      "column": "gmv_s60",
+      "file": "submissions/153_probe_hist20_gmv_s60.csv",
+      "corr_with_130": 0.8568983667317593,
+      "clipped_fraction": 0.0
+    },
+    {
+      "rank": 21,
+      "tag": "153_probe_hist21_active_age",
+      "column": "active_age",
+      "file": "submissions/153_probe_hist21_active_age.csv",
+      "corr_with_130": 0.3503684799463018,
+      "clipped_fraction": 0.111676
+    },
+    {
+      "rank": 22,
+      "tag": "153_probe_hist22_to_cart_s180",
+      "column": "to_cart_s180",
+      "file": "submissions/153_probe_hist22_to_cart_s180.csv",
+      "corr_with_130": 0.5499183073388164,
+      "clipped_fraction": 0.0
+    },
+    {
+      "rank": 23,
+      "tag": "153_probe_hist23_gmv_s180",
+      "column": "gmv_s180",
+      "file": "submissions/153_probe_hist23_gmv_s180.csv",
+      "corr_with_130": 0.8734609153210122,
+      "clipped_fraction": 0.171636
+    },
+    {
+      "rank": 24,
+      "tag": "153_probe_hist24_active_s60",
+      "column": "active_s60",
+      "file": "submissions/153_probe_hist24_active_s60.csv",
+      "corr_with_130": 0.7080416164040658,
+      "clipped_fraction": 0.0
+    },
+    {
+      "rank": 25,
+      "tag": "153_probe_hist25_to_ord_s90",
+      "column": "to_ord_s90",
+      "file": "submissions/153_probe_hist25_to_ord_s90.csv",
+      "corr_with_130": 0.6652985588308905,
+      "clipped_fraction": 0.0
+    },
+    {
+      "rank": 26,
+      "tag": "153_probe_hist26_gmv_s30",
+      "column": "gmv_s30",
+      "file": "submissions/153_probe_hist26_gmv_s30.csv",
+      "corr_with_130": 0.8191073588268134,
+      "clipped_fraction": 0.0
+    },
+    {
+      "rank": 27,
+      "tag": "153_probe_hist27_to_cart_s60",
+      "column": "to_cart_s60",
+      "file": "submissions/153_probe_hist27_to_cart_s60.csv",
+      "corr_with_130": 0.526998824222389,
+      "clipped_fraction": 0.0
+    },
+    {
+      "rank": 28,
+      "tag": "153_probe_hist28_active_s365",
+      "column": "active_s365",
+      "file": "submissions/153_probe_hist28_active_s365.csv",
+      "corr_with_130": 0.7162183111287491,
+      "clipped_fraction": 0.0
+    },
+    {
+      "rank": 29,
+      "tag": "153_probe_hist29_to_ord_s30",
+      "column": "to_ord_s30",
+      "file": "submissions/153_probe_hist29_to_ord_s30.csv",
+      "corr_with_130": 0.61226609597699,
+      "clipped_fraction": 0.0
+    },
+    {
+      "rank": 30,
+      "tag": "153_probe_hist30_searches_d30",
+      "column": "searches_d30",
+      "file": "submissions/153_probe_hist30_searches_d30.csv",
+      "corr_with_130": 0.7072781961902043,
+      "clipped_fraction": 0.0
+    }
+  ],
+  "STATUS": "ON HOLD \u2014 DO NOT SUBMIT",
+  "hold_reason": "Audit 155 showed the 152 protocol does not model the deployment solve. The ridge is solved with the Gram over all 250k users but a right-hand side recovered from the public 50k, and the recovery additionally substitutes E[v^2] over 250k for its public value. Simulating both faithfully turns the K=20 gain of +0.00047 into -0.00281, positive in 0 of 48 splits. The existing pool is immune because its bases correlate above 0.99 and their weights sum to about one, so the two errors cancel; raw historical columns correlate 0.35 to 0.87 with the stack and break that cancellation."
+}

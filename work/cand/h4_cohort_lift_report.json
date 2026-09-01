@@ -1,0 +1,13 @@
+{
+  "clusters": 64,
+  "occupied_clusters": 54,
+  "lift_min": -3.2093577269813105,
+  "lift_max": 2.054113591881267,
+  "lift_mean": 0.06494266526061038,
+  "lift_sd": 1.278612853257524,
+  "smallest_occupied_cluster": 176,
+  "val_mean": 2.677340507507324,
+  "val_sd": 2.2150721549987793,
+  "final_mean": 2.5094449520111084,
+  "final_sd": 2.1394970417022705
+}

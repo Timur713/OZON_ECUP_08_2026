@@ -1,0 +1,22 @@
+{
+  "tag": "99_probe_gbdt_gift43_probability",
+  "file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/submissions/99_probe_gbdt_gift43_probability.csv",
+  "vector": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/gbdt_gift43_components.npz",
+  "vector_key": "probability",
+  "candidate_file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/99_probe_gbdt_gift43_probability_candidate.npy",
+  "base_submission": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/submissions/91_ridge26_measured.csv",
+  "base_score": 1.6466387804455878,
+  "weight": 0.3,
+  "mean_log": 2.3232886999999995,
+  "prediction_min": 0.0,
+  "prediction_max": 2764.4035154624144,
+  "base_mean": 2.3232887,
+  "candidate_mean": 2.3232887,
+  "base_second_moment": 8.050132187871089,
+  "candidate_second_moment": 8.019037885821147,
+  "cross_base_candidate": 7.754987062781349,
+  "probe_second_moment": 7.923372748148902,
+  "corr_base_candidate": 0.8939832960922088,
+  "distance_squared": 0.55919594812954,
+  "ez_base": 8.051021807301879
+}

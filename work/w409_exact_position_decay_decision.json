@@ -1,0 +1,28 @@
+{
+  "hypothesis": "relative-position inputs and fixed multiscale pooling are complementary on exact w409c",
+  "mechanism_and_trainer_frozen_before_131_public": true,
+  "formal_incremental_gate_file_created_after_131_public": true,
+  "uses_public_scores": false,
+  "seed": 93,
+  "single_independent_gain": 0.00032469927365851486,
+  "separate_families_joint_gain": 0.0005080484535992016,
+  "combined_full_joint_gain": 0.000524066853576396,
+  "incremental_gain_beyond_separate_families": 1.60183999771944e-05,
+  "positive_fraction": 1.0,
+  "single_negative_weight_fraction": 0.0,
+  "joint_negative_weight_fraction": 0.010416666666666666,
+  "thresholds": {
+    "single_gain": 0.00012,
+    "incremental_beyond_separate_families": 8e-05,
+    "positive_fraction": 0.9,
+    "maximum_negative_weight_fraction": 0.1
+  },
+  "checks": {
+    "single_gain": true,
+    "incremental_beyond_separate_families": false,
+    "positive_fraction": true,
+    "single_weight_sign": true,
+    "joint_weight_sign": true
+  },
+  "passed": false
+}

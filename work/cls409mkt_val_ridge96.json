@@ -1,0 +1,22 @@
+[
+  {
+    "candidate": "work/cls409mkt_val_server_val.npy",
+    "lambda": 0.003,
+    "base_columns": 25,
+    "oracle_base_score_250k": 1.6651398250946639,
+    "oracle_augmented_score_250k": 1.6651348163953281,
+    "oracle_gain_250k": 5.0086993357290055e-06,
+    "oracle_degrees_added": 0.7898498939739689,
+    "oracle_candidate_weight": 0.03863239794816054,
+    "repeats": 96,
+    "mean_fitted_public_gain": 1.565539669992159e-05,
+    "mean_independent_private_gain": -7.734414653140509e-06,
+    "private_gain_se": 2.247130772507479e-06,
+    "private_gain_positive_fraction": 0.5208333333333334,
+    "private_gain_min": -0.00013057403056415673,
+    "private_gain_max": 7.951403906192311e-06,
+    "mean_degrees_added": 0.7896002029298982,
+    "mean_candidate_weight": 0.036622796647000876,
+    "candidate_weight_negative_fraction": 0.14583333333333334
+  }
+]

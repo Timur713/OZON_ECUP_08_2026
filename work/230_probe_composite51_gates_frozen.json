@@ -1,0 +1,66 @@
+{
+  "probe_tag": "230_probe_composite51",
+  "extra_scores": {
+    "191_probe_shape_e4": "1.6461810",
+    "178_probe_divB_st24a": "1.6469745",
+    "146_probe_sw28_meanreversion": "1.6603005407",
+    "131_probe_w409_exact_position_s93": "1.6465450851",
+    "127_probe_w409_exact_decay_s93": "1.6464824096735666",
+    "102_probe_w409c": "1.646720938726788",
+    "83_probe_cls300": "1.6488394251718939",
+    "86_probe_cls300_probability": "1.6558577069",
+    "85_probe_w210a": "1.6482434279349687",
+    "89_probe_w300a": "1.6472946857056134",
+    "92_probe_cls409_r26": "1.647041762499095"
+  },
+  "lambda": 0.003,
+  "marginal_baseline_expected_public": 1.6457998905691713,
+  "marginal_degrees_added": 0.5067220608343064,
+  "empirical_penalty_per_degree": 3.95e-05,
+  "positive_empirical_cost": 2.00155214029551e-05,
+  "strict_double_empirical_cost": 4.00310428059102e-05,
+  "adaptive_selection_cost": 4e-05,
+  "strict_with_adaptive_cost": 8.00310428059102e-05,
+  "positive_empirical_net_gate": 1.64614077302,
+  "strict_gate": 1.646099673083,
+  "strict_with_adaptive_gate": 1.646040039499,
+  "positive_weight_neutral_score": 1.646295862404,
+  "positive_gate_state": {
+    "score": 1.64614077302,
+    "expected_public": 1.645779875047772,
+    "marginal_public_gain": 2.0015521399407987e-05,
+    "primary_weight": 0.1136700471646951
+  },
+  "strict_gate_state": {
+    "score": 1.646099673083,
+    "expected_public": 1.6457598595263245,
+    "marginal_public_gain": 4.003104284677761e-05,
+    "primary_weight": 0.1437917311030061
+  },
+  "strict_with_adaptive_gate_state": {
+    "score": 1.646040039499,
+    "expected_public": 1.6457198595269764,
+    "marginal_public_gain": 8.003104219489465e-05,
+    "primary_weight": 0.18749518029848522
+  },
+  "adaptive_selection_bias_included": true,
+  "negative_weight_branch_allowed": false,
+  "frozen_before_submission": true,
+  "date_msk": "2026-08-29",
+  "sha256": "7d23ff94ef8b1b5d6766224e979afe74ad10cf6c51bf96214a93b68849d78798",
+  "what_it_measures": "One composite base compressing 50 networks trained this session. Each is below the admission threshold alone, but together they move the fold-378 out-of-fold score from 1.6645302 to 1.6639663. Delivering that one base at a time would cost 50 probes; compressed it costs one probe and 0.51 df.",
+  "offline_evidence": {
+    "composite_out_of_fold_rmsle_fold378": 1.6647748,
+    "pool29_stack_out_of_fold": 1.664543,
+    "conditional_gain_beyond_the_pool": 0.0003701,
+    "deployment_faithful_gain": 0.0003652,
+    "sign_stability": "96 of 96 positive",
+    "correlation_with_stack": 0.9989,
+    "why_the_deployment_gain_barely_drops": "at correlation 0.9989 the E[v^2] proxy error and the Gram mismatch cancel, which is the regime 155-159 identified as safe. Every earlier candidate that looked good offline and collapsed in deployment sat below 0.99."
+  },
+  "the_risk_this_probe_measures": "The composite's weights are fitted on fold-378 labels and applied at anchor 408. FINDINGS 2.1 records that fold-378 rankings invert against the real target, which is exactly why this project never stacks on that fold. The downside is bounded: if the weights do not transfer, the recovered moment is poor, the ridge gives the base a small weight and the cost is about 0.5 degrees of freedom. The upside is the largest offline gain measured in this session.",
+  "reading_key": {
+    "admit_only_if": "public score <= 1.646040039",
+    "if_it_fails": "branch closed; no re-parameterisation, no reweighted composite, no second probe on the same 50 models"
+  }
+}

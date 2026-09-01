@@ -1,0 +1,19 @@
+{
+  "tag": "81_probe_surv",
+  "file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/submissions/81_probe_surv.csv",
+  "vector": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/gbdt_surv_final.npy",
+  "vector_key": null,
+  "candidate_file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/81_probe_surv_candidate.npy",
+  "base_score": 1.6468181197,
+  "weight": 0.3,
+  "mean_log": 2.3232890519173677,
+  "base_mean": 2.323289202739097,
+  "candidate_mean": 2.3232887,
+  "base_second_moment": 8.049916462302521,
+  "candidate_second_moment": 8.049914126286142,
+  "cross_base_candidate": 8.042005269988882,
+  "probe_second_moment": 8.046593551289318,
+  "corr_base_candidate": 0.9970176103433211,
+  "distance_squared": 0.01582004861089702,
+  "ez_base": 8.050618621465139
+}

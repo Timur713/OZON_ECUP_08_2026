@@ -1,0 +1,27 @@
+{
+  "tag": "171_upside_position_sw28_l003",
+  "date_msk": "2026-08-29",
+  "role": "TOP-SOLUTION, ready to send. 130 and 147 are untouched.",
+  "file": "submissions/171_upside_position_sw28_l003.csv",
+  "sha256": "44b6c49ab945494b7b27a4df99a8c8499ff8fb07364e9291dd2bcafaaffeb3a0",
+  "what_it_is": "the pool of 130 plus the two bases whose public gain was MEASURED and real but which frozen keys rejected on adaptive-selection grounds: 131 (w409 exact position) and 146 (sw28 mean reversion). No new probe, no retuning, no sign inversion, no lambda change - both enter with the moments and the signs they were measured with.",
+  "numbers": {
+    "expected_public": 1.6460381032772344,
+    "public_of_130": 1.6461706600883055,
+    "expected_public_gain_over_130": 0.0001407466662019,
+    "degrees_of_freedom": 22.102124142854578,
+    "degrees_added_over_130": 1.5713958511463557,
+    "empirical_private_estimate": 1.6469111371808771,
+    "empirical_private_estimate_of_130": 1.6469898137109589,
+    "private_improvement": 7.86765300818e-05,
+    "correlation_with_130": 0.9999205,
+    "rms_log_distance_from_130": 0.020544,
+    "component_weights": {
+      "146_sw28": 0.042328771611328364,
+      "131_position": 0.11414380425774158
+    }
+  },
+  "the_honest_accounting": "Both components were rejected by frozen keys, 131 missing strict+adaptive by 0.0001027 and 146 by 0.00000275. Neither rejection was because the gain was absent; both were rejected for adaptive-selection bias that the df model does not capture. The project's own accounting charges about 0.00004 per admitted base, so two of them carry roughly 0.00008 of unmodelled bias against a measured private gain of 0.0000787. On private this is close to a coin flip. On public the 0.00014 is a straightforward consequence of moments already in hand, and the solver's public predictions have matched actuals to between 1e-08 and 1e-05 on eight consecutive occasions.",
+  "why_it_is_being_offered_now": "The stated priority changed: upside over repo-review defensibility, with 130 and 147 held as the safety net. That is the exact input the 26.08 decision to leave 146 out was based on, and it is the user's call to make, not a measurement that changed.",
+  "recommended_use": "send it, read the actual public, and decide on finals afterwards. It cannot damage the safety net because it is a third file."
+}

@@ -1,0 +1,55 @@
+{
+  "pool": "25 audit columns + w409c + decay_s93",
+  "base_matched_private": 1.6646650940756562,
+  "base_deployment_private": 1.6653687034861575,
+  "candidates": {
+    "divM_shape_e8_val": {
+      "standalone_rmsle": 1.6905324663919454,
+      "correlation_with_stack": 0.9948764112229463,
+      "matched_conditional_gain": 9.583689493642782e-05,
+      "matched_standard_error": 2.3335084745678863e-06,
+      "matched_positive_splits": 96,
+      "deployment_conditional_gain": 7.4126102268611e-05,
+      "deployment_positive_splits": 89,
+      "positive_weight_splits": 96,
+      "mean_weight": 0.1558344110634022,
+      "gate": "PASS"
+    },
+    "divM_plain_e6_val": {
+      "standalone_rmsle": 1.7167463545590989,
+      "correlation_with_stack": 0.9954890021030269,
+      "matched_conditional_gain": 3.0549199619325784e-05,
+      "matched_standard_error": 3.353551768493309e-06,
+      "matched_positive_splits": 84,
+      "deployment_conditional_gain": 1.2989160451624496e-07,
+      "deployment_positive_splits": 62,
+      "positive_weight_splits": 94,
+      "mean_weight": 0.10940033937288583,
+      "gate": "FAIL"
+    },
+    "divM_shape_e4_s2_val": {
+      "standalone_rmsle": 1.715046714657231,
+      "correlation_with_stack": 0.9947971458002222,
+      "matched_conditional_gain": -1.606743064339981e-05,
+      "matched_standard_error": 2.3976786541766146e-06,
+      "matched_positive_splits": 12,
+      "deployment_conditional_gain": -3.477465007854785e-05,
+      "deployment_positive_splits": 10,
+      "positive_weight_splits": 52,
+      "mean_weight": 0.011850099780403606,
+      "gate": "FAIL"
+    },
+    "divM_shape_e4_st24_val": {
+      "standalone_rmsle": 1.7133922457738764,
+      "correlation_with_stack": 0.9963179877899238,
+      "matched_conditional_gain": -1.2150753452645305e-05,
+      "matched_standard_error": 1.5353646356335314e-06,
+      "matched_positive_splits": 2,
+      "deployment_conditional_gain": -2.828301181372293e-05,
+      "deployment_positive_splits": 17,
+      "positive_weight_splits": 61,
+      "mean_weight": 0.020882389717501847,
+      "gate": "FAIL"
+    }
+  }
+}

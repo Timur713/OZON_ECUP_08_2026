@@ -1,0 +1,22 @@
+[
+  {
+    "candidate": "work/cls300tprofhead_val_selected_e2.npy",
+    "lambda": 0.003,
+    "base_columns": 25,
+    "oracle_base_score_250k": 1.6651398250946639,
+    "oracle_augmented_score_250k": 1.6651278022577118,
+    "oracle_gain_250k": 1.202283695200812e-05,
+    "oracle_degrees_added": 0.8081442416518421,
+    "oracle_candidate_weight": -0.025994460754203075,
+    "repeats": 96,
+    "mean_fitted_public_gain": 2.4236056522818072e-05,
+    "mean_independent_private_gain": 1.6100720891948361e-06,
+    "private_gain_se": 1.7719906091563272e-06,
+    "private_gain_positive_fraction": 0.7291666666666666,
+    "private_gain_min": -8.039449590291348e-05,
+    "private_gain_max": 1.8819776357092977e-05,
+    "mean_degrees_added": 0.808025964258544,
+    "mean_candidate_weight": -0.030139609978476662,
+    "candidate_weight_negative_fraction": 0.7916666666666666
+  }
+]

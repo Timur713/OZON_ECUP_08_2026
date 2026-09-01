@@ -1,0 +1,38 @@
+[
+  {
+    "candidates": [
+      "work/w409c_val.npy",
+      "work/w409_exact_decay_s93_val.npy",
+      "work/exw409_s93_val.npy"
+    ],
+    "lambda": 0.003,
+    "base_columns": 25,
+    "oracle_base_score_250k": 1.665139825094663,
+    "oracle_augmented_score_250k": 1.6647667848276608,
+    "oracle_gain_250k": 0.0003730402670021338,
+    "oracle_degrees_added": 1.7190679970464302,
+    "oracle_candidate_weights": {
+      "work/w409c_val.npy": 0.14888780745777977,
+      "work/w409_exact_decay_s93_val.npy": 0.19548007529646097,
+      "work/exw409_s93_val.npy": 0.11244266958774711
+    },
+    "repeats": 96,
+    "mean_fitted_public_gain": 0.0004074278825968956,
+    "mean_independent_private_gain": 0.00034590307508289747,
+    "private_gain_se": 3.1002362215949466e-06,
+    "private_gain_positive_fraction": 1.0,
+    "private_gain_min": 0.0002507980597745707,
+    "private_gain_max": 0.0004062305716339143,
+    "mean_degrees_added": 1.71825104304184,
+    "mean_candidate_weights": {
+      "work/w409c_val.npy": 0.14549718919608964,
+      "work/w409_exact_decay_s93_val.npy": 0.20257741539653343,
+      "work/exw409_s93_val.npy": 0.10556689772286072
+    },
+    "candidate_weight_negative_fraction": {
+      "work/w409c_val.npy": 0.0,
+      "work/w409_exact_decay_s93_val.npy": 0.0,
+      "work/exw409_s93_val.npy": 0.020833333333333332
+    }
+  }
+]

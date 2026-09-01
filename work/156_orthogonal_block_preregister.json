@@ -1,0 +1,23 @@
+{
+  "tag": "156_orthogonal_whitened_block",
+  "date_msk": "2026-08-28",
+  "status": "frozen before measurement; 153 is on hold and nothing has been submitted",
+  "diagnosis_from_155": "The deployment solve uses the Gram over all 250k users with a right-hand side recovered from the public 50k, and the recovery substitutes E[v^2] over 250k for its public value. Both errors are harmless for the existing pool because its bases correlate above 0.99 and their weights sum to about one, which makes E_all[p^2] - sum_j w_j E_all[v_j^2] cancel to first order; that cancellation is why the project's predicted public scores have matched actuals to 1e-06. Raw historical columns correlate 0.35 to 0.87 with the stack, so the cancellation fails and the recovered moments are amplified by the ill-conditioned Gram.",
+  "hypothesis": "Both failures are properties of the PARAMETERISATION, not of the signal. Re-expressing the new columns in a basis that is orthogonal to the span of the 25 bases and whitened among themselves makes the new block's sub-Gram the identity, so the ridge cannot amplify right-hand-side noise through an ill-conditioned inverse. The span is unchanged, so the achievable gain is unchanged.",
+  "why_no_extra_probes_are_needed": "Orthogonalisation and whitening are linear maps built from the 250k Gram, which is label-free and already available. The transformed moments are exact linear combinations of the moments the same probes already recover: r_perp = r_V - C' r_ext, then r_w = W' r_perp. No new submission is implied by the reparameterisation itself.",
+  "arms": {
+    "A": "plain 152 audit, Gram and right-hand side both from the public 50k (the flawed measurement)",
+    "B": "deployment with exact public moments, Gram from 250k",
+    "C": "deployment as it really is, B plus the E[v^2] proxy error",
+    "D": "C in the orthogonalised and whitened basis",
+    "E": "D swept over the penalty on the new block",
+    "F": "D with the proxy error removed, which is what two probes per column at different mixing weights would buy"
+  },
+  "reading_key": {
+    "revive": "some arm D or E configuration reaches mean private gain >= 0.00020 with positive gain in >= 90 percent of 48 splits. Then rebuild the batch in that parameterisation and re-register the gate",
+    "revive_at_double_cost": "only arm F clears 0.00020 at some K. Then the branch survives but costs two probes per column, so K halves; it is revived only if the gain at the halved K still clears the threshold",
+    "closed": "no arm clears 0.00020 -> the conditional-calibration branch is closed for good, 130 and 147 stand unchanged, and the whole line is recorded as a negative result with its mechanism"
+  },
+  "expected_sign": "orthogonalisation should recover most of arm A because the noise amplification it removes is a conditioning effect; the proxy error is a separate bias and may still dominate",
+  "frozen_before_measurement": true
+}

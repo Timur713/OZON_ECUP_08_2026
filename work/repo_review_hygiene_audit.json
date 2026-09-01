@@ -1,0 +1,18 @@
+{
+  "audited_at_msk": "2026-08-25T18:23:45+03:00",
+  "private_key_material_found_in_workspace_text_scan": false,
+  "pem_filename_found_in_export": false,
+  "competition_data_found_in_local_export_archives": true,
+  "archive_member": "export/data/train.parquet",
+  "tracked_archive_with_competition_data": "ecup_export.tgz",
+  "protections_added_to_gitignore": [
+    "export/data/",
+    "ecup_export*.tgz",
+    "*.pem",
+    "submissions/*.csv.gz"
+  ],
+  "export_absolute_local_paths_remaining": 0,
+  "export_requirements_match_tested_environment": true,
+  "destructive_cleanup_performed": false,
+  "required_before_jury_handoff": "remove tracked archive/data artifacts from the review branch and verify the resulting git tree; preserve local copies unless the user authorizes deletion"
+}

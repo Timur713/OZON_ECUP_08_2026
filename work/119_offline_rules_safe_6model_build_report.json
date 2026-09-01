@@ -1,0 +1,67 @@
+{
+  "file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/submissions/119_offline_rules_safe_6model.csv",
+  "sha256": "2286bc80b9fff46541ed292e4216e51a5f9f2de2fec341c3b32ef13aef1695f8",
+  "construction": "historical_validation_only_nonnegative_ridge",
+  "uses_public_scores": false,
+  "uses_recovered_moments": false,
+  "uses_competition_target_mean": false,
+  "families": [
+    "GBD262",
+    "W120_seed_average",
+    "TCN180_two_head",
+    "TCN365_growing_anchor",
+    "TCN409",
+    "TCN409_replication"
+  ],
+  "lambda_grid": [
+    0.001,
+    0.003,
+    0.01,
+    0.03
+  ],
+  "lambda_selection": "minimum mean independent 200k score over fixed 96 splits",
+  "cv": [
+    {
+      "lambda": 0.001,
+      "mean_independent_private": 1.66646800087909,
+      "private_score_se": 0.00012765306641629407,
+      "mean_active_components": 5.041666666666667
+    },
+    {
+      "lambda": 0.003,
+      "mean_independent_private": 1.6665004756560353,
+      "private_score_se": 0.0001274694250381618,
+      "mean_active_components": 5.510416666666667
+    },
+    {
+      "lambda": 0.01,
+      "mean_independent_private": 1.666675359307104,
+      "private_score_se": 0.0001271588292112359,
+      "mean_active_components": 5.979166666666667
+    },
+    {
+      "lambda": 0.03,
+      "mean_independent_private": 1.6670873956938692,
+      "private_score_se": 0.0001268142083214615,
+      "mean_active_components": 6.0
+    }
+  ],
+  "selected_lambda": 0.001,
+  "validation_score_full_250k": 1.6663848194602804,
+  "active_components": 5,
+  "weights": {
+    "GBD262": 0.12239625134509254,
+    "W120_seed_average": 0.20627918563984307,
+    "TCN180_two_head": 0.0,
+    "TCN365_growing_anchor": 0.029500821551146073,
+    "TCN409": 0.006813317396798686,
+    "TCN409_replication": 0.6369416555716096,
+    "const": -0.19824236090146297
+  },
+  "final_mean_log1p": 2.201083894414944,
+  "final_std_log1p": 1.554045589232771,
+  "prediction_min": 0.0,
+  "prediction_max": 12416.220382776019,
+  "rows": 250000,
+  "warning": "Historical validation is January while the competition target is a gift season; this file is a rules-safe fallback, not the expected best competition final."
+}

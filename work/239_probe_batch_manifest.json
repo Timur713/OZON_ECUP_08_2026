@@ -1,0 +1,42 @@
+{
+  "base": "240_allpool_composite_l0003.csv at 1.6454459655",
+  "weight": 0.3,
+  "rule": "a probe scoring BELOW its neutral value means the base carries positive information; the admission test is whether its marginal public gain beats its own df cost, computed after the score is known",
+  "probes": [
+    {
+      "tag": "241_probe_daily03_e4",
+      "correlation_with_240": 0.9946904964184582
+    },
+    {
+      "tag": "242_probe_daily03_gift",
+      "correlation_with_240": 0.9948854425001358
+    },
+    {
+      "tag": "243_probe_diff_e4",
+      "correlation_with_240": 0.9947765176994282
+    },
+    {
+      "tag": "244_probe_shape_s502",
+      "correlation_with_240": 0.9959407804222947
+    },
+    {
+      "tag": "245_probe_g_e6",
+      "correlation_with_240": 0.9959872768437107
+    },
+    {
+      "tag": "246_probe_daynormshape",
+      "correlation_with_240": 0.9957982353971314
+    },
+    {
+      "tag": "247_probe_bankshape2002",
+      "correlation_with_240": 0.9958777309954046
+    },
+    {
+      "tag": "248_probe_grpshape",
+      "correlation_with_240": 0.9969573243937598
+    }
+  ],
+  "CORRECTION": "The neutral_score field written in the first version of this file was wrong. It was computed from the condition E[z*candidate] = E[z*base], which is not what neutrality means: a base is neutral when it adds nothing to the RIDGE against the whole pool, and that depends on the pool's Gram, not on the two moments being equal. The values it produced, around 1.643 to 1.644, are better than our best submission and are meaningless as a reference.",
+  "how_to_read_a_returned_score": "Send the probe, report the score, and the marginal gain is computed exactly by work/solve_augmented_stack.py against the full pool. A base is admitted under this batch's relaxed rule if that marginal gain exceeds its own df cost at 0.0000395 per degree, which is about 0.00003 for a base of this kind. There is no useful threshold that can be quoted in advance without running the solve, because it depends on the recovered moment.",
+  "expected_probe_score_range": "Each probe is 0.70 of the current best solution plus 0.30 of one model, so its own score will be WORSE than 1.6454460, most likely between 1.646 and 1.649. That is by construction and says nothing about whether the base is useful."
+}

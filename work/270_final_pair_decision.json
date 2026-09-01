@@ -1,0 +1,67 @@
+{
+  "tag": "270_final_pair_decision",
+  "date_msk": "2026-08-30",
+  "deadline": "31.08.2026 12:00 MSK",
+  "all_measured": {
+    "147_private_safe_nonnegative_current_l001": {
+      "public": 1.6466762024,
+      "df": 12.96,
+      "adaptive_bases": 0,
+      "private_estimate": 1.6471881224,
+      "adjusted_private": 1.6471881224
+    },
+    "130_private_safe_exact_decay_l003": {
+      "public": 1.6461706601,
+      "df": 20.530728,
+      "adaptive_bases": 0,
+      "private_estimate": 1.646981623856,
+      "adjusted_private": 1.646981623856
+    },
+    "171_upside_position_sw28_l003": {
+      "public": 1.6460211139,
+      "df": 22.102124,
+      "adaptive_bases": 2,
+      "private_estimate": 1.6468941477980001,
+      "adjusted_private": 1.6469741477980002
+    },
+    "200_shape_anchor_l003": {
+      "public": 1.6457819828,
+      "df": 23.660604,
+      "adaptive_bases": 4,
+      "private_estimate": 1.646716576658,
+      "adjusted_private": 1.646876576658
+    },
+    "204_allpool_new_l0003": {
+      "public": 1.6455330292,
+      "df": 40.34928,
+      "adaptive_bases": 15,
+      "private_estimate": 1.64712682576,
+      "adjusted_private": 1.64772682576
+    },
+    "240_allpool_composite_l0003": {
+      "public": 1.6454459655,
+      "df": 41.236236,
+      "adaptive_bases": 16,
+      "private_estimate": 1.647074796822,
+      "adjusted_private": 1.647714796822
+    },
+    "250_extended_l0003": {
+      "public": 1.6453346328,
+      "df": 46.332697,
+      "adaptive_bases": 16,
+      "private_estimate": 1.6471647743315,
+      "adjusted_private": 1.6478047743315
+    },
+    "260_final_split_l0": {
+      "public": 1.6452091364,
+      "df": 53.997218,
+      "adaptive_bases": 16,
+      "private_estimate": 1.6473420265110001,
+      "adjusted_private": 1.6479820265110001
+    }
+  },
+  "recommendation": [
+    "200_shape_anchor_l003.csv",
+    "147_private_safe_nonnegative_current_l001.csv"
+  ]
+}

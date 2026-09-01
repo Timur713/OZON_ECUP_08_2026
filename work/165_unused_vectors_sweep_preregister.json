@@ -1,0 +1,22 @@
+{
+  "tag": "165_unused_vector_sweep",
+  "date_msk": "2026-08-28",
+  "status": "frozen before measurement",
+  "idea": "61 trained validation vectors from previously rejected branches sit unused in work/. Each was rejected on its own. They have never been screened against the CURRENT 27-column pool, and never as a joint block.",
+  "honest_risk": "This is a sweep over 61 candidates on the same fold-378 data that rejected most of them. Without a correction the maximum of 61 noisy statistics is guaranteed to look like a finding. The correction is therefore fixed before the sweep runs.",
+  "selection_correction": {
+    "screened": 61,
+    "expected_maximum_bias": "sigma * sqrt(2 ln 61) = 2.87 sigma; with the measured standard error of about 1.2e-05 this is 3.4e-05",
+    "individual_threshold": 0.000155,
+    "components": "0.00008 standing magnitude + 0.00004 standard adaptive charge + 0.000035 maximum-of-61 selection bias",
+    "sign_stability": "90 of 96",
+    "correlation_with_stack": "at least 0.99, since 155-159 showed the moment recovery is only safe there and these are all model predictions so they should satisfy it naturally"
+  },
+  "joint_rule": {
+    "block": "ALL individually passing candidates, in one block. No subset search after seeing the joint number.",
+    "threshold": "joint gain >= 2 * added_df * 0.0000395 + 0.00004 + 0.000035, the project's own strict formula plus the same two charges",
+    "note": "if no candidate passes individually, no joint block is formed; fishing for a subset that works jointly is exactly the winner's curse that FINDINGS 2.2 rejected"
+  },
+  "expected_outcome": "most likely nothing passes; these branches were rejected for reasons that the current pool, which is strictly stronger than the pool they were rejected against, will not reverse",
+  "frozen_before_measurement": true
+}

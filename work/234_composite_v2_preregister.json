@@ -1,0 +1,24 @@
+{
+  "tag": "234_composite_v2",
+  "date_msk": "2026-08-30",
+  "status": "frozen before the members exist",
+  "relation_to_the_230_key": "The frozen key of 230 forbids a re-parameterisation, a reweighted composite, or a second probe ON THE SAME 50 MODELS. This is a composite of DIFFERENT models, none of which was a member of composite51, so it is a new candidate rather than a second look at a rejected one. It is nevertheless a second attempt at the same MECHANISM, and it is charged accordingly: the adaptive cost is doubled to 0.00008, the rate this project uses for a round that follows an observed result.",
+  "members": "every model in work/div whose name is absent from the member list in work/nl/227_composite_members.json",
+  "what_the_first_composite_taught": {
+    "offline_conditional_gain": 0.0003701,
+    "public_marginal_gain": 5.9e-05,
+    "transfer_ratio": 0.159,
+    "reading": "Five sixths of the offline gain did not survive. The most likely cause is that the composite's weights, a ridge at lambda 0.003 over 51 columns, are fitted to fold-378 idiosyncrasy, and FINDINGS 2.1 records that this fold's rankings invert against the real target."
+  },
+  "the_one_design_change": "The regularisation of the composite is selected by its own out-of-fold score at fold 378 over a fixed grid, rather than inherited from the pool's lambda. A heavily regularised composite approaches a plain average of its members and carries less fold-specific structure, which is what should transfer. The grid is fixed here before any member exists: 0.003, 0.01, 0.03, 0.1, 0.3, 1.0.",
+  "screening": "against pool29 plus composite51, since composite51's moment is measured and it is now part of the deployed solution. Screening against the smaller pool would credit this candidate with signal the ensemble already has, which is the gate-pool defect recorded in FINDINGS 4.1.",
+  "gate": {
+    "magnitude": 8e-05,
+    "adaptive_cost": 8e-05,
+    "sign_stability": "90 of 96",
+    "correlation_with_stack": "at least 0.99, the region 155-159 showed the moment recovery to be safe in"
+  },
+  "if_it_fails": "the composite mechanism is closed for good, both variants, and no third construction of it is attempted.",
+  "expected_value": "At the measured transfer ratio of about one sixth, an offline gain of 0.0004 buys roughly 0.00007 of public. This is worth one probe and it is not worth pretending it closes the gap to top-3.",
+  "frozen_before_measurement": true
+}

@@ -1,0 +1,167 @@
+{
+  "uses_public_scores": false,
+  "uses_recovered_moments": false,
+  "uses_competition_target_mean": false,
+  "selection_rule": "promote every family passing identical frozen gates on both seeds",
+  "seeds": [
+    1310,
+    2718
+  ],
+  "thresholds": {
+    "minimum_single_independent_gain": 0.00012,
+    "minimum_incremental_gain_beyond_w409c": 8e-05,
+    "minimum_positive_fraction": 0.9,
+    "maximum_negative_weight_fraction": 0.1,
+    "maximum_control_holdout_loss_vs_w409c": 0.0005,
+    "minimum_profile_holdout_gain_vs_control": 0.0002
+  },
+  "diagnostic_thresholds": {
+    "minimum_single_independent_gain": 4e-05,
+    "minimum_incremental_gain_beyond_w409c": 2e-05,
+    "minimum_positive_fraction": 0.75,
+    "maximum_negative_weight_fraction": 0.25,
+    "maximum_control_holdout_loss_vs_w409c": 0.0015,
+    "minimum_profile_holdout_gain_vs_control": -0.0005
+  },
+  "w409c_mean_independent_private_gain": 0.00021737656915285278,
+  "families": {
+    "control": {
+      "seeds": [
+        {
+          "seed": 1310,
+          "tag": "control409_growth",
+          "single_independent_gain": 5.317126472240141e-06,
+          "incremental_gain_beyond_w409c": -1.0625088638078594e-05,
+          "positive_fraction": 0.71875,
+          "single_negative_weight_fraction": 0.8541666666666666,
+          "joint_negative_weight_fraction": 0.6770833333333334,
+          "holdout_private_score": 1.676376417846168,
+          "same_seed_control_private_score": 1.676376417846168,
+          "holdout_margin": -0.008452012520978824,
+          "checks": {
+            "single_gain": false,
+            "incremental_beyond_w409c": false,
+            "positive_fraction": false,
+            "single_weight_sign": false,
+            "joint_weight_sign": false,
+            "holdout": false
+          },
+          "passed": false,
+          "diagnostic_checks": {
+            "single_gain": false,
+            "incremental_beyond_w409c": false,
+            "positive_fraction": false,
+            "single_weight_sign": false,
+            "joint_weight_sign": false,
+            "holdout": false
+          },
+          "diagnostic_passed": false
+        },
+        {
+          "seed": 2718,
+          "tag": "control409s2718_growth",
+          "single_independent_gain": 2.0239079054131897e-05,
+          "incremental_gain_beyond_w409c": 1.8688574170558803e-05,
+          "positive_fraction": 0.90625,
+          "single_negative_weight_fraction": 0.96875,
+          "joint_negative_weight_fraction": 0.96875,
+          "holdout_private_score": 1.6858622843674598,
+          "same_seed_control_private_score": 1.6858622843674598,
+          "holdout_margin": -0.01793787904227062,
+          "checks": {
+            "single_gain": false,
+            "incremental_beyond_w409c": false,
+            "positive_fraction": true,
+            "single_weight_sign": false,
+            "joint_weight_sign": false,
+            "holdout": false
+          },
+          "passed": false,
+          "diagnostic_checks": {
+            "single_gain": false,
+            "incremental_beyond_w409c": false,
+            "positive_fraction": true,
+            "single_weight_sign": false,
+            "joint_weight_sign": false,
+            "holdout": false
+          },
+          "diagnostic_passed": false
+        }
+      ],
+      "passed": false,
+      "diagnostic_passed": false,
+      "tier": "reject"
+    },
+    "marked": {
+      "seeds": [
+        {
+          "seed": 1310,
+          "tag": "mark409_growth",
+          "single_independent_gain": 4.898938918763973e-05,
+          "incremental_gain_beyond_w409c": 2.1796285239632674e-05,
+          "positive_fraction": 0.9583333333333334,
+          "single_negative_weight_fraction": 1.0,
+          "joint_negative_weight_fraction": 1.0,
+          "holdout_private_score": 1.692079122314221,
+          "same_seed_control_private_score": 1.676376417846168,
+          "holdout_margin": -0.015702704468053108,
+          "checks": {
+            "single_gain": false,
+            "incremental_beyond_w409c": false,
+            "positive_fraction": true,
+            "single_weight_sign": false,
+            "joint_weight_sign": false,
+            "holdout": false
+          },
+          "passed": false,
+          "diagnostic_checks": {
+            "single_gain": true,
+            "incremental_beyond_w409c": true,
+            "positive_fraction": true,
+            "single_weight_sign": false,
+            "joint_weight_sign": false,
+            "holdout": false
+          },
+          "diagnostic_passed": false
+        },
+        {
+          "seed": 2718,
+          "tag": "mark409s2718_growth",
+          "single_independent_gain": 0.0001080782153366211,
+          "incremental_gain_beyond_w409c": 9.415256659622837e-05,
+          "positive_fraction": 1.0,
+          "single_negative_weight_fraction": 1.0,
+          "joint_negative_weight_fraction": 1.0,
+          "holdout_private_score": 1.6850827822584233,
+          "same_seed_control_private_score": 1.6858622843674598,
+          "holdout_margin": 0.000779502109036434,
+          "checks": {
+            "single_gain": false,
+            "incremental_beyond_w409c": true,
+            "positive_fraction": true,
+            "single_weight_sign": false,
+            "joint_weight_sign": false,
+            "holdout": true
+          },
+          "passed": false,
+          "diagnostic_checks": {
+            "single_gain": true,
+            "incremental_beyond_w409c": true,
+            "positive_fraction": true,
+            "single_weight_sign": false,
+            "joint_weight_sign": false,
+            "holdout": true
+          },
+          "diagnostic_passed": false
+        }
+      ],
+      "passed": false,
+      "diagnostic_passed": false,
+      "tier": "reject"
+    }
+  },
+  "eligible_families": [],
+  "diagnostic_families": [],
+  "full_refit_families": [],
+  "decision": "no family cleared even the frozen diagnostic gates; no full refit"
+}

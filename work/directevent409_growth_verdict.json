@@ -1,0 +1,31 @@
+{
+  "tag": "directevent409_growth",
+  "decision": "reject_without_full_or_csv",
+  "uses_public_scores": false,
+  "selected_epoch": 2,
+  "selected_hurdle_weight": 0.0,
+  "holdout_private_score": 1.6807930822156507,
+  "w409c_same_split_score": 1.6679244053251892,
+  "holdout_maximum_allowed": 1.668424405325189,
+  "holdout_gate_miss": 0.012368676890461616,
+  "individual_private_gain": 0.00006836481002057045,
+  "individual_minimum_gain": 0.00012,
+  "individual_positive_count": 94,
+  "minimum_positive_count": 90,
+  "individual_negative_weight_fraction": 0.9895833333333334,
+  "maximum_negative_weight_fraction": 0.05,
+  "joint_private_gain_with_w409c": 0.0002341233509215538,
+  "w409c_private_gain": 0.00021737656915206635,
+  "conditional_gain_beyond_w409c": 0.000016746781769487462,
+  "minimum_conditional_gain": 0.0001,
+  "joint_direct_weight_negative_fraction": 0.96875,
+  "gates": {
+    "holdout": false,
+    "individual_gain": false,
+    "individual_positive_count": true,
+    "individual_weight_sign": false,
+    "conditional_gain": false,
+    "joint_weight_sign": false
+  },
+  "reason": "Untouched temporal holdout missed by 0.012369; individual and conditional gains are below frozen adaptive thresholds; the candidate weight is negative on almost every split. Negative post-hoc inversion is forbidden."
+}

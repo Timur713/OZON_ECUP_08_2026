@@ -1,0 +1,32 @@
+{
+  "output": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/cls300mkt_val_epoch1_mix045_final.npy",
+  "vectors": [
+    "work/cls300mkt_val_epoch1_best_final_components.npz:hurdle",
+    "work/cls300mkt_val_epoch1_best_final_components.npz:direct"
+  ],
+  "weights": [
+    0.45,
+    0.55
+  ],
+  "raw_blend": true,
+  "correlations": [
+    [
+      1.0,
+      0.996295
+    ],
+    [
+      0.996295,
+      1.0
+    ]
+  ],
+  "component_means": [
+    2.616017921627358,
+    2.6823678341522217
+  ],
+  "component_stds": [
+    1.42945352175301,
+    1.433943448473304
+  ],
+  "meta_mean": 2.652510373516033,
+  "meta_std": 1.430609737120723
+}

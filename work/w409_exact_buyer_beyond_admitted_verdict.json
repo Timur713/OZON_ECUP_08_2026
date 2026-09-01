@@ -1,0 +1,27 @@
+{
+  "branch": "w409_exact_buyer_s93",
+  "decided_msk": "2026-08-26T11:30:00+03:00",
+  "preregistration": "work/136_buyer_beyond_admitted_preregister.json",
+  "preregistration_sha256": "178b32936bb17d180e7671d5d6e97017bf3cc8903dd81eff5e393c64cb27b904",
+  "uses_public_scores": false,
+  "measured_96_split_independent_private_gain_over_25col_base": {
+    "w409c": 0.00021738,
+    "w409c_decay": 0.00034049,
+    "w409c_buyer": 0.00032839,
+    "w409c_decay_buyer": 0.00037405,
+    "w409c_decay_position": 0.00050805,
+    "w409c_decay_position_buyer": 0.00050586
+  },
+  "buyer_incremental_beyond_w409c_only": 0.00011101,
+  "buyer_incremental_beyond_admitted_w409c_decay": 3.356e-05,
+  "buyer_incremental_beyond_w409c_decay_position": -2.19e-06,
+  "gate_incremental_beyond_admitted": 8e-05,
+  "passed": false,
+  "verdict": "REJECTED. The original frozen gate credited buyer with +0.00011101 measured beyond {w409c} alone, but 127/decay is already admitted and sits inside the current primary 130. Beyond the actually admitted pool buyer contributes only +0.00003356, far under the standing 0.00008 threshold, and beyond {w409c,decay,position} it is slightly negative. The auxiliary buyer head therefore re-expresses representation the admitted decay base already supplies.",
+  "actions": [
+    "133_probe_w409_exact_buyer_s93.csv is NOT submitted. No public probe is spent on this branch.",
+    "No inversion, no joint recovery, no threshold relaxation.",
+    "The CSV is retained only as a build artifact."
+  ],
+  "methodological_finding": "Incremental gates must be evaluated against the CURRENT admitted pool, not against a historical baseline. Measuring beyond {w409c} after decay was admitted overstated this branch by 3.3x."
+}

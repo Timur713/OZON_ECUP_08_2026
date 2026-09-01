@@ -1,0 +1,43 @@
+{
+  "probe_tag": "133_probe_w409_exact_buyer_s93",
+  "extra_scores": {
+    "83_probe_cls300": "1.6488394251718939",
+    "86_probe_cls300_probability": "1.6558577069",
+    "85_probe_w210a": "1.6482434279349687",
+    "89_probe_w300a": "1.6472946857056134",
+    "92_probe_cls409_r26": "1.647041762499095",
+    "102_probe_w409c": "1.646720938726788",
+    "127_probe_w409_exact_decay_s93": "1.6464824096735666"
+  },
+  "lambda": 0.003,
+  "marginal_baseline_expected_public": 1.6461788499434364,
+  "marginal_degrees_added": 0.5615222018016794,
+  "empirical_penalty_per_degree": 3.95e-05,
+  "positive_empirical_cost": 2.2180126971166336e-05,
+  "strict_double_empirical_cost": 4.436025394233267e-05,
+  "adaptive_selection_cost": 4e-05,
+  "strict_with_adaptive_cost": 8.436025394233267e-05,
+  "positive_empirical_net_gate": 1.646603606734,
+  "strict_gate": 1.64655652326,
+  "strict_with_adaptive_gate": 1.646493550993,
+  "positive_weight_neutral_score": 1.646794465118,
+  "positive_gate_state": {
+    "score": 1.646603606734,
+    "expected_public": 1.646156669816499,
+    "marginal_public_gain": 2.218012693733229e-05,
+    "primary_weight": 0.11870139573368137
+  },
+  "strict_gate_state": {
+    "score": 1.64655652326,
+    "expected_public": 1.6461344896895869,
+    "marginal_public_gain": 4.436025384957354e-05,
+    "primary_weight": 0.14798211251501406
+  },
+  "strict_with_adaptive_gate_state": {
+    "score": 1.646493550993,
+    "expected_public": 1.6460944896898049,
+    "marginal_public_gain": 8.436025363156574e-05,
+    "primary_weight": 0.1871425936167594
+  },
+  "adaptive_selection_bias_included": true
+}

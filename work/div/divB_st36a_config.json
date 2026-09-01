@@ -1,0 +1,40 @@
+{
+  "tag": "divB_st36a",
+  "seed": 213,
+  "architecture": "exact_w409c_plus_decay",
+  "only_change_from_w409c": "decay",
+  "channels": [
+    "gmv",
+    "to_ord",
+    "to_cart",
+    "searches",
+    "active",
+    "search",
+    "cat"
+  ],
+  "window": 409,
+  "width": 96,
+  "anchors": [
+    186,
+    222,
+    258,
+    294,
+    330
+  ],
+  "stride": 36,
+  "anchor_phase": 0,
+  "user_fraction": 1.0,
+  "user_seed": 0,
+  "valid_channel": false,
+  "head": "direct",
+  "decays": [
+    7.0,
+    30.0,
+    90.0,
+    180.0
+  ],
+  "buyer_auxiliary_loss_weight": 0.0,
+  "epochs": 2,
+  "parameters": 313217,
+  "private_selection": "fixed 50k calibration / independent 200k scoring"
+}

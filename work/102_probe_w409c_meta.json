@@ -1,0 +1,22 @@
+{
+  "tag": "102_probe_w409c",
+  "file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/submissions/102_probe_w409c.csv",
+  "vector": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/w409c_final.npy",
+  "vector_key": null,
+  "candidate_file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/102_probe_w409c_candidate.npy",
+  "base_submission": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/submissions/91_ridge26_measured.csv",
+  "base_score": 1.6466387804455878,
+  "weight": 0.3,
+  "mean_log": 2.3232886999999995,
+  "prediction_min": 0.0,
+  "prediction_max": 13125.675027736159,
+  "base_mean": 2.3232887,
+  "candidate_mean": 2.3232887,
+  "base_second_moment": 8.050132187871089,
+  "candidate_second_moment": 8.049294585268562,
+  "cross_base_candidate": 8.040001250215694,
+  "probe_second_moment": 8.045801809821594,
+  "corr_base_candidate": 0.9963378786104321,
+  "distance_squared": 0.01942427270826316,
+  "ez_base": 8.051021807301879
+}

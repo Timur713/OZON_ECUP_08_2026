@@ -1,0 +1,22 @@
+[
+  {
+    "candidate": "work/control409s2718_growth_val.npy",
+    "lambda": 0.003,
+    "base_columns": 25,
+    "oracle_base_score_250k": 1.6651398250946639,
+    "oracle_augmented_score_250k": 1.6651082897964202,
+    "oracle_gain_250k": 3.1535298243623444e-05,
+    "oracle_degrees_added": 0.8539784791348772,
+    "oracle_candidate_weight": -0.04712448351650227,
+    "repeats": 96,
+    "mean_fitted_public_gain": 4.324737477236449e-05,
+    "mean_independent_private_gain": 2.0239079053944547e-05,
+    "private_gain_se": 1.7405246793886775e-06,
+    "private_gain_positive_fraction": 0.90625,
+    "private_gain_min": -6.16911624069516e-05,
+    "private_gain_max": 3.7233151159110633e-05,
+    "mean_degrees_added": 0.8539495967155389,
+    "mean_candidate_weight": -0.04942989500856517,
+    "candidate_weight_negative_fraction": 0.96875
+  }
+]

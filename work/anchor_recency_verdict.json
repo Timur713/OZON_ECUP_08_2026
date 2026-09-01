@@ -1,0 +1,28 @@
+{
+  "finding": "Every TCN base in our library is trained on stale anchors and never sees the most recent 66 days of target windows.",
+  "decided_msk": "2026-08-26T16:50:00+03:00",
+  "preregistration": "work/142_anchor_recency_preregister.json",
+  "uses_public_scores": false,
+  "defect": "train_w409_exact_decay.py sets anchors = range(186, validation_anchor-29, 12) with validation_anchor hardcoded to 378, so training stops at anchor 342. The SAME model then predicts final anchor 408. Targets for anchors 354, 366 and 378 end at day 384, 396 and 408 respectively and are fully observed, so excluding them is not required by leakage, only by the trainer sharing one anchor list between the validation run and the final run.",
+  "contrast_that_flagged_it": "gbdt_f4.py trains on range(186,379,12), i.e. up to 378. GBDT bases are among our best (GBD second overall at 1.651738 standalone) while TCN bases are weaker. Consistent with recency mattering, but confounded by model family, so it was tested directly.",
+  "measurement": {
+    "held_fixed": "anchor count 14, stride 12, window 409, width 96, seed 93, epochs 2. Only recency varies.",
+    "anchors_186_342_recent": 1.667959883,
+    "anchors_150_306_minus36d": 1.670155575,
+    "anchors_90_246_minus96d": 1.675064679,
+    "cost_of_36_days_staleness": 0.002195692,
+    "cost_of_96_days_staleness": 0.007104796,
+    "approximate_slope_per_day": 6.5e-05,
+    "monotonic": true,
+    "gate": "recency matters if E1 beats E2 by >= 0.0015 and ordering holds - PASSED"
+  },
+  "implied_headroom": "Extending training anchors from 342 to 378 is 36 more days of recency, worth roughly 0.002 at the base level by the measured slope. This has never been applied to any sequence base, including the admitted 102_probe_w409c and 127_decay.",
+  "action_taken": "Training EXEXT_plain and EXEXT_decay: exact backbone, anchors 186..378 (17 anchors), 5 seeds each, averaged.",
+  "honest_limitations": [
+    "A model trained through anchor 378 cannot be scored on fold 378, so the gain is INFERRED from the recency slope, not measured directly on a holdout.",
+    "Seed selection is impossible for the same reason, so the seeds are averaged rather than chosen. Averaging beats a RANDOM seed by 0.0023 but does not beat a good one (9-seed average 1.668470 vs best single 1.667721).",
+    "A base-level gain of 0.002 does not transfer one-for-one into the ensemble; our 29-base ridge buys only +0.0023 correlation over the single best base.",
+    "Any resulting base still requires a public probe against a gate built with --expect-baseline 1.6461788499434364. It cannot be admitted on this inference alone."
+  ],
+  "no_leakage": "anchor_end + 30 <= final_anchor 408 is enforced in the trainer; the test window 409-439 is untouched."
+}

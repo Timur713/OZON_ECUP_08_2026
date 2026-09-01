@@ -1,0 +1,83 @@
+{
+  "tag": "smoke_residual4",
+  "base_tag": "smoke_growth4",
+  "uses_public_scores": false,
+  "uses_recovered_moments": false,
+  "folds": [
+    270,
+    306,
+    342,
+    378
+  ],
+  "evaluation_folds": [
+    342,
+    378
+  ],
+  "protocol": "train residual correction only on strictly earlier temporal folds",
+  "features": 311,
+  "residual_history_features": [
+    "last",
+    "mean",
+    "median",
+    "absolute_mean",
+    "last_minus_mean",
+    "trend"
+  ],
+  "base_scores": [
+    {
+      "fold": 342,
+      "score": 1.75270683497691,
+      "slope": 1.0255590357869229,
+      "intercept": -0.007578164665059045
+    },
+    {
+      "fold": 378,
+      "score": 1.6285588344804098,
+      "slope": 0.998741874271399,
+      "intercept": -0.2653468302994538
+    }
+  ],
+  "selection_grid": {
+    "iterations": [
+      50
+    ],
+    "shrinkages": [
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "minimum_mean_gain": 0.00015,
+    "requires_every_fold_nonnegative": true
+  },
+  "selected": {
+    "kind": "lightgbm",
+    "iteration": 50,
+    "shrinkage": 0.1,
+    "folds": [
+      {
+        "fold": 342,
+        "score": 1.7529046670196209,
+        "gain_vs_base": -0.00019783204271095478,
+        "slope": 1.021723781174579,
+        "intercept": 0.004714655025846394
+      },
+      {
+        "fold": 378,
+        "score": 1.6285299919738854,
+        "gain_vs_base": 2.8842506524462408e-05,
+        "slope": 0.9964311694910177,
+        "intercept": -0.2582041459154852
+      }
+    ],
+    "mean_score": 1.6907173294967532,
+    "worst_score": 1.7529046670196209,
+    "mean_gain_vs_base": -8.449476809324619e-05,
+    "worst_gain_vs_base": -0.00019783204271095478,
+    "selection_objective": 1.7031547970013268
+  },
+  "accepted": false,
+  "candidate_file": "/Users/timur/Desktop/dev/OZON_ECUP_2026_3/work/smoke_residual4_candidate_final.npy",
+  "elapsed_seconds": 1.3103418350219727
+}
